@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/real-iska-vt/static/css/main.1854fe94.css",
+    "main.js": "/real-iska-vt/static/js/main.70a36512.js",
+    "static/media/avatar.gif": "/real-iska-vt/static/media/avatar.da7d23b697f6e4fdafef.gif",
+    "static/media/map.jpg": "/real-iska-vt/static/media/map.3a569680ea5bdf9a2322.jpg",
+    "static/media/iska-logo.png": "/real-iska-vt/static/media/iska-logo.0b23486e2144e26ea815.png",
+    "static/media/krona-one-latin-400-normal.woff": "/real-iska-vt/static/media/krona-one-latin-400-normal.fd47e8be9d5868e2354f.woff",
+    "static/media/krona-one-latin-400-normal.woff2": "/real-iska-vt/static/media/krona-one-latin-400-normal.2f0d0d32161acbb479ff.woff2",
+    "static/media/krona-one-latin-ext-400-normal.woff": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.fb9cd5f06d66cdcda94f.woff",
+    "static/media/krona-one-latin-ext-400-normal.woff2": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.01120cafa274a6b13dba.woff2",
+    "index.html": "/real-iska-vt/index.html",
+    "main.1854fe94.css.map": "/real-iska-vt/static/css/main.1854fe94.css.map",
+    "main.70a36512.js.map": "/real-iska-vt/static/js/main.70a36512.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1854fe94.css",
+    "static/js/main.70a36512.js"
+  ]
+}
