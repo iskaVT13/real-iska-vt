@@ -1,0 +1,76 @@
+.firebase-image {
+  position: relative;
+  width: fit-content;
+  height: 100px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.response-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align:left;
+  margin-top:70px;
+  color: white;
+  white-space: pre-line;
+}
+
+.step p img{
+  position: relative;
+  padding: 15px;
+  
+}
+
+.json-response{
+  background-color: #ea9800;
+  padding: 10px;
+}
+
+.response-paragraph{
+  font-size:20px;
+  line-height:30px;
+  max-width:580px;
+  text-align: center;
+}
+
+.choices-button{
+    display: flexbox;
+    justify-content: space-evenly;
+    overflow: hidden;
+    position: relative;
+    background-color: #7E0001;
+
+}
+.e-button button{
+  display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    margin-right: 5px;
+    background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
+    color: white; /* Text color */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 40;
+
+}
+
+.choices-button button:hover{
+    background: linear-gradient(to bottom, #f1c500, #c40606); /* Gradient color */
+}
+
+.choices-button button.active {
+    background: linear-gradient(to bottom, #ea9800, #ea9800); /* Active button gradient color */
+    color: #ffffff;
+  }
+
+  
+  
+  
+  
+  
+  

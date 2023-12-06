@@ -1,0 +1,48 @@
+.buttons-container img{
+    background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
+
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-container{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.text-gif{
+    position: relative;
+    color: #f1c500;
+    padding: 5px;
+}
+
+.gif img{
+    position: relative;
+    width: 45vh;
+}
+
+.back-button{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.back-button button{
+    position: relative;
+    background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
+
+}
+
+.canteen-image{
+    width: 100px;
+}
+

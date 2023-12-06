@@ -1,0 +1,105 @@
+
+  {
+  "regular":[
+    { 
+      "title": "REGULAR\n"
+  },
+  {
+      "description":"STEPS TO FOLLOW:\n\n"
+  },
+  {
+      "desc":"WHERE: PUP SIS\n\n"
+  },
+  {
+    "speechText": "Here is the process to enroll for a regular student. Please take your time to be guided with the steps. Good Luck"
+  },
+{
+      "steps": "1. Log in to your SIS Account.",
+      "image": "gs://iskavt-26f75.appspot.com/pylon2022.jpg"
+},
+{
+      "steps": "2. Check if your grades is complete. (Grades Section.)\n",
+      "image": "gs://iskavt-26f75.appspot.com/pylon2022.jpg"
+},
+{
+      "steps": "3. Go to Enrollment Section.\n",
+      "image": "gs://iskavt-26f75.appspot.com/pylon2022.jpg"
+},
+{
+  "steps": "4. Check all the subjects and schedule to enroll.\n",
+  "image": "gs://iskavt-26f75.appspot.com/pylon2022.jpg"
+},
+{
+  "steps": "5. Click Save and Assess.\n",
+  "image": "gs://iskavt-26f75.appspot.com/pylon2022.jpg"
+},
+{
+  "steps": "6. Review and click Okay to confirm.\n",
+  "image": "gs://iskavt-26f75.appspot.com/pylon2022.jpg"
+},
+{
+  "steps": "7. Review the assessment.\n",
+  "image": "gs://iskavt-26f75.appspot.com/pylon2022.jpg"
+},
+{
+  "steps": "8. Print Confirmation Slip.\n",
+  "image": "gs://iskavt-26f75.appspot.com/pylon2022.jpg"
+}
+  ],
+
+  "irregular": [
+    {
+      "title": "IRREGULAR\n"
+    },
+    {
+      "description":"STEPS TO FOLLOW:\n\n"
+  },
+  {
+      "desc":"WHERE: PUP SIS\n\n"
+  },
+  {
+    "speechText": "Here is the process to enroll for a irregular student. Please take your time to be guided with the steps. Good Luck"
+  },
+    {
+        "steps": "1. Log in to your SIS Account.\n",
+        "image": "gs://iskavt-26f75.appspot.com/pylon2022.jpg"
+    }
+  ],
+  "transferee":[
+    {
+      "title":"TRANSFEREE\n"
+    },
+    {
+      "description":"STEPS TO FOLLOW:\n\n"
+  },
+  {
+      "desc":"WHERE: PUP SIS\n\n"
+  },
+  {
+    "speechText": "Here is the process to enroll for a transferee student. Please take your time to be guided with the steps. Good Luck"
+  },
+    {
+      "steps": "1. Log in to your SIS Account.\n",
+      "image": "gs://iskavt-26f75.appspot.com/pylon2022.jpg"
+  }
+  ],
+  "freshmen":[
+    {
+      "title":"FRESHMEN\n"
+    },
+    {
+      "description":"STEPS TO FOLLOW:\n\n"
+  },
+  {
+      "desc":"WHERE: PUP SIS\n\n"
+  },
+  {
+    "speechText": "Here is the process to enroll for a freshmen student. Please take your time to be guided with the steps. Good Luck"
+  },
+    {
+      "steps": "1. Log in to your SIS Account.\n",
+      "image": "gs://iskavt-26f75.appspot.com/pylon2022.jpg"
+  }
+  ]
+  }
+    

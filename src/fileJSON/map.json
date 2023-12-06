@@ -1,0 +1,21 @@
+{
+    "button1": {
+      "buttonImage": "gs://iskavt-26f75.appspot.com/pylon2022.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/Gate to Canteen.gif",
+      "title": "Main Gate",
+      "responseText": "Here is the way from main gate to canteen"
+    },
+    "button2": {
+      "buttonImage": "button2-image.jpg",
+      "clickedImage": "clicked2-image.jpg",
+      "title": "Button 2",
+      "responseText": "Response for Button 2"
+    },
+    "button3": {
+      "buttonImage": "button3-image.jpg",
+      "clickedImage": "clicked3-image.jpg",
+      "title": "Button 3",
+      "responseText": "Response for Button 3"
+    }
+  }
+  

@@ -1,0 +1,270 @@
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  position: relative;
+  display: block;
+  justify-content: space-around;
+}
+
+body{
+  position: relative;
+  background-color: #7E0001;
+  justify-content: space-evenly;
+  display: block;
+  text-align: center;
+  align-items: center;
+  background-size: cover;
+  scrollbar-width:none;
+  scrollbar-color: transparent transparent;
+
+  &::-webkit-scrollbar {
+      width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+  }
+}
+
+header{
+  background-color: #7E0001;
+  justify-content: space-between;
+  display: flex;
+  top: 0;
+  position: sticky;
+  z-index: 100;
+  padding: 5px;
+}
+
+
+.question-list {
+  border: 5px solid darkgoldenrod;
+  background-color: white;
+  color: rgb(236, 166, 4);
+  position: absolute;
+  width: 190px;
+  height: max-content;
+  right: 5%;
+  margin-top: 10px;
+  top: 60px;
+  overflow: auto;
+  font-size: 15px;
+  z-index: 155;
+}
+
+.logo {
+  width:13vh;
+  height:max-content;
+}
+.otherResponse{
+  height: 65vh;
+  width: 100%;
+  z-index: 10;
+}
+
+
+h1{
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+
+.app-neym{
+  position: relative;
+  margin-top: -4vh;
+}
+
+.app-name {
+  font-family: 'Krona One';
+  font-size: 2rem;
+  color: white;
+}
+
+.app-name span{
+  color: rgb(236, 166, 4);
+  font-family: 'Krona One';
+}
+
+.desc{
+  position: relative;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 15px;
+color: white;
+
+
+}
+
+.desc-hidden {
+  display: none;
+}
+
+.virtual{
+  display: block;
+  padding: 5px;
+}
+
+.vr-box{
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  bottom: 8vh;
+  padding: 2vh;
+}
+
+.iska img{
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  top: 50%;
+}
+
+
+.textOther{
+  justify-content: space-around;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 5px;
+  color: white;
+  top: 15%;
+  position: sticky;
+  background-color: #7E0001;
+  z-index: 99;
+}
+
+.container{
+  white-space: pre-line;
+  color: white;
+  overflow-y: scroll;
+  padding: 5px;
+  line-height: 1.5; /* Adjust this value to control the line spacing */
+  z-index: 50;
+  
+}
+
+.displayResponse{
+  display: flex;
+  text-align: left;
+  padding: 10px;
+  height: max-content;
+}
+
+.display-text {
+  padding: 20px;
+  border-radius: 5px;
+  position:relative;
+}
+
+.otherResponse{
+  text-align: left;
+  font-size:15px;
+  margin-top: 20px;
+  z-index: -1;
+}
+
+.download-container{
+  position: sticky;
+  width: 100%;
+  bottom: 10vh;
+  background-color: transparent;
+}
+
+.download-button button{
+  position: sticky;
+  background-color: #f1c500;
+  width: fit-content;
+  top: 50vh;
+  left: 80%;
+}
+
+.bottom{
+  background-color: #7E0001;
+  padding: 5px;
+  bottom: 0;
+  position: sticky;
+  overflow: hidden;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.microphone{
+  background-color: #7E0001;
+  position: sticky;
+  bottom: 0; /* Stick it to the bottom of the viewport */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.center-input{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+input {
+  padding: 10px;
+  width: 100%; /* Use the full width of the parent container */
+  margin: 10px; /* You can use shorthand property for margin */
+  border-radius: 10px;
+  border-color: #f1c500;
+}
+
+/* Media Query for screens with a maximum width of 768px (typical mobile screens) */
+@media (max-width: 768px) {
+  input {
+    width: 37vh; /* Adjust the width to take up 90% of the parent container */
+    margin: 5px; /* Reduce the margin for smaller screens */
+  }
+}
+
+
+
+.hide-this{
+  visibility: hidden;
+}
+
+.keyBoard{
+  margin-right: 10px;
+}
+
+.start{
+  color: white;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
+  padding: 20px ;
+  border-radius: 100px;
+}
+
+.stop{
+  color: white;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
+  padding: 20px 20px;
+  border-radius: 100px;
+}
+
+.transcript{
+  color: white;
+  position:relative;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 25;
+  
+}
