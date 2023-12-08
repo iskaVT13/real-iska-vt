@@ -243,6 +243,16 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
   const handleTextInput = (text) => {
     sendTextToCommands(text);
+
+    // Show elements with the textOther classname
+    const showTextOther = document.querySelectorAll('.textOther');
+    showTextOther.forEach((element) => {
+      element.style.display = ''; // Set to an empty string to use the default display value
+    });
+    const showReset = document.querySelectorAll('.reset-button');
+    showReset.forEach((element) => {
+      element.style.display = '';
+    });
   };
 
 // Function to handle a year button click event
@@ -1269,6 +1279,16 @@ const sendTextToCommands = (text) => {
     setSelectedProgram(false);
     setSelectedYearResponse(false);
     setYearButtonVisible(false);
+
+    // Show elements with the textOther classname
+    const showTextOther = document.querySelectorAll('.textOther');
+    showTextOther.forEach((element) => {
+      element.style.display = ''; // Set to an empty string to use the default display value
+    });
+    const showReset = document.querySelectorAll('.reset-button');
+    showReset.forEach((element) => {
+      element.style.display = '';
+    });
     
   }
 };

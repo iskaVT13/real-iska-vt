@@ -2,62 +2,68 @@
     "gate": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/Gate to Canteen.gif",
       "title": "Main Gate",
-      "responseText": "Here is the way from main gate to canteen"
+      "responseText": "Here is the way from Main gate to Canteen"
     },
     "admission": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/pylon2022.jpg",
       "title": "Admission Building",
-      "responseText": "Response for Button 2"
+      "responseText": "Here is the way from Admission Building to Canteen"
     },
     "lab1": {
       "clickedImage": "clicked3-image.jpg",
       "title": "ComLab-1",
-      "responseText": "Response for Button 3"
+      "responseText": "Here is the way from Computer Laboratory 1 to Canteen"
     },
     "lab2": {
       "clickedImage": "clicked3-image.jpg",
       "title": "comLab-2",
-      "responseText": "Response for Button 3"
+      "responseText": "Here is the way from Computer Laboratory 2 to Canteen"
     },
     "yumul": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Yumul Building",
-      "responseText": "Response for Button 3"
+      "responseText": "Here is the way from Yumul Building to Canteen"
     },
     "canteen": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Canteen",
-      "responseText": "Response for Button 3"
+      "responseText": "Here is the way from to Canteen"
     },
     "gymnasium": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Gymnasium",
-      "responseText": "Response for Button 3"
+      "responseText": "Here is the way from Gymnasium to Canteen"
     },
     "nantes": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Nantes",
-      "responseText": "Response for Button 3"
+      "responseText": "Here is the way from Accounting and Marketing Building to Canteen"
     },
     "grandstand": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Grandstand",
-      "responseText": "Response for Button 3"
+      "responseText": "Here is the way from Grandstand to Canteen"
     },
     "engineer": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Engineer and Architecture Building",
-      "responseText": "Response for Button 3"
+      "responseText": "Here is the way from Engineer and Architecture Building to Canteen"
     },
     "education": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Education Building",
-      "responseText": "Response for Button 3"
+      "responseText": "Here is the way from Education Building to Canteen"
     },
     "science": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Science Building",
-      "responseText": "Response for Button 3"
+      "responseText": "Here is the way from Science Building to Canteen"
+    },
+    "hospitality": {
+      "clickedImage": "clicked3-image.jpg",
+      "title": "Hospitality Management Building",
+      "responseText": "Here is the way from Hospitality Management Building to Canteen"
     }
+
   }
   
