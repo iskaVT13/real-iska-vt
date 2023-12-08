@@ -2,7 +2,18 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
-
+import pylon from '../areaImage/pylon2022.jpg';
+import admission from '../areaImage/Admin Building.jpg';
+import lab1 from '../areaImage/pylon2022.jpg';
+import lab2 from '../areaImage/pylon2022.jpg';
+import yumul from '../areaImage/Yumul Building.jpg';
+import canteen from '../areaImage/pylon2022.jpg';
+import nantes from '../areaImage/pylon2022.jpg';
+import gymnasium from '../areaImage/pylon2022.jpg';
+import grandstand from '../areaImage/pylon2022.jpg';
+import science from '../areaImage/Health and Sciences Building.jpg';
+import education from '../areaImage/pylon2022.jpg';
+import engineer from '../areaImage/Engineering Building.jpg';
 
 function CanteenButton() {
   const [isActive, setIsActive] = useState(false);
@@ -59,19 +70,36 @@ function CanteenButton() {
   };
 
   return (
-    <div className="canteen-container">
-      {!isActive && (
-        <div className="buttons-container">
-          {Object.keys(responses).map((button) => (
-            <div key={button} onClick={() => handleImageClick(button)} className="place-image-container">
-              <img
-                alt={responses[button].buttonImage}
-                className="canteen-image"/>
-              <p>{responses[button].title}</p>
-            </div>
-          ))}
-        </div>
-      )}
+    <div className="areaImage-container">
+    {!isActive && (
+    <div className="buttons-container">
+        <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={pylon} />
+        <p>MAIN GATE</p>
+        <img onClick={() => handleImageClick('admission')} alt='Admission' className='admission-image' src={admission} />
+        <p>ADMISSION OFFICE</p>
+        <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src={lab1}/>
+        <p>COMPUTER LABORATORY 1</p>
+        <img onClick={() => handleImageClick('lab2')}alt='lab2' className='lab2-image' src={lab2} />
+        <p>COMPUTER LABORATORY 2</p>
+        <img onClick={() => handleImageClick('yumul')} alt='yumul' className='yumul-image' src={yumul} />
+        <p>YUMUL BUILDING</p>
+        <img onClick={() => handleImageClick('canteen')} alt='canteen' className='canteen-image' src={canteen} />
+        <p>CANTEEN</p>
+        <img onClick={() => handleImageClick('nantes')}  alt='nantes' className='nantes-image' src={nantes} />
+        <p>ACCOUNTACY and MARKETING BUILDING</p>
+        <img onClick={() => handleImageClick('gymnasium')} alt='gymnasium' className='gymnasium-image' src={gymnasium} />
+        <p>GYMNASIUM</p>
+        <img onClick={() => handleImageClick('education')} alt='education' className='education-image' src={education} />
+        <p>EDUCATION BUILDING</p>
+        <img onClick={() => handleImageClick('science')}  alt='science' className='science-image' src={science} />
+        <p>HEALTH and SCIENCE BUILDING</p>
+        <img onClick={() => handleImageClick('grandstand')} alt='grandstand' className='grandstand-image' src={grandstand} />
+        <p>GRANDSTAND</p>
+        <img onClick={() => handleImageClick('engineer')}  alt='engineer' className='engineer-image' src={engineer} />
+        <p>ENGINEERING and ARCHTECTURE BUILDING</p>
+      
+    </div>
+  )}
 
       {isActive && (
         <div className="image-container">

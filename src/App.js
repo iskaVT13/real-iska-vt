@@ -37,6 +37,15 @@ import "@fontsource/krona-one";
 import Canteen from './buildings/canteen';
 import Science from './buildings/science';
 import Engineer from './buildings/engineer';
+import Yumul from './buildings/yumul';
+import Admission from './buildings/admission';
+import Lab1 from './buildings/lab1';
+import Lab2 from './buildings/lab2';
+import Grandstand from './buildings/grandstand';
+import Gymnasium from './buildings/gymnasium';
+import Nantes from './buildings/nantes';
+import Education from './buildings/education';
+import Hospitality from './buildings/hospitality';
 
 import Vr from './VRtour';
 
@@ -177,6 +186,33 @@ const [scienceResponse, setScienceResponse] = useState('');
 //ENGINEER
 const [engineerButton, setEngineerVisible] = useState(false);
 const [engineerResponse, setEngineerResponse] = useState('');
+//EDUCATION
+const [educButton, setEducVisible] = useState(false);
+const [educResponse, setEducResponse] = useState('');
+//ADMISSION
+const [admissionButton, setAdmissionVisible] = useState(false);
+const [admissionResponse, setAdmissionResponse] = useState('');
+//GRANDSTAND
+const [grandstandButton, setGrandStandVisible] = useState(false);
+const [grandstandResponse, setGrandStandResponse] = useState('');
+//GYMNASIUM
+const [gymButton, setGymVisible] = useState(false);
+const [gymResponse, setGymResponse] = useState('');
+//LAB1
+const [lab1Button, setLab1Visible] = useState(false);
+const [lab1Response, setLab1Response] = useState('');
+//LAB2
+const [lab2Button, setLab2Visible] = useState(false);
+const [lab2Response, setLab2Response] = useState('');
+//NANTES
+const [nantesButton, setNantesVisible] = useState(false);
+const [nantesResponse, setNantesResponse] = useState('');
+//YUMUL
+const [yumulButton, setYumulVisible] = useState(false);
+const [yumulResponse, setYumulResponse] = useState('');
+//HOSPITALITY 
+const [hMButton, setHMVisible] = useState(false);
+const [HMResponse, setHMResponse] = ('');
 
 // Set the virtual file system for pdfMake
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
@@ -255,6 +291,65 @@ const handleYearButtonClick = (year) => {
     setEngineerResponse(engineerr);
     setDownloadButtonVisible(false);
   }
+
+  const handleEducButtonClick = (educ) => {
+    const educc = Responses[educ];
+
+    setEducResponse(educc);
+    setDownloadButtonVisible(false);
+  }
+  const handleAdmissionButtonClick = (admission) => {
+    const admissionn = Responses[admission];
+
+    setAdmissionResponse(admissionn);
+    setDownloadButtonVisible(false);
+  }
+  const handleGrandstandButtonClick = (grandstand) => {
+    const grandstandd = Responses[grandstand];
+
+    setGrandStandResponse(grandstandd);
+    setDownloadButtonVisible(false);
+  }
+  const handleGymButtonClick = (gym) => {
+    const gymm = Responses[gym];
+
+    setGymResponse(gymm);
+    setDownloadButtonVisible(false);
+  }
+  const handlelab1ButtonClick = (lab1) => {
+    const lab1b = Responses[lab1];
+
+    setLab1Response(lab1b);
+    setDownloadButtonVisible(false);
+  }
+  const handleLab2ButtonClick = (lab2) => {
+    const lab2b = Responses[lab2];
+
+    setLab2Response(lab2b);
+    setDownloadButtonVisible(false);
+  }
+
+  const handleHMButtonClick = (hm) => {
+    const hMm = Responses[hm];
+
+    setHMResponse(hMm);
+    setDownloadButtonVisible(false);
+  }
+
+  const handleNantesButtonClick = (nantes) => {
+    const nantesh = Responses[nantes];
+
+    setNantesResponse(nantesh);
+    setDownloadButtonVisible(false);
+  }
+  const handleYumulButtonClick = (yumul) => {
+    const yumull = Responses[yumul];
+
+    setYumulResponse(yumull);
+    setDownloadButtonVisible(false);
+  }
+
+
 // Function to display the text and speak it
 const displayText = (text) => {
   let message = new SpeechSynthesisUtterance(text);
@@ -662,9 +757,7 @@ const displayText = (text) => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-
         setCommandRecognized(true);
-
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -674,9 +767,472 @@ const displayText = (text) => {
         //ENGINEER
         setEngineerVisible(true);
         setEngineerResponse(false);
-
       }
     },
+    {
+      command: ['* yumul', 'yumul *', '* yumul *', 'yumul'],
+      callback: () => {
+        resetTranscript();
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        const textDisplay = `
+        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        `;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true); // Show the reset button after a command is executed
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+
+        setYumulVisible(true);
+        setYumulResponse(false);
+      } 
+    },
+    {
+      command: ['* nantes', 'nantes *', '* nantes *', 'nantes', '* accounting *'],
+      callback: () => {
+        resetTranscript();
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        const textDisplay = `
+        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        `;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true); // Show the reset button after a command is executed
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+
+        setYumulVisible(false);
+        setYumulResponse(false);
+
+        setNantesVisible(true);
+        setNantesResponse(false);
+      }
+    },
+    {
+      command: ['gymnasium', '* gymnasium', '* gymnasium *', 'gymnasium *', 'gym', '* gym', '* gym *', '* gym *', '*gym*'],
+      callback: () => {
+        resetTranscript();
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        const textDisplay = `
+        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        `;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true); // Show the reset button after a command is executed
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(true);
+        setGymResponse(false);
+      }
+    },
+    {
+      command: ['grandstand', '* grandstand', '* grandstand *', 'grandstand *'],
+      callback: () => {
+        resetTranscript();
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        const textDisplay = `
+        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        `;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true); // Show the reset button after a command is executed
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(true);
+        setGrandStandResponse(false);
+      }
+    },
+    {
+      command: ['education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *'],
+      callback: () => {
+        resetTranscript();
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        const textDisplay = `
+        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        `;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true); // Show the reset button after a command is executed
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(true);
+        setEducResponse(false);
+      }
+    },
+    {
+      command: ['admission', '* admission', 'admission *', '* admission *'],
+      callback: () => {
+        resetTranscript();
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        const textDisplay = `
+        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        `;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true); // Show the reset button after a command is executed
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(true);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(true);
+        setAdmissionResponse(false);
+      }
+    },
+    {
+      command: ['lab 1', 'lab * 1', 'laboratory 1', 'laboratory 1 *', '* laboratory 1 *', 'com lab 1', '*com * lab * 1', '* computer laboratory 1 *', 'computer lab 1',
+       '* computer * lab * 1 *', '* computer laboratory 1 *', 'ICT lab 1', 'ICT laboratory 1', '* ICT lab 1 *', 'IT lab 1', 'IT laboratory 1', '* IT lab * 1 *',
+       '* IT laboratory 1 *' ],
+      callback: () => {
+        resetTranscript();
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        const textDisplay = `
+        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        `;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true); // Show the reset button after a command is executed
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(true);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(true);
+        setLab1Response(false);
+      }
+    },
+    {
+     command: ['lab 2', 'lab * 2', 'laboratory 2', 'laboratory 2 *', '* laboratory 2 *', 'com lab 2', '*com * lab * 2', '* computer laboratory 2 *', 'computer lab 2',
+      '* computer * lab * 2 *', '* computer laboratory 2 *', 'ICT lab 2', 'ICT laboratory 2', '* ICT lab 2 *', 'IT lab 2', 'IT laboratory 2', '* IT lab * 2 *',
+      '* IT laboratory 2 *' ],
+        callback: () => {
+          resetTranscript();
+          displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+          const textDisplay = `
+          Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+          `;
+          displayOtherText(textDisplay);
+          setResetButtonVisible(true); // Show the reset button after a command is executed
+  
+          setProgramsButton(false);
+  
+          setYearButtonVisible(false);
+          setSelectedYearResponse(false);
+  
+          setDisplayTextOnScreen(false);
+  
+          setAboutVisible(false);
+          setAboutResponse(false);
+  
+          setSelectedProgram(false);
+  
+          setResponseDisplayed(true); // Set responseDisplayed to true
+          setCommandRecognized(true);
+          //CANTEEN
+          setCanteenVisible(false);
+          setCanteenResponse(false);
+          //SCIENCE
+          setScienceVisible(false);
+          setScienceResponse(false);
+          //ENGINEER
+          setEngineerVisible(false);
+          setEngineerResponse(false);
+          //YUMUL
+          setYumulVisible(false);
+          setYumulResponse(false);
+          //NANTES
+          setNantesVisible(false);
+          setNantesResponse(false);
+          //GYMNASIUM
+          setGymVisible(false);
+          setGymResponse(false);
+          //GRANDSTAND
+          setGrandStandVisible(false);
+          setGrandStandResponse(false);
+          //EDUCATION
+          setEducVisible(true);
+          setEducResponse(false);
+          //ADMISSION
+          setAdmissionVisible(false);
+          setAdmissionResponse(false);
+          //LAB1
+          setLab1Visible(false);
+          setLab1Response(false);
+          //LAB2
+          setLab2Visible(true);
+          setLab2Response(false);
+      }
+    },
+    {
+      command: ['* hospitality *', '* hospitality', 'hospitality management', 'hospitality *', '* hospitality management', 'hospitality management *', '* hospitality management *'],
+      callback: () => {
+        resetTranscript();
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        const textDisplay = `
+        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        `;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true); // Show the reset button after a command is executed
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(true);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(true);
+        setHMResponse(false);
+      }
+    },
+
    // Also command for asking the locations
     ...processesCommands,
   
@@ -805,6 +1361,7 @@ const sendTextToCommands = (text) => {
           { aboutButtons && (
             <About onAboutClick={handleAboutButtonClick} />
           )}
+        {/* BUILDINGS */}
           {canteenButton && (
             <Canteen onCanteenButtonClick = {handleCanteenButtonClick} jsonData={Maps}/>
           )}
@@ -814,6 +1371,34 @@ const sendTextToCommands = (text) => {
           {engineerButton && (
             <Engineer onEngineerButtonClick = {handleEngineerButtonClick} />
           )}
+          {yumulButton && (
+            <Yumul onYumulButtonClick = {handleYumulButtonClick} />
+          )}
+          {nantesButton && (
+            <Nantes onNantesButtonClick = {handleNantesButtonClick} />
+          )}
+          {lab1Button && (
+            <Lab1 onLab1ButtonCLick = {handlelab1ButtonClick} />
+          )}
+          {lab2Button && (
+            <Lab2 onLab2ButtonCLick = {handleLab2ButtonClick} />
+          )}
+          {gymButton && (
+            <Gymnasium onGymButtonCLick = {handleGymButtonClick} />
+          )}
+          {grandstandButton && (
+            <Grandstand onGrandstandButtonCLick = {handleGrandstandButtonClick} />
+          )}
+          {admissionButton && (
+            <Admission onAdmissionButtonClick = {handleAdmissionButtonClick} />
+          )}
+          {educButton && (
+            <Education onEducationButtonClick = {handleEducButtonClick} />
+          )}
+          {hMButton && (
+            <Hospitality onHmBUttonClick = {handleHMButtonClick} />
+          )}
+
         </div>
        
       <div className='vr-box'>
@@ -827,7 +1412,10 @@ const sendTextToCommands = (text) => {
      
         <div className="otherResponse">
         {(selectedYearResponse || programsResponse || aboutResponse) && (
-          <p className="displayResponse">{selectedYearResponse}{programsResponse}{aboutResponse}{canteenResponse}{scienceResponse}{engineerResponse}</p>         
+          <p className="displayResponse">
+          {selectedYearResponse}{programsResponse}{aboutResponse}
+          {canteenResponse}{scienceResponse}{engineerResponse}{yumulResponse}{admissionResponse}{nantesResponse}{lab1Response}{lab2Response}{educResponse}{HMResponse}{grandstandResponse}{gymResponse}
+          </p>         
         )}
         <p>{displayTextOnScreen}</p>
       </div>

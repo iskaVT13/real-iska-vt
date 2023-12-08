@@ -1,0 +1,10 @@
+{
+    "commands": [
+      {
+        "command": ["freshmen student", ""],
+        "text": "Here is how to enroll as a freshmen student",
+        "image": "path/to/freshmen_student_image.jpg"
+      }
+    ]
+  }
+  

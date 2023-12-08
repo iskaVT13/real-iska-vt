@@ -1,20 +1,62 @@
 {
-    "button1": {
-      "buttonImage": "gs://iskavt-26f75.appspot.com/pylon2022.jpg",
+    "gate": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/Gate to Canteen.gif",
       "title": "Main Gate",
       "responseText": "Here is the way from main gate to canteen"
     },
-    "button2": {
-      "buttonImage": "button2-image.jpg",
-      "clickedImage": "clicked2-image.jpg",
-      "title": "Button 2",
+    "admission": {
+      "clickedImage": "gs://iskavt-26f75.appspot.com/pylon2022.jpg",
+      "title": "Admission Building",
       "responseText": "Response for Button 2"
     },
-    "button3": {
-      "buttonImage": "button3-image.jpg",
+    "lab1": {
       "clickedImage": "clicked3-image.jpg",
-      "title": "Button 3",
+      "title": "ComLab-1",
+      "responseText": "Response for Button 3"
+    },
+    "lab2": {
+      "clickedImage": "clicked3-image.jpg",
+      "title": "comLab-2",
+      "responseText": "Response for Button 3"
+    },
+    "yumul": {
+      "clickedImage": "clicked3-image.jpg",
+      "title": "Yumul Building",
+      "responseText": "Response for Button 3"
+    },
+    "canteen": {
+      "clickedImage": "clicked3-image.jpg",
+      "title": "Canteen",
+      "responseText": "Response for Button 3"
+    },
+    "gymnasium": {
+      "clickedImage": "clicked3-image.jpg",
+      "title": "Gymnasium",
+      "responseText": "Response for Button 3"
+    },
+    "nantes": {
+      "clickedImage": "clicked3-image.jpg",
+      "title": "Nantes",
+      "responseText": "Response for Button 3"
+    },
+    "grandstand": {
+      "clickedImage": "clicked3-image.jpg",
+      "title": "Grandstand",
+      "responseText": "Response for Button 3"
+    },
+    "engineer": {
+      "clickedImage": "clicked3-image.jpg",
+      "title": "Engineer and Architecture Building",
+      "responseText": "Response for Button 3"
+    },
+    "education": {
+      "clickedImage": "clicked3-image.jpg",
+      "title": "Education Building",
+      "responseText": "Response for Button 3"
+    },
+    "science": {
+      "clickedImage": "clicked3-image.jpg",
+      "title": "Science Building",
       "responseText": "Response for Button 3"
     }
   }
