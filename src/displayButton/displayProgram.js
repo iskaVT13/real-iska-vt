@@ -1,36 +1,46 @@
+// src/App.js
 import React, { useState } from 'react';
 import './displayDesign.css';
 
-function Programs({ onProgramClick }) {
-  const [activeProgram, setActiveProgram] = useState(null);
+import Bachelor from '../showRespose/Programs/bachelor';
+import Diploma from '../showRespose/Programs/diploma';
 
-  const speakText = (text, program) => {
-    if ('speechSynthesis' in window) {
-      const speech = new SpeechSynthesisUtterance(text);
-      speechSynthesis.speak(speech);
-    } else {
-      console.error('Speech synthesis is not supported in this browser.');
-    }
-    
-    setActiveProgram(program); // Set the active program when a button is clicked
+function App() {
+  const [showBachelor, setShowBachelor] = useState(false);
+  const [showDiploma, setShowDiploma] = useState(false);
+
+  const speakText = (text) => {
+    const speechSynthesis = window.speechSynthesis;
+    const speechText = new SpeechSynthesisUtterance(text);
+    speechSynthesis.speak(speechText);
   };
 
+  const handleBachelorButtonClick = () => {
+    speakText("Here is the process on how to enroll as regular student here at P U P Lopez.")
+    setShowBachelor(!showBachelor);
+    setShowDiploma(false);
+    
+  };
+  const handleDiplomaButtonClick = () => {
+    speakText("Here is the process on how to enroll a irregular student at P U P Lopez.")
+    setShowDiploma(!showDiploma);
+    setShowBachelor(false);
+
+  };
+  
+
   return (
-    <div className='choices-button'>
-      <button
-        onClick={() => { onProgramClick('bachelor'); speakText('These is the list of programs available in Bachelors Degree here at Lopez Quezon', 'bachelor'); }}
-        className={activeProgram === 'bachelor' ? 'active' : ''}
-      >
-        Bachelors
-      </button>
-      <button
-        onClick={() => { onProgramClick('diploma'); speakText('These is the list of Diploma programs offers here at Lopez Quezon', 'diploma'); }}
-        className={activeProgram === 'diploma' ? 'active' : ''}
-      >
-        Diploma
-      </button>
+    <div>
+      <div className='choices-button' >
+      <button className={showBachelor ? 'active-button' : ''} onClick={handleBachelorButtonClick}> BACHELOR </button>
+      <button className={showDiploma ? 'active-button' : ''} onClick={handleDiplomaButtonClick}> DIPLOMA </button>
+      </div>
+      <div>
+      {showBachelor && <Bachelor />}
+      {showDiploma && <Diploma />}
+      </div>
     </div>
   );
 }
 
-export default Programs;
+export default App;
