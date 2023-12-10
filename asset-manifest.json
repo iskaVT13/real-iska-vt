@@ -1,8 +1,16 @@
 {
   "files": {
-    "main.css": "/real-iska-vt/static/css/main.1854fe94.css",
-    "main.js": "/real-iska-vt/static/js/main.70a36512.js",
+    "main.css": "/real-iska-vt/static/css/main.af1aa725.css",
+    "main.js": "/real-iska-vt/static/js/main.b97ba498.js",
+    "static/js/498.fcaf40d7.chunk.js": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js",
+    "static/js/703.59b532f8.chunk.js": "/real-iska-vt/static/js/703.59b532f8.chunk.js",
+    "static/js/379.06dbaa89.chunk.js": "/real-iska-vt/static/js/379.06dbaa89.chunk.js",
+    "static/media/Health and Sciences Building.jpg": "/real-iska-vt/static/media/Health and Sciences Building.c4a63024bce8005aad67.jpg",
+    "static/media/Engineering Building.jpg": "/real-iska-vt/static/media/Engineering Building.9c93c42f0c2e51c29a1e.jpg",
+    "static/media/Admin Building.jpg": "/real-iska-vt/static/media/Admin Building.63dd14867aa9446f4b8b.jpg",
+    "static/media/Yumul Building.jpg": "/real-iska-vt/static/media/Yumul Building.513cc074a8893eb4dbda.jpg",
     "static/media/avatar.gif": "/real-iska-vt/static/media/avatar.da7d23b697f6e4fdafef.gif",
+    "static/media/pylon2022.jpg": "/real-iska-vt/static/media/pylon2022.c31e89cf492bae4cb956.jpg",
     "static/media/map.jpg": "/real-iska-vt/static/media/map.3a569680ea5bdf9a2322.jpg",
     "static/media/iska-logo.png": "/real-iska-vt/static/media/iska-logo.0b23486e2144e26ea815.png",
     "static/media/krona-one-latin-400-normal.woff": "/real-iska-vt/static/media/krona-one-latin-400-normal.fd47e8be9d5868e2354f.woff",
@@ -10,11 +18,14 @@
     "static/media/krona-one-latin-ext-400-normal.woff": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.fb9cd5f06d66cdcda94f.woff",
     "static/media/krona-one-latin-ext-400-normal.woff2": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.01120cafa274a6b13dba.woff2",
     "index.html": "/real-iska-vt/index.html",
-    "main.1854fe94.css.map": "/real-iska-vt/static/css/main.1854fe94.css.map",
-    "main.70a36512.js.map": "/real-iska-vt/static/js/main.70a36512.js.map"
+    "main.af1aa725.css.map": "/real-iska-vt/static/css/main.af1aa725.css.map",
+    "main.b97ba498.js.map": "/real-iska-vt/static/js/main.b97ba498.js.map",
+    "498.fcaf40d7.chunk.js.map": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js.map",
+    "703.59b532f8.chunk.js.map": "/real-iska-vt/static/js/703.59b532f8.chunk.js.map",
+    "379.06dbaa89.chunk.js.map": "/real-iska-vt/static/js/379.06dbaa89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1854fe94.css",
-    "static/js/main.70a36512.js"
+    "static/css/main.af1aa725.css",
+    "static/js/main.b97ba498.js"
   ]
 }
