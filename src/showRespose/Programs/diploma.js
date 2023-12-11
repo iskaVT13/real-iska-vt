@@ -14,7 +14,7 @@ const Diploma = () => {
       const pageWidth = pdf.internal.pageSize.getWidth();
       
       pdf.setFontSize(18);
-      const headerText = 'Regular Student Enrollment Steps';
+      const headerText = 'Diploma Courses';
       const headerWidth = pdf.getStringUnitWidth(headerText) * pdf.internal.getFontSize() / pdf.internal.scaleFactor;
       const centerPosition = (pageWidth - headerWidth) / 2;
 
@@ -72,7 +72,7 @@ const Diploma = () => {
        pdf.text(footerText, centerFooterPosition, pdf.internal.pageSize.getHeight() - margin);
  
 
-      pdf.save('RegularStudent.pdf');
+      pdf.save('Diploma Courses.pdf');
     } else {
       console.error('Element with class "step" not found');
     }

@@ -5,10 +5,10 @@
       "responseText": "Here is the way from Main gate to Canteen"
     },
     "admission": {
-      "clickedImage": "gs://iskavt-26f75.appspot.com/pylon2022.jpg",
-      "title": "Admission Building",
-      "responseText": "Here is the way from Admission Building to Canteen"
-    },
+        "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Admin to Yumul.gif",
+        "title": "Admission Building",
+        "responseText": "Here is the way from Admission Building to Canteen"
+      },
     "lab1": {
       "clickedImage": "clicked3-image.jpg",
       "title": "ComLab-1",
@@ -19,15 +19,10 @@
       "title": "comLab-2",
       "responseText": "Here is the way from Computer Laboratory 2 to Canteen"
     },
-    "yumul": {
-      "clickedImage": "clicked3-image.jpg",
-      "title": "Yumul Building",
-      "responseText": "Here is the way from Yumul Building to Canteen"
-    },
     "canteen": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Canteen to yumul bldg.gif",
       "title": "Canteen",
-      "responseText": "Here is the way from to Canteen"
+      "responseText": "Here is the way from Canteen to Admission Building"
     },
     "gymnasium": {
       "clickedImage": "clicked3-image.jpg",
@@ -40,7 +35,7 @@
       "responseText": "Here is the way from Accounting and Marketing Building to Canteen"
     },
     "grandstand": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Grandstand to yumul bldg.gif",
       "title": "Grandstand",
       "responseText": "Here is the way from Grandstand to Canteen"
     },

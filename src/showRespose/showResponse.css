@@ -30,12 +30,17 @@
     
 }
 
-.step ul{
+.step ul {
     color: white;
+    text-align: justify;
+    padding: 10px;
+}
+.lyrics li{
+    color: white;
+    text-align: left;
 }
 
 .hymn{
     text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
 }
+

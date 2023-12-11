@@ -16,13 +16,13 @@ function App() {
   };
 
   const handleBachelorButtonClick = () => {
-    speakText("Here is the process on how to enroll as regular student here at P U P Lopez.")
+    speakText("Here is the Bachelor of Science courses at P U P Lopez.")
     setShowBachelor(!showBachelor);
     setShowDiploma(false);
     
   };
   const handleDiplomaButtonClick = () => {
-    speakText("Here is the process on how to enroll a irregular student at P U P Lopez.")
+    speakText("Here is the Diploma courses at P U P Lopez.")
     setShowDiploma(!showDiploma);
     setShowBachelor(false);
 
@@ -32,8 +32,8 @@ function App() {
   return (
     <div>
       <div className='choices-button' >
-      <button className={showBachelor ? 'active-button' : ''} onClick={handleBachelorButtonClick}> BACHELOR </button>
-      <button className={showDiploma ? 'active-button' : ''} onClick={handleDiplomaButtonClick}> DIPLOMA </button>
+      <button className={showBachelor ? 'active-button' : ''} onClick={handleBachelorButtonClick}> BACHELOR COURSES </button>
+      <button className={showDiploma ? 'active-button' : ''} onClick={handleDiplomaButtonClick}> DIPLOMA COURSES </button>
       </div>
       <div>
       {showBachelor && <Bachelor />}

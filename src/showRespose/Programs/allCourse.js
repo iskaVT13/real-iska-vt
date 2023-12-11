@@ -2,11 +2,8 @@ import React from 'react';
 import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
-import pylon from '../../areaImage/pylon2022.jpg';
-import step1 from '../Enroll/enrollPicture/log in.png'
 
-
-const Regular = () => {
+const Bachelor = () => {
   const handleDownloadPDF = () => {
     const element = document.querySelector('.step');
 
@@ -17,7 +14,7 @@ const Regular = () => {
       const pageWidth = pdf.internal.pageSize.getWidth();
       
       pdf.setFontSize(18);
-      const headerText = 'Regular Student Enrollment Steps';
+      const headerText = 'Bachelor of Science Courses';
       const headerWidth = pdf.getStringUnitWidth(headerText) * pdf.internal.getFontSize() / pdf.internal.scaleFactor;
       const centerPosition = (pageWidth - headerWidth) / 2;
 
@@ -75,7 +72,7 @@ const Regular = () => {
        pdf.text(footerText, centerFooterPosition, pdf.internal.pageSize.getHeight() - margin);
  
 
-      pdf.save('RegularStudent.pdf');
+      pdf.save('BS Courses.pdf');
     } else {
       console.error('Element with class "step" not found');
     }
@@ -83,23 +80,35 @@ const Regular = () => {
   return (
     <div>
       <div className='step'>
-        <h4 className=''>STEPS TO FOLLOW:</h4><br></br>
-        <p>Step 1: Log in to your SIS Account.</p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
-        <p>Step 2. Check if your grades is complete (Grades Section )</p>
-          <img className='screenshot' src={pylon} alt='Step-image2' />
-        <p>Step 3. Go to enrollment section </p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
-        <p>Step 4. Check all the subjects and the schedule to enroll</p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
-        <p>Step 5 : Click Save and Assess </p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
-        <p>Step 6 : Review and Click okay to confirm </p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
-        <p>Step 7 : Review the Assessment </p>
-        <p>Step 8 : Print the Confirmation Slip </p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
-      </div>
+        <h4 className=''>COURSES OFFER AT PUP LOPEZ</h4><br/>
+        <h5>BACHELOR COURSES</h5>
+        <p>
+        Bachelor of Elementery Education (BEED)<br/>
+        Bachelor in Public Administration (BPA)<br/>
+        Bachelor in Public Adminsitration Major in Fiscal Adminstration (BPA -FA)<br/>
+        Bachelor of Science in Accountancy (BSA)<br/>
+        Bachelor of Science in Agri-Business Management (BSAM)<br/>
+        Bachelor of Science in Business Administration Major in Financial Management (BSBS-FM)<br/>
+        Bachelor of Science in Business Administration Major in Marketing Management (BSBA-MM)<br/>
+        Bachelor of Science in Biology (BSBIO)<br/>
+        Bachelor of Science in Civil Engineering (BSCE)<br/>
+        Bachelor of Science in Electrical Engineering (BSEE)<br/>
+        Bachelor of Secondary Education (BSEDMT)<br/>
+        Bachelor of Science in Hospitality Management (BSHM)<br/>
+        Bachelor of Science in Information Technology (BSIT)<br/>
+        Bachelor of Science in Nutrition and Dietics (BSND)<br/>
+        Bachelor of Science in Office Administration Major in Legal Office Administration (BSOA- LOA)<br/>
+        </p>
+        <h5>DIPLOMA COURSES</h5>
+        <p>
+        Diploma in Computer Engineering Technology (DCEPET)<br/>
+        Diploma in Civil Engineering Technology (DCVET)<br/>
+        Dimploma in Electrical Engineering Technology (DEET)<br/>
+        Diploma in Information Technology (DIT)<br/>
+        Diploma in Office Management Technology - Legal Office Management (DOMT-LOM)<br/>
+        Diploma in Office Management Technology - Medical Office Management (DOMT-MOM)<br/>
+        </p>
+              </div>
 
     <div className='download-button'>
         <button onClick={handleDownloadPDF}>Download as PDF</button>
@@ -108,4 +117,4 @@ const Regular = () => {
   );
 };
 
-export default Regular;
+export default Bachelor;

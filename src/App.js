@@ -7,19 +7,13 @@ import './App.css';
 import iska from './pictures/iska-logo.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMicrophone, faHome, faCircleQuestion, faFileArrowDown, faKeyboard, faPaperPlane, faTimes, faVideo } from '@fortawesome/free-solid-svg-icons';
-
-import Iska from './components/avatar';
-
-import pdfMake from 'pdfmake/build/pdfmake';
-import pdfFonts from 'pdfmake/build/vfs_fonts';
+import { faMicrophone, faHome, faCircleQuestion, faKeyboard, faPaperPlane, faTimes, faVideo } from '@fortawesome/free-solid-svg-icons';
 
 // Get and call the Menu.js 
 import Menu from './Menu/Menu';
 
 // Get the response to a command
 import Responses from './fileJSON/dataResponse.json';
-import Maps from './fileJSON/map.json'
 
 import processesData from './fileJSON/processes.json'; 
 
@@ -31,7 +25,23 @@ import About from './displayButton/displayAbout';
 // Install a font for ISKA name
 import "@fontsource/krona-one"; 
 
+//GREETINGS AND CAN DO OF ISKA
 
+
+//QUERIES OR QUESTIONS about PUP
+import Eregular from './showRespose/Enroll/regular';
+import Eirregular from './showRespose/Enroll/irregular';
+import Efreshmen from './showRespose/Enroll/freshmen';
+import Etransferee from './showRespose/Enroll/transferee';
+
+import Graduation from './showRespose/graduationReq';
+import Bachelor from './showRespose/Programs/bachelor';
+import Diploma from './showRespose/Programs/diploma';
+
+import History from './showRespose/About/history';
+import Mission from './showRespose/About/mission';
+import Vision from './showRespose/About/vision';
+import Hymn from './showRespose/About/hymn';
 
 //BUILDINGS 
 import Canteen from './buildings/canteen';
@@ -48,9 +58,6 @@ import Education from './buildings/education';
 import Hospitality from './buildings/hospitality';
 
 import Vr from './VRtour';
-
-
-
 
 // Function for the searchInput 
 function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden }) {
@@ -147,8 +154,6 @@ const [speechActive, setSpeechActive] = useState(false);
 const [displayTextOnScreen, setDisplayTextOnScreen] = useState('');
 // State for controlling the visibility of the reset button
 const [resetButtonVisible, setResetButtonVisible] = useState(false);
-// State for controlling the visibility of the download button
-const [downloadButtonVisible, setDownloadButtonVisible] = useState(false);
 // State to control the visibility of the question list
 const [showQuestions, setShowQuestions] = useState(false);
 
@@ -176,6 +181,19 @@ const [microphoneHidden, setMicrophoneHidden] = useState(false);
 const [commandRecognized, setCommandRecognized] = useState(false);
 const [recognizedProcessText, setRecognizedProcessText] = useState(' ');
 const [isQuestionIcon, setIsQuestionIcon] = useState(true);
+
+//DIRECT RESPONSE
+const [showEregular, setShowEregular] = useState(false);
+const [showEirregular, setShowEirregular] = useState(false);
+const [showEFreshmen, setShowEfreshmen] = useState(false);
+const [showEtransferee, seteShowEtransferee] = useState(false);
+const [showGrad, setShowGrad] = useState(false);
+const [showBachelor, setShowBachelor] = useState(false);
+const [showDiploma, setShowDiploma] = useState(false);
+const [showHistory, setShowHistory] = useState(false);
+const [showMission, setShowMission] = useState(false);
+const [showVision, setShowVision] = useState(false);
+const [showHymn, setShowHymn] = useState(false);
 
 //CANTEEN
 const [canteenButton, setCanteenVisible] = useState(false);
@@ -212,31 +230,8 @@ const [yumulButton, setYumulVisible] = useState(false);
 const [yumulResponse, setYumulResponse] = useState('');
 //HOSPITALITY 
 const [hMButton, setHMVisible] = useState(false);
-const [HMResponse, setHMResponse] = ('');
+const [HMResponse, setHMResponse] = useState('');
 
-// Set the virtual file system for pdfMake
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
-
-  // function for generating the pdf file when download button is click
-  const generatePDF = () => {
-    const docDefinition = {
-      content: [
-        { text: '"ISKA" Virtual Assistant', style: 'header', alignment: 'center'},
-        { text: displayTextOnScreen || selectedYearResponse || programsResponse || aboutResponse, alignment: 'justify'},
-      ],
-      styles: {
-        header: {
-          fontSize: 18,
-          bold: true,
-          margin: [0, 0, 0, 10],
-        },
-      },
-    };
-
-    pdfMake.createPdf(docDefinition).download('iska-web-app.pdf');
-  };
-
-  // calling the response data from json file 
 
   const processes = processesData;
 
@@ -260,7 +255,6 @@ const handleYearButtonClick = (year) => {
   const response = Responses[year];  // Retrieve the response associated with the selected year
 
     setSelectedYearResponse(response);
-    setDownloadButtonVisible(true); // HIde the download button
 
   };
 
@@ -269,7 +263,6 @@ const handleYearButtonClick = (year) => {
     const program = Responses[programs];  // Retrieve the response associated with the selected year
 
     setSelectedProgram(program);
-    setDownloadButtonVisible(true); // HIde the download button
 
   };
 
@@ -277,86 +270,73 @@ const handleYearButtonClick = (year) => {
   const handleAboutButtonClick = (about) => {
     const abouts = Responses[about];
     setAboutResponse(abouts);
-    setDownloadButtonVisible(true); // HIde the download button
 
   };
 
   const handleCanteenButtonClick = (canteen) => {
-    const canteenn = Maps[canteen];
+    const canteenn = Responses[canteen];
 
     setCanteenResponse(canteenn);
-    setDownloadButtonVisible(false);
   }
 
   const handleScienceButtonClick = (science) => {
     const sciencee = Responses[science];
 
     setScienceResponse(sciencee);
-    setDownloadButtonVisible(false);
   }
 
   const handleEngineerButtonClick = (engineer) => {
     const engineerr = Responses[engineer];
 
     setEngineerResponse(engineerr);
-    setDownloadButtonVisible(false);
   }
 
   const handleEducButtonClick = (educ) => {
     const educc = Responses[educ];
 
     setEducResponse(educc);
-    setDownloadButtonVisible(false);
   }
   const handleAdmissionButtonClick = (admission) => {
     const admissionn = Responses[admission];
 
     setAdmissionResponse(admissionn);
-    setDownloadButtonVisible(false);
   }
   const handleGrandstandButtonClick = (grandstand) => {
     const grandstandd = Responses[grandstand];
 
     setGrandStandResponse(grandstandd);
-    setDownloadButtonVisible(false);
   }
   const handleGymButtonClick = (gym) => {
     const gymm = Responses[gym];
 
     setGymResponse(gymm);
-    setDownloadButtonVisible(false);
   }
   const handlelab1ButtonClick = (lab1) => {
     const lab1b = Responses[lab1];
 
     setLab1Response(lab1b);
-    setDownloadButtonVisible(false);
   }
   const handleLab2ButtonClick = (lab2) => {
     const lab2b = Responses[lab2];
 
     setLab2Response(lab2b);
-    setDownloadButtonVisible(false);
   }
 
   const handleHMButtonClick = (hm) => {
     const hMm = Responses[hm];
 
     setHMResponse(hMm);
-    setDownloadButtonVisible(false);
   }
 
   const handleNantesButtonClick = (nantes) => {
     const nantesh = Responses[nantes];
 
     setNantesResponse(nantesh);
-    setDownloadButtonVisible(false);
   }
   const handleYumulButtonClick = (yumul) => {
     const yumull = Responses[yumul];
 
     setYumulResponse(yumull);
-    setDownloadButtonVisible(false);
   }
 
 
@@ -382,7 +362,6 @@ const displayText = (text) => {
   const resetDisplay = () => {
     setDisplayTextOnScreen('');
     setResetButtonVisible(false); // Hide the reset button
-    setDownloadButtonVisible(false); // Hide the download button
     setYearButtonVisible(false);
     setSelectedYearResponse(false);
     displayOtherText(false);
@@ -392,12 +371,56 @@ const displayText = (text) => {
     setAboutVisible(false);
     setResponseDisplayed(false);
     setRecognizedProcessText(false);
+
     setCanteenResponse(false);
     setCanteenVisible(false);
+
     setScienceVisible(false);
     setScienceResponse(false);
+
     setEngineerVisible(false);
     setEngineerResponse(false);
+
+    setAdmissionVisible(false);
+    setAdmissionResponse(false);
+
+    setYumulVisible(false);
+    setYumulResponse(false);
+
+    setLab1Visible(false);
+    setLab1Response(false);
+
+    setLab2Visible(false);
+    setLab2Response(false);
+
+    setGymVisible(false);
+    setGymResponse(false);
+
+    setGrandStandVisible(false);
+    setGrandStandResponse(false);
+
+    setNantesVisible(false);
+    setNantesResponse(false);
+
+    setEducVisible(false);
+    setEducResponse(false);
+
+    setHMVisible(false);
+    setHMResponse(false);
+
+
+
+    setShowEregular(false);
+    setShowEfreshmen(false);
+    setShowEirregular(false);
+    seteShowEtransferee(false);
+    setShowGrad(false);
+    setShowBachelor(false);
+    setShowDiploma(false);
+    setShowHistory(false);
+    setShowMission(false);
+    setShowVision(false);
+    setShowHymn(false);
 
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
@@ -424,7 +447,6 @@ const displayText = (text) => {
       displayText(`${get.response}`);
       setRecognizedProcessText(recognitionText);
       setResetButtonVisible(true);
-      setDownloadButtonVisible(true);
     },
   }));
   
@@ -438,7 +460,6 @@ const displayText = (text) => {
         const textDisplay = `Hello, I'm ISKA, how can I assist you?`;
         displayOtherText(textDisplay);
         setResetButtonVisible(true);
-        setDownloadButtonVisible(false);
         setProgramsButton(false);
 
         setAboutResponse(false);
@@ -451,8 +472,55 @@ const displayText = (text) => {
         
         setResponseDisplayed(true);
         setCommandRecognized(true);
-
+        //CANTEEN
         setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
 
 
       }
@@ -467,7 +535,6 @@ const displayText = (text) => {
         const textDisplay = `Hi, I am ISKA, a PUP Lopez Virtual Assistant developed by the team Code Craft a 4th year BSIT students.`;
         displayOtherText(textDisplay);
         setResetButtonVisible(true);
-        setDownloadButtonVisible(false);
         setProgramsButton(false);
 
         setAboutResponse(false);
@@ -481,8 +548,55 @@ const displayText = (text) => {
         setResponseDisplayed(true);
 
         setCommandRecognized(true);
-
+                //CANTEEN
         setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
 
 
       }
@@ -495,7 +609,6 @@ const displayText = (text) => {
         resetTranscript();
         displayText('These is the map of P U P lopez quezon branch')
         setResetButtonVisible(true);
-        setDownloadButtonVisible(false);
         setProgramsButton(false);
 
 
@@ -508,8 +621,55 @@ const displayText = (text) => {
         setResponseDisplayed(true);
         
         setResponseDisplayed(true);
-        
+        //CANTEEN
         setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
 
       },
     },
@@ -540,8 +700,55 @@ const displayText = (text) => {
         setResponseDisplayed(true); // Set responseDisplayed to true
         
         setCommandRecognized(true);
-
+        //CANTEEN
         setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
 
 
 
@@ -578,7 +785,6 @@ const displayText = (text) => {
         displayOtherText(textDisplay);
         setDisplayTextOnScreen(text);
         setResetButtonVisible(true);
-        setDownloadButtonVisible(false);
         setProgramsButton(false);
 
         setAboutResponse(false);
@@ -590,8 +796,55 @@ const displayText = (text) => {
         setResponseDisplayed(true); // Set responseDisplayed to true
 
         setCommandRecognized(true);
-
+        //CANTEEN
         setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
 
         
     const textDisplayContainer = document.querySelector('.textOther');
@@ -627,8 +880,55 @@ const displayText = (text) => {
         setResponseDisplayed(true); // Set responseDisplayed to true
 
         setCommandRecognized(true);
-
+        //CANTEEN
         setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
 
         
     const textDisplayContainer = document.querySelector('.textOther');
@@ -665,8 +965,55 @@ const displayText = (text) => {
         setResponseDisplayed(true); // Set responseDisplayed to true
 
         setCommandRecognized(true);
-
+        //CANTEEN
         setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
         
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
@@ -705,6 +1052,19 @@ const displayText = (text) => {
 
         setCanteenVisible(true);
         setCanteenResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
       }
     },
 
@@ -741,6 +1101,19 @@ const displayText = (text) => {
 
         setScienceVisible(true);
         setScienceResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
       }
     },
     {
@@ -777,6 +1150,46 @@ const displayText = (text) => {
         //ENGINEER
         setEngineerVisible(true);
         setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
       }
     },
     {
@@ -813,9 +1226,46 @@ const displayText = (text) => {
         //ENGINEER
         setEngineerVisible(false);
         setEngineerResponse(false);
-
+        //YUMUL
         setYumulVisible(true);
         setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
       } 
     },
     {
@@ -852,12 +1302,46 @@ const displayText = (text) => {
         //ENGINEER
         setEngineerVisible(false);
         setEngineerResponse(false);
-
+        //YUMUL
         setYumulVisible(false);
         setYumulResponse(false);
-
+        //NANTES
         setNantesVisible(true);
         setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
       }
     },
     {
@@ -903,6 +1387,38 @@ const displayText = (text) => {
         //GYMNASIUM
         setGymVisible(true);
         setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+
       }
     },
     {
@@ -951,6 +1467,34 @@ const displayText = (text) => {
         //GRANDSTAND
         setGrandStandVisible(true);
         setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
       }
     },
     {
@@ -1002,15 +1546,40 @@ const displayText = (text) => {
         //EDUCATION
         setEducVisible(true);
         setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
       }
     },
     {
       command: ['admission', '* admission', 'admission *', '* admission *'],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Admission Building');
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        Please select your nearest area in campus, so that I can assist you to show the way to Admission Building
         `;
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
@@ -1051,11 +1620,33 @@ const displayText = (text) => {
         setGrandStandVisible(false);
         setGrandStandResponse(false);
         //EDUCATION
-        setEducVisible(true);
+        setEducVisible(false);
         setEducResponse(false);
         //ADMISSION
         setAdmissionVisible(true);
         setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
       }
     },
     {
@@ -1107,7 +1698,7 @@ const displayText = (text) => {
         setGrandStandVisible(false);
         setGrandStandResponse(false);
         //EDUCATION
-        setEducVisible(true);
+        setEducVisible(false);
         setEducResponse(false);
         //ADMISSION
         setAdmissionVisible(false);
@@ -1115,6 +1706,25 @@ const displayText = (text) => {
         //LAB1
         setLab1Visible(true);
         setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
       }
     },
     {
@@ -1177,10 +1787,26 @@ const displayText = (text) => {
           //LAB2
           setLab2Visible(true);
           setLab2Response(false);
+          //HOSPITALITY
+          setHMVisible(false);
+          setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
       }
     },
     {
-      command: ['* hospitality *', '* hospitality', 'hospitality management', 'hospitality *', '* hospitality management', 'hospitality management *', '* hospitality management *'],
+      command: ['hospitality'],
       callback: () => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
@@ -1240,8 +1866,881 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(true);
         setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
       }
     },
+    {
+      command: ['regular', '* regular', 'regular *', '* regular *'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the process on how to enroll as a freshmen at PUP Lopez`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(true);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+        
+
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+    {
+      command: ['irregular', '* irregular', 'irregular * ', '* irregular *'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(true);
+        seteShowEtransferee(false);
+        setShowEfreshmen(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+    {
+      command: ['freshmen', 'freshman'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(true);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+    {
+      command: ['transferee', '* transferee', 'transferee * ', '* transferee *'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(true);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+    {
+      command: ['graduation', '* graduation', 'graduation * ', '* graduation *'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(true);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+    {
+      command: ['bachelor', '* bachelor', 'bachelor *', '* bachelor *'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(true);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+    {
+      command: ['diploma', '* diploma', 'diploma *', '* diploma *'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(true);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+    {
+      command: ['history', '* history', 'history *', '* history *'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(true)
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+    {
+      command: ['mission', '* mission', 'mission *', '* mission *'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(true);
+        setShowVision(false);
+        setShowHymn(false);
+
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+    {
+      command: ['vision', '* vision ', 'vision *', '* vision *'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(true);
+        setShowHymn(false);
+
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+    {
+      command: ['hymn', '* hymn ', 'hymn *', '* hymn *'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(true);
+
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+    
 
    // Also command for asking the locations
     ...processesCommands,
@@ -1269,7 +2768,6 @@ const sendTextToCommands = (text) => {
     const textDisplay = `Sorry I currently do not have information about that.`
     displayOtherText(textDisplay);
     
-    setDownloadButtonVisible(false); // Display a message for unrecognized commands
     setResetButtonVisible(true);
     setAboutResponse(false);
     setAboutVisible(false);
@@ -1279,6 +2777,47 @@ const sendTextToCommands = (text) => {
     setSelectedProgram(false);
     setSelectedYearResponse(false);
     setYearButtonVisible(false);
+
+    setCanteenVisible(false);
+    setCanteenResponse(false);
+
+    setAdmissionVisible(false);
+    setAdmissionResponse(false);
+    
+    setYumulVisible(false);
+    setYumulResponse(false);
+
+    setLab1Visible(false);
+    setLab1Response(false);
+
+    setLab2Visible(false);
+    setLab2Response(false);
+
+    setScienceVisible(false);
+    setScienceResponse(false);
+    
+    setEngineerVisible(false);
+    setEngineerResponse(false);
+
+    setEducVisible(false);
+    setEducResponse(false);
+
+    setGrandStandVisible(false);
+    setGrandStandResponse(false);
+
+    setGymVisible(false);
+    setGymResponse(false);
+
+    setHMVisible(false);
+    setHMResponse(false);
+    
+    setNantesVisible(false);
+    setNantesResponse(false);
+
+    setShowEregular(false);
+    setShowEfreshmen(false);
+    setShowEirregular(false);
+    seteShowEtransferee(false);
 
     // Show elements with the textOther classname
     const showTextOther = document.querySelectorAll('.textOther');
@@ -1373,7 +2912,7 @@ const sendTextToCommands = (text) => {
 
   <div className='buttons'>
           {yearbutton && (
-            <YearButtons onYearButtonClick={handleYearButtonClick} jsonData={Responses}/>
+            <YearButtons onYearButtonClick={handleYearButtonClick} />
                   )}
           {programsButton && (
             <Program onProgramClick={handleProgramButtonClick} />
@@ -1383,7 +2922,7 @@ const sendTextToCommands = (text) => {
           )}
         {/* BUILDINGS */}
           {canteenButton && (
-            <Canteen onCanteenButtonClick = {handleCanteenButtonClick} jsonData={Maps}/>
+            <Canteen onCanteenButtonClick = {handleCanteenButtonClick}/>
           )}
           {scienceButton && (
             <Science onScienceButtonClick = {handleScienceButtonClick} />
@@ -1430,13 +2969,24 @@ const sendTextToCommands = (text) => {
         </div>
       <div className='container'>
      
+      {showEregular && <Eregular />}
+      {showEirregular && <Eirregular />}
+      {showEFreshmen && <Efreshmen />}
+      {showEtransferee && <Etransferee />}
+      {showGrad && <Graduation />}
+      {showBachelor && <Bachelor />}
+      {showDiploma && <Diploma />}
+      {showHistory && <History />}
+      {showMission && <Mission />}
+      {showVision && <Vision />}
+      {showHymn && <Hymn />}
+
         <div className="otherResponse">
-        {(selectedYearResponse || programsResponse || aboutResponse) && (
           <p className="displayResponse">
           {selectedYearResponse}{programsResponse}{aboutResponse}
           {canteenResponse}{scienceResponse}{engineerResponse}{yumulResponse}{admissionResponse}{nantesResponse}{lab1Response}{lab2Response}{educResponse}{HMResponse}{grandstandResponse}{gymResponse}
-          </p>         
-        )}
+          </p>
+        
         <p>{displayTextOnScreen}</p>
       </div>
       
@@ -1446,16 +2996,6 @@ const sendTextToCommands = (text) => {
               <p className="recognized-text-content">{recognizedProcessText}</p>
             )}
       </div>
-      </div>
-
-      <div className='download-container'>
-      <div className='download-button'>
-      {downloadButtonVisible && (
-        <button onClick={generatePDF}> 
-<FontAwesomeIcon  icon={faFileArrowDown}  size="xl" style={{"--fa-primary-color": "#fab005", "--fa-secondary-color": "#ffffff",}} /> </button>
-      )}
-      </div>
-
       </div>
       </section>
 

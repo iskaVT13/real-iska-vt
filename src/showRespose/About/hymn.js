@@ -84,23 +84,26 @@ const Hymn = () => {
       <div className='step'>
         <h4 className=''>IMNO NG PUP</h4>
         <p>S. Calabig, S. Roldan, and R. Amaranto</p><br/>
-        <p className='hymn'>Sintang Paaralan <br/>
-Tanglaw ka ng bayan <br/>
-Pandayan ng isip ng kabataan <br/>
-Kami ay dumating nang salat sa yaman <br/>
-Hanap na dunong ay iyong alay <br/>
-Ang layunin mong makatao <br/>
-Dinarangal ang Pilipino <br/>
-Ang iyong aral, diwa, adhikang taglay <br/>
-PUP, aming gabay <br/>
-Paaralang dakila <br/>
-PUP, pinagpala <br/>
-Gagamitin ang karunungan <br/>
-Mula sa iyo, para sa bayan <br/>
-Ang iyong aral, diwa, adhikang taglay <br/>
-PUP, aming gabay <br/>
-Paaralang dakila <br/>
-PUP, pinagpala</p> <br/>
+        <ul className='lyrics'>
+          <li>Sintang Paaralan</li>
+          <li>Tanglaw ka ng bayan</li>
+          <li>Pandayan ng isip ng kabataan</li>
+          <li>Kami ay dumating nang salat sa yaman </li>
+          <li>Hanap na dunong ay iyong alay</li>
+          <li>Ang layunin mong makatao </li>
+          <li>Dinarangal ang Pilipino </li>
+          <li>Ang iyong aral, diwa, adhikang taglay </li>
+          <li>PUP, aming gabay</li>
+          <li>Paaralang dakila</li>
+          <li>PUP, pinagpala </li>
+          <li>Gagamitin ang karunungan </li>
+          <li>Mula sa iyo, para sa bayan </li>
+          <li>Ang iyong aral, diwa, adhikang taglay</li>
+          <li>PUP, aming gabay </li>
+          <li>Paaralang dakila </li>
+          <li>PUP, pinagpala</li>
+        </ul>
+
         <img className='screenshot' src={pylon} alt='Step-image1' />
       </div>
 

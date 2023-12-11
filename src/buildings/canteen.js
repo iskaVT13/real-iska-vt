@@ -7,13 +7,13 @@ import admission from '../areaImage/Admin Building.jpg';
 import lab1 from '../areaImage/pylon2022.jpg';
 import lab2 from '../areaImage/pylon2022.jpg';
 import yumul from '../areaImage/Yumul Building.jpg';
-import canteen from '../areaImage/pylon2022.jpg';
 import nantes from '../areaImage/pylon2022.jpg';
 import gymnasium from '../areaImage/pylon2022.jpg';
 import grandstand from '../areaImage/pylon2022.jpg';
 import science from '../areaImage/Health and Sciences Building.jpg';
 import education from '../areaImage/pylon2022.jpg';
 import engineer from '../areaImage/Engineering Building.jpg';
+import hospitality from '../areaImage/pylon2022.jpg';
 
 function CanteenButton() {
   const [isActive, setIsActive] = useState(false);
@@ -23,7 +23,7 @@ function CanteenButton() {
 
   useEffect(() => {
     // Import the responses JSON file dynamically
-    import('../fileJSON/map.json')
+    import('../goingTo/goCanteen.json')
       .then((responseModule) => setResponses(responseModule.default))
       .catch((error) => console.error('Error loading responses:', error));
   }, []);
@@ -83,8 +83,6 @@ function CanteenButton() {
         <p>COMPUTER LABORATORY 2</p>
         <img onClick={() => handleImageClick('yumul')} alt='yumul' className='yumul-image' src={yumul} />
         <p>YUMUL BUILDING</p>
-        <img onClick={() => handleImageClick('canteen')} alt='canteen' className='canteen-image' src={canteen} />
-        <p>CANTEEN</p>
         <img onClick={() => handleImageClick('nantes')}  alt='nantes' className='nantes-image' src={nantes} />
         <p>ACCOUNTACY and MARKETING BUILDING</p>
         <img onClick={() => handleImageClick('gymnasium')} alt='gymnasium' className='gymnasium-image' src={gymnasium} />
@@ -97,6 +95,8 @@ function CanteenButton() {
         <p>GRANDSTAND</p>
         <img onClick={() => handleImageClick('engineer')}  alt='engineer' className='engineer-image' src={engineer} />
         <p>ENGINEERING and ARCHTECTURE BUILDING</p>
+        <img onClick={() => handleImageClick('hospitality')}  alt='hospitality' className='jm-image' src={hospitality} />
+        <p>HOSPITALITY MANAGEMENT BUILDING</p>
       
     </div>
   )}

@@ -1,12 +1,10 @@
 import React from 'react';
-import '../showResponse.css';
+import './showResponse.css';
 import { jsPDF } from 'jspdf';
 
-import pylon from '../../areaImage/pylon2022.jpg';
-import step1 from '../Enroll/enrollPicture/log in.png'
 
 
-const Regular = () => {
+const Graduation = () => {
   const handleDownloadPDF = () => {
     const element = document.querySelector('.step');
 
@@ -17,7 +15,7 @@ const Regular = () => {
       const pageWidth = pdf.internal.pageSize.getWidth();
       
       pdf.setFontSize(18);
-      const headerText = 'Regular Student Enrollment Steps';
+      const headerText = 'Irregular Student Enrollment Steps';
       const headerWidth = pdf.getStringUnitWidth(headerText) * pdf.internal.getFontSize() / pdf.internal.scaleFactor;
       const centerPosition = (pageWidth - headerWidth) / 2;
 
@@ -75,7 +73,7 @@ const Regular = () => {
        pdf.text(footerText, centerFooterPosition, pdf.internal.pageSize.getHeight() - margin);
  
 
-      pdf.save('RegularStudent.pdf');
+      pdf.save('Irregular-Student.pdf');
     } else {
       console.error('Element with class "step" not found');
     }
@@ -83,22 +81,14 @@ const Regular = () => {
   return (
     <div>
       <div className='step'>
-        <h4 className=''>STEPS TO FOLLOW:</h4><br></br>
-        <p>Step 1: Log in to your SIS Account.</p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
-        <p>Step 2. Check if your grades is complete (Grades Section )</p>
-          <img className='screenshot' src={pylon} alt='Step-image2' />
-        <p>Step 3. Go to enrollment section </p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
-        <p>Step 4. Check all the subjects and the schedule to enroll</p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
-        <p>Step 5 : Click Save and Assess </p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
-        <p>Step 6 : Review and Click okay to confirm </p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
-        <p>Step 7 : Review the Assessment </p>
-        <p>Step 8 : Print the Confirmation Slip </p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
+        <h4 className=''>Graduation Requirements</h4><br></br>
+        <ul className='list'>
+            <li>A candidate for graduation should file their application for graduation with the University Registrar's Office at the start of their last semester.</li>
+            <li>A student shall be recommended for graduation when they have satisfied all academic and other requirements prescribed by the University.</li>
+            <li>No student shall be allowed to graduate from the University unless they have earned therein more than fifty percent (50%) of the academic units required in their curriculum.</li>
+            <li>A candidate for graduation should have their deficiencies made up and their record cleared not later than two weeks before the end of their semester.</li>
+            <li>No student will be issued a diploma and a transcript of records unless they have been cleared of all accountabilities.</li>
+        </ul>
       </div>
 
     <div className='download-button'>
@@ -108,4 +98,4 @@ const Regular = () => {
   );
 };
 
-export default Regular;
+export default Graduation;
