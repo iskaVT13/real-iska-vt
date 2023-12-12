@@ -63,6 +63,11 @@
       "clickedImage": "clicked3-image.jpg",
       "title": "Hospitality Management Building",
       "responseText": "Here is the way from Hospitality Management Building to Canteen"
+    },
+    "ecopark": {
+      "clickedImage": "",
+      "title": "Eco Park",
+      "responseText": "Here is the way from Eco Park to Grandstand"
     }
 
   }

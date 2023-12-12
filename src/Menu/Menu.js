@@ -14,8 +14,6 @@ const customModalStyles = {
   content: {
     border: 'none',
     padding: '0',
-    width: '350px',
-    height: '520px',
     position: 'relative',
   },
 };
@@ -27,8 +25,6 @@ const customMapModalStyles = {
   content: {
     border: 'none',
     padding: '0',
-    width: '350px',
-    height: '520px',
     position: 'relative',
   },
 };
@@ -161,7 +157,7 @@ function Menu() {
           style={customMapModalStyles}
         >
           <div className="popup-title">
-            <span>Map</span>
+            <span>PUP LOPEZ MAP</span>
           </div>
           <FontAwesomeIcon className="close" onClick={closePopup} icon={faXmark} size="2x" />
           <div

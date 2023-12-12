@@ -12,7 +12,7 @@
     align-items: center;
     text-align: center;
     height: 500px;
-    width: 350px;
+    width: 300px;
     background-color: #7E0001;
     padding: 20px;
     border-radius: 5px;
@@ -35,8 +35,8 @@
     cursor: pointer;
     color: #c59595;
     position: absolute;
-    top: 20px;
-    right: -37px;
+    top: 8px;
+    right: 10px;
     z-index: 9999;
 }
 
@@ -123,10 +123,9 @@ button:hover .icon {
     max-height: calc(100% - 250px);
     overflow-y: auto;
     padding: 20px;
-    height: 550px;
+    height: 650px;
     width: 290px;
-    justify-content: justify ;
-
+    text-align: center;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
 
@@ -162,14 +161,13 @@ button:hover .icon {
 }
 
 .map-popup-content {
-    max-height: calc(100% - 250px);
     padding: 20px;
     height: 600px;
-    width: 430px;
+    width: 300px;
 }
 
 .map-image {
-    width: 100%;
+    width: 10vh;
     height: auto;
     object-fit: scale-down; 
     transition: transform 0.3s;
@@ -188,10 +186,6 @@ button:hover .icon {
   .ReactModal__Overlay {
     background: none; /* No background, fully transparent */
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,7 +196,7 @@ button:hover .icon {
   .ReactModal__Content {
     background-color: #7E0001;
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 1001; /* Ensure the modal content is above the overlay */
   }

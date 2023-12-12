@@ -14,6 +14,7 @@ import nantes from '../areaImage/pylon2022.jpg';
 import education from '../areaImage/pylon2022.jpg';
 import engineer from '../areaImage/Engineering Building.jpg';
 import hospitality from '../areaImage/pylon2022.jpg';
+import ecopark from '../areaImage/pylon2022.jpg';
 
 function NantesButton() {
   const [isActive, setIsActive] = useState(false);
@@ -97,6 +98,8 @@ function NantesButton() {
         <p>ENGINEERING and ARCHTECTURE BUILDING</p>
         <img onClick={() => handleImageClick('hospitality')}  alt='hospitality' className='jm-image' src={hospitality} />
         <p>HOSPITALITY MANAGEMENT BUILDING</p>
+        <img onClick={() => handleImageClick('ecopark')}  alt='EcoPark' className='ecopark-image' src={ecopark} />
+        <p>Eco Park</p>
       
     </div>
   )}

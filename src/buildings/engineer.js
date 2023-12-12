@@ -14,6 +14,7 @@ import grandstand from '../areaImage/pylon2022.jpg';
 import science from '../areaImage/Health and Sciences Building.jpg';
 import education from '../areaImage/pylon2022.jpg';
 import hospitality from '../areaImage/pylon2022.jpg';
+import ecopark from '../areaImage/pylon2022.jpg';
 
 function EngineerButton() {
   const [isActive, setIsActive] = useState(false);
@@ -97,6 +98,8 @@ function EngineerButton() {
         <p>GRANDSTAND</p>
         <img onClick={() => handleImageClick('hospitality')}  alt='hospitality' className='jm-image' src={hospitality} />
         <p>HOSPITALITY MANAGEMENT BUILDING</p>
+        <img onClick={() => handleImageClick('ecopark')}  alt='EcoPark' className='ecopark-image' src={ecopark} />
+        <p>Eco Park</p>
       
     </div>
   )}

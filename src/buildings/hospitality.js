@@ -14,6 +14,7 @@ import grandstand from '../areaImage/pylon2022.jpg';
 import science from '../areaImage/Health and Sciences Building.jpg';
 import education from '../areaImage/pylon2022.jpg';
 import engineer from '../areaImage/Engineering Building.jpg';
+import ecopark from '../areaImage/pylon2022.jpg';
 
 function HmButton() {
   const [isActive, setIsActive] = useState(false);
@@ -97,6 +98,8 @@ function HmButton() {
         <p>GRANDSTAND</p>
         <img onClick={() => handleImageClick('engineer')}  alt='engineer' className='engineer-image' src={engineer} />
         <p>ENGINEERING and ARCHTECTURE BUILDING</p>
+        <img onClick={() => handleImageClick('ecopark')}  alt='EcoPark' className='ecopark-image' src={ecopark} />
+        <p>Eco Park</p>
       
     </div>
   )}

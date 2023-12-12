@@ -26,7 +26,7 @@ import About from './displayButton/displayAbout';
 import "@fontsource/krona-one"; 
 
 //GREETINGS AND CAN DO OF ISKA
-
+import Avatar from './greetingResponse/hello';
 
 //QUERIES OR QUESTIONS about PUP
 import Eregular from './showRespose/Enroll/regular';
@@ -56,6 +56,7 @@ import Gymnasium from './buildings/gymnasium';
 import Nantes from './buildings/nantes';
 import Education from './buildings/education';
 import Hospitality from './buildings/hospitality';
+import EcoPark from './buildings/ecoPark';
 
 import Vr from './VRtour';
 
@@ -195,6 +196,9 @@ const [showMission, setShowMission] = useState(false);
 const [showVision, setShowVision] = useState(false);
 const [showHymn, setShowHymn] = useState(false);
 
+//GREETINGS 
+const [showAvatar, setShowAvatar] = useState(false);
+
 //CANTEEN
 const [canteenButton, setCanteenVisible] = useState(false);
 const [canteenResponse, setCanteenResponse] = useState('');
@@ -231,6 +235,8 @@ const [yumulResponse, setYumulResponse] = useState('');
 //HOSPITALITY 
 const [hMButton, setHMVisible] = useState(false);
 const [HMResponse, setHMResponse] = useState('');
+const [ecoparkButton, setEcoparkVisible] = useState(false);
+const [ecoparkResponse, setEcoparkResponse] = useState(false);
 
 
   const processes = processesData;
@@ -338,6 +344,11 @@ const handleYearButtonClick = (year) => {
 
     setYumulResponse(yumull);
   }
+  const handleEcoParkButtonClick = (ecopark) => {
+    const ecoparkk = Responses[ecopark];
+
+    setEcoparkResponse(ecoparkk);
+  }
 
 
 // Function to display the text and speak it
@@ -408,6 +419,8 @@ const displayText = (text) => {
     setHMVisible(false);
     setHMResponse(false);
 
+    setEcoparkVisible(false);
+    setEcoparkResponse(false);
 
 
     setShowEregular(false);
@@ -422,9 +435,17 @@ const displayText = (text) => {
     setShowVision(false);
     setShowHymn(false);
 
+    setShowAvatar(true);
+
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+
+      
+      const avatarDisplay = document.querySelector('.hello');
+      while (avatarDisplay.firstChild) {
+        avatarDisplay.removeChild(avatarDisplay.firstChild);
+      }
     }
   };
 
@@ -456,9 +477,7 @@ const displayText = (text) => {
       command: ['hi', 'hello', 'hey', '* hello *', '* hello', 'hello *'],
       callback:() => {
         resetTranscript();
-        displayText("Hello, I'm iska, how can I assist you?");
-        const textDisplay = `Hello, I'm ISKA, how can I assist you?`;
-        displayOtherText(textDisplay);
+        displayText("Hi, I am iska, a P U P Lopez Virtual Assistant developed by the team Code Craft a 4th year B S I T students.");
         setResetButtonVisible(true);
         setProgramsButton(false);
 
@@ -508,6 +527,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -522,7 +544,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(true);
 
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
 
     },
@@ -532,8 +559,6 @@ const displayText = (text) => {
       callback: () => {
         resetTranscript();
         displayText('Hi, I am iska, a P U P Lopez Virtual Assistant developed by the team Code Craft a 4th year B S I T students.');
-        const textDisplay = `Hi, I am ISKA, a PUP Lopez Virtual Assistant developed by the team Code Craft a 4th year BSIT students.`;
-        displayOtherText(textDisplay);
         setResetButtonVisible(true);
         setProgramsButton(false);
 
@@ -545,8 +570,6 @@ const displayText = (text) => {
 
         setResponseDisplayed(true);
         
-        setResponseDisplayed(true);
-
         setCommandRecognized(true);
                 //CANTEEN
         setCanteenVisible(false);
@@ -584,6 +607,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);       
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -598,6 +624,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(true);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
 
       }
 
@@ -657,6 +689,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -670,6 +705,13 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
 
       },
     },
@@ -736,6 +778,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -750,8 +795,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(false);
 
-
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -832,6 +881,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -846,6 +898,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
@@ -916,6 +974,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -930,6 +991,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
@@ -1001,6 +1068,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1014,7 +1084,13 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+    hideAvatar.forEach((element) => {
+      element.style.display = 'none';
+    });
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -1049,9 +1125,45 @@ const displayText = (text) => {
         setResponseDisplayed(true); // Set responseDisplayed to true
 
         setCommandRecognized(true);
-
+        //CANTEEN
         setCanteenVisible(true);
         setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1065,6 +1177,13 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
 
@@ -1098,9 +1217,42 @@ const displayText = (text) => {
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
-
+        //SCIENCE
         setScienceVisible(true);
         setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1114,6 +1266,13 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1177,6 +1336,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1190,6 +1352,13 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1253,6 +1422,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1266,6 +1438,13 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       } 
     },
     {
@@ -1329,6 +1508,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1342,6 +1524,13 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1405,6 +1594,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1419,6 +1611,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1482,6 +1680,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1495,6 +1696,14 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
+
       }
     },
     {
@@ -1558,6 +1767,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1571,6 +1783,13 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1647,6 +1866,13 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1712,6 +1938,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1725,6 +1954,14 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
+
       }
     },
     {
@@ -1790,6 +2027,9 @@ const displayText = (text) => {
           //HOSPITALITY
           setHMVisible(false);
           setHMResponse(false);
+          //ECOPARK
+          setEcoparkVisible(false);
+          setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1803,6 +2043,13 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1866,6 +2113,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(true);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1879,7 +2129,15 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
+      
     },
     {
       command: ['regular', '* regular', 'regular *', '* regular *'],
@@ -1939,6 +2197,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(true);
         setShowEirregular(false);
@@ -1952,8 +2213,14 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        
 
+        setShowAvatar(false);
+
+        
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2018,6 +2285,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(true);
@@ -2032,6 +2302,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2096,6 +2372,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2110,6 +2389,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2174,6 +2459,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2188,6 +2476,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2252,6 +2546,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2266,6 +2563,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2330,6 +2633,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2344,6 +2650,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2408,6 +2720,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2422,6 +2737,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2486,6 +2807,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2500,6 +2824,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2564,6 +2894,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2578,6 +2911,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2642,6 +2981,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2656,6 +2998,12 @@ const displayText = (text) => {
         setShowVision(true);
         setShowHymn(false);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2720,6 +3068,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //ECOPARK
+        setEcoparkVisible(false);
+        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2734,6 +3085,12 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(true);
 
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2810,6 +3167,9 @@ const sendTextToCommands = (text) => {
 
     setHMVisible(false);
     setHMResponse(false);
+
+    setEcoparkVisible(false);
+    setEcoparkResponse(false);
     
     setNantesVisible(false);
     setNantesResponse(false);
@@ -2819,6 +3179,9 @@ const sendTextToCommands = (text) => {
     setShowEirregular(false);
     seteShowEtransferee(false);
 
+    setShowAvatar(false);
+
+
     // Show elements with the textOther classname
     const showTextOther = document.querySelectorAll('.textOther');
     showTextOther.forEach((element) => {
@@ -2827,6 +3190,10 @@ const sendTextToCommands = (text) => {
     const showReset = document.querySelectorAll('.reset-button');
     showReset.forEach((element) => {
       element.style.display = '';
+    });
+    const hideAvatar = document.querySelectorAll('.avatar-container');
+    hideAvatar.forEach((element) => {
+      element.style.display = 'none';
     });
     
   }
@@ -2874,9 +3241,7 @@ const sendTextToCommands = (text) => {
     <h1 className='app-name'>
         IS<span>KA</span></h1>
     </div>
-      <p className={responseDisplayed ? 'desc-hidden' : 'desc'}>
-  Hi! I'm ISKA, PUP Virtual Assistant, how can I help you?
-</p>
+      <p className={responseDisplayed ? 'desc-hidden' : 'desc'}></p>
 
       </div>
       <div className='right-icon'>
@@ -2955,7 +3320,10 @@ const sendTextToCommands = (text) => {
             <Education onEducationButtonClick = {handleEducButtonClick} />
           )}
           {hMButton && (
-            <Hospitality onHmBUttonClick = {handleHMButtonClick} />
+            <Hospitality onHmButtonClick = {handleHMButtonClick} />
+          )}
+          {ecoparkButton && (
+            <EcoPark onEcoparkButtonClick = {handleEcoParkButtonClick} />
           )}
 
         </div>
@@ -2980,11 +3348,13 @@ const sendTextToCommands = (text) => {
       {showMission && <Mission />}
       {showVision && <Vision />}
       {showHymn && <Hymn />}
+      {showAvatar && <Avatar />}
+      <Avatar />
 
         <div className="otherResponse">
           <p className="displayResponse">
           {selectedYearResponse}{programsResponse}{aboutResponse}
-          {canteenResponse}{scienceResponse}{engineerResponse}{yumulResponse}{admissionResponse}{nantesResponse}{lab1Response}{lab2Response}{educResponse}{HMResponse}{grandstandResponse}{gymResponse}
+          {canteenResponse}{scienceResponse}{engineerResponse}{yumulResponse}{admissionResponse}{nantesResponse}{lab1Response}{lab2Response}{educResponse}{HMResponse}{grandstandResponse}{gymResponse}{ecoparkResponse}
           </p>
         
         <p>{displayTextOnScreen}</p>

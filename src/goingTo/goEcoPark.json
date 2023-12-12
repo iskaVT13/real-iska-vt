@@ -1,9 +1,14 @@
 {
     "gate": {
-      "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/Gate to Admin.gif",
+      "clickedImage": "",
       "title": "Main Gate",
       "responseText": "Here is the way from Main gate to Admission Building"
     },
+    "admission": {
+        "clickedImage": "",
+        "title": "Admission Building",
+        "responseText": "Here is the way from Admission Building to Canteen"
+      },
     "lab1": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/lab1 to admin.gif",
       "title": "ComLab-1",
@@ -58,11 +63,6 @@
       "clickedImage": "clicked3-image.jpg",
       "title": "Hospitality Management Building",
       "responseText": "Here is the way from Hospitality Management Building to Canteen"
-    },
-    "ecopark": {
-      "clickedImage": "",
-      "title": "Eco Park",
-      "responseText": "Here is the way from Eco Park to Admission Building"
     }
 
   }
