@@ -197,6 +197,8 @@ const [showHistory, setShowHistory] = useState(false);
 const [showMission, setShowMission] = useState(false);
 const [showVision, setShowVision] = useState(false);
 const [showHymn, setShowHymn] = useState(false);
+const[showAchiever, setShowAchiever] = useState(false);
+const [showAvatar, setShowAvatar] = useState(false);
 
 //CANTEEN
 const [canteenButton, setCanteenVisible] = useState(false);
@@ -433,6 +435,9 @@ const displayText = (text) => {
     setShowMission(false);
     setShowVision(false);
     setShowHymn(false);
+    setShowAchiever(false);
+
+    setShowAvatar(true);
 
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
@@ -3356,6 +3361,9 @@ const sendTextToCommands = (text) => {
       {showMission && <Mission />}
       {showVision && <Vision />}
       {showHymn && <Hymn />}
+      {showAvatar && <Avatar />}
+      {showAchiever && <Achiever />}
+      <Avatar />
 
         <div className="otherResponse">
           <p className="displayResponse">

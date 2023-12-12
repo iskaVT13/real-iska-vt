@@ -1,6 +1,6 @@
 .avatar-container  {
     width: fit-content;
-    position: relative;
+    position: fixed;
     align-items: center;
 }
 
