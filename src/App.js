@@ -34,6 +34,8 @@ import Eirregular from './showRespose/Enroll/irregular';
 import Efreshmen from './showRespose/Enroll/freshmen';
 import Etransferee from './showRespose/Enroll/transferee';
 
+import Achiever from './showRespose/Achiever/PLDL';
+
 import Graduation from './showRespose/graduationReq';
 import Bachelor from './showRespose/Programs/bachelor';
 import Diploma from './showRespose/Programs/diploma';
@@ -194,6 +196,7 @@ const [showHistory, setShowHistory] = useState(false);
 const [showMission, setShowMission] = useState(false);
 const [showVision, setShowVision] = useState(false);
 const [showHymn, setShowHymn] = useState(false);
+const [showAchiever, setShowAchiever] = useState(false);
 
 //CANTEEN
 const [canteenButton, setCanteenVisible] = useState(false);
@@ -421,6 +424,7 @@ const displayText = (text) => {
     setShowMission(false);
     setShowVision(false);
     setShowHymn(false);
+    setShowAchiever(false);
 
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
@@ -521,6 +525,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
 
       }
@@ -597,6 +602,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
 
       }
@@ -670,6 +676,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
       },
     },
@@ -749,6 +756,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
 
 
@@ -845,6 +853,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
         
     const textDisplayContainer = document.querySelector('.textOther');
@@ -929,6 +938,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
         
     const textDisplayContainer = document.querySelector('.textOther');
@@ -1014,6 +1024,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
         
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
@@ -1065,6 +1076,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
       }
     },
 
@@ -1114,6 +1126,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
       }
     },
     {
@@ -1190,6 +1203,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
       }
     },
     {
@@ -1266,6 +1280,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
       } 
     },
     {
@@ -1342,6 +1357,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
       }
     },
     {
@@ -1418,6 +1434,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
       }
     },
@@ -1495,6 +1512,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
       }
     },
     {
@@ -1571,6 +1589,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
       }
     },
     {
@@ -1647,6 +1666,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
       }
     },
     {
@@ -1725,6 +1745,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
       }
     },
     {
@@ -1803,6 +1824,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
       }
     },
     {
@@ -1879,6 +1901,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
       }
     },
     {
@@ -1952,6 +1975,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
         
 
         const textDisplayContainer = document.querySelector('.textOther');
@@ -2031,6 +2055,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2109,6 +2134,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2187,6 +2213,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2265,6 +2292,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2343,6 +2371,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2421,6 +2450,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2499,6 +2529,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2577,6 +2608,7 @@ const displayText = (text) => {
         setShowMission(true);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2655,6 +2687,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(true);
         setShowHymn(false);
+        setShowAchiever(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2733,6 +2766,87 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(true);
+        setShowAchiever(false);
+
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+
+    {
+      command: ['lister', '* lister ', 'lister *', '* lister *', '* PL *'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the Requirements on how to become an Academic Achiever`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+        setShowAchiever(true);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2980,6 +3094,7 @@ const sendTextToCommands = (text) => {
       {showMission && <Mission />}
       {showVision && <Vision />}
       {showHymn && <Hymn />}
+      {showAchiever && <Achiever />}
 
         <div className="otherResponse">
           <p className="displayResponse">
