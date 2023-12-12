@@ -4,17 +4,17 @@ import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the sto
 import './building.css';
 import pylon from '../areaImage/pylon2022.jpg';
 import admission from '../areaImage/Admin Building.jpg';
-import lab2 from '../areaImage/pylon2022.jpg';
+import lab2 from '../areaImage/Lab 2.jpg';
 import yumul from '../areaImage/Yumul Building.jpg';
-import canteen from '../areaImage/pylon2022.jpg';
-import nantes from '../areaImage/pylon2022.jpg';
-import gymnasium from '../areaImage/pylon2022.jpg';
-import grandstand from '../areaImage/pylon2022.jpg';
+import nantes from '../areaImage/Nantes (front view).jpg';
+import gymnasium from '../areaImage/Gym.jpg';
+import grandstand from '../areaImage/Grandstand.jpg';
 import science from '../areaImage/Health and Sciences Building.jpg';
-import education from '../areaImage/pylon2022.jpg';
+import education from '../areaImage/Educ Bldg.jpg';
 import engineer from '../areaImage/Engineering Building.jpg';
-import hospitality from '../areaImage/pylon2022.jpg';
-import ecopark from '../areaImage/pylon2022.jpg';
+import hospitality from '../areaImage/HM _ Plant Lab (front view).jpg';
+import ecopark from '../areaImage/eco park.jpg';
+import canteen from '../areaImage/Canteen.jpg';
 
 
 function Lab1Button() {
@@ -55,6 +55,10 @@ function Lab1Button() {
     hideReset.forEach((element) => {
       element.style.display = 'none';
     });
+    const hideAvatar = document.querySelectorAll('.avatar-container');
+    hideAvatar.forEach((element) => {
+      element.style.display = 'none';
+    });
   };
 
   const handleBackButtonClick = () => {
@@ -70,6 +74,22 @@ function Lab1Button() {
       element.style.display = '';
     });
   };
+   // Function to handle text-to-speech synthesis
+   const speakText = (text) => {
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    synth.speak(utterance);
+  };
+
+  useEffect(() => {
+    // Ensure that the SpeechSynthesis API is supported
+    if ('speechSynthesis' in window) {
+      // Use speakText function to speak the responseText
+      speakText(currentButton.responseText);
+    }
+  }, [currentButton]);
+
 
   return (
     <div className="areaImage-container">

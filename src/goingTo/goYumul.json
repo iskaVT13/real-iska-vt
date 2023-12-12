@@ -2,62 +2,62 @@
     "gate": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/Gate to Canteen.gif",
       "title": "Main Gate",
-      "responseText": "Here is the way from Main gate to Canteen"
+      "responseText": "Here is the way from Main gate to Yumul Building"
     },
     "admission": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Admin to Yumul.gif",
         "title": "Admission Building",
-        "responseText": "Here is the way from Admission Building to Canteen"
+        "responseText": "Here is the way from Admission Building to Yumul Building"
       },
     "lab1": {
       "clickedImage": "clicked3-image.jpg",
       "title": "ComLab-1",
-      "responseText": "Here is the way from Computer Laboratory 1 to Canteen"
+      "responseText": "Here is the way from Computer Laboratory 1 to Yumul Building"
     },
     "lab2": {
       "clickedImage": "clicked3-image.jpg",
       "title": "comLab-2",
-      "responseText": "Here is the way from Computer Laboratory 2 to Canteen"
+      "responseText": "Here is the way from Computer Laboratory 2 to Yumul Building"
     },
     "canteen": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Canteen to yumul bldg.gif",
       "title": "Canteen",
-      "responseText": "Here is the way from Canteen to Admission Building"
+      "responseText": "Here is the way from Canteen to Yumul Building"
     },
     "gymnasium": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Gymnasium",
-      "responseText": "Here is the way from Gymnasium to Canteen"
+      "responseText": "Here is the way from Gymnasium to Yumul Building"
     },
     "nantes": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Nantes",
-      "responseText": "Here is the way from Accounting and Marketing Building to Canteen"
+      "responseText": "Here is the way from Accounting and Marketing Building to Yumul Building"
     },
     "grandstand": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Grandstand to yumul bldg.gif",
       "title": "Grandstand",
-      "responseText": "Here is the way from Grandstand to Canteen"
+      "responseText": "Here is the way from Grandstand to Yumul Building"
     },
     "engineer": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Engineer and Architecture Building",
-      "responseText": "Here is the way from Engineer and Architecture Building to Canteen"
+      "responseText": "Here is the way from Engineer and Architecture Building to Yumul Building"
     },
     "education": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Education Building",
-      "responseText": "Here is the way from Education Building to Canteen"
+      "responseText": "Here is the way from Education Building to Yumul Building"
     },
     "science": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Science Building",
-      "responseText": "Here is the way from Science Building to Canteen"
+      "responseText": "Here is the way from Science Building to Yumul Building"
     },
     "hospitality": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Hospitality Management Building",
-      "responseText": "Here is the way from Hospitality Management Building to Canteen"
+      "responseText": "Here is the way from Hospitality Management Building to Yumul Building"
     },
     "ecopark": {
       "clickedImage": "",

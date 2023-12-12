@@ -4,15 +4,15 @@ import './greet.css';
 import avatar from '../pictures/avatar.gif';
 
 
-const Hymn = () => {
+const Hello = () => {
   return (
     <div>
       <div className='avatar-container'>
-        <h3 className='hello'>Hi, I'm ISKA, a PUP Lopez Virtual Assistant developed by the team Code Craft a 4th year BSIT students.</h3>
+        <h3 className='hello'>Hi, I'm ISKA, a PUP Lopez Virtual Assistant. How can I assist you today?</h3>
         <img className='avatar' src={avatar} alt='avatar' />
       </div>
     </div>
   );
 };
 
-export default Hymn;
+export default Hello;

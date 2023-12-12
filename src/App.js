@@ -476,7 +476,7 @@ const displayText = (text) => {
   // All the command user can ask for ISKA 
   const commands = [
     {
-      command: ['hi', 'hello', 'hey', '* hello *', '* hello', 'hello *'],
+      command: ['hi', 'hello', 'hey', '* hello *', '* hello', 'hello *', 'what are you', '* what are you', 'what are you *', '* what are you *'],
       callback:() => {
         resetTranscript();
         displayText("Hi, I am iska, a P U P Lopez Virtual Assistant developed by the team Code Craft a 4th year B S I T students.");
@@ -556,89 +556,6 @@ const displayText = (text) => {
       }
 
     },
-
-    {
-      command: ['what are you', 'who are you'],
-      callback: () => {
-        resetTranscript();
-        displayText('Hi, I am iska, a P U P Lopez Virtual Assistant developed by the team Code Craft a 4th year B S I T students.');
-        setResetButtonVisible(true);
-        setProgramsButton(false);
-
-        setAboutResponse(false);
-        setAboutVisible(false);
-
-        setSelectedYearResponse(false);
-        setYearButtonVisible(false);
-
-        setResponseDisplayed(true);
-        
-        setCommandRecognized(true);
-                //CANTEEN
-        setCanteenVisible(false);
-        setCanteenResponse(false);
-        //SCIENCE
-        setScienceVisible(false);
-        setScienceResponse(false);
-        //ENGINEER
-        setEngineerVisible(false);
-        setEngineerResponse(false);
-        //YUMUL
-        setYumulVisible(false);
-        setYumulResponse(false);
-        //NANTES
-        setNantesVisible(false);
-        setNantesResponse(false);
-        //GYMNASIUM
-        setGymVisible(false);
-        setGymResponse(false);
-        //GRANDSTAND
-        setGrandStandVisible(false);
-        setGrandStandResponse(false);
-        //EDUCATION
-        setEducVisible(false);
-        setEducResponse(false);
-        //ADMISSION
-        setAdmissionVisible(false);
-        setAdmissionResponse(false);
-        //LAB1
-        setLab1Visible(false);
-        setLab1Response(false);
-        //LAB2
-        setLab2Visible(false);
-        setLab2Response(false);
-        //HOSPITALITY
-        setHMVisible(false);
-        setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);       
-
-        setShowEregular(false);
-        setShowEirregular(false);
-        setShowEfreshmen(false);
-        seteShowEtransferee(false);
-
-        setShowGrad(false);
-        setShowBachelor(false);
-        setShowDiploma(false);
-        setShowHistory(false);
-        setShowMission(false);
-        setShowVision(false);
-        setShowHymn(false);
-        setShowAchiever(false);
-
-        setShowAvatar(true);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
-
-      }
-
-    },
-
     {
       command: ['* map *', 'map *', '* map', 'map', 'university map', 'map of the university', 'show university map'],
       callback: () => {

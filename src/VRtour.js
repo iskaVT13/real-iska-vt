@@ -18,7 +18,7 @@ const MyIframeComponent = () => {
       scrolling="no"
       allowFullScreen={true}
       frameBorder="0"
-      src="https://webobook.com/public/6552cc1ac65ac70a6b17f092,en?ap=true&si=true&sm=false&sp=true&sfr=false&sl=false&sop=false&"
+      src="https://webobook.com/public/6573274008ca526d1702cd02,en?fbclid=IwAR3bP33e8DP1q7Olhwo5yZaO94nb_1NTlvoRdTAKtQlziUlYZpCTSwC_hDM"
       allowvr="yes"
     />
   );
