@@ -27,6 +27,7 @@ import "@fontsource/krona-one";
 
 //GREETINGS AND CAN DO OF ISKA
 import Avatar from './greetingResponse/hello';
+import IskaDo from './greetingResponse/iskaDo';
 
 //QUERIES OR QUESTIONS about PUP
 import Eregular from './showRespose/Enroll/regular';
@@ -199,6 +200,8 @@ const [showVision, setShowVision] = useState(false);
 const [showHymn, setShowHymn] = useState(false);
 const[showAchiever, setShowAchiever] = useState(false);
 const [showAvatar, setShowAvatar] = useState(false);
+const [showGoodMoral, setShowGoodmoral] = useState(false);
+const [showIskaDo, setShowIska] = useState(false);
 
 //CANTEEN
 const [canteenButton, setCanteenVisible] = useState(false);
@@ -427,6 +430,8 @@ const displayText = (text) => {
     setShowVision(false);
     setShowHymn(false);
     setShowAchiever(false);
+    setShowIska(false);
+    setShowGoodmoral(false);
 
     setShowAvatar(true);
 
@@ -530,6 +535,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);        
 
         setShowAvatar(true);
 
@@ -609,7 +616,9 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
@@ -696,7 +705,9 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
@@ -780,7 +791,9 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(true);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
@@ -871,7 +884,9 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
@@ -962,6 +977,11 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false)
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
         
         const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
@@ -1013,6 +1033,17 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
+        
       }
     },
 
@@ -1062,6 +1093,16 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1138,6 +1179,16 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1214,6 +1265,16 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       } 
     },
     {
@@ -1290,6 +1351,16 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1367,7 +1438,9 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
@@ -1450,6 +1523,16 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1526,6 +1609,17 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1604,6 +1698,16 @@ const displayText = (text) => {
         setShowHymn(false);
         setShowAchiever(false);
         setShowGoodmoral(false);    
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         }
     },
     {
@@ -1682,6 +1786,17 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1761,7 +1876,15 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIska(false);
         setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
        }
     },
     {
@@ -1838,6 +1961,16 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
       
     },
@@ -1912,7 +2045,11 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
 
         
         const hideAvatar = document.querySelectorAll('.avatar-container');
@@ -1997,7 +2134,9 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
@@ -2082,7 +2221,9 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
@@ -2167,8 +2308,15 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2248,8 +2396,15 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2329,8 +2484,15 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2410,8 +2572,15 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2491,8 +2660,15 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2572,8 +2748,15 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2653,8 +2836,15 @@ const displayText = (text) => {
         setShowVision(true);
         setShowHymn(false);
         setShowAchiever(false);
-
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
         setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2734,6 +2924,15 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(true);
         setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2814,7 +3013,96 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(true);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
 
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
+    {
+      command: ['moral', '* moral', 'moral * ', 'good moral', '* good moral', 'good moral *', '* good moral *'],
+      callback: () => {
+        resetTranscript();
+        const textDisplay = `Here is the Requirements on how to get Good Moral`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(true);
+    
         setShowAvatar(false);
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
@@ -2964,9 +3252,7 @@ const sendTextToCommands = (text) => {
     <h1 className='app-name'>
         IS<span>KA</span></h1>
     </div>
-      <p className={responseDisplayed ? 'desc-hidden' : 'desc'}>
-  Hi! I'm ISKA, PUP Virtual Assistant, how can I help you?
-</p>
+      <p className={responseDisplayed ? 'desc-hidden' : 'desc'}></p>
 
       </div>
       <div className='right-icon'>
@@ -3068,6 +3354,9 @@ const sendTextToCommands = (text) => {
       {showVision && <Vision />}
       {showHymn && <Hymn />}
       {showAchiever && <Achiever />}
+      {showIskaDo && <IskaDo />}
+      {showGoodMoral && <Goodmoral />}
+      {showAvatar && <Avatar />}
       <Avatar />
 
         <div className="otherResponse">
