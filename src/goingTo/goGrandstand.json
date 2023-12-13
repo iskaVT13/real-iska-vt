@@ -10,12 +10,12 @@
         "responseText": "Here is the way from Admission Building to Grandstand"
       },
     "lab1": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/Lab 1 to Grandstand.gif",
       "title": "ComLab-1",
       "responseText": "Here is the way from Computer Laboratory 1 to Grandstand"
     },
     "lab2": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/Lab2 to Grandstand.gif",
       "title": "comLab-2",
       "responseText": "Here is the way from Computer Laboratory 2 to Grandstand"
     },
