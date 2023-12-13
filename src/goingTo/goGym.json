@@ -10,12 +10,12 @@
         "responseText": "Here is the way from Admission Building to Gymnasium"
       },
     "lab1": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/lab1 to Gym.gif",
       "title": "ComLab-1",
       "responseText": "Here is the way from Computer Laboratory 1 to Gymnasium"
     },
     "lab2": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/lab 2 to gym.gif",
       "title": "comLab-2",
       "responseText": "Here is the way from Computer Laboratory 2 to Gymnasium"
     },
@@ -30,9 +30,9 @@
       "responseText": "Here is the way from Canteen to Gymnasium"
     },
     "nantes": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "FRONT",
       "title": "Nantes",
-      "responseText": "Here is the way from Accounting and Marketing Building to Gymnasium"
+      "responseText": "The Gymnasium is in front of the Accounting and Marketing Building"
     },
     "grandstand": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/Grandstand to gym.gif",
@@ -40,22 +40,22 @@
       "responseText": "Here is the way from Grandstand to Gymnasium"
     },
     "engineer": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/engr to gym.gif",
       "title": "Engineer and Architecture Building",
       "responseText": "Here is the way from Engineer and Architecture Building to Gymnasium"
     },
     "education": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/educ bldg to gym.gif",
       "title": "Education Building",
       "responseText": "Here is the way from Education Building to Gymnasium"
     },
     "science": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/science to Gym.gif",
       "title": "Science Building",
       "responseText": "Here is the way from Science Building to Gymnasium"
     },
     "hospitality": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/HM & plant lab to gym.gif",
       "title": "Hospitality Management Building",
       "responseText": "Here is the way from Hospitality Management Building to Gymnasium"
     },

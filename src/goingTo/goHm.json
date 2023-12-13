@@ -10,12 +10,12 @@
         "responseText": "Here is the way from Admission Building to Hospitality Management Building"
       },
     "lab1": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingHM/lab 1 to HM _ Plant Lab.gif",
       "title": "ComLab-1",
       "responseText": "Here is the way from Computer Laboratory 1 to Hospitality Management Building"
     },
     "lab2": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingHM/lab 2 to Hm _ Plant Lab.gif",
       "title": "comLab-2",
       "responseText": "Here is the way from Computer Laboratory 2 to Hospitality Management Building"
     },
@@ -30,12 +30,12 @@
       "responseText": "Here is the way from Canteen to Hospitality Management Building"
     },
     "gymnasium": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingHM/gym to HM & plant lab.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Hospitality Management Building"
     },
     "nantes": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingHM/nantes to HM & plant lab.gif",
       "title": "Nantes",
       "responseText": "Here is the way from Accounting and Marketing Building to Hospitality Management Building"
     },
@@ -45,17 +45,17 @@
       "responseText": "Here is the way from Grandstand to Hospitality Management Building"
     },
     "engineer": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingHM/engr to hm and plant lab.gif",
       "title": "Engineer and Architecture Building",
       "responseText": "Here is the way from Engineer and Architecture Building to Hospitality Management Building"
     },
     "education": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingHM/educ bldg to HM & Plant lab.gif",
       "title": "Education Building",
       "responseText": "Here is the way from Education Building to Hospitality Management Building"
     },
     "science": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingHM/sciecnce to HM _ Plant Lab.gif",
       "title": "Science Building",
       "responseText": "Here is the way from Science Building to Hospitality Management Building"
     },

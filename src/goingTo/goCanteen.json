@@ -15,7 +15,7 @@
       "responseText": "Here is the way from Computer Laboratory 1 to Canteen"
     },
     "lab2": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingCanteen/lab 2 to Canteen.gif",
       "title": "comLab-2",
       "responseText": "Here is the way from Computer Laboratory 2 to Canteen"
     },
@@ -25,12 +25,12 @@
       "responseText": "Here is the way from Yumul Building to Canteen"
     },
     "gymnasium": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingCanteen/gym to canteen.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Canteen"
     },
     "nantes": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingCanteen/nantes to canteen.gif",
       "title": "Nantes",
       "responseText": "Here is the way from Accounting and Marketing Building to Canteen"
     },
@@ -40,22 +40,22 @@
       "responseText": "Here is the way from Grandstand to Canteen"
     },
     "engineer": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingCanteen/engr to canteen.gif",
       "title": "Engineer and Architecture Building",
       "responseText": "Here is the way from Engineer and Architecture Building to Canteen"
     },
     "education": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingCanteen/educ bldg to canteen.gif",
       "title": "Education Building",
       "responseText": "Here is the way from Education Building to Canteen"
     },
     "science": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingCanteen/science to canteen.gif",
       "title": "Science Building",
       "responseText": "Here is the way from Science Building to Canteen"
     },
     "hospitality": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingCanteen/HM & plant lab to canteen.gif",
       "title": "Hospitality Management Building",
       "responseText": "Here is the way from Hospitality Management Building to Canteen"
     },

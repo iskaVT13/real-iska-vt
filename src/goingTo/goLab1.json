@@ -25,12 +25,12 @@
       "responseText": "Here is the way from Canteen to Computer Laboratory 1"
     },
     "gymnasium": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab1/gym to ict lab1.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Computer Laboratory 1"
     },
     "nantes": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab1/nantes to ict lab1.gif",
       "title": "Nantes",
       "responseText": "Here is the way from Accounting and Marketing Building to Computer Laboratory 1"
     },
@@ -45,7 +45,7 @@
       "responseText": "Here is the way from Engineer and Architecture Building to Computer Laboratory 1"
     },
     "education": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab1/educ bldg to ict lab1.gif",
       "title": "Education Building",
       "responseText": "Here is the way from Education Building to Computer Laboratory 1"
     },
@@ -55,7 +55,7 @@
       "responseText": "Here is the way from Science Building to Computer Laboratory 1"
     },
     "hospitality": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab1/HM & plant lab to ict lab1.gif",
       "title": "Hospitality Management Building",
       "responseText": "Here is the way from Hospitality Management Building to Computer Laboratory 1"
     },

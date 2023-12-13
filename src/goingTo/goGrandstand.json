@@ -30,37 +30,32 @@
       "responseText": "Here is the way from Canteen to Grandstand"
     },
     "gymnasium": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/gym to grandstand.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Grandstand"
     },
     "nantes": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/nantes to grandstand.gif",
       "title": "Nantes",
       "responseText": "Here is the way from Accounting and Marketing Building to Grandstand"
     },
-    "grandstand": {
-      "clickedImage": "clicked3-image.jpg",
-      "title": "Grandstand",
-      "responseText": "Here is the way from Grandstand to Grandstand"
-    },
     "engineer": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/engr to grandstand.gif",
       "title": "Engineer and Architecture Building",
       "responseText": "Here is the way from Engineer and Architecture Building to Grandstand"
     },
     "education": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/educ bldg to grandstand.gif",
       "title": "Education Building",
       "responseText": "Here is the way from Education Building to Grandstand"
     },
     "science": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/science to grandstand.gif",
       "title": "Science Building",
       "responseText": "Here is the way from Science Building to Grandstand"
     },
     "hospitality": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/HM & plant lab to grandstand.gif",
       "title": "Hospitality Management Building",
       "responseText": "Here is the way from Hospitality Management Building to Grandstand"
     },

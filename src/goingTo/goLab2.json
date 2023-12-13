@@ -10,7 +10,7 @@
         "responseText": "Here is the way from Admission Building to Computer Laboratory 2"
       },
     "lab1": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/lab 1 to Lab 2.gif",
       "title": "ComLab-1",
       "responseText": "Here is the way from Computer Laboratory 1 to Computer Laboratory 2"
     },
@@ -25,12 +25,12 @@
       "responseText": "Here is the way from Canteen to Computer Laboratory 2"
     },
     "gymnasium": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/gym to ict lab2.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Computer Laboratory 2"
     },
     "nantes": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/nantes to ict lab2.gif",
       "title": "Nantes",
       "responseText": "Here is the way from Accounting and Marketing Building to Computer Laboratory 2"
     },
@@ -40,22 +40,22 @@
       "responseText": "Here is the way from Grandstand to Computer Laboratory 2"
     },
     "engineer": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/engr to lab 2.gif",
       "title": "Engineer and Architecture Building",
       "responseText": "Here is the way from Engineer and Architecture Building to Computer Laboratory 2"
     },
     "education": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/educ bldg to ict lab2.gif",
       "title": "Education Building",
       "responseText": "Here is the way from Education Building to Computer Laboratory 2"
     },
     "science": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/science to lab 2.gif",
       "title": "Science Building",
       "responseText": "Here is the way from Science Building to Computer Laboratory 2"
     },
     "hospitality": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/HM & plant lab to ict lab2.gif",
       "title": "Hospitality Management Building",
       "responseText": "Here is the way from Hospitality Management Building to Computer Laboratory 2"
     },

@@ -735,7 +735,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
-
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         
       },
     },
@@ -1115,7 +1118,7 @@ const displayText = (text) => {
     },
 
     {
-      command: ['* science ', 'science *', '* science *', 'science'],
+      command: ['* science ', 'science *', '* science *', 'science', 'two o three',203,204,205,206,108,107,106,105,'* 203', '203 *', '204 *', '* 204', '*  205', ' 205 *', '206 *', '* 206', 'chemical lab', '* chemical lab', 'physical lab', '* physical lab', '105 *', '* 105', '106 *', '* 106', '107 *', '* 107', '108 *', '* 108'],
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Health and Science Building');
@@ -1206,7 +1209,7 @@ const displayText = (text) => {
       }
     },
     {
-      command: ['* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* arhitecture *'],
+      command: [109,110,111,112,113,114,115,116,211,210,209,208,207,'* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* architecture *', 207, 208 ,209, 210, 211,109,110,111,112,113,114,114,116, 'ict lab 3', '* ict lab 3', '* ict lab * 3', 'draft lab', '* draft lab * 3', '* draft lab 3 *'],
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
@@ -1295,7 +1298,7 @@ const displayText = (text) => {
       }
     },
     {
-      command: ['* yumul', 'yumul *', '* yumul *', 'yumul'],
+      command: ['* yumul', 'yumul *', '* yumul *', 'yumul',200,201,202,],
       callback: () => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Yumul Building');
@@ -1384,7 +1387,7 @@ const displayText = (text) => {
       } 
     },
     {
-      command: ['* nantes', 'nantes *', '* nantes *', 'nantes', '* accounting *'],
+      command: [216,217,218,120,121,122,'* nantes', 'nantes *', '* nantes *', 'nantes', '* dental', 'dental *', 'business', '* business ', '* business *', '* business *' ,'* accounting *', '* 120', 'accounting', 'accounting *', '* accounting', '* accounting *', 'marketing', 'marketing *', '* marketing ', '* marketing*', ' *121', '121 *', '* 122','122 *', 'medical faculty', 'medical *', '* medical', '* medical *', 'avr', '* avr', 'avr *', '* avr *', 'library', '* library', 'library *', 'speech lab', '* speech lab', '* 216', '216 *', '217 *', ' * 217', '* 218', '218 *', '* 216', '216 *', '* 217', '217 *', ' * 122', '122 *', '* 121', '121 *', '120 *', ' * 120'],
       callback: () => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Accounting and Marketing Building');
@@ -1561,7 +1564,7 @@ const displayText = (text) => {
       }
     },
     {
-      command: ['grandstand', '* grandstand', '* grandstand *', 'grandstand *'],
+      command: ['grandstand', '* grandstand', '* grandstand *', 'grandstand *', 'property office', '* property office', '* property *', '* property', '* rotc', 'rotc *', '* rotc *'],
       callback: () => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Grandstand');
@@ -1649,7 +1652,7 @@ const displayText = (text) => {
       }
     },
     {
-      command: ['education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *'],
+      command: [212,213,214,215,117,118,119,'education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *', 'public *', '* public', '* public *', '117 *','* 117', '118 *', '* 118', '119 *','* 119', '212 *','* 212', '213 *','* 213', '214 *','* 214', '215 *','* 215', 'csc ', '* csc ', '* csc *'],
       callback: () => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Education and Public Administration Building');
@@ -1739,7 +1742,7 @@ const displayText = (text) => {
       }
     },
     {
-      command: ['admission', '* admission', 'admission *', '* admission *'],
+      command: ['admission', '* admission', 'admission *', '* admission *', 'osas', '* osas', 'osas *', '* osas *', 'cashier', '* cashier', '* cashier *', '* cashier *', 'registrar', '* registrar', ' registrar *', '* registrar *', 'academic ', '* academic', 'academic *', '* academic *', 'director office', '* director office', 'director * office ' ],
       callback: () => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Admission Building');
@@ -1829,7 +1832,7 @@ const displayText = (text) => {
         }
     },
     {
-      command: ['lab 1', 'lab * 1', 'laboratory 1', 'laboratory 1 *', '* laboratory 1 *', 'com lab 1', '*com * lab * 1', '* computer laboratory 1 *', 'computer lab 1',
+      command: [103,'lab 1', 'lab * 1', 'laboratory 1', 'laboratory 1 *', '* laboratory 1 *', 'com lab 1', '*com * lab * 1', '* computer laboratory 1 *', 'computer lab 1',
        '* computer * lab * 1 *', '* computer laboratory 1 *', 'ICT lab 1', 'ICT laboratory 1', '* ICT lab 1 *', 'IT lab 1', 'IT laboratory 1', '* IT lab * 1 *',
        '* IT laboratory 1 *' ],
       callback: () => {
@@ -1920,7 +1923,7 @@ const displayText = (text) => {
       }
     },
     {
-     command: ['lab 2', 'lab * 2', 'laboratory 2', 'laboratory 2 *', '* laboratory 2 *', 'com lab 2', '*com * lab * 2', '* computer laboratory 2 *', 'computer lab 2',
+     command: [104,'lab 2', 'lab * 2', 'laboratory 2', 'laboratory 2 *', '* laboratory 2 *', 'com lab 2', '*com * lab * 2', '* computer laboratory 2 *', 'computer lab 2',
       '* computer * lab * 2 *', '* computer laboratory 2 *', 'ICT lab 2', 'ICT laboratory 2', '* ICT lab 2 *', 'IT lab 2', 'IT laboratory 2', '* IT lab * 2 *',
       '* IT laboratory 2 *' ],
         callback: () => {
@@ -2011,7 +2014,7 @@ const displayText = (text) => {
        }
     },
     {
-      command: ['hospitality'],
+      command: [100,101,102,'hospitality', '* hospitality', 'hospitality ', ' hospitality ', 'hm', 'kitchen lab', ' kitchen lab','kitchen lab ', " kitchen lab ", ' kitchen ','beverage','*beverage','tissue', 'tissue', 'tissue lab', '* tissue lab ', 'plant',' plant ', 'plant',' plant lab *'],
       callback: () => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Hospitality Management Building');
@@ -3297,11 +3300,14 @@ const displayText = (text) => {
 // Function for searchInput command
 const sendTextToCommands = (text) => {
   const command = commands.find((cmd) => {
-    if (typeof cmd.command === 'string') { // statement for command if its in lowercase and string
-      return text.toLowerCase().includes(cmd.command.toLowerCase());
+    const lowerText = text.toLowerCase();
+    const lowerCommand = cmd.command.toString().toLowerCase();
+    
+    if (typeof cmd.command === 'string' || typeof cmd.command === 'number') {
+      return lowerText === lowerCommand;
     } else if (Array.isArray(cmd.command)) {
       return cmd.command.some((phrase) =>
-        text.toLowerCase().includes(phrase.toLowerCase())
+        lowerText.includes(phrase.toString().toLowerCase())
       );
     }
     return false;

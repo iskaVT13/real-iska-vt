@@ -20,6 +20,7 @@ function CanteenButton() {
   const [imageURL, setImageURL] = useState('');
   const [currentButton, setCurrentButton] = useState('');
   const [responses, setResponses] = useState({});
+  
 
   useEffect(() => {
     // Import the responses JSON file dynamically

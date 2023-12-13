@@ -1,6 +1,6 @@
 {
     "gate": {
-      "clickedImage": "gs://iskavt-26f75.appspot.com/Gate to Canteen.gif",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Gate to Yumul.gif",
       "title": "Main Gate",
       "responseText": "Here is the way from Main gate to Yumul Building"
     },
@@ -10,12 +10,12 @@
         "responseText": "Here is the way from Admission Building to Yumul Building"
       },
     "lab1": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Lab 1 to Yumul.gif",
       "title": "ComLab-1",
       "responseText": "Here is the way from Computer Laboratory 1 to Yumul Building"
     },
     "lab2": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/lab 2 to yumul.gif",
       "title": "comLab-2",
       "responseText": "Here is the way from Computer Laboratory 2 to Yumul Building"
     },
@@ -25,12 +25,12 @@
       "responseText": "Here is the way from Canteen to Yumul Building"
     },
     "gymnasium": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/gym to yumul bldg.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Yumul Building"
     },
     "nantes": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/nantes to yumul bldg.gif",
       "title": "Nantes",
       "responseText": "Here is the way from Accounting and Marketing Building to Yumul Building"
     },
@@ -40,22 +40,22 @@
       "responseText": "Here is the way from Grandstand to Yumul Building"
     },
     "engineer": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/engr to yumul.gif",
       "title": "Engineer and Architecture Building",
       "responseText": "Here is the way from Engineer and Architecture Building to Yumul Building"
     },
     "education": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/educ bldg to yumul bldg.gif",
       "title": "Education Building",
       "responseText": "Here is the way from Education Building to Yumul Building"
     },
     "science": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/science to yumul.gif",
       "title": "Science Building",
       "responseText": "Here is the way from Science Building to Yumul Building"
     },
     "hospitality": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/HM & plant lab to yumul.gif",
       "title": "Hospitality Management Building",
       "responseText": "Here is the way from Hospitality Management Building to Yumul Building"
     },

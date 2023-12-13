@@ -10,12 +10,12 @@
         "responseText": "Here is the way from Admission Building to Accounting and Marketing Building"
       },
     "lab1": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/lab1 to Nantes.gif",
       "title": "ComLab-1",
       "responseText": "Here is the way from Computer Laboratory 1 to Accounting and Marketing Building"
     },
     "lab2": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/lab 2 to nantes.gif",
       "title": "comLab-2",
       "responseText": "Here is the way from Computer Laboratory 2 to Accounting and Marketing Building"
     },
@@ -45,7 +45,7 @@
       "responseText": "Here is the way from Engineer and Architecture Building to Accounting and Marketing Building"
     },
     "education": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/educ bldg to nantes.gif",
       "title": "Education Building",
       "responseText": "Here is the way from Education Building to Accounting and Marketing Building"
     },
@@ -55,7 +55,7 @@
       "responseText": "Here is the way from Science Building to Accounting and Marketing Building"
     },
     "hospitality": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/HM & plant lab to nantes.gif",
       "title": "Hospitality Management Building",
       "responseText": "Here is the way from Hospitality Management Building to Accounting and Marketing Building"
     },
