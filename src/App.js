@@ -60,6 +60,7 @@ import Gymnasium from './buildings/gymnasium';
 import Nantes from './buildings/nantes';
 import Education from './buildings/education';
 import Hospitality from './buildings/hospitality';
+import ComfortRoom from './buildings/comfortroom';
 
 import Vr from './VRtour';
 
@@ -239,6 +240,9 @@ const [yumulResponse, setYumulResponse] = useState('');
 //HOSPITALITY 
 const [hMButton, setHMVisible] = useState(false);
 const [HMResponse, setHMResponse] = useState('');
+//COMFORT ROOM
+const[showCrVisible, setShowCrVisible] = useState(false);
+const [showCrResponse, setShowCrResponse] = useState(false);
 
 
   const processes = processesData;
@@ -346,6 +350,11 @@ const handleYearButtonClick = (year) => {
 
     setYumulResponse(yumull);
   }
+  const handleCrButtonClick = (cr) => {
+    const crr = Responses[cr];
+
+    setShowCrResponse(crr);
+  }
 
 
 // Function to display the text and speak it
@@ -435,6 +444,9 @@ const displayText = (text) => {
 
     setShowAvatar(true);
 
+    setShowCrVisible(false);
+    setShowCrResponse(false);
+
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -521,6 +533,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -602,6 +617,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -691,6 +709,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+         //COMFORT ROOM
+         setShowCrVisible(false);
+         setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -777,6 +798,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+         //COMFORT ROOM
+         setShowCrVisible(false);
+         setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -870,6 +894,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -964,6 +991,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+         //COMFORT ROOM
+         setShowCrVisible(false);
+         setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1018,8 +1048,45 @@ const displayText = (text) => {
 
         setCommandRecognized(true);
 
+        //CANTEEN
         setCanteenVisible(true);
         setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1051,9 +1118,9 @@ const displayText = (text) => {
       command: ['* science ', 'science *', '* science *', 'science'],
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Science Building');
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Health and Science Building');
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Science Building
+        Please select your nearest area in campus, so that I can assist you to show the way to Health and Science Building
         `;
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
@@ -1077,9 +1144,42 @@ const displayText = (text) => {
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
-
+        //SCIENCE
         setScienceVisible(true);
         setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1166,6 +1266,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1195,9 +1298,9 @@ const displayText = (text) => {
       command: ['* yumul', 'yumul *', '* yumul *', 'yumul'],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Yumul Building');
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        Please select your nearest area in campus, so that I can assist you to show the way to Yumul Building
         `;
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
@@ -1252,6 +1355,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1281,9 +1387,9 @@ const displayText = (text) => {
       command: ['* nantes', 'nantes *', '* nantes *', 'nantes', '* accounting *'],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Accounting and Marketing Building');
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        Please select your nearest area in campus, so that I can assist you to show the way to Accounting and Marketing Building
         `;
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
@@ -1338,6 +1444,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1367,10 +1476,9 @@ const displayText = (text) => {
       command: ['gymnasium', '* gymnasium', '* gymnasium *', 'gymnasium *', 'gym', '* gym', '* gym *', '* gym *', '*gym*'],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
-        const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
-        `;
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Gymnasium');
+        const textDisplay= `
+        Please select your nearest area in campus, so that I can assist you to show the way to Gymnasium`;
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
@@ -1424,6 +1532,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1453,10 +1564,9 @@ const displayText = (text) => {
       command: ['grandstand', '* grandstand', '* grandstand *', 'grandstand *'],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Grandstand');
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
-        `;
+        Please select your nearest area in campus, so that I can assist you to show the way to Grandstand`;
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
@@ -1510,6 +1620,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1539,9 +1652,9 @@ const displayText = (text) => {
       command: ['education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *'],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Education and Public Administration Building');
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        Please select your nearest area in campus, so that I can assist you to show the way to Education and Public Administration Building
         `;
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
@@ -1596,6 +1709,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1628,8 +1744,7 @@ const displayText = (text) => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Admission Building');
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Admission Building
-        `;
+        Please select your nearest area in campus, so that I can assist you to show the way to Admission Building`;
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
@@ -1683,6 +1798,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1716,10 +1834,9 @@ const displayText = (text) => {
        '* IT laboratory 1 *' ],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Computer Laboratory 1');
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
-        `;
+        Please select your nearest area in campus, so that I can assist you to show the way to Computer Laboratory 1`;
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
@@ -1773,6 +1890,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1805,10 +1925,9 @@ const displayText = (text) => {
       '* IT laboratory 2 *' ],
         callback: () => {
           resetTranscript();
-          displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+          displayText('Please select your nearest area in campus, so that I can assist you to show the way to Computer Laboratory 2');
           const textDisplay = `
-          Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
-          `;
+          Please select your nearest area in campus, so that I can assist you to show the way to Computer Laboratory 2`;
           displayOtherText(textDisplay);
           setResetButtonVisible(true); // Show the reset button after a command is executed
   
@@ -1862,6 +1981,10 @@ const displayText = (text) => {
           //HOSPITALITY
           setHMVisible(false);
           setHMResponse(false);
+          //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
+
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1891,9 +2014,9 @@ const displayText = (text) => {
       command: ['hospitality'],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Hospitality Management Building');
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        Please select your nearest area in campus, so that I can assist you to show the way to Hospitality Management Building
         `;
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
@@ -1948,6 +2071,10 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(true);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
+
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1978,7 +2105,8 @@ const displayText = (text) => {
       command: ['regular', '* regular', 'regular *', '* regular *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll as a freshmen at PUP Lopez`;
+        displayText('Here is the process on how to enroll regular student')
+        const textDisplay = `Here is the process on how to enroll as a regular student`;
         displayOtherText(textDisplay);
         setResetButtonVisible(true);
 
@@ -2032,6 +2160,10 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
+
 
         setShowEregular(true);
         setShowEirregular(false);
@@ -2066,7 +2198,8 @@ const displayText = (text) => {
       command: ['irregular', '* irregular', 'irregular * ', '* irregular *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayText('Here is the process on how to enroll irregular student')
+        const textDisplay = `Here is the process on how to enroll irregular student`;
         displayOtherText(textDisplay);
         setResetButtonVisible(true);
 
@@ -2120,6 +2253,10 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
+
 
         setShowEregular(false);
         setShowEirregular(true);
@@ -2153,7 +2290,8 @@ const displayText = (text) => {
       command: ['freshmen', 'freshman'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayText('Here is the process on how to enroll freshmen student')
+        const textDisplay = `Here is the process on how to enroll freshman student`;
         displayOtherText(textDisplay);
         setResetButtonVisible(true);
 
@@ -2207,6 +2345,10 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
+
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2240,7 +2382,8 @@ const displayText = (text) => {
       command: ['transferee', '* transferee', 'transferee * ', '* transferee *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        displayText('Here is the process on how to enroll transferee student')
+        const textDisplay = `Here is the process on how to enroll transferee student`;
         displayOtherText(textDisplay);
         setResetButtonVisible(true);
 
@@ -2294,6 +2437,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2328,8 +2474,7 @@ const displayText = (text) => {
       command: ['graduation', '* graduation', 'graduation * ', '* graduation *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
-        displayOtherText(textDisplay);
+        displayText('Here is the requirements for graduation');
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -2382,6 +2527,10 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
+
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2416,8 +2565,7 @@ const displayText = (text) => {
       command: ['bachelor', '* bachelor', 'bachelor *', '* bachelor *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
-        displayOtherText(textDisplay);
+        displayText('Here is the bachelor od Science courses offer at P U P Lopez');
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -2470,6 +2618,10 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
+
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2504,8 +2656,8 @@ const displayText = (text) => {
       command: ['diploma', '* diploma', 'diploma *', '* diploma *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
-        displayOtherText(textDisplay);
+        displayText('Here is the Diploma courses offer at P U P Lopez');
+
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -2558,6 +2710,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2592,8 +2747,7 @@ const displayText = (text) => {
       command: ['history', '* history', 'history *', '* history *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
-        displayOtherText(textDisplay);
+        displayText('This is the history of the P U P');
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -2646,6 +2800,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2680,8 +2837,7 @@ const displayText = (text) => {
       command: ['mission', '* mission', 'mission *', '* mission *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
-        displayOtherText(textDisplay);
+        displayText('Here is the Mission of P U P');
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -2734,6 +2890,10 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
+
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2768,8 +2928,7 @@ const displayText = (text) => {
       command: ['vision', '* vision ', 'vision *', '* vision *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
-        displayOtherText(textDisplay);
+        displayText('Here is the P U P Vision');
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -2822,6 +2981,10 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
+
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2853,7 +3016,7 @@ const displayText = (text) => {
       }
     },
     {
-      command: ['hymn', '* hymn ', 'hymn *', '* hymn *'],
+      command: ['hymn', '* hymn ', 'hymn *', '* hymn *', 'imno', '* imno', 'imno *', '* imno *'],
       callback: () => {
         resetTranscript();
         const textDisplay = 'Here is the PUP Hymn';
@@ -2910,6 +3073,10 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
+
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2940,7 +3107,6 @@ const displayText = (text) => {
         }
       }
     },
-
     {
       command: ['lister', '* lister ', 'lister *', '* lister *', '* PL *'],
       callback: () => {
@@ -2999,6 +3165,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -3086,6 +3255,9 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -3189,10 +3361,17 @@ const sendTextToCommands = (text) => {
     setNantesVisible(false);
     setNantesResponse(false);
 
+    setShowCrVisible(false);
+    setShowCrResponse(false);
+
     setShowEregular(false);
     setShowEfreshmen(false);
     setShowEirregular(false);
     seteShowEtransferee(false);
+    setShowAchiever(false);
+    setShowBachelor(false);
+    setShowDiploma(false);
+    setShowGoodmoral(false);
 
     setShowAvatar(false);
 
@@ -3330,6 +3509,9 @@ const sendTextToCommands = (text) => {
           {hMButton && (
             <Hospitality onHmBUttonClick = {handleHMButtonClick} />
           )}
+          {showCrVisible && (
+            <ComfortRoom onCrButtonClick = {handleCrButtonClick} />
+          )}
 
         </div>
        
@@ -3362,7 +3544,7 @@ const sendTextToCommands = (text) => {
         <div className="otherResponse">
           <p className="displayResponse">
           {selectedYearResponse}{programsResponse}{aboutResponse}
-          {canteenResponse}{scienceResponse}{engineerResponse}{yumulResponse}{admissionResponse}{nantesResponse}{lab1Response}{lab2Response}{educResponse}{HMResponse}{grandstandResponse}{gymResponse}
+          {canteenResponse}{scienceResponse}{engineerResponse}{yumulResponse}{admissionResponse}{nantesResponse}{lab1Response}{lab2Response}{educResponse}{HMResponse}{grandstandResponse}{gymResponse}{showCrResponse}
           </p>
         
         <p>{displayTextOnScreen}</p>

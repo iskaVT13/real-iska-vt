@@ -125,18 +125,21 @@ function GrandstandButton() {
     </div>
   )}
 
-      {isActive && (
-        <div className="image-container">
-          <button onClick={handleBackButtonClick} className="back-button">
-            Back
-          </button>
-          <div className='gif'>
-          <p className='text-gif'>{currentButton.responseText}</p>
-          <img  src={imageURL} alt={currentButton.title} />
-          </div>
-          
-        </div>
-      )}
+<div className='showImage'>
+
+{isActive && (
+  <div className="image-container">
+    <p className='text-gif'>{currentButton.responseText}</p>
+    <button onClick={handleBackButtonClick} className="back-button">
+      Back
+    </button>
+    <div className='gif'>
+    <img  src={imageURL} alt={currentButton.title} />
+    </div>
+    
+  </div>
+)}
+    </div>
     </div>
   );
 }

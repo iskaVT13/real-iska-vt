@@ -3,9 +3,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
 import pylon from '../areaImage/pylon2022.jpg';
-import admission from '../areaImage/Admin Building.jpg';
+import lab1 from '..//areaImage/Lab 1.jpg';
 import lab2 from '../areaImage/Lab 2.jpg';
 import yumul from '../areaImage/Yumul Building.jpg';
+import canteen from '../areaImage/Canteen.jpg';
 import nantes from '../areaImage/Nantes (front view).jpg';
 import gymnasium from '../areaImage/Gym.jpg';
 import grandstand from '../areaImage/Grandstand.jpg';
@@ -14,10 +15,8 @@ import education from '../areaImage/Educ Bldg.jpg';
 import engineer from '../areaImage/Engineering Building.jpg';
 import hospitality from '../areaImage/HM _ Plant Lab (front view).jpg';
 import ecopark from '../areaImage/eco park.jpg';
-import canteen from '../areaImage/Canteen.jpg';
 
-
-function Lab1Button() {
+function ComfortRoomButton() {
   const [isActive, setIsActive] = useState(false);
   const [imageURL, setImageURL] = useState('');
   const [currentButton, setCurrentButton] = useState('');
@@ -25,7 +24,7 @@ function Lab1Button() {
 
   useEffect(() => {
     // Import the responses JSON file dynamically
-    import('../goingTo/goLab1.json')
+    import('../goingTo/goCr.json')
       .then((responseModule) => setResponses(responseModule.default))
       .catch((error) => console.error('Error loading responses:', error));
   }, []);
@@ -55,10 +54,12 @@ function Lab1Button() {
     hideReset.forEach((element) => {
       element.style.display = 'none';
     });
+
     const hideAvatar = document.querySelectorAll('.avatar-container');
     hideAvatar.forEach((element) => {
       element.style.display = 'none';
     });
+  
   };
 
   const handleBackButtonClick = () => {
@@ -90,15 +91,14 @@ function Lab1Button() {
     }
   }, [currentButton]);
 
-
   return (
     <div className="areaImage-container">
     {!isActive && (
     <div className="buttons-container">
         <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={pylon} />
         <p>MAIN GATE</p>
-        <img onClick={() => handleImageClick('admission')} alt='Admission' className='admission-image' src={admission} />
-        <p>ADMISSION OFFICE</p>
+        <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src={lab1}/>
+        <p>COMPUTER LABORATORY 1</p>
         <img onClick={() => handleImageClick('lab2')}alt='lab2' className='lab2-image' src={lab2} />
         <p>COMPUTER LABORATORY 2</p>
         <img onClick={() => handleImageClick('yumul')} alt='yumul' className='yumul-image' src={yumul} />
@@ -124,8 +124,7 @@ function Lab1Button() {
       
     </div>
   )}
-
-<div className='showImage'>
+    <div className='showImage'>
 
 {isActive && (
   <div className="image-container">
@@ -144,4 +143,4 @@ function Lab1Button() {
   );
 }
 
-export default Lab1Button;
+export default ComfortRoomButton;

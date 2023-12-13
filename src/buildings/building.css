@@ -1,11 +1,6 @@
-.buttons-container img{
-    background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
-
-}
-
-.buttons-container{
-    display: flex;
-    justify-content: space-around;
+.showImage{
+    position: fixed;
+    display: block;
 }
 
 .image-container{
@@ -21,27 +16,23 @@
 
 .text-gif{
     position: relative;
-    color: #f1c500;
-    padding: 5px;
+    color: #ffffff;
 }
 
 .gif img{
     position: relative;
-    width: 45vh;
+    width: 46vh;
+    padding: 15px;
 }
 
 .back-button{
     display: flex;
     position: relative;
     justify-content: space-between;
+    background-color: #f1c500;
+    width: fit-content;
+    left: 5%;
 }
-
-.back-button button{
-    position: relative;
-    background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
-
-}
-
 .areaImage-container{
 display: inline-flexbox;
 justify-content: space-around;
