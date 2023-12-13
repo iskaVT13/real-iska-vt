@@ -27,6 +27,7 @@ import "@fontsource/krona-one";
 
 //GREETINGS AND CAN DO OF ISKA
 import Avatar from './greetingResponse/hello';
+import IskaDo from './greetingResponse/iskaDo';
 
 //QUERIES OR QUESTIONS about PUP
 import Eregular from './showRespose/Enroll/regular';
@@ -199,6 +200,8 @@ const [showVision, setShowVision] = useState(false);
 const [showHymn, setShowHymn] = useState(false);
 const[showAchiever, setShowAchiever] = useState(false);
 const [showAvatar, setShowAvatar] = useState(false);
+const [showIskaDo, setShowIskaDo] = useState(false);
+
 
 //CANTEEN
 const [canteenButton, setCanteenVisible] = useState(false);
@@ -436,6 +439,7 @@ const displayText = (text) => {
     setShowVision(false);
     setShowHymn(false);
     setShowAchiever(false);
+    setShowIskaDo(false);
 
     setShowAvatar(true);
 
@@ -546,6 +550,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
 
         setShowAvatar(true);
 
@@ -627,6 +632,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
+
 
         setShowAvatar(false);
 
@@ -717,6 +724,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
 
         setShowAvatar(false);
 
@@ -740,22 +748,9 @@ const displayText = (text) => {
         displayText('There are various things that i can do. Below are the detailed list.');
         const textDisplay = `
         There are various things that i can do. Below are the detailed list.
-          `;
-        const text = `
-        What I Can Do?
-        - Answer Questions.
-        - Show Processes.
-        - Show Programs Available.
-        - Recite PUP Mission and Vission.
-        - Play PUP Hymn.
-        - Show Directions.
-        - Download Reports.
-        - Open PUP Website.
-        - Open PUP SIS.
-        - I can provide anything about PUP Lopez. 
         `;
         displayOtherText(textDisplay);
-        setDisplayTextOnScreen(text);
+
         setResetButtonVisible(true);
         setProgramsButton(false);
 
@@ -821,6 +816,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(true);
 
         setShowAvatar(false);
 
@@ -915,6 +911,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
 
         setShowAvatar(false);
 
@@ -1009,6 +1006,10 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIskaDo(false);
+
+        setShowAvatar(false);
         
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
@@ -1096,6 +1097,10 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIskaDo(false);
+
+        setShowAvatar(false);
       }
     },
 
@@ -1178,6 +1183,10 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIskaDo(false);
+
+        setShowAvatar(false);
       }
     },
     {
@@ -1257,6 +1266,10 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIskaDo(false);
+
+        setShowAvatar(false);
       }
     },
     {
@@ -1336,6 +1349,10 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIskaDo(false);
+
+        setShowAvatar(false);
       } 
     },
     {
@@ -1415,6 +1432,10 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIskaDo(false);
+
+        setShowAvatar(false);
       }
     },
     {
@@ -1495,6 +1516,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
 
         setShowAvatar(false);
 
@@ -1581,6 +1603,10 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIskaDo(false);
+
+        setShowAvatar(false);
       }
     },
     {
@@ -1660,6 +1686,10 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIskaDo(false);
+
+        setShowAvatar(false);
       }
     },
     {
@@ -1817,6 +1847,10 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIskaDo(false);
+
+        setShowAvatar(false);
       }
     },
     {
@@ -1977,6 +2011,10 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIskaDo(false);
+
+        setShowAvatar(false);
       }
       
     },
@@ -2054,6 +2092,10 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowIskaDo(false);
+
+        setShowAvatar(false);
         
 
         
@@ -2142,6 +2184,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
 
         setShowAvatar(false);
 
@@ -2230,6 +2273,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
 
         setShowAvatar(false);
 
@@ -2318,6 +2362,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
 
         setShowAvatar(false);
 
@@ -2406,6 +2451,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
 
         setShowAvatar(false);
 
@@ -2494,6 +2540,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
 
         setShowAvatar(false);
 
@@ -2582,6 +2629,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
 
         setShowAvatar(false);
 
@@ -2670,6 +2718,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
 
         setShowAvatar(false);
 
@@ -2758,6 +2807,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
+
 
         setShowAvatar(false);
 
@@ -2846,6 +2897,8 @@ const displayText = (text) => {
         setShowVision(true);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowIskaDo(false);
+
 
         setShowAvatar(false);
 
@@ -2934,6 +2987,9 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(true);
         setShowAchiever(false);
+        setShowIskaDo(false);
+
+        setShowAvatar(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -3014,6 +3070,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(true);
+        setShowIskaDo(false);
+
 
         setShowAvatar(false);
 
@@ -3108,6 +3166,8 @@ const sendTextToCommands = (text) => {
     setShowEfreshmen(false);
     setShowEirregular(false);
     seteShowEtransferee(false);
+    setShowAchiever(false);
+    setShowIskaDo(false);
 
     setShowAvatar(false);
 
@@ -3182,18 +3242,15 @@ const sendTextToCommands = (text) => {
       {showQuestions && (
         <div className="question-list">
           {/* Add your list of questions here */}
-          <h6 className='note'>Try to ask these suggestions (Note: This list is not clickable)</h6>
-          <p>- What are the available programs</p>
-          <p>- Tell me about PUP</p>
-          <p>- How to enroll</p>
-          <p>- How to add subjects</p>
-          <p>- How to change subjects</p>
+          <h6 className='note'>Here are some task ISKA can do.</h6>
+          <p> What are the available programs</p>
+          <p> Tell me about PUP</p>
+          <p> How to enroll</p>
           <p>- How to become academic achiever</p>
           <p>- How to apply for graduation</p>
+          <h5>You can ask ISKA for location of building</h5>
           <p>- Where is the Nantes Building</p>
           <p>- Where is the Admission Office</p>
-          <p>- Show university map</p>
-          <p>- What can you do</p>
           {/* Add more questions as needed */}
         </div>
       )}
@@ -3280,6 +3337,7 @@ const sendTextToCommands = (text) => {
       {showHymn && <Hymn />}
       {showAvatar && <Avatar />}
       {showAchiever && <Achiever />}
+      {showIskaDo && <IskaDo />}
       <Avatar />
 
         <div className="otherResponse">
