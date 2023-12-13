@@ -26,7 +26,7 @@ import About from './displayButton/displayAbout';
 import "@fontsource/krona-one"; 
 
 //GREETINGS AND CAN DO OF ISKA
-
+import Avatar from './greetingResponse/hello';
 
 //QUERIES OR QUESTIONS about PUP
 import Eregular from './showRespose/Enroll/regular';
@@ -197,8 +197,8 @@ const [showHistory, setShowHistory] = useState(false);
 const [showMission, setShowMission] = useState(false);
 const [showVision, setShowVision] = useState(false);
 const [showHymn, setShowHymn] = useState(false);
-const [showAchiever, setShowAchiever] = useState(false);
-const [showGoodmoral, setShowGoodmoral] = useState(false);
+const[showAchiever, setShowAchiever] = useState(false);
+const [showAvatar, setShowAvatar] = useState(false);
 
 //CANTEEN
 const [canteenButton, setCanteenVisible] = useState(false);
@@ -427,7 +427,8 @@ const displayText = (text) => {
     setShowVision(false);
     setShowHymn(false);
     setShowAchiever(false);
-    setShowGoodmoral(false);
+
+    setShowAvatar(true);
 
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
@@ -529,83 +530,13 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);
-      }
 
-    },
+        setShowAvatar(true);
 
-    {
-      command: ['what are you', 'who are you'],
-      callback: () => {
-        resetTranscript();
-        displayText('Hi, I am iska, a P U P Lopez Virtual Assistant developed by the team Code Craft a 4th year B S I T students.');
-        const textDisplay = `Hi, I am ISKA, a PUP Lopez Virtual Assistant developed by the team Code Craft a 4th year BSIT students.`;
-        displayOtherText(textDisplay);
-        setResetButtonVisible(true);
-        setProgramsButton(false);
-
-        setAboutResponse(false);
-        setAboutVisible(false);
-
-        setSelectedYearResponse(false);
-        setYearButtonVisible(false);
-
-        setResponseDisplayed(true);
-        
-        setResponseDisplayed(true);
-
-        setCommandRecognized(true);
-                //CANTEEN
-        setCanteenVisible(false);
-        setCanteenResponse(false);
-        //SCIENCE
-        setScienceVisible(false);
-        setScienceResponse(false);
-        //ENGINEER
-        setEngineerVisible(false);
-        setEngineerResponse(false);
-        //YUMUL
-        setYumulVisible(false);
-        setYumulResponse(false);
-        //NANTES
-        setNantesVisible(false);
-        setNantesResponse(false);
-        //GYMNASIUM
-        setGymVisible(false);
-        setGymResponse(false);
-        //GRANDSTAND
-        setGrandStandVisible(false);
-        setGrandStandResponse(false);
-        //EDUCATION
-        setEducVisible(false);
-        setEducResponse(false);
-        //ADMISSION
-        setAdmissionVisible(false);
-        setAdmissionResponse(false);
-        //LAB1
-        setLab1Visible(false);
-        setLab1Response(false);
-        //LAB2
-        setLab2Visible(false);
-        setLab2Response(false);
-        //HOSPITALITY
-        setHMVisible(false);
-        setHMResponse(false);
-
-        setShowEregular(false);
-        setShowEirregular(false);
-        setShowEfreshmen(false);
-        seteShowEtransferee(false);
-
-        setShowGrad(false);
-        setShowBachelor(false);
-        setShowDiploma(false);
-        setShowHistory(false);
-        setShowMission(false);
-        setShowVision(false);
-        setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(false);
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
 
     },
@@ -678,7 +609,15 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);      },
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
+
+      },
     },
     {
       command: ['* enroll *', '* enroll', 'enroll *', 'enroll', 'enrollment', '* enrollment', 'enrollment *', '* enrollment *'],
@@ -757,7 +696,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);
+
+        setShowAvatar(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -775,22 +715,9 @@ const displayText = (text) => {
         displayText('There are various things that i can do. Below are the detailed list.');
         const textDisplay = `
         There are various things that i can do. Below are the detailed list.
-          `;
-        const text = `
-        What I Can Do?
-        - Answer Questions.
-        - Show Processes.
-        - Show Programs Available.
-        - Recite PUP Mission and Vission.
-        - Play PUP Hymn.
-        - Show Directions.
-        - Download Reports.
-        - Open PUP Website.
-        - Open PUP SIS.
-        - I can provide anything about PUP Lopez. 
         `;
         displayOtherText(textDisplay);
-        setDisplayTextOnScreen(text);
+
         setResetButtonVisible(true);
         setProgramsButton(false);
 
@@ -853,7 +780,14 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);        
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
+        
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -937,9 +871,15 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);        
-   
-        const textDisplayContainer = document.querySelector('.textOther');
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
+        
+    const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
     }
@@ -1022,8 +962,6 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(false);
         
         const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
@@ -1075,8 +1013,6 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(false);     
       }
     },
 
@@ -1126,9 +1062,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(false);
-           }
+      }
     },
     {
       command: ['* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* arhitecture *'],
@@ -1204,9 +1138,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(false);  
-        }
+      }
     },
     {
       command: ['* yumul', 'yumul *', '* yumul *', 'yumul'],
@@ -1282,9 +1214,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(false);   
-       } 
+      } 
     },
     {
       command: ['* nantes', 'nantes *', '* nantes *', 'nantes', '* accounting *'],
@@ -1360,9 +1290,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(false);   
-        }
+      }
     },
     {
       command: ['gymnasium', '* gymnasium', '* gymnasium *', 'gymnasium *', 'gym', '* gym', '* gym *', '* gym *', '*gym*'],
@@ -1439,7 +1367,13 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
       }
     },
     {
@@ -1516,9 +1450,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(false);
-         }
+      }
     },
     {
       command: ['education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *'],
@@ -1594,9 +1526,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(false);  
-       }
+      }
     },
     {
       command: ['admission', '* admission', 'admission *', '* admission *'],
@@ -1752,9 +1682,7 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(false);   
-        }
+      }
     },
     {
      command: ['lab 2', 'lab * 2', 'laboratory 2', 'laboratory 2 *', '* laboratory 2 *', 'com lab 2', '*com * lab * 2', '* computer laboratory 2 *', 'computer lab 2',
@@ -1910,9 +1838,8 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(false);    
-       }
+      }
+      
     },
     {
       command: ['regular', '* regular', 'regular *', '* regular *'],
@@ -1985,9 +1912,13 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(false);
+        
 
+        
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2066,8 +1997,13 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);
-        
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2146,8 +2082,13 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);
-        
+
+        setShowAvatar(false);
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2226,7 +2167,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);
+
+        setShowAvatar(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2306,7 +2248,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);
+
+        setShowAvatar(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2386,7 +2329,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);
+
+        setShowAvatar(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2466,7 +2410,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);
+
+        setShowAvatar(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2546,7 +2491,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);
+
+        setShowAvatar(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2626,7 +2572,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);
+
+        setShowAvatar(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2706,7 +2653,8 @@ const displayText = (text) => {
         setShowVision(true);
         setShowHymn(false);
         setShowAchiever(false);
-        setShowGoodmoral(false);
+
+        setShowAvatar(false);
 
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
@@ -2786,7 +2734,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(true);
         setShowAchiever(false);
-        setShowGoodmoral(false);
+
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2866,89 +2814,13 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(true);
-        setShowGoodmoral(false);
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
-      }
-    },
 
-    {
-      command: ['good moral', '* good moral ', 'good moral *', '* good moral *'],
-      callback: () => {
-        resetTranscript();
-        displayText('Here is the Steps on how to request for Good Moral Certificate');
-        const textDisplay = `Here is the Steps on how to request for Good Moral Certificate`;
-        displayOtherText(textDisplay);
-        setResetButtonVisible(true);
+        setShowAvatar(false);
 
-        setProgramsButton(false);
-
-        setYearButtonVisible(false);
-        setSelectedYearResponse(false);
-
-        setDisplayTextOnScreen(false);
-
-        setAboutVisible(false);
-        setAboutResponse(false);
-
-        setSelectedProgram(false);
-
-        setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
-        //CANTEEN
-        setCanteenVisible(false);
-        setCanteenResponse(false);
-        //SCIENCE
-        setScienceVisible(false);
-        setScienceResponse(false);
-        //ENGINEER
-        setEngineerVisible(false);
-        setEngineerResponse(false);
-        //YUMUL
-        setYumulVisible(false);
-        setYumulResponse(false);
-        //NANTES
-        setNantesVisible(false);
-        setNantesResponse(false);
-        //GYMNASIUM
-        setGymVisible(false);
-        setGymResponse(false);
-        //GRANDSTAND
-        setGrandStandVisible(false);
-        setGrandStandResponse(false);
-        //EDUCATION
-        setEducVisible(false);
-        setEducResponse(false);
-        //ADMISSION
-        setAdmissionVisible(false);
-        setAdmissionResponse(false);
-        //LAB1
-        setLab1Visible(false);
-        setLab1Response(false);
-        //LAB2
-        setLab2Visible(false);
-        setLab2Response(false);
-        //HOSPITALITY
-        setHMVisible(false);
-        setHMResponse(false);
-
-        setShowEregular(false);
-        setShowEirregular(false);
-        setShowEfreshmen(false);
-        seteShowEtransferee(false);
-
-        setShowGrad(false);
-        setShowBachelor(false);
-        setShowDiploma(false);
-        setShowHistory(false);
-        setShowMission(false);
-        setShowVision(false);
-        setShowHymn(false);
-        setShowAchiever(false);
-        setShowGoodmoral(true);
-
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -3034,6 +2906,9 @@ const sendTextToCommands = (text) => {
     setShowEirregular(false);
     seteShowEtransferee(false);
 
+    setShowAvatar(false);
+
+
     // Show elements with the textOther classname
     const showTextOther = document.querySelectorAll('.textOther');
     showTextOther.forEach((element) => {
@@ -3102,18 +2977,15 @@ const sendTextToCommands = (text) => {
       {showQuestions && (
         <div className="question-list">
           {/* Add your list of questions here */}
-          <h6 className='note'>Try to ask these suggestions (Note: This list is not clickable)</h6>
-          <p>- What are the available programs</p>
-          <p>- Tell me about PUP</p>
-          <p>- How to enroll</p>
-          <p>- How to add subjects</p>
-          <p>- How to change subjects</p>
+          <h6 className='note'>Here are some task ISKA can do.</h6>
+          <p> What are the available programs</p>
+          <p> Tell me about PUP</p>
+          <p> How to enroll</p>
           <p>- How to become academic achiever</p>
           <p>- How to apply for graduation</p>
+          <h5>You can ask ISKA for location of building</h5>
           <p>- Where is the Nantes Building</p>
           <p>- Where is the Admission Office</p>
-          <p>- Show university map</p>
-          <p>- What can you do</p>
           {/* Add more questions as needed */}
         </div>
       )}
@@ -3196,7 +3068,7 @@ const sendTextToCommands = (text) => {
       {showVision && <Vision />}
       {showHymn && <Hymn />}
       {showAchiever && <Achiever />}
-      {showGoodmoral && <Goodmoral />}
+      <Avatar />
 
         <div className="otherResponse">
           <p className="displayResponse">

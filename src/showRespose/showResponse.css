@@ -27,10 +27,18 @@
 .download-button button{
     color: white;   
     border: none;
+<<<<<<< HEAD
     background-color: rgb(236, 166, 4);
     padding: 10px 20px; 
     cursor: pointer; 
     
+=======
+    background-color: rgb(2, 189, 64);
+    transition: background-color 0.3s ease;
+}
+.download-button button:hover {
+    background-color: #147932; /* Change the color to your desired hover color */
+>>>>>>> e40508f02c0f109a70aae9c9ed8620fc784fd2ba
 }
 
 .step ul {

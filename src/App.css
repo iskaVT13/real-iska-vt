@@ -139,12 +139,13 @@ color: white;
 
 .container{
   white-space: pre-line;
-  color: white;
+  color: rgb(255, 255, 255);
   overflow-y: scroll;
   padding: 5px;
   line-height: 1.5; /* Adjust this value to control the line spacing */
   z-index: 50;
   height: 200vh;
+  text-align: center;
   
 }
 
