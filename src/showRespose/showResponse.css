@@ -25,8 +25,11 @@
     position: fixed;
 }
 .download-button button{
-    color: white;
+    color: white;   
     border: none;
+    background-color: rgb(236, 166, 4);
+    padding: 10px 20px; 
+    cursor: pointer; 
     
 }
 

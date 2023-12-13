@@ -26,15 +26,13 @@ import About from './displayButton/displayAbout';
 import "@fontsource/krona-one"; 
 
 //GREETINGS AND CAN DO OF ISKA
-import Avatar from './greetingResponse/hello';
+
 
 //QUERIES OR QUESTIONS about PUP
 import Eregular from './showRespose/Enroll/regular';
 import Eirregular from './showRespose/Enroll/irregular';
 import Efreshmen from './showRespose/Enroll/freshmen';
 import Etransferee from './showRespose/Enroll/transferee';
-
-import Achiever from './showRespose/Achiever/PLDL';
 
 import Graduation from './showRespose/graduationReq';
 import Bachelor from './showRespose/Programs/bachelor';
@@ -44,6 +42,9 @@ import History from './showRespose/About/history';
 import Mission from './showRespose/About/mission';
 import Vision from './showRespose/About/vision';
 import Hymn from './showRespose/About/hymn';
+
+import Achiever from './showRespose/Achiever/PLDL';
+import Goodmoral from './showRespose/goodMoral/goodmoral';
 
 //BUILDINGS 
 import Canteen from './buildings/canteen';
@@ -58,7 +59,6 @@ import Gymnasium from './buildings/gymnasium';
 import Nantes from './buildings/nantes';
 import Education from './buildings/education';
 import Hospitality from './buildings/hospitality';
-import EcoPark from './buildings/ecoPark';
 
 import Vr from './VRtour';
 
@@ -197,8 +197,8 @@ const [showHistory, setShowHistory] = useState(false);
 const [showMission, setShowMission] = useState(false);
 const [showVision, setShowVision] = useState(false);
 const [showHymn, setShowHymn] = useState(false);
-const[showAchiever, setShowAchiever] = useState(false);
-const [showAvatar, setShowAvatar] = useState(false);
+const [showAchiever, setShowAchiever] = useState(false);
+const [showGoodmoral, setShowGoodmoral] = useState(false);
 
 //CANTEEN
 const [canteenButton, setCanteenVisible] = useState(false);
@@ -236,8 +236,6 @@ const [yumulResponse, setYumulResponse] = useState('');
 //HOSPITALITY 
 const [hMButton, setHMVisible] = useState(false);
 const [HMResponse, setHMResponse] = useState('');
-const [ecoparkButton, setEcoparkVisible] = useState(false);
-const [ecoparkResponse, setEcoparkResponse] = useState(false);
 
 
   const processes = processesData;
@@ -345,11 +343,6 @@ const handleYearButtonClick = (year) => {
 
     setYumulResponse(yumull);
   }
-  const handleEcoParkButtonClick = (ecopark) => {
-    const ecoparkk = Responses[ecopark];
-
-    setEcoparkResponse(ecoparkk);
-  }
 
 
 // Function to display the text and speak it
@@ -420,8 +413,6 @@ const displayText = (text) => {
     setHMVisible(false);
     setHMResponse(false);
 
-    setEcoparkVisible(false);
-    setEcoparkResponse(false);
 
 
     setShowEregular(false);
@@ -436,18 +427,11 @@ const displayText = (text) => {
     setShowVision(false);
     setShowHymn(false);
     setShowAchiever(false);
-
-    setShowAvatar(true);
+    setShowGoodmoral(false);
 
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-
-      
-      const avatarDisplay = document.querySelector('.hello');
-      while (avatarDisplay.firstChild) {
-        avatarDisplay.removeChild(avatarDisplay.firstChild);
-      }
     }
   };
 
@@ -476,10 +460,12 @@ const displayText = (text) => {
   // All the command user can ask for ISKA 
   const commands = [
     {
-      command: ['hi', 'hello', 'hey', '* hello *', '* hello', 'hello *', 'what are you', '* what are you', 'what are you *', '* what are you *'],
+      command: ['hi', 'hello', 'hey', '* hello *', '* hello', 'hello *'],
       callback:() => {
         resetTranscript();
-        displayText("Hi, I am iska, a P U P Lopez Virtual Assistant developed by the team Code Craft a 4th year B S I T students.");
+        displayText("Hello, I'm iska, how can I assist you?");
+        const textDisplay = `Hello, I'm ISKA, how can I assist you?`;
+        displayOtherText(textDisplay);
         setResetButtonVisible(true);
         setProgramsButton(false);
 
@@ -529,9 +515,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -546,16 +529,87 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
-        setShowAvatar(true);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
+        setShowGoodmoral(false);
       }
 
     },
+
+    {
+      command: ['what are you', 'who are you'],
+      callback: () => {
+        resetTranscript();
+        displayText('Hi, I am iska, a P U P Lopez Virtual Assistant developed by the team Code Craft a 4th year B S I T students.');
+        const textDisplay = `Hi, I am ISKA, a PUP Lopez Virtual Assistant developed by the team Code Craft a 4th year BSIT students.`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+        setProgramsButton(false);
+
+        setAboutResponse(false);
+        setAboutVisible(false);
+
+        setSelectedYearResponse(false);
+        setYearButtonVisible(false);
+
+        setResponseDisplayed(true);
+        
+        setResponseDisplayed(true);
+
+        setCommandRecognized(true);
+                //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+        setShowAchiever(false);
+        setShowGoodmoral(false);
+      }
+
+    },
+
     {
       command: ['* map *', 'map *', '* map', 'map', 'university map', 'map of the university', 'show university map'],
       callback: () => {
@@ -610,9 +664,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -627,15 +678,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
-
-      },
+        setShowGoodmoral(false);      },
     },
     {
       command: ['* enroll *', '* enroll', 'enroll *', 'enroll', 'enrollment', '* enrollment', 'enrollment *', '* enrollment *'],
@@ -700,9 +743,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -717,13 +757,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowGoodmoral(false);
 
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -804,9 +839,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -821,14 +853,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
-        
+        setShowGoodmoral(false);        
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -898,9 +923,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -915,15 +937,9 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
-        
-    const textDisplayContainer = document.querySelector('.textOther');
+        setShowGoodmoral(false);        
+   
+        const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
     }
@@ -993,9 +1009,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1009,8 +1022,10 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowGoodmoral(false);
         
-    const textDisplayContainer = document.querySelector('.textOther');
+        const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
     }
@@ -1044,45 +1059,9 @@ const displayText = (text) => {
         setResponseDisplayed(true); // Set responseDisplayed to true
 
         setCommandRecognized(true);
-        //CANTEEN
+
         setCanteenVisible(true);
         setCanteenResponse(false);
-        //SCIENCE
-        setScienceVisible(false);
-        setScienceResponse(false);
-        //ENGINEER
-        setEngineerVisible(false);
-        setEngineerResponse(false);
-        //YUMUL
-        setYumulVisible(false);
-        setYumulResponse(false);
-        //NANTES
-        setNantesVisible(false);
-        setNantesResponse(false);
-        //GYMNASIUM
-        setGymVisible(false);
-        setGymResponse(false);
-        //GRANDSTAND
-        setGrandStandVisible(false);
-        setGrandStandResponse(false);
-        //EDUCATION
-        setEducVisible(false);
-        setEducResponse(false);
-        //ADMISSION
-        setAdmissionVisible(false);
-        setAdmissionResponse(false);
-        //LAB1
-        setLab1Visible(false);
-        setLab1Response(false);
-        //LAB2
-        setLab2Visible(false);
-        setLab2Response(false);
-        //HOSPITALITY
-        setHMVisible(false);
-        setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1096,6 +1075,8 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
+        setShowAchiever(false);
+        setShowGoodmoral(false);     
       }
     },
 
@@ -1129,42 +1110,9 @@ const displayText = (text) => {
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
-        //SCIENCE
+
         setScienceVisible(true);
         setScienceResponse(false);
-        //ENGINEER
-        setEngineerVisible(false);
-        setEngineerResponse(false);
-        //YUMUL
-        setYumulVisible(false);
-        setYumulResponse(false);
-        //NANTES
-        setNantesVisible(false);
-        setNantesResponse(false);
-        //GYMNASIUM
-        setGymVisible(false);
-        setGymResponse(false);
-        //GRANDSTAND
-        setGrandStandVisible(false);
-        setGrandStandResponse(false);
-        //EDUCATION
-        setEducVisible(false);
-        setEducResponse(false);
-        //ADMISSION
-        setAdmissionVisible(false);
-        setAdmissionResponse(false);
-        //LAB1
-        setLab1Visible(false);
-        setLab1Response(false);
-        //LAB2
-        setLab2Visible(false);
-        setLab2Response(false);
-        //HOSPITALITY
-        setHMVisible(false);
-        setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1178,7 +1126,9 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-      }
+        setShowAchiever(false);
+        setShowGoodmoral(false);
+           }
     },
     {
       command: ['* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* arhitecture *'],
@@ -1241,9 +1191,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1257,7 +1204,9 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-      }
+        setShowAchiever(false);
+        setShowGoodmoral(false);  
+        }
     },
     {
       command: ['* yumul', 'yumul *', '* yumul *', 'yumul'],
@@ -1320,9 +1269,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1336,7 +1282,9 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-      } 
+        setShowAchiever(false);
+        setShowGoodmoral(false);   
+       } 
     },
     {
       command: ['* nantes', 'nantes *', '* nantes *', 'nantes', '* accounting *'],
@@ -1399,9 +1347,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1415,7 +1360,9 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-      }
+        setShowAchiever(false);
+        setShowGoodmoral(false);   
+        }
     },
     {
       command: ['gymnasium', '* gymnasium', '* gymnasium *', 'gymnasium *', 'gym', '* gym', '* gym *', '* gym *', '*gym*'],
@@ -1478,9 +1425,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1495,13 +1439,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
+        setShowGoodmoral(false);
       }
     },
     {
@@ -1565,9 +1503,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1581,7 +1516,9 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-      }
+        setShowAchiever(false);
+        setShowGoodmoral(false);
+         }
     },
     {
       command: ['education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *'],
@@ -1644,9 +1581,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1660,7 +1594,9 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-      }
+        setShowAchiever(false);
+        setShowGoodmoral(false);  
+       }
     },
     {
       command: ['admission', '* admission', 'admission *', '* admission *'],
@@ -1736,7 +1672,9 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-      }
+        setShowAchiever(false);
+        setShowGoodmoral(false);    
+        }
     },
     {
       command: ['lab 1', 'lab * 1', 'laboratory 1', 'laboratory 1 *', '* laboratory 1 *', 'com lab 1', '*com * lab * 1', '* computer laboratory 1 *', 'computer lab 1',
@@ -1801,9 +1739,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1817,7 +1752,9 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-      }
+        setShowAchiever(false);
+        setShowGoodmoral(false);   
+        }
     },
     {
      command: ['lab 2', 'lab * 2', 'laboratory 2', 'laboratory 2 *', '* laboratory 2 *', 'com lab 2', '*com * lab * 2', '* computer laboratory 2 *', 'computer lab 2',
@@ -1882,9 +1819,6 @@ const displayText = (text) => {
           //HOSPITALITY
           setHMVisible(false);
           setHMResponse(false);
-          //ECOPARK
-          setEcoparkVisible(false);
-          setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1898,7 +1832,9 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-      }
+        setShowAchiever(false);
+        setShowGoodmoral(false);
+       }
     },
     {
       command: ['hospitality'],
@@ -1961,9 +1897,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(true);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -1977,8 +1910,9 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-      }
-      
+        setShowAchiever(false);
+        setShowGoodmoral(false);    
+       }
     },
     {
       command: ['regular', '* regular', 'regular *', '* regular *'],
@@ -2038,9 +1972,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(true);
         setShowEirregular(false);
@@ -2054,13 +1985,9 @@ const displayText = (text) => {
         setShowMission(false);
         setShowVision(false);
         setShowHymn(false);
-        
+        setShowAchiever(false);
+        setShowGoodmoral(false);
 
-        
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2125,9 +2052,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(true);
@@ -2142,13 +2066,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
+        setShowGoodmoral(false);
+        
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2213,9 +2132,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2230,13 +2146,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
-
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
+        setShowGoodmoral(false);
+        
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2301,9 +2212,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2318,13 +2226,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowGoodmoral(false);
 
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2389,9 +2292,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2406,13 +2306,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowGoodmoral(false);
 
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2477,9 +2372,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2494,13 +2386,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowGoodmoral(false);
 
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2565,9 +2452,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2582,13 +2466,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowGoodmoral(false);
 
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2653,9 +2532,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2670,13 +2546,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowGoodmoral(false);
 
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2741,9 +2612,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2758,13 +2626,8 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowGoodmoral(false);
 
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2829,9 +2692,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2846,13 +2706,8 @@ const displayText = (text) => {
         setShowVision(true);
         setShowHymn(false);
         setShowAchiever(false);
+        setShowGoodmoral(false);
 
-        setShowAvatar(false);
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -2863,7 +2718,7 @@ const displayText = (text) => {
       command: ['hymn', '* hymn ', 'hymn *', '* hymn *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll irregular student at PUP Lopez`;
+        const textDisplay = 'Here is the PUP Hymn';
         displayOtherText(textDisplay);
         setResetButtonVisible(true);
 
@@ -2917,9 +2772,6 @@ const displayText = (text) => {
         //HOSPITALITY
         setHMVisible(false);
         setHMResponse(false);
-        //ECOPARK
-        setEcoparkVisible(false);
-        setEcoparkResponse(false);
 
         setShowEregular(false);
         setShowEirregular(false);
@@ -2934,7 +2786,7 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(true);
         setShowAchiever(false);
-
+        setShowGoodmoral(false);
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -3014,13 +2866,89 @@ const displayText = (text) => {
         setShowVision(false);
         setShowHymn(false);
         setShowAchiever(true);
+        setShowGoodmoral(false);
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+      }
+    },
 
-        setShowAvatar(false);
+    {
+      command: ['good moral', '* good moral ', 'good moral *', '* good moral *'],
+      callback: () => {
+        resetTranscript();
+        displayText('Here is the Steps on how to request for Good Moral Certificate');
+        const textDisplay = `Here is the Steps on how to request for Good Moral Certificate`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
 
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+        setShowAchiever(false);
+        setShowGoodmoral(true);
+
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -3097,9 +3025,6 @@ const sendTextToCommands = (text) => {
 
     setHMVisible(false);
     setHMResponse(false);
-
-    setEcoparkVisible(false);
-    setEcoparkResponse(false);
     
     setNantesVisible(false);
     setNantesResponse(false);
@@ -3109,9 +3034,6 @@ const sendTextToCommands = (text) => {
     setShowEirregular(false);
     seteShowEtransferee(false);
 
-    setShowAvatar(false);
-
-
     // Show elements with the textOther classname
     const showTextOther = document.querySelectorAll('.textOther');
     showTextOther.forEach((element) => {
@@ -3120,10 +3042,6 @@ const sendTextToCommands = (text) => {
     const showReset = document.querySelectorAll('.reset-button');
     showReset.forEach((element) => {
       element.style.display = '';
-    });
-    const hideAvatar = document.querySelectorAll('.avatar-container');
-    hideAvatar.forEach((element) => {
-      element.style.display = 'none';
     });
     
   }
@@ -3171,7 +3089,9 @@ const sendTextToCommands = (text) => {
     <h1 className='app-name'>
         IS<span>KA</span></h1>
     </div>
-      <p className={responseDisplayed ? 'desc-hidden' : 'desc'}></p>
+      <p className={responseDisplayed ? 'desc-hidden' : 'desc'}>
+  Hi! I'm ISKA, PUP Virtual Assistant, how can I help you?
+</p>
 
       </div>
       <div className='right-icon'>
@@ -3250,10 +3170,7 @@ const sendTextToCommands = (text) => {
             <Education onEducationButtonClick = {handleEducButtonClick} />
           )}
           {hMButton && (
-            <Hospitality onHmButtonClick = {handleHMButtonClick} />
-          )}
-          {ecoparkButton && (
-            <EcoPark onEcoparkButtonClick = {handleEcoParkButtonClick} />
+            <Hospitality onHmBUttonClick = {handleHMButtonClick} />
           )}
 
         </div>
@@ -3278,14 +3195,13 @@ const sendTextToCommands = (text) => {
       {showMission && <Mission />}
       {showVision && <Vision />}
       {showHymn && <Hymn />}
-      {showAvatar && <Avatar />}
       {showAchiever && <Achiever />}
-      <Avatar />
+      {showGoodmoral && <Goodmoral />}
 
         <div className="otherResponse">
           <p className="displayResponse">
           {selectedYearResponse}{programsResponse}{aboutResponse}
-          {canteenResponse}{scienceResponse}{engineerResponse}{yumulResponse}{admissionResponse}{nantesResponse}{lab1Response}{lab2Response}{educResponse}{HMResponse}{grandstandResponse}{gymResponse}{ecoparkResponse}
+          {canteenResponse}{scienceResponse}{engineerResponse}{yumulResponse}{admissionResponse}{nantesResponse}{lab1Response}{lab2Response}{educResponse}{HMResponse}{grandstandResponse}{gymResponse}
           </p>
         
         <p>{displayTextOnScreen}</p>

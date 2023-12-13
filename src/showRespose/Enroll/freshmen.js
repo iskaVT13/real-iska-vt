@@ -93,7 +93,7 @@ const Freshmen = () => {
     <div>
       <div className='step'>
         <h4 className=''>STEPS TO FOLLOW:</h4><br></br>
-        <p>Step 1: Go to the PUP iApply for PUPCET page (https://www.pup.edu.ph/iapply/pupcet) and read the information provided</p>
+        <p>Step 1: Go to the PUP iApply for PUPCET page (<a href='https://www.pup.edu.ph/iapply/pupcet' target='_blank' rel='noopener noreferrer'>https://www.pup.edu.ph/iapply/pupcet</a>) and read the information provided</p>
         <img className='screenshot' src={iapply} alt='Step-image1' />
         <p>Step 2: Scroll Down and Click "Apply Now". This will take you to PUP iApply</p>
         <img className='screenshot' src={applyNow} alt='Step-image2' />
