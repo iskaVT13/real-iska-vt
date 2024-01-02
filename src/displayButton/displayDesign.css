@@ -6,7 +6,7 @@
     position: fixed;
     background-color: #7E0001;
     z-index: 500;
-    top: 22vh;
+    top: 20%;
     padding: 10px;
 
 }
@@ -14,16 +14,17 @@
   display: inline-block;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
     position: relative;
     border-radius: 10px;
-    margin-right: 3px;
+    margin-right: 5px;
     background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
     color: white; /* Text color */
     border: none;
     cursor: pointer;
     transition: background 0.3s ease;
     z-index: 40;
-    width: 150px;
+    width: fit-content;
 
 }
 

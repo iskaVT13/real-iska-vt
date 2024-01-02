@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 10px;
-    top: 23vh;
+    top: 170px;
 }
 
 .step h4{
@@ -12,6 +12,11 @@
 }
 .step p{
     color: white;
+    text-align: left;
+    font-size: 20px;
+}
+a{
+    color:rgb(141, 173, 255);
 }
 
 .step img{
