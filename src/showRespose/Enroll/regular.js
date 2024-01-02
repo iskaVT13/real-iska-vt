@@ -2,11 +2,16 @@ import React from 'react';
 import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
-import pylon from '../../areaImage/pylon2022.jpg';
-import step1 from '../Enroll/enrollPicture/log in.png'
+import step1 from '../Enroll/enrollPicture/Regular/log in.png';
+import step2 from '../Enroll/enrollPicture/Regular/s2.jpg';
+import step3 from '../Enroll/enrollPicture/Regular/s3.jpg';
+import step4 from '../Enroll/enrollPicture/Regular/s4.jpg';
+import step5 from '../Enroll/enrollPicture/Regular/s5.jpg';
+import step8 from '../Enroll/enrollPicture/Regular/s8.jpg';
 
 
 const Regular = () => {
+          
   const justifyText = (text, x, y, maxWidth, lineHeight, pdf) => {
     if (typeof text !== 'string') {
       return;
@@ -91,18 +96,17 @@ const Regular = () => {
         <p>Step 1: Log in to your SIS Account.</p>
           <img className='screenshot' src={step1} alt='Step-image1' />
         <p>Step 2. Check if your grades is complete (Grades Section )</p>
-          <img className='screenshot' src={pylon} alt='Step-image2' />
+          <img className='screenshot' src={step2} alt='Step-image2' />
         <p>Step 3. Go to enrollment section </p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
+          <img className='screenshot' src={step3} alt='Step-image1' />
         <p>Step 4. Check all the subjects and the schedule to enroll</p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
+          <img className='screenshot' src={step4} alt='Step-image1' />
         <p>Step 5 : Click Save and Assess </p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
+          <img className='screenshot' src={step5} alt='Step-image1' />
         <p>Step 6 : Review and Click okay to confirm </p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
         <p>Step 7 : Review the Assessment </p>
         <p>Step 8 : Print the Confirmation Slip </p>
-          <img className='screenshot' src={step1} alt='Step-image1' />
+          <img className='screenshot' src={step8} alt='Step-image1' />
       </div>
 
     <div className='download-button'>

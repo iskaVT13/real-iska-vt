@@ -44,8 +44,9 @@ function CanteenButton() {
   const handleImageClick = (button) => {
     setCurrentButton(responses[button]);
     setIsActive(true);
-     // Hide elements with the textOther classname
-     const hideTextOther = document.querySelectorAll('.textOther');
+
+    // Hide elements with the textOther classname
+    const hideTextOther = document.querySelectorAll('.textOther');
     hideTextOther.forEach((element) => {
       element.style.display = 'none';
     });
@@ -59,26 +60,34 @@ function CanteenButton() {
     hideAvatar.forEach((element) => {
       element.style.display = 'none';
     });
+
+    // Scroll to the top
+    window.scrollTo(0, 0);
   };
 
   const handleBackButtonClick = () => {
     setCurrentButton('');
     setIsActive(false);
+
     // Show elements with the textOther classname
     const showTextOther = document.querySelectorAll('.textOther');
     showTextOther.forEach((element) => {
       element.style.display = ''; // Set to an empty string to use the default display value
     });
+
     const showReset = document.querySelectorAll('.reset-button');
     showReset.forEach((element) => {
       element.style.display = '';
     });
+
+    // Scroll to the top
+    window.scrollTo(0, 0);
   };
-   // Function to handle text-to-speech synthesis
-   const speakText = (text) => {
+
+  // Function to handle text-to-speech synthesis
+  const speakText = (text) => {
     const synth = window.speechSynthesis;
     const utterance = new SpeechSynthesisUtterance(text);
-
     synth.speak(utterance);
   };
 
@@ -90,9 +99,8 @@ function CanteenButton() {
     }
   }, [currentButton]);
 
-
   return (
-    <div className="areaImage-container">
+    <div className="areaImagecontainer">
     {!isActive && (
     <div className="buttons-container">
         <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={pylon} />

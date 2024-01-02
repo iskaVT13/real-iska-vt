@@ -3,15 +3,15 @@ import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
 import pylon from '../../areaImage/pylon2022.jpg';
-import iapply from '../Enroll/enrollPicture/pup iapply.png';
-import applyNow from '../Enroll/enrollPicture/applyNow.png';
-import applyNow2 from '../Enroll/enrollPicture/applyNow2.png';
-import register from '../Enroll/enrollPicture/register.png';
-import agreement from '../Enroll/enrollPicture/agreement.png';
-import agreement2 from '../Enroll/enrollPicture/agreement2.png';
-import agreement3 from '../Enroll/enrollPicture/agreement3.png';
-import qualification from '../Enroll/enrollPicture/qualification.png';
-import registration from '../Enroll/enrollPicture/registration.png';
+import iapply from '../Enroll/enrollPicture/Freshmen/pup iapply.png';
+import applyNow from '../Enroll/enrollPicture/Freshmen/applyNow.png';
+import applyNow2 from '../Enroll/enrollPicture/Freshmen/applyNow2.png';
+import register from '../Enroll/enrollPicture/Freshmen/register.png';
+import agreement from '../Enroll/enrollPicture/Freshmen/agreement.png';
+import agreement2 from '../Enroll/enrollPicture/Freshmen/agreement2.png';
+import agreement3 from '../Enroll/enrollPicture/Freshmen/agreement3.png';
+import qualification from '../Enroll/enrollPicture/Freshmen/qualification.png';
+import registration from '../Enroll/enrollPicture/Freshmen/registration.png';
 
 
 const Freshmen = () => {

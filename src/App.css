@@ -39,6 +39,7 @@ header{
   position: sticky;
   z-index: 100;
   padding: 6px;
+  overflow: -moz-hidden-unscrollable;
 }
 
 
@@ -52,7 +53,6 @@ header{
   right: 5%;
   margin-top: 10px;
   top: 60px;
-  overflow: auto;
   font-size: 15px;
   z-index: 155;
 }
@@ -60,11 +60,6 @@ header{
 .logo {
   width:13vh;
   height:max-content;
-}
-.otherResponse{
-  height: 65vh;
-  width: 100%;
-  z-index: 10;
 }
 
 
@@ -116,13 +111,6 @@ color: white;
   padding: 2vh;
 }
 
-.iska img{
-  position: relative;
-  width: fit-content;
-  height: fit-content;
-  top: 50%;
-}
-
 
 .textOther{
   justify-content: space-around;
@@ -141,13 +129,12 @@ color: white;
   top: 0;
   white-space: pre-line;
   color: rgb(255, 255, 255);
-  overflow: scroll;
+  overflow:inherit;
   padding: 5px;
   line-height: 1.5; /* Adjust this value to control the line spacing */
   z-index: 50;
   height: 200vh;
   text-align: center;
-  
 }
 
 .displayResponse{

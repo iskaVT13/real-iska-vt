@@ -34,7 +34,7 @@
     width: fit-content;
     left: 5%;
 }
-.areaImage-container{
+.areaImagecontainer{
 display: inline-flexbox;
 justify-content: space-around;
 flex-direction: column;

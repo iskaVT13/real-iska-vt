@@ -58,6 +58,8 @@ function Lab2Button() {
     hideAvatar.forEach((element) => {
       element.style.display = 'none';
     });
+     // Scroll to the top
+     window.scrollTo(0, 0);
   };
 
   const handleBackButtonClick = () => {
@@ -72,6 +74,8 @@ function Lab2Button() {
     showReset.forEach((element) => {
       element.style.display = '';
     });
+     // Scroll to the top
+     window.scrollTo(0, 0);
   };
 
    // Function to handle text-to-speech synthesis

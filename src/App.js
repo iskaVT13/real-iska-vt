@@ -90,7 +90,7 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
   const handleSendText = () => {
     onSendText(inputText);
     setInputText('');
-    
+    window.scrollTo(0, 0);
   };
 
 
