@@ -3,8 +3,11 @@
     display: flexbox;
     justify-content: space-around;
     overflow: hidden;
-    position: relative;
+    position: fixed;
     background-color: #7E0001;
+    z-index: 500;
+    top: 22vh;
+    padding: 10px;
 
 }
 .choices-button button{
@@ -13,14 +16,14 @@
     align-items: center;
     position: relative;
     border-radius: 10px;
-    margin-right: 5px;
+    margin-right: 3px;
     background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
     color: white; /* Text color */
     border: none;
     cursor: pointer;
     transition: background 0.3s ease;
     z-index: 40;
-    width: fit-content;
+    width: 150px;
 
 }
 

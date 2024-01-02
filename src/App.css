@@ -120,9 +120,9 @@ color: white;
   padding: 5px;
   color: white;
   top: 15%;
-  position: sticky;
+  position: fixed;
   background-color: #7E0001;
-  z-index: 99;
+  z-index: 501;
 }
 
 .container{
@@ -176,7 +176,7 @@ color: white;
 .center-input{
   display: flex;
   align-items: center;
-  position: relative;
+  position: sticky;
   width: 100%;
   overflow: hidden;
 }

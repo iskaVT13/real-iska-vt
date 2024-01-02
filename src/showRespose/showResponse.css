@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 10px;
+    top: 23vh;
 }
 
 .step h4{
