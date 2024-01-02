@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/real-iska-vt/static/css/main.23c8ba0e.css",
-    "main.js": "/real-iska-vt/static/js/main.b8169ec3.js",
+    "main.css": "/real-iska-vt/static/css/main.1f4fdf5d.css",
+    "main.js": "/real-iska-vt/static/js/main.a430da49.js",
     "static/js/498.fcaf40d7.chunk.js": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js",
     "static/js/703.59b532f8.chunk.js": "/real-iska-vt/static/js/703.59b532f8.chunk.js",
-    "static/js/379.e5cddfb8.chunk.js": "/real-iska-vt/static/js/379.e5cddfb8.chunk.js",
+    "static/js/379.06dbaa89.chunk.js": "/real-iska-vt/static/js/379.06dbaa89.chunk.js",
     "static/js/114.b569399c.chunk.js": "/real-iska-vt/static/js/114.b569399c.chunk.js",
     "static/js/907.59af9300.chunk.js": "/real-iska-vt/static/js/907.59af9300.chunk.js",
     "static/js/936.44f418db.chunk.js": "/real-iska-vt/static/js/936.44f418db.chunk.js",
@@ -34,30 +34,35 @@
     "static/media/Lab 2.jpg": "/real-iska-vt/static/media/Lab 2.1d5d477aa15f8f3c2aab.jpg",
     "static/media/applyNow2.png": "/real-iska-vt/static/media/applyNow2.ed4edd29b1f0804d21c0.png",
     "static/media/pylon2022.jpg": "/real-iska-vt/static/media/pylon2022.c31e89cf492bae4cb956.jpg",
+    "static/media/s5.jpg": "/real-iska-vt/static/media/s5.46f208c6c69ea89c9e0f.jpg",
     "static/media/map.jpg": "/real-iska-vt/static/media/map.3a569680ea5bdf9a2322.jpg",
     "static/media/pup iapply.png": "/real-iska-vt/static/media/pup iapply.1e303b1c9f3898821b9c.png",
+    "static/media/s4.jpg": "/real-iska-vt/static/media/s4.f5d11ef197140ecdb0db.jpg",
     "static/media/agreement.png": "/real-iska-vt/static/media/agreement.2739a030a687c56e5f13.png",
     "static/media/log in.png": "/real-iska-vt/static/media/log in.f6504351b1dbb41ffaaa.png",
     "static/media/registration.png": "/real-iska-vt/static/media/registration.04cd8163550889a242b9.png",
     "static/media/qualification.png": "/real-iska-vt/static/media/qualification.3226a7edc19f62ee38f8.png",
     "static/media/agreement3.png": "/real-iska-vt/static/media/agreement3.fbbe94d7e6bdabd41baf.png",
     "static/media/applyNow.png": "/real-iska-vt/static/media/applyNow.486b7ad73ea9d5265fe8.png",
+    "static/media/s8.jpg": "/real-iska-vt/static/media/s8.27d24cbc0ececa734258.jpg",
     "static/media/agreement2.png": "/real-iska-vt/static/media/agreement2.7eb479d927acf93432ed.png",
     "static/media/iska-logo.png": "/real-iska-vt/static/media/iska-logo.0b23486e2144e26ea815.png",
+    "static/media/s3.jpg": "/real-iska-vt/static/media/s3.b30e0b27a877a19bc8bd.jpg",
     "static/media/register.png": "/real-iska-vt/static/media/register.72c4661490164c8e4e37.png",
+    "static/media/s2.jpg": "/real-iska-vt/static/media/s2.d204a6cd79223ef2464f.jpg",
     "static/media/krona-one-latin-400-normal.woff": "/real-iska-vt/static/media/krona-one-latin-400-normal.fd47e8be9d5868e2354f.woff",
     "static/media/krona-one-latin-400-normal.woff2": "/real-iska-vt/static/media/krona-one-latin-400-normal.2f0d0d32161acbb479ff.woff2",
     "static/media/krona-one-latin-ext-400-normal.woff": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.fb9cd5f06d66cdcda94f.woff",
     "static/media/krona-one-latin-ext-400-normal.woff2": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.01120cafa274a6b13dba.woff2",
     "index.html": "/real-iska-vt/index.html",
-    "main.23c8ba0e.css.map": "/real-iska-vt/static/css/main.23c8ba0e.css.map",
-    "main.b8169ec3.js.map": "/real-iska-vt/static/js/main.b8169ec3.js.map",
+    "main.1f4fdf5d.css.map": "/real-iska-vt/static/css/main.1f4fdf5d.css.map",
+    "main.a430da49.js.map": "/real-iska-vt/static/js/main.a430da49.js.map",
     "498.fcaf40d7.chunk.js.map": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js.map",
     "703.59b532f8.chunk.js.map": "/real-iska-vt/static/js/703.59b532f8.chunk.js.map",
-    "379.e5cddfb8.chunk.js.map": "/real-iska-vt/static/js/379.e5cddfb8.chunk.js.map"
+    "379.06dbaa89.chunk.js.map": "/real-iska-vt/static/js/379.06dbaa89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23c8ba0e.css",
-    "static/js/main.b8169ec3.js"
+    "static/css/main.1f4fdf5d.css",
+    "static/js/main.a430da49.js"
   ]
 }
