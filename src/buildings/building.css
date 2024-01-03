@@ -24,10 +24,10 @@
 .text-gif{
     position: fixed;
     color: #ffffff;
-    padding: 10px;
     text-align: center;
     align-items: center;
     width: 100%;
+    top: 17vh;
 }
 
 .gif img{
@@ -35,17 +35,23 @@
     width: 100%;
     align-items: center;
     padding: 15px;
+    margin-top: 27vh;
+    justify-content: center;
+    
 }
 
 .back-button{
     display: flex;
-    position: relative;
+    position: fixed;
     justify-content: space-between;
     background-color: #f1c500;
-    width: fit-content;
-    left: 5%;
-    top: 2.5vh;
+    width: 20%;
+    left: 4%;
+    top: 21vh;
+    padding: 10px;
 }
+
+
 .areaImagecontainer{
 display: inline-flexbox;
 justify-content: space-around;
@@ -57,7 +63,7 @@ position: relative;
     padding: 30px;
     width: 100%;
     position: relative;
-    top: 5vh;
+    top: 20vh;
     overflow: scroll;
     display: flex;
     flex-direction: column;
