@@ -9,6 +9,7 @@
   position: relative;
   display: block;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 body{
@@ -21,6 +22,7 @@ body{
   background-size: cover;
   scrollbar-width:none;
   scrollbar-color: transparent transparent;
+  overflow:auto;
 
   &::-webkit-scrollbar {
       width: 6px;
@@ -36,7 +38,8 @@ header{
   justify-content: space-between;
   display: flex;
   top: 0;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   z-index: 101;
   padding: 6px;
   overflow: -moz-hidden-unscrollable;
@@ -130,7 +133,7 @@ color: white;
   top: 0;
   white-space: pre-line;
   color: rgb(255, 255, 255);
-  overflow:inherit;
+  overflow:scroll;
   padding: 5px;
   line-height: 1.5; /* Adjust this value to control the line spacing */
   z-index: 50;
@@ -156,11 +159,12 @@ color: white;
   background-color: #7E0001;
   padding: 5px;
   bottom: 0;
-  position: sticky;
+  position: fixed;
   overflow: hidden;
   z-index: 100;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .microphone{
