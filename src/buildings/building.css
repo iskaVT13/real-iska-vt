@@ -48,10 +48,10 @@ position: relative;
 }
 
 .buttons-container {
-    padding: 10px;
+    padding: 30px;
     width: 100%;
     position: relative;
-    top: 60px;
+    top: 45px;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
@@ -63,7 +63,7 @@ position: relative;
 
 
 .buttons-container img{
-    width: 23rem;
+    width: 100%;
     border: #f1c500 solid 5px;
     border-radius: 3%;
 

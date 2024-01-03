@@ -177,7 +177,7 @@ color: white;
 .center-input{
   display: flex;
   align-items: center;
-  position: sticky;
+  position: static;
   width: 100%;
   overflow: hidden;
 }
@@ -192,7 +192,7 @@ input {
 /* Media Query for screens with a maximum width of 768px (typical mobile screens) */
 @media (max-width: 768px) {
   input {
-    width: 37vh; /* Adjust the width to take up 90% of the parent container */
+    width: 100%; /* Adjust the width to take up 90% of the parent container */
     margin: 5px; /* Reduce the margin for smaller screens */
   }
 }
