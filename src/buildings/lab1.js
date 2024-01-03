@@ -28,6 +28,8 @@ function Lab1Button() {
     import('../goingTo/goLab1.json')
       .then((responseModule) => setResponses(responseModule.default))
       .catch((error) => console.error('Error loading responses:', error));
+
+      window.scrollTo(0, 0);
   }, []);
 
   const fetchImageURL = useCallback(async () => {
@@ -36,6 +38,8 @@ function Lab1Button() {
       const url = await getDownloadURL(imageRef);
       setImageURL(url);
     }
+
+    window.scrollTo(0, 0);
   }, [currentButton]);
 
   useEffect(() => {

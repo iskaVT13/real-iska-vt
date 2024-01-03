@@ -19,6 +19,7 @@ const Freshmen = () => {
     if (typeof text !== 'string') {
       return;
     }
+    window.scrollTo(0, 0);
 
     const words = text.split(' ');
     let line = '';

@@ -19,6 +19,8 @@ function App() {
     speakText("Here is the Bachelor of Science courses at P U P Lopez.")
     setShowBachelor(!showBachelor);
     setShowDiploma(false);
+
+    window.scrollTo(0, 0);
     
   };
   const handleDiplomaButtonClick = () => {
@@ -26,6 +28,7 @@ function App() {
     setShowDiploma(!showDiploma);
     setShowBachelor(false);
 
+    window.scrollTo(0, 0);
   };
   
 

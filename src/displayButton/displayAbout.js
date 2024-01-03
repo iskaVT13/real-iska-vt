@@ -25,6 +25,8 @@ function App() {
     setShowMission(false);
     setShowVision(false);
     setShowHymn(false);
+    
+    window.scrollTo(0, 0);
   };
   const handleMissionButtonClick = () => {
     speakText("This is the Mission of P U P")
@@ -33,6 +35,8 @@ function App() {
     setShowVision(false);
     setShowHymn(false);
 
+    window.scrollTo(0, 0);
+
   };
   const handleVisionButtonClick = () => {
     speakText("The Vision of P U P")
@@ -40,6 +44,8 @@ function App() {
     setShowMission(false);
     setShowHistory(false);
     setShowHymn(false);
+
+    window.scrollTo(0, 0);
   }
   const handleHymnButtonClick = () => {
     speakText("This is the Hymn of P U P")
@@ -47,6 +53,8 @@ function App() {
     setShowHistory(false);
     setShowMission(false);
     setShowVision(false);
+
+    window.scrollTo(0, 0);
 
   }
 

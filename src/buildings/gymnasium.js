@@ -27,6 +27,8 @@ function GymButton() {
     import('../goingTo/goGym.json')
       .then((responseModule) => setResponses(responseModule.default))
       .catch((error) => console.error('Error loading responses:', error));
+
+      window.scrollTo(0, 0);
   }, []);
 
   const fetchImageURL = useCallback(async () => {
@@ -35,6 +37,8 @@ function GymButton() {
       const url = await getDownloadURL(imageRef);
       setImageURL(url);
     }
+
+    window.scrollTo(0, 0);
   }, [currentButton]);
 
   useEffect(() => {

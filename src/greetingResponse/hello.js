@@ -5,6 +5,9 @@ import avatar from '../pictures/avatar.gif';
 
 
 const Hello = () => {
+
+  window.scrollTo(0, 0);
+
   return (
     <div>
       <div className='avatar-container'>

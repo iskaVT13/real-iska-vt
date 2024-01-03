@@ -2,6 +2,9 @@ import React from 'react';
 import './greet.css';
 
 const IskaDo = () => {
+
+  window.scrollTo(0, 0);
+  
   return (
     <div>
       <div className='avatar-container'>

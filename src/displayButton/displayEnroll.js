@@ -24,6 +24,8 @@ function App() {
     setShowIrregular(false);
     setShowFreshmen(false);
     setShowTransferee(false);
+
+    window.scrollTo(0, 0);
   };
   const handleIrregularButtonClick = () => {
     speakText("Here is the process on how to enroll a irregular student at P U P Lopez.")
@@ -32,6 +34,8 @@ function App() {
     setShowFreshmen(false);
     setShowTransferee(false);
 
+    window.scrollTo(0, 0);
+
   };
   const handleFreshmenButtonClick = () => {
     speakText("Here is the process on how to enroll as fresmen student at P U P Lopez. Follow this steps and you can definitely one of us")
@@ -39,6 +43,8 @@ function App() {
     setShowIrregular(false);
     setShowRegular(false);
     setShowTransferee(false);
+
+    window.scrollTo(0, 0);
   }
   const handleTransfereeButtonClick = () => {
     speakText("Here is the process on how to enroll a transferee student at P U P Lopez.")
@@ -46,6 +52,8 @@ function App() {
     setShowFreshmen(false);
     setShowIrregular(false);
     setShowRegular(false);
+
+    window.scrollTo(0, 0);
 
   }
 
