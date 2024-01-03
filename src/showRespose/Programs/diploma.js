@@ -4,6 +4,9 @@ import { jsPDF } from 'jspdf';
 
 
 const Diploma = () => {
+
+  window.scrollTo(0, 0);
+  
   const justifyText = (text, x, y, maxWidth, lineHeight, pdf) => {
     if (typeof text !== 'string') {
       return;

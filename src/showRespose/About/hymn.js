@@ -6,6 +6,8 @@ import pylon from '../../areaImage/pylon2022.jpg';
 
 const Hymn = () => {
 
+  window.scrollTo(0, 0);
+
   return (
     <div>
       <div className='step'>

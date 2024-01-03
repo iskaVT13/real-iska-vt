@@ -5,6 +5,9 @@ import { jsPDF } from 'jspdf';
 
 
 const Graduation = () => {
+
+  window.scrollTo(0, 0);
+  
   const handleDownloadPDF = () => {
     const element = document.querySelector('.step');
 

@@ -4,6 +4,8 @@ import '../showResponse.css';
 
 const Vision = () => {
 
+  window.scrollTo(0, 0);
+
   return (
     <div>
       <div className='step'>
