@@ -37,7 +37,7 @@ header{
   display: flex;
   top: 0;
   position: sticky;
-  z-index: 100;
+  z-index: 101;
   padding: 6px;
   overflow: -moz-hidden-unscrollable;
 }
@@ -122,7 +122,8 @@ color: white;
   top: 15%;
   position: fixed;
   background-color: #7E0001;
-  z-index: 501;
+  z-index: 100;
+  width: 100%;
 }
 
 .container{

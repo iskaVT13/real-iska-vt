@@ -14,6 +14,12 @@
     justify-content: space-around;
     text-align: center;
 }
+.buttons-container p{
+    padding: 10px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
 
 .text-gif{
     position: relative;
@@ -42,9 +48,10 @@ position: relative;
 }
 
 .buttons-container {
+    padding: 10px;
     width: 100%;
     position: relative;
-    top: 0;
+    top: 60px;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
@@ -56,7 +63,11 @@ position: relative;
 
 
 .buttons-container img{
-    padding: 10px;
-    width: 20rem;
+    width: 23rem;
+    border: #f1c500 solid 5px;
+    border-radius: 3%;
+
+
+
 }
 

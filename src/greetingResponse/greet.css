@@ -1,5 +1,8 @@
 .avatar-container  {
     position: fixed;
+    width: 100%;
+    top: 20%;
+    overflow: hidden;
 }
 
 

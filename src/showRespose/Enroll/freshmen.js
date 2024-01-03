@@ -4,7 +4,7 @@ import { jsPDF } from 'jspdf';
 
 import pylon from '../../areaImage/pylon2022.jpg';
 import iapply from '../Enroll/enrollPicture/Freshmen/pup iapply.png';
-import applyNow from '../Enroll/enrollPicture/Freshmen/applyNow.png';
+import step2 from '../Enroll/enrollPicture/Freshmen/step2.jpg';
 import applyNow2 from '../Enroll/enrollPicture/Freshmen/applyNow2.png';
 import register from '../Enroll/enrollPicture/Freshmen/register.png';
 import agreement from '../Enroll/enrollPicture/Freshmen/agreement.png';
@@ -99,7 +99,7 @@ const Freshmen = () => {
         <p>Step 1: Go to the PUP iApply for PUPCET page (<a href='https://www.pup.edu.ph/iapply/pupcet' target='_blank' rel='noopener noreferrer'>https://www.pup.edu.ph/iapply/pupcet</a>) and read the information provided</p>
         <img className='screenshot' src={iapply} alt='Step-image1' />
         <p>Step 2: Scroll Down and Click "Apply Now". This will take you to PUP iApply</p>
-        <img className='screenshot' src={applyNow} alt='Step-image2' />
+        <img className='screenshot' src={step2} alt='Step-image2' />
         <img className='screenshot' src={applyNow2} alt='Step-image2' />
         <p>Step 3: Click "Register Here" to create your account</p>
         <img className='screenshot' src={register} alt='Step-image3' />
