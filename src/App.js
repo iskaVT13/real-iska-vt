@@ -68,6 +68,8 @@ import Vr from './VRtour';
 function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden }) {
   const [showInput, setShowInput] = useState(false);
   const [inputText, setInputText] = useState('');
+  const [suggestions, setSuggestions] = useState(['']);
+
 
   // Handle of showing the searchInput
   const handleShowInput = () => {
@@ -79,11 +81,35 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
   const handleCloseButtonClick = () => {
     setShowInput(false);
     setMicrophoneHidden(false); // Show the microphone button
+
+    const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
   };
 
   // handle the input change in searchInput
   const handleInputChange = (e) => {
-    setInputText(e.target.value);
+    const userInput = e.target.value;
+    setInputText(userInput);
+
+    const showList = document.querySelectorAll('.list-result');
+    showList.forEach((element) => {
+            element.style.display = '';
+          });
+
+    // Filter suggestions based on the user input
+    const filteredSuggestions = ['engineering', 'admission', 'where is canteen', 'enroll','yumul building', 'architect', 'education building', 'Room 103', 'Room 104', 'Room 105', 'Room 203', 'Room 204', 'Room 205', 'Nantes Building', 'Accountancy Building', 'Library', 'ROTC' ].filter(
+      suggestion => suggestion.toLowerCase().includes(userInput.toLowerCase())
+    );
+
+    setSuggestions(filteredSuggestions);
+  };
+
+  const handleSuggestionClick = (suggestion) => {
+    setInputText(suggestion);
+    setSuggestions([]); // Clear suggestions after selecting one
   };
 
   // Handle the text when sending trigger
@@ -117,6 +143,18 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
               style={{ color: '#ffc800' }}
             />
           </div>
+          <div className='list-result'>
+          {inputText && suggestions.length > 0 && (
+        <ul>
+          {suggestions.map((suggestion, index) => (
+            <li key={index} onClick={() => handleSuggestionClick(suggestion)}>
+              {suggestion}
+            </li>
+          ))}
+        </ul>
+      )}
+          </div>
+
           <input
             type="text"
             placeholder="Type a keyword..."
@@ -133,7 +171,9 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
               />
             </div>
           </div>
+          
         </div>
+
       )}
       </div>
       
@@ -528,6 +568,11 @@ const handleGrandButtonClick = () => {
     setShowCrVisible(false);
     setShowCrResponse(false);
 
+    const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
     const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -656,6 +701,10 @@ const handleGrandButtonClick = () => {
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
           });
+          const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
 
     },
@@ -735,6 +784,11 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
@@ -832,6 +886,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const textDisplayContainer = document.querySelector('.textOther');
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
@@ -927,6 +986,11 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
@@ -1028,6 +1092,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -1128,6 +1197,11 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
         
         const textDisplayContainer = document.querySelector('.textOther');
     while (textDisplayContainer.firstChild) {
@@ -1229,6 +1303,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -1326,6 +1405,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -1418,6 +1501,11 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
@@ -1512,6 +1600,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -1605,6 +1698,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -1697,6 +1795,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -1788,6 +1891,11 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
@@ -1883,6 +1991,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -1976,6 +2089,11 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
@@ -2072,6 +2190,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -2167,6 +2290,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -2261,6 +2389,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -2354,6 +2487,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
         
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
@@ -2451,6 +2588,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -2547,6 +2689,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -2641,6 +2787,11 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+        const hideList = document.querySelectorAll('.list-result');
+        hideList.forEach((element) => {
+                element.style.display = 'none';
+              });
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
@@ -2737,6 +2888,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -2831,6 +2987,11 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
@@ -2927,6 +3088,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -3020,6 +3186,11 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
@@ -3116,6 +3287,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -3210,6 +3386,11 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
@@ -3307,6 +3488,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -3402,6 +3588,11 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+        const hideList = document.querySelectorAll('.list-result');
+    hideList.forEach((element) => {
+            element.style.display = 'none';
+          });
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -3495,6 +3686,11 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(true);
     
         setShowAvatar(false);
+
+        const hideList = document.querySelectorAll('.list-result');
+        hideList.forEach((element) => {
+                element.style.display = 'none';
+              });
 
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
@@ -3793,10 +3989,10 @@ const sendTextToCommands = (text) => {
           About PUP
         </button>
         <button onClick={handleAdminButtonClick}>
-          Where is Admission Office?
+          Admission Office
         </button>
         <button onClick={handleGrandButtonClick}>
-          Where is Grandstand?
+          Grandstand
         </button>
 
       </div>

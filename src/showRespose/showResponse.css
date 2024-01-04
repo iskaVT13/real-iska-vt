@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 10px;
-    top: 30vh;
+    top: 27vh;
     overflow: auto;
 }
 
@@ -65,11 +65,13 @@ a{
     align-items: center;
     text-align: center;
     justify-content: center;
+    padding: 10px;
 }
 
 .video{
     display: inline-block;
     position: relative;
+    padding: 10px;
 }
 
 
