@@ -244,9 +244,7 @@ const [HMResponse, setHMResponse] = useState('');
 const[showCrVisible, setShowCrVisible] = useState(false);
 const [showCrResponse, setShowCrResponse] = useState(false);
 
-
   const processes = processesData;
-
 
   const handleTextInput = (text) => {
     sendTextToCommands(text);
@@ -374,6 +372,89 @@ const displayText = (text) => {
   window.speechSynthesis.speak(message);
 };
 
+const handleEnrollButtonClick = () => {
+  setYearButtonVisible(true);
+  setResetButtonVisible(true);
+  setCommandRecognized(true);
+  setResponseDisplayed(true);
+  displayText('Please choose from the options below to indicate the enrollment category you prefer')
+  const textDisplay = `
+          Please choose from the options below to indicate the enrollment category you prefer.
+          `;
+          displayOtherText(textDisplay);
+    
+const hideAvatar = document.querySelectorAll('.avatar-container');
+  hideAvatar.forEach((element) => {
+    element.style.display = 'none';
+          });
+
+          const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
+};
+
+const handleAboutPUPButtonClick = () => {
+  setAboutVisible(true);
+  setResetButtonVisible(true);
+  setCommandRecognized(true);
+  setResponseDisplayed(true);
+  displayText('Here are some information about P U P Lopez. Please select below which one do you want to see.');
+        const textDisplay = `
+        Here are some information about P U P Lopez. Please select below which one do you want to see.
+        `;
+        displayOtherText(textDisplay);
+
+  const hideAvatar = document.querySelectorAll('.avatar-container');
+  hideAvatar.forEach((element) => {
+    element.style.display = 'none';
+          });
+
+          const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
+}
+
+const handleAdminButtonClick = () => {
+  setCanteenVisible(true);
+  setResetButtonVisible(true);
+  setCommandRecognized(true);
+  setResponseDisplayed(true);
+  displayText('Please select your nearest area in campus, so that I can assist you to show the way to Admission Building');
+        const textDisplay = `
+        Please select your nearest area in campus, so that I can assist you to show the way to Admission Building`;
+        displayOtherText(textDisplay);
+  const hideAvatar = document.querySelectorAll('.avatar-container');
+  hideAvatar.forEach((element) => {
+    element.style.display = 'none';
+          });
+
+          const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
+}
+
+const handleGrandButtonClick = () => {
+  setGrandStandVisible(true);
+  setResetButtonVisible(true);
+  setCommandRecognized(true);
+  setResponseDisplayed(true);
+  displayText('Please select your nearest area in campus, so that I can assist you to show the way to Grandstand');
+        const textDisplay = `
+        Please select your nearest area in campus, so that I can assist you to show the way to Grandstand`;
+        displayOtherText(textDisplay);
+  const hideAvatar = document.querySelectorAll('.avatar-container');
+  hideAvatar.forEach((element) => {
+    element.style.display = 'none';
+          });
+
+          const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
+}
 
   // Function for reset button event
   const resetDisplay = () => {
@@ -451,6 +532,18 @@ const displayText = (text) => {
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
     }
+
+    const showAvatar = document.querySelectorAll('.avatar-container');
+    showAvatar.forEach((element) => {
+      element.style.display = '';
+
+      const showSuggestions = document.querySelectorAll('.suggestions');
+      showSuggestions.forEach((element) => {
+        element.style.display = '';
+      });
+
+
+    });
   };
 
     // Function for toggleQuestions button event
@@ -559,6 +652,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
 
     },
@@ -643,6 +740,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
 
       },
     },
@@ -739,6 +840,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
         
       },
     },
@@ -832,6 +937,10 @@ const displayText = (text) => {
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
     }
+    const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
 
       },
     },
@@ -928,6 +1037,10 @@ const displayText = (text) => {
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
     }
+    const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
 
         
       },
@@ -1020,6 +1133,10 @@ const displayText = (text) => {
     while (textDisplayContainer.firstChild) {
       textDisplayContainer.removeChild(textDisplayContainer.firstChild);
     }
+    const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
         
       },
     },
@@ -1113,6 +1230,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
         
       }
     },
@@ -1206,6 +1327,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -1295,6 +1420,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -1384,6 +1513,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       } 
     },
     {
@@ -1473,6 +1606,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -1561,6 +1698,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -1649,6 +1790,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -1739,6 +1884,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -1829,6 +1978,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
         }
     },
     {
@@ -1920,6 +2073,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -2011,6 +2168,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
        }
     },
     {
@@ -2101,6 +2262,10 @@ const displayText = (text) => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
       
     },
@@ -2195,6 +2360,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -2287,6 +2456,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -2379,6 +2552,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -2471,6 +2648,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -2562,6 +2743,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -2653,6 +2838,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -2744,6 +2933,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -2834,6 +3027,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -2925,6 +3122,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -3016,6 +3217,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -3108,6 +3313,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -3198,6 +3407,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -3288,6 +3501,10 @@ const displayText = (text) => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     
@@ -3564,6 +3781,22 @@ const sendTextToCommands = (text) => {
       </div>
       </div>
       </section>
+
+      <div className='suggestions'>
+        <button onClick={handleEnrollButtonClick}>
+          How to enroll?
+        </button>
+        <button onClick={handleAboutPUPButtonClick}>
+          About PUP
+        </button>
+        <button onClick={handleAdminButtonClick}>
+          Where is Admission Office?
+        </button>
+        <button onClick={handleGrandButtonClick}>
+          Where is Grandstand?
+        </button>
+
+      </div>
 
       <div className='bottom'>
       <div className='transcript'>

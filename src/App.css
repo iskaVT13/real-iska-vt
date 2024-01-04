@@ -120,13 +120,14 @@ color: white;
   display: flex;
   text-align: center;
   align-items: center;
-  padding: 8px;
+  padding: 5px;
   color: white;
   top: 15%;
   position: fixed;
   background-color: #7E0001;
   z-index: 100;
   width: 100%;
+  font-size: 2vh;
 }
 
 .container{
@@ -196,12 +197,10 @@ input {
 /* Media Query for screens with a maximum width of 768px (typical mobile screens) */
 @media (max-width: 768px) {
   input {
-    width: 100%; /* Adjust the width to take up 90% of the parent container */
+    width: 36vh; /* Adjust the width to take up 90% of the parent container */
     margin: 5px; /* Reduce the margin for smaller screens */
   }
 }
-
-
 
 .hide-this{
   visibility: hidden;
@@ -241,4 +240,25 @@ input {
   align-items: center;
   z-index: 1500;
   
+}
+
+.suggestions{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+    display: flex;
+    top: 80%;
+    width: 100%;
+}
+
+.suggestions button{
+  background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
+  border: none;
+  width: 15vh;
+  height: fit-content;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20%;
+
 }

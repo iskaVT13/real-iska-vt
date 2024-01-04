@@ -7,7 +7,7 @@ const IskaDo = () => {
   
   return (
     <div>
-      <div className='avatar-container'>
+      <div className='iskaDo'>
         <ul>
           <li>
             What I Can Do?

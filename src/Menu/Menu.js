@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark, faMapLocationDot, faBell, faCircleQuestion, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faMapLocationDot, faBell, faCircleQuestion, faCircleInfo, faBuilding, faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 import pupMap from '../pictures/map.jpg';
 
@@ -138,6 +138,18 @@ function Menu() {
             <button onClick={() => openPopup("Information")}>
               <FontAwesomeIcon icon={faCircleInfo} size="2x" style={{ color: '#f0c908' }} className="icon" />
               <span>INFORMATION</span>
+            </button>
+          </div>
+          <div className='button-container'>
+          <button onClick={() => openPopup("Information")}>
+              <FontAwesomeIcon icon={faBuilding} size="2x" style={{ color: '#f0c908' }} className="icon" />
+              <span>BUILDING INFORMATION</span>
+            </button>
+          </div>
+          <div>
+          <button onClick={() => openPopup("Information")}>
+              <FontAwesomeIcon icon={faPeopleGroup} size="2x" style={{ color: '#f0c908' }} className="icon" />
+              <span>FACULTY TEACHERS</span>
             </button>
           </div>
         </div>
