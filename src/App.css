@@ -269,7 +269,14 @@ input {
   position: fixed;
   color:#7E0001;
   bottom: 8vh;
-  background-color: white;
   padding: 10px;
-  width: 100%;
+  width: 95%;
+  text-align: left;
+
+}
+
+.list-result li{
+  padding: 5px;
+  border: 1px solid #7E0001;
+  background-color: white;
 }
