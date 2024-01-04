@@ -3,29 +3,32 @@
     display: flexbox;
     justify-content: space-around;
     overflow: hidden;
-    position: fixed;
+    position: relative;
     background-color: #7E0001;
     z-index: 99;
-    top: 20%;
-    padding: 10px;
+    top: 27vh;
+    padding: 5px;
     width: 100%;
 
 }
 .choices-button button{
-  display: inline-block;
+  display: inline-flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
     position: relative;
     border-radius: 10px;
-    margin-right: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
     color: white; /* Text color */
     border: none;
     cursor: pointer;
     transition: background 0.3s ease;
     z-index: 40;
-    width: fit-content;
+    width: max-content;
+    padding: 20px;
+
 
 }
 

@@ -1051,9 +1051,9 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
         setProgramsButton(true);
-        displayText('The P U P Lopez offers a lots of programs its either Diploma or Bachelors Degree. Please select below which category do you want to see.');
+        displayText('The P U P Lopez offers a lots of programs. Please select below which category do you want to see.');
         const textDisplay = `
-        The P U P Lopez offers a lots of programs its either Diploma or Bachelors Degree. Please select below which category do you want to see.
+        The P U P Lopez offers a lots of programs. Please select below which category do you want to see.
         `;
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
@@ -1137,8 +1137,11 @@ const handleGrandButtonClick = () => {
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
           });
-        
-      },
+          const hideAvatar = document.querySelectorAll('.avatar-container');
+          hideAvatar.forEach((element) => {
+            element.style.display = 'none';
+          });
+      }
     },
 
     {

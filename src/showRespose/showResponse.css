@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 10px;
-    top: 35vh;
+    top: 30vh;
     overflow: auto;
 }
 
@@ -58,8 +58,18 @@ a{
     text-align: left;
 }
 
-.hymn{
-    text-align: justify;
+.imno{
+    position: relative;
+    text-decoration: none ;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.video{
+    display: inline-block;
+    position: relative;
 }
 
 
