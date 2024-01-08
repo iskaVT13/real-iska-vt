@@ -1,6 +1,5 @@
 .showImage{
-    position: fixed;
-    display: block;
+    position: relative;
 
 }
 
@@ -22,7 +21,7 @@
 }
 
 .text-gif{
-    position: fixed;
+    position: relative;
     color: #ffffff;
     text-align: center;
     align-items: center;
@@ -36,23 +35,24 @@
 }
 
 .gif img{
-    position: fixed;
-    width: 100%;
+    position: relative;
+    width: 45vh;
     height: fit-content;
     padding: 15px;
-    margin-top: 27vh;
+    margin-top: 18vh;
     
 }
 
 .back-button{
     display: flex;
-    position: fixed;
+    position: relative;
     justify-content: space-between;
     background-color: #f1c500;
     width: 20%;
     left: 4%;
-    top: 21vh;
+    top: 18vh;
     padding: 10px;
+    z-index: 100;
 }
 
 
@@ -83,8 +83,101 @@ position: relative;
     position: sticky;
     border: #f1c500 solid 5px;
     border-radius: 3%;
+}
 
+.directions h4{
+    font-size: 18px;
+    position: fixed;
+    top: 10vh;
+}
 
+.suggest h1{
+    position: fixed;
+    bottom: 10vh;
+    z-index: 9999;
 
 }
 
+.follow-directions{
+    position: relative;
+}
+
+.modal-close{
+    background-color: transparent;
+    border: none;
+    :focus{
+        outline: none;
+        }
+}
+.direction-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .direction-container {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    position: relative;
+    display: flex;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .showImage-button {
+    position: relative;
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #ffaa00;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .direction-modal {
+    display: flex;
+    background: #7E0001;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    top: 40vh;
+    left: 5vh;
+    position: fixed;
+    border:#f1c500 solid 2px;
+  }
+
+  .modal-content {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+  }
+
+  .modal-close {
+    margin: 10px;
+    background-color: #ff3d3d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .modal-close:hover {
+    background-color: #f0f0f0;
+  }

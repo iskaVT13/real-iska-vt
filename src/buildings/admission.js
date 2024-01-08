@@ -21,15 +21,45 @@ function AdmissionButton() {
   const [imageURL, setImageURL] = useState('');
   const [currentButton, setCurrentButton] = useState('');
   const [responses, setResponses] = useState({});
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [directCurrentButton, setDirectionCurrentButton] = useState('');
+
 
   useEffect(() => {
-    // Import the responses JSON file dynamically
-    import('../goingTo/goAdmission.json')
-      .then((responseModule) => setResponses(responseModule.default))
+    Promise.all([
+      import('../goingTo/goAdmission.json'),
+      import('../fileJSON/directionsBuilding.json'),
+    ])
+      .then(([admission, additional]) => {
+        setResponses({
+          ...admission.default,
+          ...additional.default,
+        });
+      })
       .catch((error) => console.error('Error loading responses:', error));
 
-      window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, []);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+
+  
+  };
+
+
+  const handleDirectionButtonClick = (buttonName) => {
+    const buttonText = responses[buttonName]?.directionsText || '';
+    setDirectionCurrentButton(responses[buttonName]);
+    openModal();
+    // Speak the text when the button is clicked
+    speakText(buttonText);
+  };
+  
 
   const fetchImageURL = useCallback(async () => {
     if (currentButton && currentButton.clickedImage) {
@@ -77,6 +107,7 @@ function AdmissionButton() {
     showReset.forEach((element) => {
       element.style.display = '';
     });
+    
   };
    // Function to handle text-to-speech synthesis
    const speakText = (text) => {
@@ -91,8 +122,10 @@ function AdmissionButton() {
     if ('speechSynthesis' in window) {
       // Use speakText function to speak the responseText
       speakText(currentButton.responseText);
+
     }
   }, [currentButton]);
+  
 
   return (
     <div className="areaImage-container">
@@ -127,19 +160,72 @@ function AdmissionButton() {
       
     </div>
   )}
+<div className='showImage'>
 
       {isActive && (
         <div className="image-container">
+          <p className='text-gif'>{currentButton.responseText}</p>
           <button onClick={handleBackButtonClick} className="back-button">
             Back
           </button>
           <div className='gif'>
-          <p className='text-gif'>{currentButton.responseText}</p>
           <img  src={imageURL} alt={currentButton.title} />
           </div>
-          
-        </div>
-      )}
+          <div className='direction-title'>OFFICES</div>
+          <div className='direction-container'>
+<ul>
+  <li>
+    <button onClick={() => handleDirectionButtonClick('admin1')} className="showImage-button">
+      Office of the Registrar
+    </button>
+  </li>
+  <li>
+    <button onClick={() => handleDirectionButtonClick('admin2')} className="showImage-button">
+Accounting Office    </button>
+  </li>
+  <li>
+    <button onClick={() => handleDirectionButtonClick('admin3')} className="showImage-button">
+      Cashier Office
+    </button>
+  </li>
+  <li>
+    <button onClick={() => handleDirectionButtonClick('admin4')} className="showImage-button">
+      Admission Office
+    </button>
+  </li>
+  <li>
+    <button onClick={() => handleDirectionButtonClick('admin5')} className="showImage-button">
+      OSAS
+    </button>
+  </li>
+  <li>
+    <button onClick={() => handleDirectionButtonClick('admin6')} className="showImage-button">
+      Director's Office
+    </button>
+  </li>
+  <li>
+    <button onClick={() => handleDirectionButtonClick('admin7')} className="showImage-button">
+      Academic and OJT Office
+    </button>
+  </li>
+</ul>
+</div>
+
+            {/* Modal for displaying text */}
+            <div className='pop-up' >
+            {isModalOpen && (
+              <div className="direction-modal">
+                <div className="modal-content">
+                  <p>{directCurrentButton.directionsText}</p>
+                  <button className='modal-close' onClick={closeModal}>Close</button>
+                </div>
+              </div>
+            )}
+            </div>
+           
+          </div>
+        )}
+          </div>
     </div>
   );
 }

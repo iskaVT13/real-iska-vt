@@ -15,8 +15,6 @@ import Menu from './Menu/Menu';
 // Get the response to a command
 import Responses from './fileJSON/dataResponse.json';
 
-import processesData from './fileJSON/processes.json'; 
-
 // calling the button when commanding 
 import YearButtons from './displayButton/displayEnroll';
 import Program from './displayButton/displayProgram';
@@ -64,12 +62,13 @@ import ComfortRoom from './buildings/comfortroom';
 
 import Vr from './VRtour';
 
+import suggestionsData from './fileJSON/Specific.json';
+
 // Function for the searchInput 
-function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden }) {
+function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden, onSuggestionClick}) {
   const [showInput, setShowInput] = useState(false);
   const [inputText, setInputText] = useState('');
   const [suggestions, setSuggestions] = useState(['']);
-
 
   // Handle of showing the searchInput
   const handleShowInput = () => {
@@ -99,17 +98,18 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
             element.style.display = '';
           });
 
-    // Filter suggestions based on the user input
-    const filteredSuggestions = ['engineering', 'admission', 'where is canteen', 'enroll','yumul building', 'architect', 'education building', 'Room 103', 'Room 104', 'Room 105', 'Room 203', 'Room 204', 'Room 205', 'Nantes Building', 'Accountancy Building', 'Library', 'ROTC' ].filter(
-      suggestion => suggestion.toLowerCase().includes(userInput.toLowerCase())
-    );
+  // Filter suggestions based on the user input
+  const filteredSuggestions = suggestionsData.filter(
+    suggestion => suggestion.text.toLowerCase().includes(inputText.toLowerCase())
+  );
 
     setSuggestions(filteredSuggestions);
   };
 
   const handleSuggestionClick = (suggestion) => {
-    setInputText(suggestion);
+    setInputText(suggestion.text);
     setSuggestions([]); // Clear suggestions after selecting one
+    onSuggestionClick(suggestion);
   };
 
   // Handle the text when sending trigger
@@ -145,15 +145,15 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
           </div>
           <div className='list-result'>
           {inputText && suggestions.length > 0 && (
-        <ul>
-          {suggestions.map((suggestion, index) => (
-            <li key={index} onClick={() => handleSuggestionClick(suggestion)}>
-              {suggestion}
-            </li>
-          ))}
-        </ul>
-      )}
-          </div>
+            <ul>
+              {suggestions.map((suggestion, index) => (
+                <li key={index} onClick={() => handleSuggestionClick(suggestion)}>
+                  {suggestion.text}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
 
           <input
             type="text"
@@ -284,7 +284,11 @@ const [HMResponse, setHMResponse] = useState('');
 const[showCrVisible, setShowCrVisible] = useState(false);
 const [showCrResponse, setShowCrResponse] = useState(false);
 
-  const processes = processesData;
+  const handleSuggestionClick = (suggestion) => {
+    // Handle the suggestion click logic in the parent component
+    console.log(`Suggestion clicked in parent: ${suggestion}`);
+    // Add your logic here
+  };
 
   const handleTextInput = (text) => {
     sendTextToCommands(text);
@@ -457,7 +461,7 @@ const handleAboutPUPButtonClick = () => {
 }
 
 const handleAdminButtonClick = () => {
-  setCanteenVisible(true);
+  setAdmissionVisible (true);
   setResetButtonVisible(true);
   setCommandRecognized(true);
   setResponseDisplayed(true);
@@ -601,17 +605,6 @@ const handleGrandButtonClick = () => {
     setVirtual(!showVirtual);
   
   }
-
-  const processesCommands = processes.map((get) => ({
-    command: [`* ${get.name} *`, `${get.name} *`, `* ${get.name}`],
-    callback: () => {
-      resetTranscript();
-      const recognitionText = [`${get.text}`]; // Access the "text" property from the JSON data
-      displayText(`${get.response}`);
-      setRecognizedProcessText(recognitionText);
-      setResetButtonVisible(true);
-    },
-  }));
   
   // All the command user can ask for ISKA 
   const commands = [
@@ -3705,12 +3698,7 @@ const handleGrandButtonClick = () => {
             element.style.display = 'none';
           });
       }
-    },
-    
-
-   // Also command for asking the locations
-    ...processesCommands,
-  
+    },  
 ];
 
 // Function for searchInput command
@@ -4004,6 +3992,7 @@ const sendTextToCommands = (text) => {
       <div className="microphone">
       <div className="text-input" onClick={handleTextInputClick}>
       <TextInputApp
+        onSuggestionClick={handleSuggestionClick}
         onSendText={handleTextInput}
         microphoneHidden={microphoneHidden}
         setMicrophoneHidden={setMicrophoneHidden} // Pass the setMicrophoneHidden function as a prop

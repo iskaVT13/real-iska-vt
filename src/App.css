@@ -109,7 +109,7 @@ color: white;
 .vr-box{
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 102;
   bottom: 8vh;
   padding: 2vh;
 }
@@ -269,14 +269,33 @@ input {
   position: fixed;
   color:#7E0001;
   bottom: 8vh;
-  padding: 10px;
   width: 95%;
   text-align: left;
+  overflow: auto;
+  height: 20vh;
+}
 
+.list-result::-webkit-scrollbar {
+  width: 1.5vh;
+  height: 20vh;
+}
+
+.list-result::-webkit-scrollbar-thumb {
+  background-color: #f1c500;
+  border-radius: 10px;
+}
+
+.list-result::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
 }
 
 .list-result li{
-  padding: 5px;
+  padding: 7px;
   border: 1px solid #7E0001;
   background-color: white;
+}
+
+.list-result :hover{
+  cursor: pointer;
+  background-color: #f1c500;
 }

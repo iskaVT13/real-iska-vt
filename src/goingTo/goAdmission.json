@@ -2,7 +2,7 @@
     "gate": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/Gate to Admin.gif",
       "title": "Main Gate",
-      "responseText": "Here is the way from Main gate to Admission Building"
+      "responseText": "Here is the way from Main gate to Admission Building. Below the map, there is the list Offices, faculty and Room located at Admission Building"
     },
     "lab1": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/lab1 to admin.gif",
