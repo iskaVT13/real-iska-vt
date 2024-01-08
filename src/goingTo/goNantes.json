@@ -2,67 +2,67 @@
     "gate": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/gate to nantes.gif",
       "title": "Main Gate",
-      "responseText": "Here is the way from Main gate to Accounting and Marketing Building"
+      "responseText": "Here is the way from Main gate to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
     },
     "admission": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/admin to Nantes bldg.gif",
         "title": "Admission Building",
-        "responseText": "Here is the way from Admission Building to Accounting and Marketing Building"
+        "responseText": "Here is the way from Admission Building to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
       },
     "lab1": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/lab1 to Nantes.gif",
       "title": "ComLab-1",
-      "responseText": "Here is the way from Computer Laboratory 1 to Accounting and Marketing Building"
+      "responseText": "Here is the way from Computer Laboratory 1 to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
     },
     "lab2": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/lab 2 to nantes.gif",
       "title": "comLab-2",
-      "responseText": "Here is the way from Computer Laboratory 2 to Accounting and Marketing Building"
+      "responseText": "Here is the way from Computer Laboratory 2 to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
     },
     "yumul": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/yumul to Nantes Bldg (Faculty, Clinic, Library, AVR).gif",
       "title": "Yumul Building",
-      "responseText": "Here is the way from Yumul Building to Accounting and Marketing Building"
+      "responseText": "Here is the way from Yumul Building to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
     },
     "canteen": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/Canteen to Nantes (AVR, library, faculty, clinic).gif",
       "title": "Canteen",
-      "responseText": "Here is the way from Canteen to Accounting and Marketing Building"
+      "responseText": "Here is the way from Canteen to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
     },
     "gymnasium": {
       "clickedImage": "clicked3-image.jpg",
       "title": "Gymnasium",
-      "responseText": "Here is the way from Gymnasium to Accounting and Marketing Building"
+      "responseText": "Here is the way from Gymnasium to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
     },
     "grandstand": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/Grandstand to nantes (AVR, faculty, clinic, library).gif",
       "title": "Grandstand",
-      "responseText": "Here is the way from Grandstand to Accounting and Marketing Building"
+      "responseText": "Here is the way from Grandstand to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
     },
     "engineer": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/engr to nantes.gif",
       "title": "Engineer and Architecture Building",
-      "responseText": "Here is the way from Engineer and Architecture Building to Accounting and Marketing Building"
+      "responseText": "Here is the way from Engineer and Architecture Building to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
     },
     "education": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/educ bldg to nantes.gif",
       "title": "Education Building",
-      "responseText": "Here is the way from Education Building to Accounting and Marketing Building"
+      "responseText": "Here is the way from Education Building to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
     },
     "science": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/science to Nantes.gif",
       "title": "Science Building",
-      "responseText": "Here is the way from Science Building to Accounting and Marketing Building"
+      "responseText": "Here is the way from Science Building to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
     },
     "hospitality": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/HM & plant lab to nantes.gif",
       "title": "Hospitality Management Building",
-      "responseText": "Here is the way from Hospitality Management Building to Accounting and Marketing Building"
+      "responseText": "Here is the way from Hospitality Management Building to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
     },
     "ecopark": {
       "clickedImage": "",
       "title": "Eco Park",
-      "responseText": "Here is the way from Eco Park to Accounting and Marketing Building"
+      "responseText": "Here is the way from Eco Park to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building"
     }
 
   }

@@ -1,6 +1,4 @@
 [
-  {"text": "Engineering", "suggestedText": "This is an Engineering location."},
-  {"text": "Admission", "suggestedText": "This is an Admission location."},
   {"text": "Canteen", "suggestedText": "This is a Canteen location."},
   {"text": "Enrollment", "suggestedText": "This is an Enrollment location."},
   {"text": "Yumul Building", "suggestedText": "This is a Yumul Building location."},
@@ -103,5 +101,9 @@
   {"text": "Room 105", "suggestedText": "This is Room 105."},
   {"text": "Food Laboratory", "suggestedText": "This is a Food Laboratory."},
   {"text": "ICT Laboratory 1", "suggestedText": "This is ICT Laboratory 1."},
-  {"text": "ICT Laboratory 2", "suggestedText": "This is ICT Laboratory 2."}
+  {"text": "ICT Laboratory 2", "suggestedText": "This is ICT Laboratory 2."},
+  {"text": "Eco Park"},
+  {"text": "Comfort Room"},
+  {"text": "About PUP"},
+  {"text": "Courses Available"}
 ]

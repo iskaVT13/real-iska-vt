@@ -59,10 +59,11 @@ import Nantes from './buildings/nantes';
 import Education from './buildings/education';
 import Hospitality from './buildings/hospitality';
 import ComfortRoom from './buildings/comfortroom';
+import EcoPark from './buildings/ecoPark';
 
 import Vr from './VRtour';
 
-import suggestionsData from './fileJSON/Specific.json';
+import suggestionsData from './fileJSON/filter.json';
 
 // Function for the searchInput 
 function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden, onSuggestionClick}) {
@@ -282,7 +283,10 @@ const [hMButton, setHMVisible] = useState(false);
 const [HMResponse, setHMResponse] = useState('');
 //COMFORT ROOM
 const[showCrVisible, setShowCrVisible] = useState(false);
-const [showCrResponse, setShowCrResponse] = useState(false);
+const [showCrResponse, setShowCrResponse] = useState('');
+
+const [showEcoVisible, setShowEcoVisible] = useState(false);
+const [showEcoResponse, setShowEcoResponse] = useState('');
 
   const handleSuggestionClick = (suggestion) => {
     // Handle the suggestion click logic in the parent component
@@ -396,6 +400,11 @@ const handleYearButtonClick = (year) => {
     const crr = Responses[cr];
 
     setShowCrResponse(crr);
+  }
+  const handleEcoButtonClick = (eco) => {
+    const ecoo = Responses[eco];
+
+    setShowEcoResponse(ecoo);
   }
 
 
@@ -572,6 +581,9 @@ const handleGrandButtonClick = () => {
     setShowCrVisible(false);
     setShowCrResponse(false);
 
+    setShowEcoVisible(false);
+    setShowEcoResponse(false);
+
     const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -684,6 +696,10 @@ const handleGrandButtonClick = () => {
 
         setShowAvatar(true);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -775,6 +791,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -877,6 +897,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -977,6 +1001,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -1082,6 +1110,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -1189,6 +1221,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -1294,6 +1330,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -1396,6 +1436,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -1492,6 +1536,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -1591,6 +1639,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -1689,6 +1741,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -1786,6 +1842,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -1882,6 +1942,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -1982,6 +2046,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -2080,6 +2148,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -2181,6 +2253,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -2281,6 +2357,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -2380,6 +2460,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -2477,6 +2561,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+          //ECOPARK
+          setShowEcoVisible(false);
+          setShowEcoResponse(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -2579,6 +2667,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -2680,6 +2772,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -2778,6 +2874,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
 
         const hideList = document.querySelectorAll('.list-result');
         hideList.forEach((element) => {
@@ -2879,6 +2979,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -2978,6 +3082,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -3079,6 +3187,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -3177,6 +3289,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -3278,6 +3394,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -3377,6 +3497,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -3479,6 +3603,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -3579,6 +3707,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -3678,6 +3810,10 @@ const handleGrandButtonClick = () => {
     
         setShowAvatar(false);
 
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
         const hideList = document.querySelectorAll('.list-result');
         hideList.forEach((element) => {
                 element.style.display = 'none';
@@ -3696,7 +3832,215 @@ const handleGrandButtonClick = () => {
             element.style.display = 'none';
           });
       }
-    },  
+    },
+    {
+      command: ['comfort room', '* comfort room', 'comfort room *', '* comfort room *'],
+      callback: () => {
+        resetTranscript();
+        displayText('Please select your nearest area in campus, so that I can assist you to show the way to nearest comfort room.');
+        const textDisplay = `Please select your nearest area in campus, so that I can assist you to show the way to nearest comfort room.`;
+        displayOtherText(textDisplay);
+        setResetButtonVisible(true);
+
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(true); // Set responseDisplayed to true
+        setCommandRecognized(true);
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(true);
+        setShowCrResponse(false);
+                  //ECOPARK
+                  setShowEcoVisible(false);
+                  setShowEcoResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+
+        const hideList = document.querySelectorAll('.list-result');
+        hideList.forEach((element) => {
+                element.style.display = 'none';
+              });
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
+        const textDisplayContainer = document.querySelector('.textOther');
+        while (textDisplayContainer.firstChild) {
+          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+        }
+        const hideSuggestions = document.querySelectorAll('.suggestions');
+          hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
+      }
+      },
+      {
+        command: ['Eco Park', '* eco park', 'eco park *', '* eco park *'],
+        callback: () => {
+          resetTranscript();
+          displayText('Please select your nearest area in campus, so that I can assist you to show the way to Eco Park ');
+          const textDisplay = `Please select your nearest area in campus, so that I can assist you to show the way to Eco Park`;
+          displayOtherText(textDisplay);
+          setResetButtonVisible(true);
+  
+          setProgramsButton(false);
+  
+          setYearButtonVisible(false);
+          setSelectedYearResponse(false);
+  
+          setDisplayTextOnScreen(false);
+  
+          setAboutVisible(false);
+          setAboutResponse(false);
+  
+          setSelectedProgram(false);
+  
+          setResponseDisplayed(true); // Set responseDisplayed to true
+          setCommandRecognized(true);
+          //CANTEEN
+          setCanteenVisible(false);
+          setCanteenResponse(false);
+          //SCIENCE
+          setScienceVisible(false);
+          setScienceResponse(false);
+          //ENGINEER
+          setEngineerVisible(false);
+          setEngineerResponse(false);
+          //YUMUL
+          setYumulVisible(false);
+          setYumulResponse(false);
+          //NANTES
+          setNantesVisible(false);
+          setNantesResponse(false);
+          //GYMNASIUM
+          setGymVisible(false);
+          setGymResponse(false);
+          //GRANDSTAND
+          setGrandStandVisible(false);
+          setGrandStandResponse(false);
+          //EDUCATION
+          setEducVisible(false);
+          setEducResponse(false);
+          //ADMISSION
+          setAdmissionVisible(false);
+          setAdmissionResponse(false);
+          //LAB1
+          setLab1Visible(false);
+          setLab1Response(false);
+          //LAB2
+          setLab2Visible(false);
+          setLab2Response(false);
+          //HOSPITALITY
+          setHMVisible(false);
+          setHMResponse(false);
+          //COMFORT ROOM
+          setShowCrVisible(false);
+          setShowCrResponse(false);
+          //ECOPARK
+          setShowEcoVisible(true);
+          setShowEcoResponse(false);
+  
+          setShowEregular(false);
+          setShowEirregular(false);
+          setShowEfreshmen(false);
+          seteShowEtransferee(false);
+  
+          setShowGrad(false);
+          setShowBachelor(false);
+          setShowDiploma(false);
+          setShowHistory(false);
+          setShowMission(false);
+          setShowVision(false);
+          setShowHymn(false);
+          setShowAchiever(false);
+          setShowIska(false);
+          setShowGoodmoral(false);
+      
+          setShowAvatar(false);
+  
+          const hideList = document.querySelectorAll('.list-result');
+          hideList.forEach((element) => {
+                  element.style.display = 'none';
+                });
+  
+          const hideAvatar = document.querySelectorAll('.avatar-container');
+          hideAvatar.forEach((element) => {
+            element.style.display = 'none';
+          });
+          const textDisplayContainer = document.querySelector('.textOther');
+          while (textDisplayContainer.firstChild) {
+            textDisplayContainer.removeChild(textDisplayContainer.firstChild);
+          }
+          const hideSuggestions = document.querySelectorAll('.suggestions');
+            hideSuggestions.forEach((element) => {
+              element.style.display = 'none';
+            });
+        }
+        }
+
+    
 ];
 
 // Function for searchInput command
@@ -3920,6 +4264,9 @@ const sendTextToCommands = (text) => {
           {showCrVisible && (
             <ComfortRoom onCrButtonClick = {handleCrButtonClick} />
           )}
+          {showEcoVisible && (
+            <EcoPark onEcoButtonClick = {handleEcoButtonClick} />
+          )}
 
         </div>
        
@@ -3952,7 +4299,8 @@ const sendTextToCommands = (text) => {
         <div className="otherResponse">
           <p className="displayResponse">
           {selectedYearResponse}{programsResponse}{aboutResponse}
-          {canteenResponse}{scienceResponse}{engineerResponse}{yumulResponse}{admissionResponse}{nantesResponse}{lab1Response}{lab2Response}{educResponse}{HMResponse}{grandstandResponse}{gymResponse}{showCrResponse}
+
+          {showEcoResponse}{canteenResponse}{scienceResponse}{engineerResponse}{yumulResponse}{admissionResponse}{nantesResponse}{lab1Response}{lab2Response}{educResponse}{HMResponse}{grandstandResponse}{gymResponse}{showCrResponse}
           </p>
         
         <p>{displayTextOnScreen}</p>
