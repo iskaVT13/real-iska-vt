@@ -247,22 +247,21 @@ input {
   text-align: center;
   align-items: center;
   position: fixed;
-    display: flex;
-    top: 80%;
+    display: block;
+    top: 63%;
     width: 100%;
-  height: max-content;
+    padding: 10px;
 }
 
 .suggestions button{
   background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
   border: none;
   padding: 10px;
-  margin: 10px;
   border-radius: 20px;
   font-size: 1rem;
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
   display: flex;
+  margin-top: 10px;
 }
 
 .list-result {

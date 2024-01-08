@@ -1,8 +1,25 @@
 .avatar-container  {
     position: fixed;
     width: 100%;
-    top: 20%;
+    top: 24%;
     overflow: hidden;
+}
+
+.avatar {
+    max-width: 100%;
+    max-height: 40vh;
+}
+
+.hello{
+    font-size: 1rem;
+    top: 21%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    z-index: 102;
+    display: block;
 }
 
 .iskaDo{

@@ -92,6 +92,11 @@ function AdmissionButton() {
     hideAvatar.forEach((element) => {
       element.style.display = 'none';
     });
+
+    const hideMicAndSearch = document.querySelectorAll('.bottom');
+    hideMicAndSearch.forEach((element) => {
+      element.style.display = 'none';
+    });
   
   };
 
@@ -105,6 +110,11 @@ function AdmissionButton() {
     });
     const showReset = document.querySelectorAll('.reset-button');
     showReset.forEach((element) => {
+      element.style.display = '';
+    });
+
+    const showMicAndSearch = document.querySelectorAll('.bottom');
+    showMicAndSearch.forEach((element) => {
       element.style.display = '';
     });
     

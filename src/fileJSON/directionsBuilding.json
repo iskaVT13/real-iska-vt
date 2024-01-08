@@ -1,166 +1,195 @@
 {
     "admin1": {
-      "directionsText": "In Admission Building the Office of the registrar is located at first floor of the building, third window."
+      "directionsText": "The Office of the Registrar is located at first floor of the building, third window."
     },
     "admin2": {
-      "directionsText": "In the admission building, the accounting office is located at first floor, upon entering the building"
+      "directionsText": "The Accounting Office is located at first floor, upon entering the building"
     },
     "admin3": {
-      "directionsText": "In the admission building, the cashier office is located at first floor, second window."
+      "directionsText": "The Cashier Office is located at first floor, second window."
     },
     "admin4": {
-      "directionsText": " In the admission building, the admission office is located at first floor, last window of the first floor"
+      "directionsText": " The Admission Office is located at first floor, last window of the building"
     },
     "admin5": {
-        "directionsText": " in the admission building, the admission office is located at first floor, last window of the first floor"
+        "directionsText": "The Office of OSAS is located at  second floor, first window "
       },
       "admin6": {
-        "directionsText": " in the admission building, the admission office is located at first floor, last window of the first floor"
+        "directionsText": " the Director's Office is located at second floor, second window "
       },
       "admin7": {
-        "directionsText": " in the admission building, the admission office is located at first floor, last window of the first floor"
+        "directionsText": " The Academic and OJT Office is located at second floor, last window of the building"
       },
 
 
       "y1": {
-        "directionsText": " In the yumul building, the ICTO or ICT office is located at the right side of second floor, first door crossing from academic and ojt officer"
+        "directionsText": "The ICTO or ICT office is located at the right side of second floor building, first door crossing from academic and OJT officer"
       },
       "y2": {
-        "directionsText": " In the yumul building, the GS is located at the right side of second floor, upon entering of second floor"
+        "directionsText": "The GS is located at the right side of second floor, upon entering of second floor"
       },
       "y3": {
-        "directionsText": " In the yumul building, the 202 room is located at the left side of second floor, upon entering of second floor"
+        "directionsText": "The 202 room is located at the left side of second floor, upon entering of second floor"
       },
       "y4": {
-        "directionsText": " In the yumul building, the 201 room is located at the left side of second floor, second door"
+        "directionsText": "The 201 room is located at the left side of second floor, second door"
       },
       "y5": {
-        "directionsText": " In the yumul building, the 200 room is located at the left side of second floor, third door"
+        "directionsText": "The 200 room is located at the left side of second floor, third door"
       },
       "y6": {
-        "directionsText": " In the yumul building, property and supply management office is located at the right side first floor, first door crossing from the admission office         "
+        "directionsText": " The property and supply management office is located at the right side first floor, first door crossing from the admission office         "
       },
       "y7": {
-        "directionsText": " In the yumul building, the human resources management office is located at the right side first floor, second door"
+        "directionsText": "The human resources management office is located at the right side first floor, second door"
       },
       "y8": {
-        "directionsText": " In the yumul building, the NSTP/Triage is located at the left side of first floor, upon entering of stairs        "
+        "directionsText": " The NSTP/Triage is located at the left side of first floor, upon entering of stairs        "
       },
 
 
 
       "hs1": {
-        "directionsText": " In the health and science building, the room 105 can be called food lab is located at first floor, first door next to it is CR         "
+        "directionsText": "The room 105 can be called food lab is located at first floor, first door next to it is CR         "
       },
       "hs2": {
-        "directionsText": " In the health and science building, the room 106 is located at first floor, second room        "
+        "directionsText": " The room 106 is located at first floor, second room        "
       },
       "hs3": {
-        "directionsText": " In the health and science building, the room 107 is located at first floor, third room        "
+        "directionsText": "The room 107 is located at first floor, third room        "
       },
       "hs4": {
-        "directionsText": " In the health and science building, the room 108 is located at first floor, last room next to it is CR         "
+        "directionsText": "The room 108 is located at first floor, last room next to it is CR         "
       },
       "hs5": {
-        "directionsText": " In the health and science building, the room 203 is located at second floor, first room next to it is CR        "
+        "directionsText": "The room 203 is located at second floor, first room next to it is CR        "
       },
       "hs6": {
-        "directionsText": " In the health and science building, the room 204 is located at second floor, second room        "
+        "directionsText": "The room 204 is located at second floor, second room       "
       },
       "hs7": {
-        "directionsText": " In the health and science building, the room 205 can be called physics lab is located at second floor, third room        "
+        "directionsText": "The room 205 can be called physics lab is located at second floor, third room        "
       },
       "hs8": {
-        "directionsText": " In the health and science building, the room 206 can be called chemical lab is located at second floor, last room "
+        "directionsText": "The room 206 can be called chemical lab is located at second floor, last room "
       },
 
 
       "arch1": {
-        "directionsText": "- in the architecture, technology and engineering building, the room 109 is located at first floor, first room crossing from health and science building         "
+        "directionsText": "The room 109 is located at first floor, first room crossing from health and science building         "
       },
       "arch2": {
-        "directionsText": "- in the architecture, technology and engineering building, the room 110 is located at first floor, second room         "
+        "directionsText": "The room 110 is located at first floor, second room         "
       },
       "arch3": {
-        "directionsText": "- in the architecture, technology and engineering building, the room 111 can be called CE Lab is located at first floor, third room         "
+        "directionsText": "The room 111 can be called CE Lab is located at first floor, third room         "
       },
       "arch4": {
-        "directionsText": " - in the architecture, technology and engineering building, the room 112 can be called EE lab is located at first floor, fourth room         "
+        "directionsText": "The room 112 can be called EE lab is located at first floor, fourth room         "
       },
       "arch5": {
-        "directionsText": " - in the architecture, technology and engineering building, the room 113 is located at first floor, fifth room         "
+        "directionsText": "The room 113 is located at first floor, fifth room         "
       },
       "arch6": {
-        "directionsText": "- in the architecture, technology and engineering building, the room 114 is located at first floor, sixth room         "
+        "directionsText": "The room 114 is located at first floor, sixth room         "
       },
       "arch7": {
-        "directionsText": "- in the architecture, technology and engineering building, the room 115 is located at first floor, seventh room next to it is CR        "
+        "directionsText": "The room 115 is located at first floor, seventh room next to it is CR        "
       },
       "arch8": {
-        "directionsText": "- in the architecture, technology and engineering building, the room 116 is located at first floor, last room next the agribusiness farm        "
+        "directionsText": "The room 116 is located at first floor, last room next the agribusiness farm        "
       },
       "arch9": {
-        "directionsText": "- in the architecture, technology and engineering building, the room 207 can be called lab 3 is located at second floor, first room of the first upstairs         "
+        "directionsText": "The room 207 can be called lab 3 is located at second floor, first room of the first upstairs         "
       },
       "arch10": {
-        "directionsText": "- in the architecture, technology and engineering building, the room 208 can be called draft lab is located at second floor, second room         "
+        "directionsText": "The room 208 can be called draft lab is located at second floor, second room         "
       },
       "arch11": {
-        "directionsText": "- in the architecture, technology and engineering building, the architecture faculty room is located at second floor, third room         "
+        "directionsText": "The architecture faculty room is located at second floor, third room         "
       },
       "arch12": {
-        "directionsText": "- in the architecture, technology and engineering building, the engineering faculty room is located at second floor, first room in left side of the second upstairs         "
+        "directionsText": "The engineering faculty room is located at second floor, first room in left side of the second upstairs         "
       },
       "arch13": {
-        "directionsText": "- in the architecture, technology and engineering building, the room 209 can be called CEA functional room is located at second floor, first room in right side of second upstairs         "
+        "directionsText": "The room 209 can be called CEA functional room is located at second floor, first room in right side of second upstairs         "
       },
       "arch14": {
-        "directionsText": "- in the architecture, technology and engineering building, room 210 is located at second floor, second room in right side of second upstairs         "
+        "directionsText": "The room 210 is located at second floor, second room in right side of second upstairs         "
       },
       "arch15": {
-        "directionsText": "- in the architecture, technology and engineering building, the room 211 is located at second floor, last room of second floor"
+        "directionsText": "The room 211 is located at second floor, last room of second floor"
       },
 
 
 
       "pb1": {
-        "directionsText": "- in the Public Administration and Education building, the room 117 is located at first floor, first room crossing from architecture, technology and engineering building        "
+        "directionsText": "The room 117 is located at first floor, first room crossing from architecture, technology and engineering building        "
       },
       "pb2": {
-        "directionsText": "- in the Public Administration and Education building, the room 118 is located at first floor, second room         "
+        "directionsText": "The room 118 is located at first floor, second room         "
       },
       "pb3": {
-        "directionsText": "- in the Public Administration and Education building, the CSC office is located at first floor, third room         "
+        "directionsText": "The CSC office is located at first floor, third room         "
       },
       "pb4": {
-        "directionsText": "- in the Public Administration and Education building , the room 119 can be called EDTECH is located at first floor, fourth room        "
+        "directionsText": "The room 119 can be called EDTECH is located at first floor, fourth room        "
       },
       "pb5": {
-        "directionsText": "- in the Public Administration and Education building, the QAO is located at first floor, first room crossing from Nantes building         "
+        "directionsText": "The QAO is located at first floor, first room crossing from Nantes building         "
       },
       "pb6": {
-        "directionsText": "- in the Public Administration and Education building, the room 212 is located at second floor, first room of the upstairs crossing from architecture, technology and engineering building        "
+        "directionsText": "The room 212 is located at second floor, first room of the upstairs crossing from architecture, technology and engineering building        "
       },
       "pb7": {
-        "directionsText": "- in the Public Administration and Education building, the room 213 is located at second floor, second room         "
+        "directionsText": "The room 213 is located at second floor, second room         "
       },
       "pb8": {
-        "directionsText": "- in the Public Administration and Education building, the office of counseling and psychological services is located at second floor, third room         "
+        "directionsText": "The office of counseling and psychological services is located at second floor, third room         "
       },
       "pb9": {
-        "directionsText": "- in the Public Administration and Education building, the room 214 is located at second floor, fourth room        "
+        "directionsText": "The room 214 is located at second floor, fourth room        "
       },
       "pb10": {
-        "directionsText": "- in the Public Administration and Education building, the room 215 is located at second floor, first room of the upstairs crossing from Nantes building"
+        "directionsText": "The room 215 is located at second floor, first room of the upstairs crossing from Nantes building"
       },
 
 
       
       "n1": {
-        "": ""
+        "directionsText": "The room 120 is located at first floor of the building, first room after crossing of big bridge"
       },
       "n2": {
-        "": ""
+        "directionsText": "The room 121 is located at first floor, second room of the building"
+      },
+      "n3": {
+        "directionsText": "The room 122 is located at first floor, third room of the building"
+      },
+      "n4": {
+        "directionsText": "The faculty room is located at first floor, fourth room next beside of the stairs"
+      },
+      "n5": {
+        "directionsText": "The medical room, is in the last room of first floor, next is the ecopark"
+      },
+      "n6": {
+        "directionsText": "The room 216 or Speech Laboratory is located at second floor of the building"
+      },
+      "n7": {
+        "directionsText": "The room 217 or the Keyboard Laboratory is located at second floor, second room of the building"
+      },
+      "n8": {
+        "directionsText": "The room 218 or the Stimulation Room or what we called the AVR is located at second floor, first room in right side when you upstairs"
+      },
+      "n9": {
+        "directionsText": "The library room is located at second floor, first room in left side when you upstairs"
+      },
+      "n10": {
+        "directionsText": "The dental clinic is located at second floor of the building, second room before the PWD stairs"
+      },
+
+
+      "rotc": {
+        "directionsText": "The ROTC Office is located at the back of the Grandstand and back of the Nantes Building"
       }
 
 

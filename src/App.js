@@ -623,8 +623,6 @@ const handleGrandButtonClick = () => {
 
         setSelectedYearResponse(false);
         setYearButtonVisible(false);
-
-        setResponseDisplayed(true);
         
         setResponseDisplayed(true);
         setCommandRecognized(true);
