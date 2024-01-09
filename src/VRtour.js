@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const MyIframeComponent = () => {
   const iframeStyles = {
@@ -7,6 +7,27 @@ const MyIframeComponent = () => {
     border: 'none',
     maxWidth: '100%',
   };
+
+  useEffect(() => {
+    // Function to speak the text
+    const speakText = (text) => {
+      const synth = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(text);
+      synth.speak(utterance);
+    };
+
+    // Text to be spoken
+    const textToSpeak = "Welcome to the Iska, a P U P Lopez Virtual Tour. Enjoy your experience!";
+
+    // Speak the text when the component mounts
+    speakText(textToSpeak);
+
+    // Cleanup function
+    return () => {
+      // Stop speaking when the component unmounts
+      window.speechSynthesis.cancel();
+    };
+  }, []);
 
   return (
     <iframe
