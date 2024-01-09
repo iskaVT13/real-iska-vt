@@ -10,7 +10,7 @@
         "responseText": "Here is the way from Admission Building to Computer Laboratory 1"
       },
     "lab2": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "The ICT LAboratory 1 is beside the ICT laboratory 2",
       "title": "comLab-2",
       "responseText": "Here is the way from Computer Laboratory 2 to Computer Laboratory 1"
     },
@@ -40,7 +40,7 @@
       "responseText": "Here is the way from Grandstand to Computer Laboratory 1"
     },
     "engineer": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab1/engr to lab 1.gif",
       "title": "Engineer and Architecture Building",
       "responseText": "Here is the way from Engineer and Architecture Building to Computer Laboratory 1"
     },
@@ -50,7 +50,7 @@
       "responseText": "Here is the way from Education Building to Computer Laboratory 1"
     },
     "science": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab1/science to lab 1.gif",
       "title": "Science Building",
       "responseText": "Here is the way from Science Building to Computer Laboratory 1"
     },

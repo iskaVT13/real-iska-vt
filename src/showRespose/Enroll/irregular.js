@@ -2,7 +2,9 @@ import React from 'react';
 import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
-import pylon from '../../areaImage/pylon2022.jpg';
+import step5 from '../Enroll/enrollPicture/Irregular/step5.jpg';
+import step6 from '../Enroll/enrollPicture/Irregular/step6-1.jpeg';
+import stepsix from '../Enroll/enrollPicture/Irregular/step6-2.jpg';
 
 
 const Irregular = () => {
@@ -87,11 +89,17 @@ const Irregular = () => {
     <div>
       <div className='step'>
         <h4 className=''>STEPS TO FOLLOW:</h4><br></br>
-        <p>Step 1: Log in to your SIS Account.</p>
-        <img className='screenshot' src={pylon} alt='Step-image1' />
-        <p>Step 2: </p>
-        <img className='screenshot' src={pylon} alt='Step-image2' />
-        <p>Step 3: </p>
+        <p>Step 1: Go to your adviser and ask to evaluate your subjects.</p>
+        <p>Step 2: Go to the registrar, ask for R0, and ask what unit you can take for the coming semester. </p>
+        <p>Step 3: Fill up your R0 and put the subject you enroll in based on the evaluation of your adviser.</p>
+        <p>Step 4: Go to the academic office to pass your R0 for tagging the subject (make sure their have a sign of your adviser). </p>
+        <p> Step 5: Go back to the registrar and give the complete sign of R0.</p> 
+        <p>Sample RO:</p>
+        <img className='screenshot' src={step5} alt='Step-image7' />
+        <p>Step 6: Check your SIS account to see if you are officially enrolled.</p>
+        <img className='screenshot' src={step6} alt='Step-image7' />
+        <img className='screenshot' src={stepsix} alt='Step-image7' />
+
       </div>
 
     <div className='download-button'>

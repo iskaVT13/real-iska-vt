@@ -2,8 +2,8 @@ import React from 'react';
 import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
-import pylon from '../../areaImage/pylon2022.jpg';
-
+import step1 from '../Enroll/enrollPicture/Transferee/step1.png';
+import step8 from '../Enroll/enrollPicture/Transferee/step8.jpg';
 
 const Transferee = () => {
   const justifyText = (text, x, y, maxWidth, lineHeight, pdf) => {
@@ -87,11 +87,36 @@ const Transferee = () => {
     <div>
       <div className='step'>
         <h4 className=''>STEPS TO FOLLOW:</h4><br></br>
-        <p>Step 1: Log in to your SIS Account.</p>
-        <img className='screenshot' src={pylon} alt='Step-image1' />
-        <p>Step 2: </p>
-        <img className='screenshot' src={pylon} alt='Step-image2' />
-        <p>Step 3: </p>
+        <p>Step 1: Submit transfer credentials for evaluation </p><br></br>
+        <img className='screenshot' src={step1} alt='Step-image1' />
+        <p>Step 2: Upon approval of Office of evaluated credentials, proceed to Office of the Student Affairs and Services for schedule of Psychological Examination.</p><br></br>
+        <p>Step 3: Proceed to the Cashier Office for Payment of Psychological Exam.</p><br></br>
+        <p>Step 4: Take the Psychological Exam </p><br></br>
+        <p>Step 5: Proceed to Registrar Office and submit admission credentials for evaluation.</p><br></br>
+        <img className='screenshot' src={step1} alt='Step-image1' />
+        <ul className='transferee-bullet'>
+          <p>Requirements:</p>
+          <li>Honorable Dismissal</li>
+          <li>Transcript of Records</li>
+        <li> Certificate of Good Moral Character </li>
+        <li>Course/Subject Description taken from other school</li>
+        <li>PSA (NSO) Copy of Birth Certificate </li>
+        <li>Medical Clearance from the University Clinic</li>
+        <li>Two (2) pcs. 2x2 picture with name tag</li>
+        <li>Receipt Admission fee</li>
+        <li>Curriculum Sheet</li>
+        <p>Example:</p>
+        <img className='screenshot' src={step1} alt='Step-image1' />
+        <img className='screenshot' src={step1} alt='Step-image1' />
+        </ul>
+        <p>Step 6: Proceed to the Office of the Academic Programs/College of choice and copy the subjects</p>
+        <p>Step 7: Send R-zero to OVPBC for tagging of subjects.</p>
+        <p>Step 8: Proceed to Cashier’s Office for Payment of tuition fee </p>
+        <img className='screenshot' src={step8} alt='Step-image1' />
+        <p>Step 9: Proceed to the Admission Office for printing of Registration Certificate and ID processing.</p>
+        
+
+
       </div>
 
     <div className='download-button'>

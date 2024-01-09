@@ -74,4 +74,17 @@ a{
     padding: 10px;
 }
 
+.transferee-bullet{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style-type:square;
+    position: relative;
+}
+.transferee-bullet li{
+    position: relative;
+    left: 5%;
+    font-size: 2vh;
+}
+
 

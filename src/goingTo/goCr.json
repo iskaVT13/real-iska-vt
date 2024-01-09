@@ -45,17 +45,17 @@
       "responseText": "Here is the way from Grandstand to nearest comfort room in campus"
     },
     "engineer": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "",
       "title": "Engineer and Architecture Building",
       "responseText": "Here is the way from Engineering and Architecture to nearest comfort room in campus"
     },
     "education": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "",
       "title": "Education Building",
       "responseText": "Here is the way Public Administration and Education Building to nearest comfort room in campus"
     },
     "science": {
-      "clickedImage": "clicked3-image.jpg",
+      "clickedImage": "",
       "title": "Science Building",
       "responseText": "Here is the way from Health and Science Buildiing to nearest comfort room in campus "
     },
