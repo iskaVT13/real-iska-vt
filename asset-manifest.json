@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/real-iska-vt/static/css/main.57cd4e0b.css",
-    "main.js": "/real-iska-vt/static/js/main.d16b1662.js",
+    "main.js": "/real-iska-vt/static/js/main.aee24a92.js",
     "static/js/498.fcaf40d7.chunk.js": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js",
     "static/js/703.59b532f8.chunk.js": "/real-iska-vt/static/js/703.59b532f8.chunk.js",
     "static/js/379.06dbaa89.chunk.js": "/real-iska-vt/static/js/379.06dbaa89.chunk.js",
@@ -44,7 +44,7 @@
     "static/media/Lab 2.jpg": "/real-iska-vt/static/media/Lab 2.1d5d477aa15f8f3c2aab.jpg",
     "static/media/applyNow2.png": "/real-iska-vt/static/media/applyNow2.ed4edd29b1f0804d21c0.png",
     "static/media/step5.jpg": "/real-iska-vt/static/media/step5.d4cf3cb65fd9ad695386.jpg",
-    "static/media/step8.jpg": "/real-iska-vt/static/media/step8.d4cf3cb65fd9ad695386.jpg",
+    "static/media/step8.jpg": "/real-iska-vt/static/media/step8.120dbf77d0c063b0d6a7.jpg",
     "static/media/step1.png": "/real-iska-vt/static/media/step1.36b55a3899aa4a7129f4.png",
     "static/media/pylon2022.jpg": "/real-iska-vt/static/media/pylon2022.c31e89cf492bae4cb956.jpg",
     "static/media/s5.jpg": "/real-iska-vt/static/media/s5.46f208c6c69ea89c9e0f.jpg",
@@ -52,14 +52,20 @@
     "static/media/pup iapply.png": "/real-iska-vt/static/media/pup iapply.1e303b1c9f3898821b9c.png",
     "static/media/s4.jpg": "/real-iska-vt/static/media/s4.f5d11ef197140ecdb0db.jpg",
     "static/media/step6-1.jpeg": "/real-iska-vt/static/media/step6-1.df52edeefc195eab8a1c.jpeg",
+    "static/media/step13.jpg": "/real-iska-vt/static/media/step13.04c27e8ac99cd2707157.jpg",
     "static/media/step6-2.jpg": "/real-iska-vt/static/media/step6-2.d33f1826d7a8ca7bf836.jpg",
+    "static/media/step11.jpg": "/real-iska-vt/static/media/step11.7e5ff4c75aa85bdbcacf.jpg",
     "static/media/step2.jpg": "/real-iska-vt/static/media/step2.532b2b3fa606cf67a8d2.jpg",
     "static/media/agreement.png": "/real-iska-vt/static/media/agreement.2739a030a687c56e5f13.png",
     "static/media/log in.png": "/real-iska-vt/static/media/log in.f6504351b1dbb41ffaaa.png",
+    "static/media/step12.png": "/real-iska-vt/static/media/step12.88ae2a12428376a06ef8.png",
+    "static/media/step9.jpg": "/real-iska-vt/static/media/step9.00fb4fc1b41312bb605b.jpg",
     "static/media/registration.png": "/real-iska-vt/static/media/registration.04cd8163550889a242b9.png",
+    "static/media/step7.jpg": "/real-iska-vt/static/media/step7.b1aeca6847d2806ca25d.jpg",
     "static/media/qualification.png": "/real-iska-vt/static/media/qualification.3226a7edc19f62ee38f8.png",
     "static/media/agreement3.png": "/real-iska-vt/static/media/agreement3.fbbe94d7e6bdabd41baf.png",
     "static/media/s8.jpg": "/real-iska-vt/static/media/s8.27d24cbc0ececa734258.jpg",
+    "static/media/step10.jpg": "/real-iska-vt/static/media/step10.90e491ae3c94964e6e84.jpg",
     "static/media/agreement2.png": "/real-iska-vt/static/media/agreement2.7eb479d927acf93432ed.png",
     "static/media/iska-logo.png": "/real-iska-vt/static/media/iska-logo.0b23486e2144e26ea815.png",
     "static/media/s3.jpg": "/real-iska-vt/static/media/s3.b30e0b27a877a19bc8bd.jpg",
@@ -71,7 +77,7 @@
     "static/media/krona-one-latin-ext-400-normal.woff2": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.01120cafa274a6b13dba.woff2",
     "index.html": "/real-iska-vt/index.html",
     "main.57cd4e0b.css.map": "/real-iska-vt/static/css/main.57cd4e0b.css.map",
-    "main.d16b1662.js.map": "/real-iska-vt/static/js/main.d16b1662.js.map",
+    "main.aee24a92.js.map": "/real-iska-vt/static/js/main.aee24a92.js.map",
     "498.fcaf40d7.chunk.js.map": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js.map",
     "703.59b532f8.chunk.js.map": "/real-iska-vt/static/js/703.59b532f8.chunk.js.map",
     "379.06dbaa89.chunk.js.map": "/real-iska-vt/static/js/379.06dbaa89.chunk.js.map",
@@ -91,6 +97,6 @@
   },
   "entrypoints": [
     "static/css/main.57cd4e0b.css",
-    "static/js/main.d16b1662.js"
+    "static/js/main.aee24a92.js"
   ]
 }
