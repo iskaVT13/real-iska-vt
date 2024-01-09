@@ -7,6 +7,12 @@ import pupMap from '../pictures/map.jpg';
 
 Modal.setAppElement('#root');
 
+const speakText = (text) => {
+  const speechSynthesis = window.speechSynthesis;
+  const speechText = new SpeechSynthesisUtterance(text);
+  speechSynthesis.speak(speechText);
+};
+
 const customModalStyles = {
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -56,6 +62,7 @@ function Menu() {
       setZoomLevel(1);
     } else {
       setPopupContent(content);
+      speakText(content);
     }
   };
 
@@ -146,7 +153,7 @@ function Menu() {
               <span>BUILDING INFORMATION</span>
             </button>
           </div>
-          <div>
+          <div className='button-container'>
           <button onClick={() => openPopup("Information")}>
               <FontAwesomeIcon icon={faPeopleGroup} size="2x" style={{ color: '#f0c908' }} className="icon" />
               <span>FACULTY TEACHERS</span>

@@ -2,7 +2,6 @@ import React from 'react';
 import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
-import pylon from '../../areaImage/pylon2022.jpg';
 import iapply from '../Enroll/enrollPicture/Freshmen/pup iapply.png';
 import step2 from '../Enroll/enrollPicture/Freshmen/step2.jpg';
 import applyNow2 from '../Enroll/enrollPicture/Freshmen/applyNow2.png';
@@ -12,6 +11,13 @@ import agreement2 from '../Enroll/enrollPicture/Freshmen/agreement2.png';
 import agreement3 from '../Enroll/enrollPicture/Freshmen/agreement3.png';
 import qualification from '../Enroll/enrollPicture/Freshmen/qualification.png';
 import registration from '../Enroll/enrollPicture/Freshmen/registration.png';
+import step7 from '../Enroll/enrollPicture/Freshmen/step7.jpg';
+import step8 from '../Enroll/enrollPicture/Freshmen/step8.jpg';
+import step9 from '../Enroll/enrollPicture/Freshmen/step9.jpg';
+import step10 from '../Enroll/enrollPicture/Freshmen/step10.jpg';
+import step11 from '../Enroll/enrollPicture/Freshmen/step11.jpg';
+import step12 from '../Enroll/enrollPicture/Freshmen/step12.png';
+import step13 from '../Enroll/enrollPicture/Freshmen/step13.jpg';
 
 
 const Freshmen = () => {
@@ -113,20 +119,20 @@ const Freshmen = () => {
         <p>Step 6: Fill up the registration form. Type or select the required information in the form: </p>
         <img className='screenshot' src={registration} alt='Step-image6' />
         <p>Step 7: Click Submit to create your account and sign in again</p>
-        <img className='screenshot' src={pylon} alt='Step-image7' />
+        <img className='screenshot' src={step7} alt='Step-image7' />
         <p>Step 8: Upon successful signing in, you will be taken to the PUP iApply Applicant's page where you can have the following options:</p>
-        <img className='screenshot' src={pylon} alt='Step-image8' />
+        <img className='screenshot' src={step8} alt='Step-image8' />
         <p>Step 9: Application Form:</p>
         <p>Here you fill up, update, or complete your application form, Complete your online application by typing and selecting the required information in the form</p>
-        <img className='screenshot' src={pylon} alt='Step-image9' />
+        <img className='screenshot' src={step9} alt='Step-image9' />
         <p>Step 10:  Print ePermit. If your online application form is finalized, click this option to download your system-generated ePermit and print. This printed ePermit shall be presented on your scheduled examination date. Please allow six to twenty (6-20) working days after finalizing your application to download and print your ePermit.</p>
-        <img className='screenshot' src={pylon} alt='Step-image10' />
+        <img className='screenshot' src={step10} alt='Step-image10' />
         <p>Step 11: Due to large number of applications, again, please allow six to twenty (6-20) working days for photo/document validation. Then sign-in to your account to check whether your application is approved.Once approved, proceed to downloading and printing of ePermit.</p>
-        <img className='screenshot' src={pylon} alt='Step-image11' />
+        <img className='screenshot' src={step11} alt='Step-image11' />
         <p>Step 12: Check PUPCET Results. This link will appear only during official release of test results. Please regularly check announcement in PUP website on PUPCET results.</p>
-        <img className='screenshot' src={pylon} alt='Step-image12' />
+        <img className='screenshot' src={step12} alt='Step-image12' />
         <p>Step 13: Sign out. Always sign out from the PUP iApply after using it for security purpose. Use your email address and password to sign in to your account again.</p>
-        <img className='screenshot' src={pylon} alt='Step-image13' />
+        <img className='screenshot' src={step13} alt='Step-image13' />
       </div>
 
     <div className='download-button'>
