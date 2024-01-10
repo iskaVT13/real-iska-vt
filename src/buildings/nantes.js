@@ -27,7 +27,7 @@ function AdmissionButton() {
 
   useEffect(() => {
     Promise.all([
-      import('../goingTo/goAdmission.json'),
+      import('../goingTo/goNantes.json'),
       import('../fileJSON/directionsBuilding.json'),
     ])
       .then(([admission, additional]) => {

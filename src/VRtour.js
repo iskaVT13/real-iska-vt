@@ -17,7 +17,7 @@ const MyIframeComponent = () => {
     };
 
     // Text to be spoken
-    const textToSpeak = "Welcome to the Iska, a P U P Lopez Virtual Tour. Enjoy your experience!";
+    const textToSpeak = "Explore the P U P Lopez Branch virtually to discover its modern facilities and vibrant campus life. Perfect for prospective students and alumni, this immersive tour offers a glimpse into the dynamic academic environment of Polytechnic University of the Philippines Lopez Branch. Start your virtual exploration now!";
 
     // Speak the text when the component mounts
     speakText(textToSpeak);

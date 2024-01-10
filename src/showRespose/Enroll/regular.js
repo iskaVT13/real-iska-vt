@@ -93,7 +93,7 @@ const Regular = () => {
     <div>
       <div className='step'>
         <h4 className=''>STEPS TO FOLLOW:</h4><br></br>
-        <p>Step 1: Log in to your SIS Account.</p>
+        <p>Step 1: Log in to your SIS Account. (<a href='https://sis1.pup.edu.ph/' target='_blank' rel='noopener noreferrer'>https://sis1.pup.edu.ph/</a>) </p>
           <img className='screenshot' src={step1} alt='Step-image1' />
         <p>Step 2. Check if your grades is complete (Grades Section )</p>
           <img className='screenshot' src={step2} alt='Step-image2' />

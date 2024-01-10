@@ -624,9 +624,8 @@ const handleGrandButtonClick = () => {
       command: ['hi', 'hello', 'hey', '* hello *', '* hello', 'hello *'],
       callback:() => {
         resetTranscript();
-        displayText("Hello, I'm iska, how can I assist you?");
-        const textDisplay = `Hello, I'm ISKA, how can I assist you?`;
-        displayOtherText(textDisplay);
+        displayText("Hi, I'm Iska, a p u p Lopez Virtual Assistant. How can I assist you today?");
+    
         setResetButtonVisible(true);
         setProgramsButton(false);
 
@@ -3007,7 +3006,7 @@ const handleGrandButtonClick = () => {
       command: ['bachelor', '* bachelor', 'bachelor *', '* bachelor *'],
       callback: () => {
         resetTranscript();
-        displayText('Here is the bachelor od Science courses offer at P U P Lopez');
+        displayText('Here is the bachelor courses offer at P U P Lopez');
         setResetButtonVisible(true);
 
         setProgramsButton(false);
