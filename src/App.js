@@ -75,18 +75,19 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
   const handleShowInput = () => {
     setShowInput(true);
     setMicrophoneHidden(true); // Hide the microphone button when input is shown
+
   };
 
   // Handle the close button 
   const handleCloseButtonClick = () => {
     setShowInput(false);
     setMicrophoneHidden(false); // Show the microphone button
+    
 
     const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
           });
-
   };
 
   // handle the input change in searchInput
