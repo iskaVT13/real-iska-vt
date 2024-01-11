@@ -4344,6 +4344,15 @@ const sendTextToCommands = (text) => {
       <div className='transcript'>
       <p className="transcript-text" autoCorrect="off" spellCheck="true">{transcript}</p>
       </div>
+            <div className='hide-this'>
+      <FontAwesomeIcon
+          className="keyBoard"
+          icon={faKeyboard}
+          size="xl"
+          style={{ color: '#ffc800' }}
+        />
+      </div>
+      
       <div className="microphone">
       <div className="text-input" onClick={handleTextInputClick}>
       <TextInputApp
@@ -4362,8 +4371,6 @@ const sendTextToCommands = (text) => {
       )
       ) : null}
     </div>
-      
-      
       <div className='hide-this'>
       <FontAwesomeIcon
           className="keyBoard"
