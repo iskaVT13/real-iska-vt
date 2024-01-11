@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
+import './App.css';
 
 const MyIframeComponent = () => {
   const iframeStyles = {
     width: '100%',
-    height: '640px',
+    height: '600px',
     border: 'none',
     maxWidth: '100%',
   };
@@ -30,6 +31,7 @@ const MyIframeComponent = () => {
   }, []);
 
   return (
+    <div className='vr-container'>
     <iframe
       title="Embedded Content"
       width="100%"
@@ -42,6 +44,8 @@ const MyIframeComponent = () => {
       src="https://webobook.com/public/6573274008ca526d1702cd02,en?fbclid=IwAR3bP33e8DP1q7Olhwo5yZaO94nb_1NTlvoRdTAKtQlziUlYZpCTSwC_hDM"
       allowvr="yes"
     />
+        </div>
+
   );
 };
 

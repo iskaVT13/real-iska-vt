@@ -80,6 +80,7 @@ header{
 
 h1{
   position: relative;
+  bottom: .8em;
   align-items: center;
   text-align: center;
 }
@@ -118,10 +119,11 @@ color: white;
 
 .vr-box{
   position: fixed;
+  top: 15%;
   width: 100%;
   z-index: 102;
-  bottom: 8vh;
   padding: 2vh;
+  padding: 10px;
 }
 
 
@@ -130,14 +132,15 @@ color: white;
   display: flex;
   text-align: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   color: white;
-  top: 15%;
+  top: 17%;
   position: fixed;
   background-color: #7E0001;
   z-index: 100;
   width: 100%;
   font-size: 2vh;
+  float: right;
 }
 
 .container{
@@ -207,11 +210,12 @@ input {
 /* Media Query for screens with a maximum width of 768px (typical mobile screens) */
 @media (max-width: 768px) {
   input {
-    width: 40vh; /* Adjust the width to take up 90% of the parent container */
+    width: 20em; /* Adjust the width to take up 90% of the parent container */
     margin: 5px; /* Reduce the margin for smaller screens */
+    align-items: center;
   }
   body{
-    font-size: .8em; /* Make the text slightly smaller on small screens */
+    font-size: 1em; /* Make the text slightly smaller on small screens */
   }
 }
 

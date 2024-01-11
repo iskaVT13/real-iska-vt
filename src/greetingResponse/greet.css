@@ -12,14 +12,15 @@
 
 .hello{
     font-size: 1rem;
-    top: 21%;
+    top: 19%;
     position: fixed;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
-    z-index: 102;
+    z-index: 103;
     display: block;
+    padding: 10px;
 }
 
 .iskaDo{

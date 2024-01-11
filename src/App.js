@@ -7,7 +7,7 @@ import './App.css';
 import iska from './pictures/iska-logo.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMicrophone, faHome, faCircleQuestion, faKeyboard, faPaperPlane, faTimes, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { faMicrophone, faHome, faCircleQuestion, faKeyboard, faPaperPlane, faTimes, faVideo, faClose} from '@fortawesome/free-solid-svg-icons';
 
 // Get and call the Menu.js 
 import Menu from './Menu/Menu';
@@ -228,6 +228,7 @@ const [microphoneHidden, setMicrophoneHidden] = useState(false);
 const [commandRecognized, setCommandRecognized] = useState(false);
 const [recognizedProcessText, setRecognizedProcessText] = useState(' ');
 const [isQuestionIcon, setIsQuestionIcon] = useState(true);
+const [isVirtualTourOn, setVirtualTourOn] = useState(false);
 
 //DIRECT RESPONSE
 const [showEregular, setShowEregular] = useState(false);
@@ -615,9 +616,17 @@ const handleGrandButtonClick = () => {
   };
 
   const toggleVirtualtour = () => {
-    setVirtual(!showVirtual);
+    setVirtualTourOn(!isVirtualTourOn);
+    const hideandShow = document.querySelectorAll('.bottom, .avatar-container, .suggestions');
+    
+    hideandShow.forEach((element) => {
+      element.style.display = showVirtual ? '' : 'none';
+    });
   
-  }
+    // Optionally, you can update the state here if needed
+    setVirtual(!showVirtual);
+  };
+  
   
   // All the command user can ask for ISKA 
   const commands = [
@@ -4189,7 +4198,7 @@ const sendTextToCommands = (text) => {
       <div className='right-icon'>
 
       <FontAwesomeIcon className='questions' icon={isQuestionIcon ? faCircleQuestion : faTimes} size="2xl" style={{color: "#ffc800",}} onClick={toggleQuestions} />
-      <FontAwesomeIcon className='virtual' icon={faVideo} size="xl" onClick={toggleVirtualtour} style={{color: "ffc800"}}/>
+      <FontAwesomeIcon className='virtual' icon={isVirtualTourOn ? faClose : faVideo} size="xl" onClick={toggleVirtualtour}  style={{ color: isVirtualTourOn ? '#ffc800' : '#ffc800' }}/>
 
       {showQuestions && (
         <div className="question-list">
