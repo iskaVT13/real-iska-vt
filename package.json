@@ -50,23 +50,14 @@
       "last 1 firefox version",
       "last 1 safari version",
       "last 1 android version",
-      "last 1 messenger version",
       "last 1 ios version",
       "last 1 samsung version",
       "last 1 ucandroid version",
-      "last 1 bbandroid version",
       "last 1 and_chr version",
       "last 1 and_ff version",
       "last 1 and_uc version",
       "last 1 op_mob version",
-      "last 1 operaandroid version",
-      "last 1 ios_saf version",
-      "last 1 edge_mob version",
-      "last 1 firefox_mob version",
-      "last 1 chrome_mob version",
-      "last 1 safari_mob version",
-      "last 1 ie_mob version"
-    ]
+      "last 1 ios_saf version"    ]
   },
   "devDependencies": {
     "gh-pages": "^6.1.0"

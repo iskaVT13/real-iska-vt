@@ -4178,14 +4178,14 @@ const sendTextToCommands = (text) => {
         </div>
       </div>
       <div className='logo-name'>
-    <img src={iska} alt="PUP Logo" className="logo" />
+    <img src={iska} alt="PUP Logo" />
     <div className='app-neym'>
-    <h1 className='app-name'>
+    <h1>
         IS<span>KA</span></h1>
+    </div>
     </div>
       <p className={responseDisplayed ? 'desc-hidden' : 'desc'}></p>
 
-      </div>
       <div className='right-icon'>
 
       <FontAwesomeIcon className='questions' icon={isQuestionIcon ? faCircleQuestion : faTimes} size="2xl" style={{color: "#ffc800",}} onClick={toggleQuestions} />

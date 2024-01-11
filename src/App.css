@@ -45,6 +45,24 @@ header{
   overflow: -moz-hidden-unscrollable;
 }
 
+.logo-name {
+  background-color: #7E0001;
+  display: block;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.logo-name img{
+  width: 6em;
+  position: relative;
+  display: flexbox;
+  height: 6em;
+  align-items: center;
+  justify-content: center;
+}
 
 .question-list {
   border: 5px solid darkgoldenrod;
@@ -60,30 +78,18 @@ header{
   z-index: 155;
 }
 
-.logo {
-  width:13vh;
-  height:max-content;
-}
-
-
 h1{
   position: relative;
   align-items: center;
   text-align: center;
 }
 
-.app-neym{
-  position: relative;
-  margin-top: -4vh;
-}
-
-.app-name {
+.app-neym {
   font-family: 'Krona One';
-  font-size: 2rem;
   color: white;
 }
 
-.app-name span{
+.app-neym span{
   color: rgb(236, 166, 4);
   font-family: 'Krona One';
 }
@@ -94,7 +100,11 @@ h1{
 font-size: 15px;
 color: white;
 
+}
 
+.reset-button{
+  position: relative;
+  display: flex;
 }
 
 .desc-hidden {
@@ -199,6 +209,9 @@ input {
   input {
     width: 40vh; /* Adjust the width to take up 90% of the parent container */
     margin: 5px; /* Reduce the margin for smaller screens */
+  }
+  body{
+    font-size: .8em; /* Make the text slightly smaller on small screens */
   }
 }
 
