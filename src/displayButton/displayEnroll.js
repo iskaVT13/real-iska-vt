@@ -11,6 +11,7 @@ function App() {
   const [showIrregular, setShowIrregular] = useState(false);
   const [showFreshmen, setShowFreshmen] = useState(false);
   const [showTransferee, setShowTransferee] = useState(false);
+  
 
   const speakText = (text) => {
     const speechSynthesis = window.speechSynthesis;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
@@ -64,6 +64,8 @@ import EcoPark from './buildings/ecoPark';
 import Vr from './VRtour';
 
 import suggestionsData from './fileJSON/filter.json';
+
+import enrollment from './speakText/speak';
 
 // Function for the searchInput 
 function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden, onSuggestionClick}) {
@@ -290,6 +292,20 @@ const [showCrResponse, setShowCrResponse] = useState('');
 const [showEcoVisible, setShowEcoVisible] = useState(false);
 const [showEcoResponse, setShowEcoResponse] = useState('');
 
+const [playAudio, setPlayAudio] = useState(false);
+
+useEffect(() => {
+  if (playAudio) {
+    const audioPlayer = new Audio(enrollment);
+
+    audioPlayer.play();
+
+    audioPlayer.addEventListener('ended', () => {
+      setPlayAudio(false);
+    });
+  }
+}, [playAudio]);
+
   const handleSuggestionClick = (suggestion) => {
     // Handle the suggestion click logic in the parent component
     console.log(`Suggestion clicked in parent: ${suggestion}`);
@@ -432,7 +448,7 @@ const handleEnrollButtonClick = () => {
   setResetButtonVisible(true);
   setCommandRecognized(true);
   setResponseDisplayed(true);
-  displayText('Please choose from the options below to indicate the enrollment category you prefer')
+  setPlayAudio(true);
   const textDisplay = `
           Please choose from the options below to indicate the enrollment category you prefer.
           `;
@@ -826,7 +842,7 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
         setYearButtonVisible(true);
-          displayText('Please choose from the options below to indicate the enrollment category you prefer')
+        setPlayAudio(true);
           const textDisplay = `
           Please choose from the options below to indicate the enrollment category you prefer.
           `;
@@ -834,7 +850,6 @@ const handleGrandButtonClick = () => {
 
         setResetButtonVisible(true);
 
-        
         setDisplayTextOnScreen(false);
 
         setProgramsButton(false);
