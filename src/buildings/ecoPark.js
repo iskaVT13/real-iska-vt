@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
-import pylon from '../areaImage/pylon2022.jpg';
+import gate from '../areaImage/gate.jpg';
 import admission from '../areaImage/Admin Building.jpg';
 import lab1 from '..//areaImage/Lab 1.jpg';
 import lab2 from '../areaImage/Lab 2.jpg';
@@ -104,7 +104,7 @@ useEffect(() => {
     <div className="areaImage-container">
     {!isActive && (
     <div className="buttons-container">
-        <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={pylon} />
+        <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={gate} />
         <p>MAIN GATE</p>
         <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src={lab1}/>
         <p>COMPUTER LABORATORY 1</p>

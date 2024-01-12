@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
-import pylon from '../areaImage/pylon2022.jpg';
+import gate from '../areaImage/gate.jpg';
 import admission from '../areaImage/Admin Building.jpg';
 import lab2 from '../areaImage/Lab 2.jpg';
 import yumul from '../areaImage/Yumul Building.jpg';
@@ -103,7 +103,7 @@ function Lab1Button() {
     <div className="areaImage-container">
     {!isActive && (
     <div className="buttons-container">
-        <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={pylon} />
+        <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={gate} />
         <p>MAIN GATE</p>
         <img onClick={() => handleImageClick('admission')} alt='Admission' className='admission-image' src={admission} />
         <p>ADMISSION OFFICE</p>
