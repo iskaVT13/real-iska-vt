@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/real-iska-vt/static/css/main.1ff7d44a.css",
-    "main.js": "/real-iska-vt/static/js/main.da65c9bd.js",
+    "main.js": "/real-iska-vt/static/js/main.8646ef29.js",
     "static/js/498.fcaf40d7.chunk.js": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js",
     "static/js/703.59b532f8.chunk.js": "/real-iska-vt/static/js/703.59b532f8.chunk.js",
     "static/js/379.06dbaa89.chunk.js": "/real-iska-vt/static/js/379.06dbaa89.chunk.js",
@@ -43,6 +43,7 @@
     "static/media/Nantes (front view).jpg": "/real-iska-vt/static/media/Nantes (front view).9df7730b75d369d929d2.jpg",
     "static/media/Educ Bldg.jpg": "/real-iska-vt/static/media/Educ Bldg.f0f58a563275568b2046.jpg",
     "static/media/Health and Sciences Building.jpg": "/real-iska-vt/static/media/Health and Sciences Building.c4a63024bce8005aad67.jpg",
+    "static/media/gate.jpg": "/real-iska-vt/static/media/gate.a60dd575cf5dfab74885.jpg",
     "static/media/Engineering Building.jpg": "/real-iska-vt/static/media/Engineering Building.9c93c42f0c2e51c29a1e.jpg",
     "static/media/Admin Building.jpg": "/real-iska-vt/static/media/Admin Building.63dd14867aa9446f4b8b.jpg",
     "static/media/Yumul Building.jpg": "/real-iska-vt/static/media/Yumul Building.513cc074a8893eb4dbda.jpg",
@@ -52,7 +53,6 @@
     "static/media/step5.jpg": "/real-iska-vt/static/media/step5.d4cf3cb65fd9ad695386.jpg",
     "static/media/step8.jpg": "/real-iska-vt/static/media/step8.120dbf77d0c063b0d6a7.jpg",
     "static/media/step1.png": "/real-iska-vt/static/media/step1.36b55a3899aa4a7129f4.png",
-    "static/media/pylon2022.jpg": "/real-iska-vt/static/media/pylon2022.c31e89cf492bae4cb956.jpg",
     "static/media/s5.jpg": "/real-iska-vt/static/media/s5.46f208c6c69ea89c9e0f.jpg",
     "static/media/map.jpg": "/real-iska-vt/static/media/map.3a569680ea5bdf9a2322.jpg",
     "static/media/pup iapply.png": "/real-iska-vt/static/media/pup iapply.1e303b1c9f3898821b9c.png",
@@ -83,7 +83,7 @@
     "static/media/krona-one-latin-ext-400-normal.woff2": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.01120cafa274a6b13dba.woff2",
     "index.html": "/real-iska-vt/index.html",
     "main.1ff7d44a.css.map": "/real-iska-vt/static/css/main.1ff7d44a.css.map",
-    "main.da65c9bd.js.map": "/real-iska-vt/static/js/main.da65c9bd.js.map",
+    "main.8646ef29.js.map": "/real-iska-vt/static/js/main.8646ef29.js.map",
     "498.fcaf40d7.chunk.js.map": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js.map",
     "703.59b532f8.chunk.js.map": "/real-iska-vt/static/js/703.59b532f8.chunk.js.map",
     "379.06dbaa89.chunk.js.map": "/real-iska-vt/static/js/379.06dbaa89.chunk.js.map",
@@ -103,6 +103,6 @@
   },
   "entrypoints": [
     "static/css/main.1ff7d44a.css",
-    "static/js/main.da65c9bd.js"
+    "static/js/main.8646ef29.js"
   ]
 }
