@@ -1464,7 +1464,7 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-      command: [109, 110, 111, 112, 113, 114, 115, 116, 207, 208, 209, 210, 211] || ['* 109','* 110','* 111','*112','* 113','* 114','* 115','* 116','* 211','* 210','* 209','* 208','* 207','* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* architecture *', '* 207', '* 208' ,'*  209', '* 210', '* 211','* 109','* 110','* 111','* 112','* 113','* 114','* 114','* 116', 'ict lab 3', '* ict lab 3', '* ict lab * 3', 'draft lab', '* draft lab * 3', '* draft lab 3 *'],
+      command: ['* 109','* 110','* 111','*112','* 113','* 114','* 115','* 116','* 211','* 210','* 209','* 208','* 207','* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* architecture *', '* 207', '* 208' ,'*  209', '* 210', '* 211','* 109','* 110','* 111','* 112','* 113','* 114','* 114','* 116', 'ict lab 3', '* ict lab 3', '* ict lab * 3', 'draft lab', '* draft lab * 3', '* draft lab 3 *'] || [109, 110, 111, 112, 113, 114, 115, 116, 207, 208, 209, 210, 211],
       
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
@@ -1669,7 +1669,7 @@ const handleGrandButtonClick = () => {
       } 
     },
     {
-      command: [216,217,218,120,121,122] || ['* nantes', 'nantes *', '* nantes *', 'nantes', '* dental', 'dental *', 'business', '* business ', '* business *', '* business *' ,'* accounting *', '* 120', 'accounting', 'accounting *', '* accounting', '* accounting *', 'marketing', 'marketing *', '* marketing ', '* marketing*', ' *121', '121 *', '* 122','122 *', 'medical faculty', 'medical *', '* medical', '* medical *', 'avr', '* avr', 'avr *', '* avr *', 'library', '* library', 'library *', 'speech lab', '* speech lab', '* 216', '216 *', '217 *', ' * 217', '* 218', '218 *', '* 216', '216 *', '* 217', '217 *', ' * 122', '122 *', '* 121', '121 *', '120 *', ' * 120'],
+      command: ['* nantes', 'nantes *', '* nantes *', 'nantes', '* dental', 'dental *', 'business', '* business ', '* business *', '* business *' ,'* accounting *', '* 120', 'accounting', 'accounting *', '* accounting', '* accounting *', 'marketing', 'marketing *', '* marketing ', '* marketing*', ' * 121', '121 *', '* 122','122 *', 'medical faculty', 'medical *', '* medical', '* medical *', 'avr', '* avr', 'avr *', '* avr *', 'library', '* library', 'library *', 'speech lab', '* speech lab', '* 216', '216 *', '217 *', ' * 217', '* 218', '218 *', ' * 122', '122 *', '* 121', '121 *', '120 *', ' * 120'] || [216,217,218,120,121,122],
       callback: () => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Accounting and Marketing Building');
@@ -2387,7 +2387,7 @@ const handleGrandButtonClick = () => {
        }
     },
     {
-      command: [100,101,102] || ['hospitality', '* hospitality', 'hospitality ', ' hospitality ', 'hm', 'kitchen lab', ' kitchen lab','kitchen lab ', " kitchen lab ", ' kitchen ','beverage','*beverage','tissue', 'tissue', 'tissue lab', '* tissue lab ', 'plant',' plant ', 'plant',' plant lab *', '* 100', '* 101', '* 102', '100 *', '101 *', '102 *'],
+      command: ['hospitality', '* hospitality', 'hospitality ', ' hospitality ', 'hm', 'kitchen lab', ' kitchen lab','kitchen lab ', " kitchen lab ", ' kitchen ','beverage','*beverage','tissue', 'tissue', 'tissue lab', '* tissue lab ', 'plant',' plant ', 'plant',' plant lab *', '* 100', '* 101', '* 102', '100 *', '101 *', '102 *'] || [100,101,102],
       callback: () => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Hospitality Management Building');
