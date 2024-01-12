@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
@@ -1361,7 +1361,7 @@ const handleGrandButtonClick = () => {
     },
 
     {
-      command: ['* science ', 'science *', '* science *', 'science', 'two o three', '203', '* 203', '203 *', '204 *', '* 204', '*  205', ' 205 *', '206 *', '* 206', 'chemical lab', '* chemical lab', 'physical lab', '* physical lab', '105 *', '* 105', '106 *', '* 106', '107 *', '* 107', '108 *', '* 108'] || [203],
+      command: ['* science ', 'science *', '* science *', 'science', 'two o three', '203', '* 203', '203 *', '204 *', '* 204', '*  205', ' 205 *', '206 *', '* 206', 'chemical lab', '* chemical lab', 'physical lab', '* physical lab', '105 *', '* 105', '106 *', '* 106', '107 *', '* 107', '108 *', '* 108'] || [203, 204, 205, 206, 108, 107, 106, 105],
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Health and Science Building');
@@ -1464,7 +1464,7 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-      command: ['* 109','* 110','* 111','*112','* 113','* 114','* 115','* 116','* 211','* 210','* 209','* 208','* 207','* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* architecture *', '* 207', '* 208' ,'*  209', '* 210', '* 211','* 109','* 110','* 111','* 112','* 113','* 114','* 114','* 116', 'ict lab 3', '* ict lab 3', '* ict lab * 3', 'draft lab', '* draft lab * 3', '* draft lab 3 *'],
+      command: [109, 110, 111, 112, 113, 114, 115, 116, 207, 208, 209, 210, 211] || ['* 109','* 110','* 111','*112','* 113','* 114','* 115','* 116','* 211','* 210','* 209','* 208','* 207','* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* architecture *', '* 207', '* 208' ,'*  209', '* 210', '* 211','* 109','* 110','* 111','* 112','* 113','* 114','* 114','* 116', 'ict lab 3', '* ict lab 3', '* ict lab * 3', 'draft lab', '* draft lab * 3', '* draft lab 3 *'],
       
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
@@ -1669,7 +1669,7 @@ const handleGrandButtonClick = () => {
       } 
     },
     {
-      command: [216,217,218,120,121,122,'* nantes', 'nantes *', '* nantes *', 'nantes', '* dental', 'dental *', 'business', '* business ', '* business *', '* business *' ,'* accounting *', '* 120', 'accounting', 'accounting *', '* accounting', '* accounting *', 'marketing', 'marketing *', '* marketing ', '* marketing*', ' *121', '121 *', '* 122','122 *', 'medical faculty', 'medical *', '* medical', '* medical *', 'avr', '* avr', 'avr *', '* avr *', 'library', '* library', 'library *', 'speech lab', '* speech lab', '* 216', '216 *', '217 *', ' * 217', '* 218', '218 *', '* 216', '216 *', '* 217', '217 *', ' * 122', '122 *', '* 121', '121 *', '120 *', ' * 120'],
+      command: [216,217,218,120,121,122] || ['* nantes', 'nantes *', '* nantes *', 'nantes', '* dental', 'dental *', 'business', '* business ', '* business *', '* business *' ,'* accounting *', '* 120', 'accounting', 'accounting *', '* accounting', '* accounting *', 'marketing', 'marketing *', '* marketing ', '* marketing*', ' *121', '121 *', '* 122','122 *', 'medical faculty', 'medical *', '* medical', '* medical *', 'avr', '* avr', 'avr *', '* avr *', 'library', '* library', 'library *', 'speech lab', '* speech lab', '* 216', '216 *', '217 *', ' * 217', '* 218', '218 *', '* 216', '216 *', '* 217', '217 *', ' * 122', '122 *', '* 121', '121 *', '120 *', ' * 120'],
       callback: () => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Accounting and Marketing Building');
@@ -1973,7 +1973,7 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-      command: [212,213,214,215,117,118,119,'education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *', 'public *', '* public', '* public *', '117 *','* 117', '118 *', '* 118', '119 *','* 119', '212 *','* 212', '213 *','* 213', '214 *','* 214', '215 *','* 215', 'csc ', '* csc ', '* csc *'],
+      command: [212,213,214,215,117,118,119] || ['education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *', 'public *', '* public', '* public *', '117 *','* 117', '118 *', '* 118', '119 *','* 119', '212 *','* 212', '213 *','* 213', '214 *','* 214', '215 *','* 215', 'csc ', '* csc ', '* csc *'],
       callback: () => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Education and Public Administration Building');
@@ -2387,7 +2387,7 @@ const handleGrandButtonClick = () => {
        }
     },
     {
-      command: [100,101,102,'hospitality', '* hospitality', 'hospitality ', ' hospitality ', 'hm', 'kitchen lab', ' kitchen lab','kitchen lab ', " kitchen lab ", ' kitchen ','beverage','*beverage','tissue', 'tissue', 'tissue lab', '* tissue lab ', 'plant',' plant ', 'plant',' plant lab *'],
+      command: [100,101,102] || ['hospitality', '* hospitality', 'hospitality ', ' hospitality ', 'hm', 'kitchen lab', ' kitchen lab','kitchen lab ', " kitchen lab ", ' kitchen ','beverage','*beverage','tissue', 'tissue', 'tissue lab', '* tissue lab ', 'plant',' plant ', 'plant',' plant lab *', '* 100', '* 101', '* 102', '100 *', '101 *', '102 *'],
       callback: () => {
         resetTranscript();
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Hospitality Management Building');
@@ -4164,25 +4164,6 @@ const sendTextToCommands = (text) => {
     SpeechRecognition.stopListening();
     setSpeechActive(false);
   };
-
-  // Handle the recognition
-useEffect(() => {
-  if (transcript) {
-    // Check if the transcript contains a number
-    const containsNumber = /\d+/.test(transcript);
-
-    if (containsNumber) {
-      // Handle the logic for when a number is detected
-      console.log('Number detected:', transcript);
-    } else {
-      // Handle other commands as needed
-      console.log('Other command detected:', transcript);
-    }
-
-    // Reset the transcript for the next recognition
-    resetTranscript();
-  }
-}, [transcript, resetTranscript]);
 
   // Function for handling the textInput 
   const handleTextInputClick = (e) => {
