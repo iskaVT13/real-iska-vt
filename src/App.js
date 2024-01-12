@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
@@ -1361,7 +1361,7 @@ const handleGrandButtonClick = () => {
     },
 
     {
-      command: ['* science ', 'science *', '* science *', 'science', 'two o three',203,204,205,206,108,107,106,105,'* 203', '203 *', '204 *', '* 204', '*  205', ' 205 *', '206 *', '* 206', 'chemical lab', '* chemical lab', 'physical lab', '* physical lab', '105 *', '* 105', '106 *', '* 106', '107 *', '* 107', '108 *', '* 108'],
+      command: ['* science ', 'science *', '* science *', 'science', 'two o three', '203', '* 203', '203 *', '204 *', '* 204', '*  205', ' 205 *', '206 *', '* 206', 'chemical lab', '* chemical lab', 'physical lab', '* physical lab', '105 *', '* 105', '106 *', '* 106', '107 *', '* 107', '108 *', '* 108'] || [203],
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Health and Science Building');
@@ -1464,7 +1464,8 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-      command: [109,110,111,112,113,114,115,116,211,210,209,208,207,'* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* architecture *', 207, 208 ,209, 210, 211,109,110,111,112,113,114,114,116, 'ict lab 3', '* ict lab 3', '* ict lab * 3', 'draft lab', '* draft lab * 3', '* draft lab 3 *'],
+      command: ['* 109','* 110','* 111','*112','* 113','* 114','* 115','* 116','* 211','* 210','* 209','* 208','* 207','* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* architecture *', '* 207', '* 208' ,'*  209', '* 210', '* 211','* 109','* 110','* 111','* 112','* 113','* 114','* 114','* 116', 'ict lab 3', '* ict lab 3', '* ict lab * 3', 'draft lab', '* draft lab * 3', '* draft lab 3 *'],
+      
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
         displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
@@ -4164,6 +4165,25 @@ const sendTextToCommands = (text) => {
     setSpeechActive(false);
   };
 
+  // Handle the recognition
+useEffect(() => {
+  if (transcript) {
+    // Check if the transcript contains a number
+    const containsNumber = /\d+/.test(transcript);
+
+    if (containsNumber) {
+      // Handle the logic for when a number is detected
+      console.log('Number detected:', transcript);
+    } else {
+      // Handle other commands as needed
+      console.log('Other command detected:', transcript);
+    }
+
+    // Reset the transcript for the next recognition
+    resetTranscript();
+  }
+}, [transcript, resetTranscript]);
+
   // Function for handling the textInput 
   const handleTextInputClick = (e) => {
     const targetClassName = e.target.classList;
@@ -4187,11 +4207,10 @@ const sendTextToCommands = (text) => {
         </div>
       </div>
       <div className='logo-name'>
-    <img src={iska} alt="PUP Logo" />
-    <div className='app-neym'>
-    <h1>
-        IS<span>KA</span></h1>
-    </div>
+    <img src={iska} alt="PUP Logo"/>
+    <p>
+    IS<span>KA</span>
+    </p>
     </div>
       <p className={responseDisplayed ? 'desc-hidden' : 'desc'}></p>
 

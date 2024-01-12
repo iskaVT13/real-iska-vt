@@ -18,6 +18,7 @@
     "pdfmake": "^0.2.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-loader-spinner": "^6.1.6",
     "react-modal": "^3.16.1",
     "react-player": "^2.14.1",
     "react-router-dom": "^6.20.1",
@@ -57,7 +58,8 @@
       "last 1 and_ff version",
       "last 1 and_uc version",
       "last 1 op_mob version",
-      "last 1 ios_saf version"    ]
+      "last 1 ios_saf version"
+    ]
   },
   "devDependencies": {
     "gh-pages": "^6.1.0"

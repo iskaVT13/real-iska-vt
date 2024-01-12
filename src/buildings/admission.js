@@ -181,8 +181,8 @@ function AdmissionButton() {
           <div className='gif'>
           <img  src={imageURL} alt={currentButton.title} />
           </div>
-          <div className='direction-title'>OFFICES</div>
           <div className='direction-container'>
+          <div className='direction-title'>OFFICES</div>
 <ul>
   <li>
     <button onClick={() => handleDirectionButtonClick('admin1')} className="showImage-button">

@@ -181,8 +181,8 @@ function AdmissionButton() {
           <div className='gif'>
           <img  src={imageURL} alt={currentButton.title} />
           </div>
-          <div className='direction-title'>OFFICES</div>
           <div className='direction-container'>
+          <div className='direction-title'>OFFICES AND ROOMS</div>
 <ul>
 <li>
     <button onClick={() => handleDirectionButtonClick('arch11')} className="showImage-button">

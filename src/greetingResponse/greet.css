@@ -1,7 +1,7 @@
 .avatar-container  {
     position: fixed;
     width: 100%;
-    top: 24%;
+    top: 20%;
     overflow: hidden;
     z-index: 103;
 
@@ -14,7 +14,7 @@
 
 .hello{
     font-size: 1rem;
-    top: 19%;
+    top: 15.5%;
     position: fixed;
     justify-content: center;
     align-items: center;
