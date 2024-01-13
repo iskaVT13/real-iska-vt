@@ -65,7 +65,44 @@ import Vr from './VRtour';
 
 import suggestionsData from './fileJSON/filter.json';
 
-import enrollment from './speakText/speak';
+//ISKA will speak
+import speakHello from '././speakText/hello.mp3';
+import speakISKAdo from './speakText/doISKA.mp3';
+import speakAbout from './speakText/aboutPUP.mp3';
+import speakBachelor from './speakText/bachelor.mp3';
+import speakDiploma from './speakText/diploma.mp3';
+import speakGrad from './speakText/grad.mp3';
+import speakError from './speakText/error.mp3';
+import speakMission from './speakText/mission.mp3';
+import speakCourses from './speakText/courses.mp3';
+import speakHistory from './speakText/history.mp3';
+import speakHymn from './speakText/hymn.mp3';
+import speakLister from './speakText/lister.mp3';
+import speakMoral from './speakText/moral.mp3';
+//Enrollment 
+import speakEnroll from './speakText/enrollment.mp3';
+import speakRegular from './speakText/regular.mp3';
+import speakIrregular from './speakText/irregular.mp3';
+import speakFreshmen from './speakText/freshmen.mp3';
+import speakTransferee from './speakText/transferee.mp3';
+//BUILDINGS
+import speakAdmin from './speakText/admin.mp3';
+import speakCanteen from './speakText/canteen.mp3';
+import speakYumul from './speakText/yumul.mp3';
+import speakLab1 from './speakText/lab1.mp3';
+import speakLab2 from './speakText/lab2.mp3';
+import speakScience from './speakText/science.mp3';
+import speakEngineering from './speakText/engineering.mp3';
+import speakEduc from './speakText/educ.mp3';
+import speakNantes from './speakText/nantes.mp3';
+import speakEco from './speakText/eco.mp3';
+import speakGrandstand from './speakText/grandstand.mp3';
+import speakGym from './speakText/gym.mp3';
+import speakHM from './speakText/hospitality.mp3';
+import speakCr from './speakText/cr.mp3';
+
+
+
 
 // Function for the searchInput 
 function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden, onSuggestionClick}) {
@@ -293,10 +330,11 @@ const [showEcoVisible, setShowEcoVisible] = useState(false);
 const [showEcoResponse, setShowEcoResponse] = useState('');
 
 const [playAudio, setPlayAudio] = useState(false);
+const [currentSpeak, setCurrentSpeak] = useState('');
 
 useEffect(() => {
   if (playAudio) {
-    const audioPlayer = new Audio(enrollment);
+    const audioPlayer = new Audio(currentSpeak);
 
     audioPlayer.play();
 
@@ -304,7 +342,7 @@ useEffect(() => {
       setPlayAudio(false);
     });
   }
-}, [playAudio]);
+}, [playAudio, currentSpeak]);
 
   const handleSuggestionClick = (suggestion) => {
     // Handle the suggestion click logic in the parent component
@@ -448,6 +486,7 @@ const handleEnrollButtonClick = () => {
   setResetButtonVisible(true);
   setCommandRecognized(true);
   setResponseDisplayed(true);
+  setCurrentSpeak(speakEnroll);
   setPlayAudio(true);
   const textDisplay = `
           Please choose from the options below to indicate the enrollment category you prefer.
@@ -650,8 +689,10 @@ const handleGrandButtonClick = () => {
       command: ['hi', 'hello', 'hey', '* hello *', '* hello', 'hello *'],
       callback:() => {
         resetTranscript();
-        displayText("Hi, I'm Iska, a p u p Lopez Virtual Assistant. How can I assist you today?");
-    
+
+        setCurrentSpeak(speakHello);
+        setPlayAudio(true);
+
         setResetButtonVisible(true);
         setProgramsButton(false);
 
@@ -842,6 +883,7 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
         setYearButtonVisible(true);
+        setCurrentSpeak(speakEnroll);
         setPlayAudio(true);
           const textDisplay = `
           Please choose from the options below to indicate the enrollment category you prefer.
@@ -950,11 +992,13 @@ const handleGrandButtonClick = () => {
       command: ['* do *', '* do', 'do *', 'do'],
       callback: () => {
         resetTranscript();
-        displayText('There are various things that i can do. Below are the detailed list.');
         const textDisplay = `
         There are various things that i can do. Below are the detailed list.
         `;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakISKAdo);
+        setPlayAudio(true);
 
         setResetButtonVisible(true);
         setProgramsButton(false);
@@ -1055,10 +1099,13 @@ const handleGrandButtonClick = () => {
       command: ['About pup', '* about *', '* about', 'about *', '* about pup *', 'about pup *', '* about pup', 'about'],
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
-        displayText('Here are some information about P U P Lopez. Please select below which one do you want to see.');
         const textDisplay = `
         Here are some information about P U P Lopez. Please select below which one do you want to see.
         `;
+
+        setCurrentSpeak(speakAbout);
+        setPlayAudio(true);
+
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
         setAboutVisible(true);
@@ -1167,10 +1214,13 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
         setProgramsButton(true);
-        displayText('The P U P Lopez offers a lots of programs. Please select below which category do you want to see.');
         const textDisplay = `
         The P U P Lopez offers a lots of programs. Please select below which category do you want to see.
         `;
+
+        setCurrentSpeak(speakCourses);
+        setPlayAudio(true);
+
         displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
@@ -1273,11 +1323,14 @@ const handleGrandButtonClick = () => {
       command: ['* canteen', '* canteen *', 'canteen', 'canteen *'],
       callback:() => {
         resetTranscript(); // Reset the transcript when a command is executed
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Canteen');
         const textDisplay = `
         Please select your nearest area in campus, so that I can assist you to show the way to Canteen
         `;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakCanteen);
+        setPlayAudio(true);
+
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -1379,11 +1432,14 @@ const handleGrandButtonClick = () => {
       command: ['* science ', 'science *', '* science *', 'science', 'two o three', '203', '* 203', '203 *', '204 *', '* 204', '*  205', ' 205 *', '206 *', '* 206', 'chemical lab', '* chemical lab', 'physical lab', '* physical lab', '105 *', '* 105', '106 *', '* 106', '107 *', '* 107', '108 *', '* 108'] && [203, 204, 205, 206, 108, 107, 106, 105],
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Health and Science Building');
         const textDisplay = `
         Please select your nearest area in campus, so that I can assist you to show the way to Health and Science Building
         `;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakScience);
+        setPlayAudio(true);
+
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -1483,11 +1539,14 @@ const handleGrandButtonClick = () => {
       
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architecture Building');
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Engineering and Architect Building
+        Please select your nearest area in campus, so that I can assist you to show the way to Engineering, Technology and Architect Building
         `;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakEngineering);
+        setPlayAudio(true);
+
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -1585,11 +1644,14 @@ const handleGrandButtonClick = () => {
       command: ['* yumul', 'yumul *', '* yumul *', 'yumul', '* 200', '* 201', '* 202'] && [200, 201, 202],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Yumul Building');
         const textDisplay = `
         Please select your nearest area in campus, so that I can assist you to show the way to Yumul Building
         `;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakYumul);
+        setPlayAudio(true);
+
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -1687,11 +1749,14 @@ const handleGrandButtonClick = () => {
       command: ['* nantes', 'nantes *', '* nantes *', 'nantes', '* dental', 'dental *', 'business', '* business ', '* business *', '* business *' ,'* accounting *', '* 120', 'accounting', 'accounting *', '* accounting', '* accounting *', 'marketing', 'marketing *', '* marketing ', '* marketing*', ' * 121', '121 *', '* 122','122 *', 'medical faculty', 'medical *', '* medical', '* medical *', 'avr', '* avr', 'avr *', '* avr *', 'library', '* library', 'library *', 'speech lab', '* speech lab', '* 216', '216 *', '217 *', ' * 217', '* 218', '218 *', ' * 122', '122 *', '* 121', '121 *', '120 *', ' * 120'] && [216,217,218,120,121,122],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Accounting and Marketing Building');
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Accounting and Marketing Building
+        Please select your nearest area in campus, so that I can assist you to show the way to Business and Accountancy Building
         `;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakNantes);
+        setPlayAudio(true);
+
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -1789,10 +1854,13 @@ const handleGrandButtonClick = () => {
       command: ['gymnasium', '* gymnasium', '* gymnasium *', 'gymnasium *', 'gym', '* gym', '* gym *', '* gym *', '*gym*'],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Gymnasium');
         const textDisplay= `
-        Please select your nearest area in campus, so that I can assist you to show the way to Gymnasium`;
+        Please select your nearest area in campus, so that I can assist you to show the way to PUP Lopez Gymnasium`;
         displayOtherText(textDisplay);
+        
+        setCurrentSpeak(speakGym);
+        setPlayAudio(true);
+
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -1890,10 +1958,13 @@ const handleGrandButtonClick = () => {
       command: ['grandstand', '* grandstand', '* grandstand *', 'grandstand *', 'property office', '* property office', '* property *', '* property', '* rotc', 'rotc *', '* rotc *'],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Grandstand');
         const textDisplay = `
         Please select your nearest area in campus, so that I can assist you to show the way to Grandstand`;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakGrandstand);
+        setPlayAudio(true);
+
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -1991,11 +2062,14 @@ const handleGrandButtonClick = () => {
       command: ['education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *', 'public *', '* public', '* public *', '117 *','* 117', '118 *', '* 118', '119 *','* 119', '212 *','* 212', '213 *','* 213', '214 *','* 214', '215 *','* 215', 'csc ', '* csc ', '* csc *'] && [212,213,214,215,117,118,119],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Education and Public Administration Building');
         const textDisplay = `
         Please select your nearest area in campus, so that I can assist you to show the way to Education and Public Administration Building
         `;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakEduc);
+        setPlayAudio(true);
+
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -2094,10 +2168,13 @@ const handleGrandButtonClick = () => {
       command: ['admission', '* admission', 'admission *', '* admission *', 'osas', '* osas', 'osas *', '* osas *', 'cashier', '* cashier', '* cashier *', '* cashier *', 'registrar', '* registrar', ' registrar *', '* registrar *', 'academic ', '* academic', 'academic *', '* academic *', 'director office', '* director office', 'director * office ' ],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Admission Building');
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Admission Building`;
+        Please select your nearest area in campus, so that I can assist you to show the way to Administration Building`;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakAdmin);
+        setPlayAudio(true);
+        
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -2199,10 +2276,12 @@ const handleGrandButtonClick = () => {
        '* IT laboratory 1 *' ],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Computer Laboratory 1');
-        const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Computer Laboratory 1`;
+        const textDisplay = `Please select your nearest area in campus, so that I can assist you to show the way to ICT Laboratory 1`;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakLab1);
+        setPlayAudio(true);
+
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -2303,10 +2382,13 @@ const handleGrandButtonClick = () => {
       '* IT laboratory 2 *' ],
         callback: () => {
           resetTranscript();
-          displayText('Please select your nearest area in campus, so that I can assist you to show the way to Computer Laboratory 2');
           const textDisplay = `
-          Please select your nearest area in campus, so that I can assist you to show the way to Computer Laboratory 2`;
+          Please select your nearest area in campus, so that I can assist you to show the way to ICT Laboratory 2`;
           displayOtherText(textDisplay);
+
+          setCurrentSpeak(speakLab2);
+          setPlayAudio(true);
+
           setResetButtonVisible(true); // Show the reset button after a command is executed
   
           setProgramsButton(false);
@@ -2405,11 +2487,14 @@ const handleGrandButtonClick = () => {
       command: ['hospitality', '* hospitality', 'hospitality ', ' hospitality ', 'hm', 'kitchen lab', ' kitchen lab','kitchen lab ', " kitchen lab ", ' kitchen ','beverage','*beverage','tissue', 'tissue', 'tissue lab', '* tissue lab ', 'plant',' plant ', 'plant',' plant lab *', '* 100', '* 101', '* 102', '100 *', '101 *', '102 *'] && [100,101,102],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to Hospitality Management Building');
         const textDisplay = `
         Please select your nearest area in campus, so that I can assist you to show the way to Hospitality Management Building
         `;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakHM);
+        setPlayAudio(true);
+
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -2509,9 +2594,12 @@ const handleGrandButtonClick = () => {
       command: ['regular', '* regular', 'regular *', '* regular *'],
       callback: () => {
         resetTranscript();
-        displayText('Here is the process on how to enroll regular student')
-        const textDisplay = `Here is the process on how to enroll as a regular student`;
+        const textDisplay = `Here is the process on how to enroll as a regular student in PUP Lopez`;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakRegular);
+        setPlayAudio(true);
+
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -2614,9 +2702,12 @@ const handleGrandButtonClick = () => {
       command: ['irregular', '* irregular', 'irregular * ', '* irregular *'],
       callback: () => {
         resetTranscript();
-        displayText('Here is the process on how to enroll irregular student')
-        const textDisplay = `Here is the process on how to enroll irregular student`;
+        const textDisplay = `Here is the process on how to enroll Irregular Student in PUP Lopez`;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakIrregular);
+        setPlayAudio(true);
+
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -2719,9 +2810,12 @@ const handleGrandButtonClick = () => {
       command: ['freshmen', 'freshman'],
       callback: () => {
         resetTranscript();
-        displayText('Here is the process on how to enroll freshmen student')
-        const textDisplay = `Here is the process on how to enroll freshman student`;
+        const textDisplay = `Here is the process on how to enroll freshman student in PUP Lopez`;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakFreshmen);
+        setPlayAudio(true);
+
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -2823,9 +2917,12 @@ const handleGrandButtonClick = () => {
       command: ['transferee', '* transferee', 'transferee * ', '* transferee *'],
       callback: () => {
         resetTranscript();
-        displayText('Here is the process on how to enroll transferee student')
-        const textDisplay = `Here is the process on how to enroll transferee student`;
+        const textDisplay = `Here is the process on how to enroll a Transferee Student in PUP Lopez`;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakTransferee);
+        setPlayAudio(true);
+
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -2928,7 +3025,10 @@ const handleGrandButtonClick = () => {
       command: ['graduation', '* graduation', 'graduation * ', '* graduation *'],
       callback: () => {
         resetTranscript();
-        displayText('Here is the requirements for graduation');
+
+        setCurrentSpeak(speakGrad);
+        setPlayAudio(true);
+
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -3032,7 +3132,10 @@ const handleGrandButtonClick = () => {
       command: ['bachelor', '* bachelor', 'bachelor *', '* bachelor *'],
       callback: () => {
         resetTranscript();
-        displayText('Here is the bachelor courses offer at P U P Lopez');
+
+        setCurrentSpeak(speakBachelor);
+        setPlayAudio(true);
+
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -3136,7 +3239,9 @@ const handleGrandButtonClick = () => {
       command: ['diploma', '* diploma', 'diploma *', '* diploma *'],
       callback: () => {
         resetTranscript();
-        displayText('Here is the Diploma courses offer at P U P Lopez');
+
+        setCurrentSpeak(speakDiploma);
+        setPlayAudio(true);
 
         setResetButtonVisible(true);
 
@@ -3240,7 +3345,10 @@ const handleGrandButtonClick = () => {
       command: ['history', '* history', 'history *', '* history *'],
       callback: () => {
         resetTranscript();
-        displayText('This is the history of the P U P');
+
+        setCurrentSpeak(speakHistory);
+        setPlayAudio(true);
+
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -3340,10 +3448,13 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-      command: ['mission', '* mission', 'mission *', '* mission *'],
+      command: ['mission', '* mission', 'mission *', '* mission *', 'vision', '* vision', 'vision *', '* vision *'],
       callback: () => {
         resetTranscript();
-        displayText('Here is the Mission of P U P');
+
+        setCurrentSpeak(speakMission);
+        setPlayAudio(true);
+
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -3444,114 +3555,14 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-      command: ['vision', '* vision ', 'vision *', '* vision *'],
-      callback: () => {
-        resetTranscript();
-        displayText('Here is the P U P Vision');
-        setResetButtonVisible(true);
-
-        setProgramsButton(false);
-
-        setYearButtonVisible(false);
-        setSelectedYearResponse(false);
-
-        setDisplayTextOnScreen(false);
-
-        setAboutVisible(false);
-        setAboutResponse(false);
-
-        setSelectedProgram(false);
-
-        setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
-        //CANTEEN
-        setCanteenVisible(false);
-        setCanteenResponse(false);
-        //SCIENCE
-        setScienceVisible(false);
-        setScienceResponse(false);
-        //ENGINEER
-        setEngineerVisible(false);
-        setEngineerResponse(false);
-        //YUMUL
-        setYumulVisible(false);
-        setYumulResponse(false);
-        //NANTES
-        setNantesVisible(false);
-        setNantesResponse(false);
-        //GYMNASIUM
-        setGymVisible(false);
-        setGymResponse(false);
-        //GRANDSTAND
-        setGrandStandVisible(false);
-        setGrandStandResponse(false);
-        //EDUCATION
-        setEducVisible(false);
-        setEducResponse(false);
-        //ADMISSION
-        setAdmissionVisible(false);
-        setAdmissionResponse(false);
-        //LAB1
-        setLab1Visible(false);
-        setLab1Response(false);
-        //LAB2
-        setLab2Visible(false);
-        setLab2Response(false);
-        //HOSPITALITY
-        setHMVisible(false);
-        setHMResponse(false);
-        //COMFORT ROOM
-        setShowCrVisible(false);
-        setShowCrResponse(false);
-
-
-        setShowEregular(false);
-        setShowEirregular(false);
-        setShowEfreshmen(false);
-        seteShowEtransferee(false);
-
-        setShowGrad(false);
-        setShowBachelor(false);
-        setShowDiploma(false);
-        setShowHistory(false);
-        setShowMission(false);
-        setShowVision(true);
-        setShowHymn(false);
-        setShowAchiever(false);
-        setShowIska(false);
-        setShowGoodmoral(false);
-    
-        setShowAvatar(false);
-
-                  //ECOPARK
-                  setShowEcoVisible(false);
-                  setShowEcoResponse(false);
-
-        const hideList = document.querySelectorAll('.list-result');
-    hideList.forEach((element) => {
-            element.style.display = 'none';
-          });
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
-
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
-            element.style.display = 'none';
-          });
-      }
-    },
-    {
       command: ['hymn', '* hymn ', 'hymn *', '* hymn *', 'imno', '* imno', 'imno *', '* imno *'],
       callback: () => {
         resetTranscript();
         const textDisplay = 'Here is the PUP Hymn';
+
+        setCurrentSpeak(speakHymn);
+        setPlayAudio(true);
+
         displayOtherText(textDisplay);
         setResetButtonVisible(true);
 
@@ -3658,6 +3669,10 @@ const handleGrandButtonClick = () => {
         resetTranscript();
         const textDisplay = `Here is the Requirements on how to become an Academic Achiever`;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakLister);
+        setPlayAudio(true);
+
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -3759,8 +3774,12 @@ const handleGrandButtonClick = () => {
       command: ['moral', '* moral', 'moral * ', 'good moral', '* good moral', 'good moral *', '* good moral *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the Requirements on how to get Good Moral`;
+        const textDisplay = `Here is the Requirements on how to get Good Moral in PUP Lopez`;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakMoral);
+        setPlayAudio(true);
+
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -3862,9 +3881,12 @@ const handleGrandButtonClick = () => {
       command: ['comfort room', '* comfort room', 'comfort room *', '* comfort room *'],
       callback: () => {
         resetTranscript();
-        displayText('Please select your nearest area in campus, so that I can assist you to show the way to nearest comfort room.');
         const textDisplay = `Please select your nearest area in campus, so that I can assist you to show the way to nearest comfort room.`;
         displayOtherText(textDisplay);
+
+        setCurrentSpeak(speakCr);
+        setPlayAudio(true);
+
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -3965,9 +3987,12 @@ const handleGrandButtonClick = () => {
         command: ['Eco Park', '* eco park', 'eco park *', '* eco park *'],
         callback: () => {
           resetTranscript();
-          displayText('Please select your nearest area in campus, so that I can assist you to show the way to Eco Park ');
           const textDisplay = `Please select your nearest area in campus, so that I can assist you to show the way to Eco Park`;
           displayOtherText(textDisplay);
+
+          setCurrentSpeak(speakEco);
+          setPlayAudio(true);
+
           setResetButtonVisible(true);
   
           setProgramsButton(false);
@@ -4088,7 +4113,9 @@ const sendTextToCommands = (text) => {
   if (command) {
     command.callback();
   } else {
-    displayText('Sorry I currently do not have information about that.');
+    setCurrentSpeak(speakError);
+    setPlayAudio(true);
+    
     const textDisplay = `Sorry I currently do not have information about that.`
     displayOtherText(textDisplay);
     
