@@ -84,7 +84,7 @@ const goodmoral = () => {
   return (
     <div>
       <div className='step'>
-        <p className=''>HOW TO REQUEST FOR GOOD MORAL CERTIFICATE</p>
+        <h3 className=''>HOW TO REQUEST FOR GOOD MORAL CERTIFICATE</h3>
         <p>1.Secure a form from Office of the Student Services accordingly (Form PUP-ACGM-5-OFSS-0007).<br/>
            2.Present Registration card or ID for currently enrolled student and Alumni ID or TOR with picture for graduate.<br/>
            3.Pay appropriate fee at the Cashier Office. <br/>

@@ -141,6 +141,9 @@ function AdmissionButton() {
     <div className="areaImage-container">
     {!isActive && (
     <div className="buttons-container">
+      <div className='title-area'>
+        <p>Please select your nearest area in campus, so that I can assist you to show the way to Administration Building</p>
+      </div>
         <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={gate} />
         <p>MAIN GATE</p>
         <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src={lab1}/>

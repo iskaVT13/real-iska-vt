@@ -527,9 +527,6 @@ const handleAdminButtonClick = () => {
   setCurrentSpeak(speakAdmin);
   setPlayAudio(true);
 
-        const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Administration Building`;
-        displayOtherText(textDisplay);
   const hideAvatar = document.querySelectorAll('.avatar-container');
   hideAvatar.forEach((element) => {
     element.style.display = 'none';
@@ -1307,10 +1304,6 @@ const handleGrandButtonClick = () => {
       command: ['* canteen', '* canteen *', 'canteen', 'canteen *'],
       callback:() => {
         resetTranscript(); // Reset the transcript when a command is executed
-        const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Canteen
-        `;
-        displayOtherText(textDisplay);
 
         setCurrentSpeak(speakCanteen);
         setPlayAudio(true);
@@ -2046,10 +2039,6 @@ const handleGrandButtonClick = () => {
       command: ['education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *', 'public *', '* public', '* public *', '117 *','* 117', '118 *', '* 118', '119 *','* 119', '212 *','* 212', '213 *','* 213', '214 *','* 214', '215 *','* 215', 'csc ', '* csc ', '* csc *'] && [212,213,214,215,117,118,119],
       callback: () => {
         resetTranscript();
-        const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Education and Public Administration Building
-        `;
-        displayOtherText(textDisplay);
 
         setCurrentSpeak(speakEduc);
         setPlayAudio(true);
@@ -2152,9 +2141,6 @@ const handleGrandButtonClick = () => {
       command: ['admission', '* admission', 'admission *', '* admission *', 'osas', '* osas', 'osas *', '* osas *', 'cashier', '* cashier', '* cashier *', '* cashier *', 'registrar', '* registrar', ' registrar *', '* registrar *', 'academic ', '* academic', 'academic *', '* academic *', 'director office', '* director office', 'director * office ' ],
       callback: () => {
         resetTranscript();
-        const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Administration Building`;
-        displayOtherText(textDisplay);
 
         setCurrentSpeak(speakAdmin);
         setPlayAudio(true);
@@ -3651,9 +3637,6 @@ const handleGrandButtonClick = () => {
       command: ['lister', '* lister ', 'lister *', '* lister *', '* PL *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the Requirements on how to become an Academic Achiever`;
-        displayOtherText(textDisplay);
-
         setCurrentSpeak(speakLister);
         setPlayAudio(true);
 
@@ -3758,8 +3741,6 @@ const handleGrandButtonClick = () => {
       command: ['moral', '* moral', 'moral * ', 'good moral', '* good moral', 'good moral *', '* good moral *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the Requirements on how to get Good Moral in PUP Lopez`;
-        displayOtherText(textDisplay);
 
         setCurrentSpeak(speakMoral);
         setPlayAudio(true);
