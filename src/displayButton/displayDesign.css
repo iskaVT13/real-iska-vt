@@ -6,11 +6,17 @@
     position: relative;
     background-color: #7E0001;
     z-index: 99;
-    top: 10em;
+    top: 7em;
     padding: 5px;
     width: 100%;
-
+    height: 100%;
+    color: white;
 }
+
+.choices-button p{
+  padding: 10px;
+}
+
 .choices-button button{
   display: inline-flex;
     justify-content: space-around;
@@ -26,7 +32,8 @@
     cursor: pointer;
     transition: background 0.3s ease;
     z-index: 40;
-    width: max-content;
+    width: 15em;
+    height: 1em;
     padding: 20px;
 
 

@@ -1,58 +1,60 @@
 // src/App.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './displayDesign.css';
 
 import History from '../showRespose/About/history';
 import Mission from '../showRespose/About/mission';
-import Vision from '../showRespose/About/vision';
 import Hymn from '../showRespose/About/hymn';
+
+import voiceHymn from '../speakText/hymn.mp3';
+import voiceMission from '../speakText/mission.mp3';
+import voiceHistory from '../speakText/history.mp3';
 
 function App() {
   const [showHistory, setShowHistory] = useState(false);
   const [showMission, setShowMission] = useState(false);
-  const [showVision, setShowVision] = useState(false);
   const [showHymn, setShowHymn] = useState(false);
+  const [playVoice, setPlayVoice] = useState(false);
+  const [currentVoice, setCurrentVoice] = useState('');
 
-  const speakText = (text) => {
-    const speechSynthesis = window.speechSynthesis;
-    const speechText = new SpeechSynthesisUtterance(text);
-    speechSynthesis.speak(speechText);
-  };
+useEffect(() => {
+  if (playVoice) {
+    const audioPlayer = new Audio(currentVoice);
+
+    audioPlayer.play();
+
+    audioPlayer.addEventListener('ended', () => {
+      setPlayVoice(false);
+    });
+  }
+}, [playVoice, currentVoice]);
 
   const handleHistoryButtonClick = () => {
-    speakText("This is the history of Polytechnic University of the Philippines")
     setShowHistory(!showHistory);
     setShowMission(false);
-    setShowVision(false);
     setShowHymn(false);
+    setCurrentVoice(voiceHistory);
+    setPlayVoice(true);
     
     window.scrollTo(0, 0);
   };
   const handleMissionButtonClick = () => {
-    speakText("This is the Mission of P U P")
     setShowMission(!showMission);
     setShowHistory(false);
-    setShowVision(false);
     setShowHymn(false);
+    setCurrentVoice(voiceMission);
+    setPlayVoice(true);
 
     window.scrollTo(0, 0);
 
   };
-  const handleVisionButtonClick = () => {
-    speakText("The Vision of P U P")
-    setShowVision(!showVision);
-    setShowMission(false);
-    setShowHistory(false);
-    setShowHymn(false);
 
-    window.scrollTo(0, 0);
-  }
   const handleHymnButtonClick = () => {
-    speakText("This is the Hymn of P U P")
     setShowHymn(!showHymn);
     setShowHistory(false);
     setShowMission(false);
-    setShowVision(false);
+    setCurrentVoice(voiceHymn);
+    setPlayVoice(true);
 
     window.scrollTo(0, 0);
 
@@ -61,16 +63,18 @@ function App() {
   return (
     <div>
       <div className='choices-button' >
-      <button className={showHistory ? 'active-button' : ''} onClick={handleHistoryButtonClick}> HISTORY</button>
-      <button className={showMission ? 'active-button' : ''} onClick={handleMissionButtonClick}> PUP MISSION</button>
-      <button className={showVision ? 'active-button' : ''} onClick={handleVisionButtonClick}> PUP VISION</button>
-      <button className={showHymn ? 'active-button' : ''} onClick={handleHymnButtonClick}> PUP HYMN </button>
+      <div>
+        <p> Please choose from the options below to indicate the enrollment category you prefer.
+</p>
+      </div>
+      <button className={showHistory ? 'active-button' : ''} onClick={handleHistoryButtonClick}>HISTORY</button>
+      <button className={showMission ? 'active-button' : ''} onClick={handleMissionButtonClick}>MISSION and VISION</button>
+      <button className={showHymn ? 'active-button' : ''} onClick={handleHymnButtonClick}> PUP HYMN</button>
       </div>
       <br></br>
       <div>
       {showHistory && <History />}
       {showMission && <Mission />}
-      {showVision && <Vision />}
       {showHymn && <Hymn />}
       </div>
     </div>

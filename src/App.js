@@ -488,10 +488,6 @@ const handleEnrollButtonClick = () => {
   setResponseDisplayed(true);
   setCurrentSpeak(speakEnroll);
   setPlayAudio(true);
-  const textDisplay = `
-          Please choose from the options below to indicate the enrollment category you prefer.
-          `;
-          displayOtherText(textDisplay);
     
 const hideAvatar = document.querySelectorAll('.avatar-container');
   hideAvatar.forEach((element) => {
@@ -509,11 +505,8 @@ const handleAboutPUPButtonClick = () => {
   setResetButtonVisible(true);
   setCommandRecognized(true);
   setResponseDisplayed(true);
-  displayText('Here are some information about P U P Lopez. Please select below which one do you want to see.');
-        const textDisplay = `
-        Here are some information about P U P Lopez. Please select below which one do you want to see.
-        `;
-        displayOtherText(textDisplay);
+  setCurrentSpeak(speakAbout);
+  setPlayAudio(true);
 
   const hideAvatar = document.querySelectorAll('.avatar-container');
   hideAvatar.forEach((element) => {
@@ -531,9 +524,11 @@ const handleAdminButtonClick = () => {
   setResetButtonVisible(true);
   setCommandRecognized(true);
   setResponseDisplayed(true);
-  displayText('Please select your nearest area in campus, so that I can assist you to show the way to Admission Building');
+  setCurrentSpeak(speakAdmin);
+  setPlayAudio(true);
+
         const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Admission Building`;
+        Please select your nearest area in campus, so that I can assist you to show the way to Administration Building`;
         displayOtherText(textDisplay);
   const hideAvatar = document.querySelectorAll('.avatar-container');
   hideAvatar.forEach((element) => {
@@ -551,7 +546,9 @@ const handleGrandButtonClick = () => {
   setResetButtonVisible(true);
   setCommandRecognized(true);
   setResponseDisplayed(true);
-  displayText('Please select your nearest area in campus, so that I can assist you to show the way to Grandstand');
+  setCurrentSpeak(speakGrandstand);
+  setPlayAudio(true);
+
         const textDisplay = `
         Please select your nearest area in campus, so that I can assist you to show the way to Grandstand`;
         displayOtherText(textDisplay);
@@ -702,8 +699,8 @@ const handleGrandButtonClick = () => {
         setSelectedYearResponse(false);
         setYearButtonVisible(false);
         
-        setResponseDisplayed(true);
-        setCommandRecognized(true);
+        setResponseDisplayed(false);
+        setCommandRecognized(false);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -885,11 +882,6 @@ const handleGrandButtonClick = () => {
         setYearButtonVisible(true);
         setCurrentSpeak(speakEnroll);
         setPlayAudio(true);
-          const textDisplay = `
-          Please choose from the options below to indicate the enrollment category you prefer.
-          `;
-          displayOtherText(textDisplay);
-
         setResetButtonVisible(true);
 
         setDisplayTextOnScreen(false);
@@ -1099,14 +1091,10 @@ const handleGrandButtonClick = () => {
       command: ['About pup', '* about *', '* about', 'about *', '* about pup *', 'about pup *', '* about pup', 'about'],
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
-        const textDisplay = `
-        Here are some information about P U P Lopez. Please select below which one do you want to see.
-        `;
 
         setCurrentSpeak(speakAbout);
         setPlayAudio(true);
 
-        displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
         setAboutVisible(true);
         setResetButtonVisible(true); // Show the reset button after a command is executed
@@ -1214,14 +1202,10 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
         setProgramsButton(true);
-        const textDisplay = `
-        The P U P Lopez offers a lots of programs. Please select below which category do you want to see.
-        `;
 
         setCurrentSpeak(speakCourses);
         setPlayAudio(true);
 
-        displayOtherText(textDisplay);
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setYearButtonVisible(false);
