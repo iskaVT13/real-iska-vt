@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
+
 import gate from '../areaImage/gate.webp';
 import admission from '../areaImage/Admin Building.webp';
 import lab1 from '..//areaImage/Lab 1.webp';

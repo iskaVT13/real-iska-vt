@@ -23,6 +23,7 @@ function HmButton() {
   const [responses, setResponses] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [directCurrentButton, setDirectionCurrentButton] = useState('');
+  const [currentAudio, setCurrentAudio] = useState(null);
 
   useEffect(() => {
     Promise.all([
@@ -46,8 +47,19 @@ function HmButton() {
 
   const closeModal = () => {
     setIsModalOpen(false);
+  };
 
-  
+  const playAudio = (audioURL) => {
+    // Stop the current audio if it's playing
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
+    // Create and play the new audio
+    const audio = new Audio(audioURL);
+    audio.play();
+    setCurrentAudio(audio);
   };
 
   const handleDirectionButtonClick = (buttonName) => {
@@ -98,11 +110,6 @@ function HmButton() {
     });
      // Scroll to the top
      window.scrollTo(0, 0);
-  };
-  
-  const playAudio = (audioURL) => {
-    const audio = new Audio(audioURL);
-    audio.play();
   };
 
   const handleBackButtonClick = () => {

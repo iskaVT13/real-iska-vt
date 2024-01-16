@@ -15,12 +15,12 @@ import education from '../areaImage/Educ Bldg.webp';
 import engineer from '../areaImage/Engineering Building.webp';
 import hospitality from '../areaImage/HM _ Plant Lab.webp';
 import ecopark from '../areaImage/eco park.webp';
+
 function CanteenButton() {
   const [isActive, setIsActive] = useState(false);
   const [imageURL, setImageURL] = useState('');
   const [currentButton, setCurrentButton] = useState('');
   const [responses, setResponses] = useState({});
-  
 
   useEffect(() => {
     // Import the responses JSON file dynamically

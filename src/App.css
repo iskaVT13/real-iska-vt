@@ -10,37 +10,64 @@
   display: block;
   justify-content: space-around;
   overflow: hidden;
-  font-family: sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-/* Responsive styles for small screens (up to 767px) */
-@media only screen and (max-width: 767px) {
+/* Media Query for screens with a maximum width of 576px (typical small screens) */
+@media (max-width: 576px) {
   body {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px; /* Adjust font size for small screens (e.g., iPhone SE) */
   }
-  /* Add more styles for small screens as needed */
 }
 
-/* Responsive styles for medium screens (768px to 991px) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+/* Media Query for screens with a width between 577px and 768px (typical medium screens) */
+@media (min-width: 577px) and (max-width: 768px) {
   body {
-    font-size: 18px; /* Adjust font size for medium screens */
+    font-size: 16px; /* Adjust font size for medium screens (e.g., iPhone 7/8/SE2) */
   }
-  /* Add more styles for medium screens as needed */
 }
 
-/* Responsive styles for large screens (992px and above) */
-@media only screen and (min-width: 992px) {
+/* Media Query for screens with a width between 769px and 991px (typical large screens) */
+@media (min-width: 769px) and (max-width: 991px) {
   body {
-    font-size: 20px; /* Adjust font size for large screens */
+    font-size: 18px; /* Adjust font size for large screens (e.g., iPhone X/XS/11 Pro) */
   }
-  /* Add more styles for large screens as needed */
 }
+
+/* Media Query for screens with a minimum width of 992px (typical extra-large screens) */
+@media (min-width: 992px) {
+  body {
+    font-size: 20px; /* Adjust font size for extra-large screens (e.g., iPhone 12 Pro Max) */
+  }
+}
+
+/* Media Query for screens with a width between 320px and 480px (typical Android small screens) */
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    font-size: 14px; /* Adjust font size for small Android screens */
+  }
+}
+
+/* Media Query for screens with a width between 481px and 768px (typical Android medium screens) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 16px; /* Adjust font size for medium Android screens */
+  }
+}
+
+/* Media Query for screens with a minimum width of 769px (typical Android large screens) */
+@media (min-width: 769px) {
+  body {
+    font-size: 18px; /* Adjust font size for large Android screens */
+  }
+}
+
 
 body{
   position: relative;
   background-color: #7E0001;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   display: block;
   text-align: center;
   align-items: center;

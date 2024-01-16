@@ -23,7 +23,8 @@ function AdmissionButton() {
   const [responses, setResponses] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [directCurrentButton, setDirectionCurrentButton] = useState('');
-
+  const [currentAudio, setCurrentAudio] = useState(null);
+  
 
   useEffect(() => {
     Promise.all([
@@ -49,6 +50,20 @@ function AdmissionButton() {
     setIsModalOpen(false);
 
   
+  };
+
+  
+  const playAudio = (audioURL) => {
+    // Stop the current audio if it's playing
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
+    // Create and play the new audio
+    const audio = new Audio(audioURL);
+    audio.play();
+    setCurrentAudio(audio);
   };
 
 
@@ -108,10 +123,6 @@ function AdmissionButton() {
   
   };
 
-  const playAudio = (audioURL) => {
-    const audio = new Audio(audioURL);
-    audio.play();
-  };
   
   const handleBackButtonClick = () => {
     setCurrentButton('');
@@ -140,31 +151,31 @@ function AdmissionButton() {
       <div className='title-area'>
         <p>Please select your nearest area in campus, so that I can assist you to show the way to Administration Building</p>
       </div>
-        <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={gate} />
+        <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={gate} onLoad={fetchImageURL}/>
         <p>MAIN GATE</p>
-        <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src={lab1}/>
+        <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src={lab1} onLoad={fetchImageURL}/>
         <p>ICT LABORATORY 1</p>
-        <img onClick={() => handleImageClick('lab2')}alt='lab2' className='lab2-image' src={lab2} />
+        <img onClick={() => handleImageClick('lab2')}alt='lab2' className='lab2-image' src={lab2} onLoad={fetchImageURL}/>
         <p>ICT LABORATORY 2</p>
-        <img onClick={() => handleImageClick('yumul')} alt='yumul' className='yumul-image' src={yumul} />
+        <img onClick={() => handleImageClick('yumul')} alt='yumul' className='yumul-image' src={yumul} onLoad={fetchImageURL}/>
         <p>YUMUL BUILDING</p>
-        <img onClick={() => handleImageClick('canteen')} alt='canteen' className='canteen-image' src={canteen} />
+        <img onClick={() => handleImageClick('canteen')} alt='canteen' className='canteen-image' src={canteen} onLoad={fetchImageURL}/>
         <p>PUP CANTEEN</p>
-        <img onClick={() => handleImageClick('nantes')}  alt='nantes' className='nantes-image' src={nantes} />
+        <img onClick={() => handleImageClick('nantes')}  alt='nantes' className='nantes-image' src={nantes} onLoad={fetchImageURL}/>
         <p>BUSINESS and ACCOUNTACY BUILDING</p>
-        <img onClick={() => handleImageClick('gymnasium')} alt='gymnasium' className='gymnasium-image' src={gymnasium} />
+        <img onClick={() => handleImageClick('gymnasium')} alt='gymnasium' className='gymnasium-image' src={gymnasium} onLoad={fetchImageURL}/>
         <p>GYMNASIUM</p>
-        <img onClick={() => handleImageClick('education')} alt='education' className='education-image' src={education} />
+        <img onClick={() => handleImageClick('education')} alt='education' className='education-image' src={education} onLoad={fetchImageURL}/>
         <p>EDUCATION and PUBLIC ADMINISTRATION BUILDING</p>
-        <img onClick={() => handleImageClick('science')}  alt='science' className='science-image' src={science} />
+        <img onClick={() => handleImageClick('science')}  alt='science' className='science-image' src={science} onLoad={fetchImageURL}/>
         <p>HEALTH and SCIENCE BUILDING</p>
-        <img onClick={() => handleImageClick('grandstand')} alt='grandstand' className='grandstand-image' src={grandstand} />
+        <img onClick={() => handleImageClick('grandstand')} alt='grandstand' className='grandstand-image' src={grandstand}onLoad={fetchImageURL} />
         <p>GRANDSTAND</p>
-        <img onClick={() => handleImageClick('engineer')}  alt='engineer' className='engineer-image' src={engineer} />
+        <img onClick={() => handleImageClick('engineer')}  alt='engineer' className='engineer-image' src={engineer} onLoad={fetchImageURL}/>
         <p>ENGINEERING, TECHNOLOGY and ARCHTECTURE BUILDING</p>
-        <img onClick={() => handleImageClick('hospitality')}  alt='hospitality' className='jm-image' src={hospitality} />
+        <img onClick={() => handleImageClick('hospitality')}  alt='hospitality' className='jm-image' src={hospitality}onLoad={fetchImageURL} />
         <p>HOSPITALITY MANAGEMENT BUILDING</p>
-        <img onClick={() => handleImageClick('ecopark')}  alt='EcoPark' className='ecopark-image' src={ecopark} />
+        <img onClick={() => handleImageClick('ecopark')}  alt='EcoPark' className='ecopark-image' src={ecopark} onLoad={fetchImageURL}/>
         <p>PUP ECOPARK</p>
       
     </div>

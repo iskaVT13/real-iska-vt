@@ -344,6 +344,7 @@ useEffect(() => {
   }
 }, [playAudio, currentSpeak]);
 
+
   const handleSuggestionClick = (suggestion) => {
     // Handle the suggestion click logic in the parent component
     console.log(`Suggestion clicked in parent: ${suggestion}`);
