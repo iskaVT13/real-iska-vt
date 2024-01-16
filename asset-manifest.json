@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/real-iska-vt/static/css/main.cfefd2c6.css",
-    "main.js": "/real-iska-vt/static/js/main.d45c9bff.js",
+    "main.css": "/real-iska-vt/static/css/main.8f434652.css",
+    "main.js": "/real-iska-vt/static/js/main.12d5c4a9.js",
     "static/js/498.fcaf40d7.chunk.js": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js",
     "static/js/703.59b532f8.chunk.js": "/real-iska-vt/static/js/703.59b532f8.chunk.js",
     "static/js/379.06dbaa89.chunk.js": "/real-iska-vt/static/js/379.06dbaa89.chunk.js",
@@ -114,8 +114,8 @@
     "static/media/krona-one-latin-ext-400-normal.woff": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.fb9cd5f06d66cdcda94f.woff",
     "static/media/krona-one-latin-ext-400-normal.woff2": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.01120cafa274a6b13dba.woff2",
     "index.html": "/real-iska-vt/index.html",
-    "main.cfefd2c6.css.map": "/real-iska-vt/static/css/main.cfefd2c6.css.map",
-    "main.d45c9bff.js.map": "/real-iska-vt/static/js/main.d45c9bff.js.map",
+    "main.8f434652.css.map": "/real-iska-vt/static/css/main.8f434652.css.map",
+    "main.12d5c4a9.js.map": "/real-iska-vt/static/js/main.12d5c4a9.js.map",
     "498.fcaf40d7.chunk.js.map": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js.map",
     "703.59b532f8.chunk.js.map": "/real-iska-vt/static/js/703.59b532f8.chunk.js.map",
     "379.06dbaa89.chunk.js.map": "/real-iska-vt/static/js/379.06dbaa89.chunk.js.map",
@@ -134,7 +134,7 @@
     "reactPlayerPreview.b3f9eec1.chunk.js.map": "/real-iska-vt/static/js/reactPlayerPreview.b3f9eec1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cfefd2c6.css",
-    "static/js/main.d45c9bff.js"
+    "static/css/main.8f434652.css",
+    "static/js/main.12d5c4a9.js"
   ]
 }
