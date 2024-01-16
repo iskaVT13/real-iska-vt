@@ -2,67 +2,80 @@
     "gate": {
       "clickedImage": "",
       "title": "Main Gate",
-      "responseText": "Here is the way from Main gate to Eco Park"
+      "responseText": "Here is the way from Main gate to Eco Park",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FGate%20to%20EcoPark.mp3?alt=media&token=48f064bd-2cab-45b6-b6e2-ea50b0f482ae"
     },
     "admission": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/admin to eco park.gif",
         "title": "Admission Building",
-        "responseText": "Here is the way from Admission Building to Eco Park"
+        "responseText": "Here is the way from Admission Building to Eco Park",
+        "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FAdmin%20to%20EcoPark.mp3?alt=media&token=c9492f93-2758-4167-866d-0641851cfd8d"
       },
     "lab1": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/lab 1 to Eco Park.gif",
       "title": "ComLab-1",
-      "responseText": "Here is the way from Computer Laboratory 1 to Eco Park"
+      "responseText": "Here is the way from Computer Laboratory 1 to Eco Park",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FComLab1%20to%20EcoPark.mp3?alt=media&token=477a3b2c-77ac-41bd-a792-0fbbc85fb2e7"
     },
     "lab2": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/lab 2 to eco park.gif",
       "title": "comLab-2",
-      "responseText": "Here is the way from Computer Laboratory 2 to Eco Park"
+      "responseText": "Here is the way from Computer Laboratory 2 to Eco Park",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FComLab2%20to%20EcoPark.mp3?alt=media&token=41460028-9119-47a8-bf60-a4c4742e173e"
     },
     "yumul": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/yumul to eco park.gif",
       "title": "Yumul Building",
-      "responseText": "Here is the way from Yumul Building to Eco Park"
+      "responseText": "Here is the way from Yumul Building to Eco Park",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FYumul%20to%20EcoPark.mp3?alt=media&token=9ecd6c97-e9c8-424f-9f62-99332dcb35c2"
     },
     "canteen": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/Canteen to eco park.gif",
       "title": "Canteen",
-      "responseText": "Here is the way from Canteen to Eco Park"
+      "responseText": "Here is the way from Canteen to Eco Park",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FCanteen%20to%20EcoPark.mp3?alt=media&token=aa341f90-0953-414a-bfb1-68192f13a5e1"
     },
     "gymnasium": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/gym to eco park.gif",
       "title": "Gymnasium",
-      "responseText": "Here is the way from Gymnasium to Eco Park"
+      "responseText": "Here is the way from Gymnasium to Eco Park",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FGym%20to%20EcoPark.mp3?alt=media&token=920d54f1-aebd-4c59-ab92-60e729640475"
     },
     "nantes": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/nantes to eco park.gif",
       "title": "Nantes",
-      "responseText": "Here is the way from Accounting and Marketing Building to Eco Park"
+      "responseText": "Here is the way from Accounting and Marketing Building to Eco Park",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FBusinessAndAccountancy%20to%20EcoPark.mp3?alt=media&token=22d2378e-1d25-4507-b987-053271822cd5"
     },
     "grandstand": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/Grandstand to eco park.gif",
       "title": "Grandstand",
-      "responseText": "Here is the way from Grandstand to Eco Park"
+      "responseText": "Here is the way from Grandstand to Eco Park",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FGrandstand%20to%20EcoPark.mp3?alt=media&token=3cebd7af-e2d3-4d1b-9e52-21f8fa627ff8"
     },
     "engineer": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/engr to eco park.gif",
       "title": "Engineer and Architecture Building",
-      "responseText": "Here is the way from Engineer and Architecture Building to Eco Park"
+      "responseText": "Here is the way from Engineer and Architecture Building to Eco Park",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FEngineering%20to%20EcoPark.mp3?alt=media&token=75c54b76-fed1-4409-a0d6-3f34f2e6bdc6"
     },
     "education": {
       "clickedImage": "",
       "title": "Education Building",
-      "responseText": "Here is the way from Education Building to Eco Park"
+      "responseText": "Here is the way from Education Building to Eco Park",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FEduc%20to%20EcoPark.mp3?alt=media&token=e9c891a3-053b-4733-8fc5-0b3cfe8d4311"
     },
     "science": {
       "clickedImage": "",
       "title": "Science Building",
-      "responseText": "Here is the way from Science Building to Eco Park"
+      "responseText": "Here is the way from Science Building to Eco Park",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FHealth%20to%20EcoPark.mp3?alt=media&token=9b7c96f7-86ea-4a7e-8c5f-029e01c1478b"
     },
     "hospitality": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/HM & plant lab to eco park.gif",
       "title": "Hospitality Management Building",
-      "responseText": "Here is the way from Hospitality Management Building to Eco Park"
+      "responseText": "Here is the way from Hospitality Management Building to Eco Park",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FHM%20to%20EcoPark.mp3?alt=media&token=bedca8d2-da90-48e7-925f-8bfe560d873a"
     }
 
   }

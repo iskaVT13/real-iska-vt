@@ -2,67 +2,80 @@
     "gate": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/gate to gym.gif",
       "title": "Main Gate",
-      "responseText": "Here is the way from Main gate to Gymnasium"
+      "responseText": "Here is the way from Main gate to Gymnasium",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2Fgate2gym.mp3?alt=media&token=86138bff-afec-49fe-9fee-988d1d149e6f"
     },
     "admission": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/admin to gym.gif",
         "title": "Admission Building",
-        "responseText": "Here is the way from Admission Building to Gymnasium"
+        "responseText": "Here is the way from Admission Building to Gymnasium",
+        "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FAdmin%20to%20Gym.mp3?alt=media&token=65a60727-939f-4140-a8c4-f2ae5bc2ad43"
       },
     "lab1": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/lab1 to Gym.gif",
       "title": "ComLab-1",
-      "responseText": "Here is the way from Computer Laboratory 1 to Gymnasium"
+      "responseText": "Here is the way from Computer Laboratory 1 to Gymnasium",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FComLab1%20to%20Gym.mp3?alt=media&token=4b1e9a46-f184-4d55-a311-66177cfab276"
     },
     "lab2": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/lab 2 to gym.gif",
       "title": "comLab-2",
-      "responseText": "Here is the way from Computer Laboratory 2 to Gymnasium"
+      "responseText": "Here is the way from Computer Laboratory 2 to Gymnasium",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FComLab2%20to%20Gym.mp3?alt=media&token=2f3fea7b-170c-4352-9902-ea22d8f6edab"
     },
     "yumul": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/yumul to gym.gif",
       "title": "Yumul Building",
-      "responseText": "Here is the way from Yumul Building to Gymnasium"
+      "responseText": "Here is the way from Yumul Building to Gymnasium",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FYumul%20to%20Gym.mp3?alt=media&token=ff5ff87f-bbc8-4a35-b61a-3f36d86f45b9"
     },
     "canteen": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/Canteen to Gym.gif",
       "title": "Canteen",
-      "responseText": "Here is the way from Canteen to Gymnasium"
+      "responseText": "Here is the way from Canteen to Gymnasium",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FCanteen%20to%20Gym.mp3?alt=media&token=ea3db780-e22a-4fd4-805b-40e4e7b548d9"
     },
     "nantes": {
       "clickedImage": "FRONT",
       "title": "Nantes",
-      "responseText": "The Gymnasium is in front of the Accounting and Marketing Building"
+      "responseText": "The Gymnasium is in front of the Accounting and Marketing Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FBusinessAndAccountancy%20to%20Gym.mp3?alt=media&token=a1f96bae-d5ef-4713-9be3-f8e4cbc0771e"
     },
     "grandstand": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/Grandstand to gym.gif",
       "title": "Grandstand",
-      "responseText": "Here is the way from Grandstand to Gymnasium"
+      "responseText": "Here is the way from Grandstand to Gymnasium",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FGrandstand%20to%20Gym.mp3?alt=media&token=a8532ff6-7631-4a72-9fdb-c114b1910d44"
     },
     "engineer": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/engr to gym.gif",
       "title": "Engineer and Architecture Building",
-      "responseText": "Here is the way from Engineer and Architecture Building to Gymnasium"
+      "responseText": "Here is the way from Engineer and Architecture Building to Gymnasium",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FEngineering%20to%20Gym.mp3?alt=media&token=115d6b0b-9ed7-4dd7-b670-d388908cd7ab"
     },
     "education": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/educ bldg to gym.gif",
       "title": "Education Building",
-      "responseText": "Here is the way from Education Building to Gymnasium"
+      "responseText": "Here is the way from Education Building to Gymnasium",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FEduc%20to%20Gym.mp3?alt=media&token=b5780db2-a931-4d83-b7de-e2c1e34c2f82"
     },
     "science": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/science to Gym.gif",
       "title": "Science Building",
-      "responseText": "Here is the way from Science Building to Gymnasium"
+      "responseText": "Here is the way from Science Building to Gymnasium",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FScience%20Building%20to%20Gym.mp3?alt=media&token=6054ebfe-430e-48df-80c7-ec2bd0863dd6"
     },
     "hospitality": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/HM & plant lab to gym.gif",
       "title": "Hospitality Management Building",
-      "responseText": "Here is the way from Hospitality Management Building to Gymnasium"
+      "responseText": "Here is the way from Hospitality Management Building to Gymnasium",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FHM%20to%20Gym.mp3?alt=media&token=5dc51e60-e891-4a73-aca5-715275110f50"
     },
     "ecopark": {
       "clickedImage": "",
       "title": "Eco Park",
-      "responseText": "Here is the way from Eco Park to Gymnasium"
+      "responseText": "Here is the way from Eco Park to Gymnasium",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FEcoPark%20to%20Gym.mp3?alt=media&token=93f5c9c3-b2e1-485f-b6e8-7d386fd84c80"
     }
 
   }

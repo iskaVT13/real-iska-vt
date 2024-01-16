@@ -3,9 +3,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
 import gate from '../areaImage/gate.jpg';
+import admission from '../areaImage/Admin Building.jpg';
 import lab1 from '..//areaImage/Lab 1.jpg';
 import lab2 from '../areaImage/Lab 2.jpg';
-import yumul from '../areaImage/Yumul Building.jpg';
 import canteen from '../areaImage/Canteen.jpg';
 import nantes from '../areaImage/Nantes (front view).jpg';
 import gymnasium from '../areaImage/Gym.jpg';
@@ -53,12 +53,14 @@ function AdmissionButton() {
 
 
   const handleDirectionButtonClick = (buttonName) => {
-    const buttonText = responses[buttonName]?.directionsText || '';
     setDirectionCurrentButton(responses[buttonName]);
     openModal();
-    // Speak the text when the button is clicked
-    speakText(buttonText);
-  };
+
+     // Play audio if available
+  if (responses[buttonName]?.speakDirections) {
+    playAudio(responses[buttonName].speakDirections);
+  }
+    };
   
 
   const fetchImageURL = useCallback(async () => {
@@ -75,8 +77,14 @@ function AdmissionButton() {
   }, [fetchImageURL]);
 
   const handleImageClick = (button) => {
+    const buttonData = responses[button];
     setCurrentButton(responses[button]);
     setIsActive(true);
+
+    if (buttonData.speakVoice) {
+      playAudio(buttonData.speakVoice);
+    }
+
      // Hide elements with the textOther classname
      const hideTextOther = document.querySelectorAll('.textOther');
     hideTextOther.forEach((element) => {
@@ -100,6 +108,11 @@ function AdmissionButton() {
   
   };
 
+  const playAudio = (audioURL) => {
+    const audio = new Audio(audioURL);
+    audio.play();
+  };
+  
   const handleBackButtonClick = () => {
     setCurrentButton('');
     setIsActive(false);
@@ -119,36 +132,22 @@ function AdmissionButton() {
     });
     
   };
-   // Function to handle text-to-speech synthesis
-   const speakText = (text) => {
-    const synth = window.speechSynthesis;
-    const utterance = new SpeechSynthesisUtterance(text);
-
-    synth.speak(utterance);
-  };
-
-  useEffect(() => {
-    // Ensure that the SpeechSynthesis API is supported
-    if ('speechSynthesis' in window) {
-      // Use speakText function to speak the responseText
-      speakText(currentButton.responseText);
-
-    }
-  }, [currentButton]);
-  
 
   return (
     <div className="areaImage-container">
     {!isActive && (
     <div className="buttons-container">
+                  <div className='title-area'>
+        <p>Please select your nearest area in campus, so that I can assist you to show the way to Yumul Building</p>
+      </div>
         <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={gate} />
         <p>MAIN GATE</p>
+        <img onClick={() => handleImageClick('admission')} alt='Admission' className='admission-image' src={admission} />
+        <p>ADMINISTRATION OFFICE</p>
         <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src={lab1}/>
         <p>COMPUTER LABORATORY 1</p>
         <img onClick={() => handleImageClick('lab2')}alt='lab2' className='lab2-image' src={lab2} />
         <p>COMPUTER LABORATORY 2</p>
-        <img onClick={() => handleImageClick('yumul')} alt='yumul' className='yumul-image' src={yumul} />
-        <p>YUMUL BUILDING</p>
         <img onClick={() => handleImageClick('canteen')} alt='canteen' className='canteen-image' src={canteen} />
         <p>CANTEEN</p>
         <img onClick={() => handleImageClick('nantes')}  alt='nantes' className='nantes-image' src={nantes} />

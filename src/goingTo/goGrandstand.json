@@ -2,67 +2,80 @@
     "gate": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/Gate to Grandstand.gif",
       "title": "Main Gate",
-      "responseText": "Here is the way from Main gate to Grandstand"
+      "responseText": "Here is the way from Main gate to Grandstand",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FGate%20to%20Grandstand.mp3?alt=media&token=1cb86f8b-e38e-46ef-b6db-18eaaaa24db6"
     },
     "admission": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/admin to grandstand.gif",
         "title": "Admission Building",
-        "responseText": "Here is the way from Admission Building to Grandstand"
+        "responseText": "Here is the way from Admission Building to Grandstand",
+        "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FAdmin%20to%20Grandstand.mp3?alt=media&token=3a767c8a-b830-4642-bc1a-6fd31b24874c"
       },
     "lab1": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/Lab 1 to Grandstand.gif",
       "title": "ComLab-1",
-      "responseText": "Here is the way from Computer Laboratory 1 to Grandstand"
+      "responseText": "Here is the way from Computer Laboratory 1 to Grandstand",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FComLab1%20to%20Grandstand.mp3?alt=media&token=f0f0ef74-bff3-4fce-9bb5-33907a0e0d9b"
     },
     "lab2": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/Lab2 to Grandstand.gif",
       "title": "comLab-2",
-      "responseText": "Here is the way from Computer Laboratory 2 to Grandstand"
+      "responseText": "Here is the way from Computer Laboratory 2 to Grandstand",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FComLab2%20to%20Grandstand.mp3?alt=media&token=40b053fe-6519-4637-85c2-31abc71d8406"
     },
     "yumul": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/yumul to grandstand.gif",
       "title": "Yumul Building",
-      "responseText": "Here is the way from Yumul Building to Grandstand"
+      "responseText": "Here is the way from Yumul Building to Grandstand",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FYumul%20to%20Grandstand.mp3?alt=media&token=2308f516-c68b-4f69-9285-6cf8b0d2e36e"
     },
     "canteen": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/Canteen to grandstand (rotc, property office).gif",
       "title": "Canteen",
-      "responseText": "Here is the way from Canteen to Grandstand"
+      "responseText": "Here is the way from Canteen to Grandstand",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FCanteen%20to%20Grandstand.mp3?alt=media&token=17c574d1-744f-45d4-8aa8-1cb41ba9066d"
     },
     "gymnasium": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/gym to grandstand.gif",
       "title": "Gymnasium",
-      "responseText": "Here is the way from Gymnasium to Grandstand"
+      "responseText": "Here is the way from Gymnasium to Grandstand",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FGym%20to%20Grandstand.mp3?alt=media&token=89a4e66e-e832-48e0-8002-eacb292b0a15"
     },
     "nantes": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/nantes to grandstand.gif",
       "title": "Nantes",
-      "responseText": "Here is the way from Accounting and Marketing Building to Grandstand"
+      "responseText": "Here is the way from Accounting and Marketing Building to Grandstand",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FBusinessAndAccountancy%20to%20Grandstand.mp3?alt=media&token=72c25a17-e68b-41c6-9d27-0a313b1f3dc6"
     },
     "engineer": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/engr to grandstand.gif",
       "title": "Engineer and Architecture Building",
-      "responseText": "Here is the way from Engineer and Architecture Building to Grandstand"
+      "responseText": "Here is the way from Engineer and Architecture Building to Grandstand",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FEngineering%20to%20Grandstand.mp3?alt=media&token=3005b190-08f5-440b-8889-3348ded51b03"
     },
     "education": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/educ bldg to grandstand.gif",
       "title": "Education Building",
-      "responseText": "Here is the way from Education Building to Grandstand"
+      "responseText": "Here is the way from Education Building to Grandstand",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FEduc%20to%20Grandstand.mp3?alt=media&token=2aabe64f-3b74-4cc0-bc6d-eb676f25052d"
     },
     "science": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/science to grandstand.gif",
       "title": "Science Building",
-      "responseText": "Here is the way from Science Building to Grandstand"
+      "responseText": "Here is the way from Science Building to Grandstand",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FHealth%20to%20Grandstand.mp3?alt=media&token=36853b6f-9a49-4eb7-929e-600134a5c0cd"
     },
     "hospitality": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/HM & plant lab to grandstand.gif",
       "title": "Hospitality Management Building",
-      "responseText": "Here is the way from Hospitality Management Building to Grandstand"
+      "responseText": "Here is the way from Hospitality Management Building to Grandstand",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FHM%20to%20Grandstand.mp3?alt=media&token=49ce4c1c-bc62-4f69-83ac-1285f2c1757c"
     },
     "ecopark": {
       "clickedImage": "",
       "title": "Eco Park",
-      "responseText": "Here is the way from Eco Park to Grandstand"
+      "responseText": "Here is the way from Eco Park to Grandstand",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FEcoPark%20to%20Grandstand.mp3?alt=media&token=4ac5ebd4-4588-4be8-b10a-e5e5539c9983"
     }
 
   }

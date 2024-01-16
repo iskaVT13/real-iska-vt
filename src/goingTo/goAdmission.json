@@ -2,67 +2,81 @@
     "gate": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/Gate to Admin.gif",
       "title": "Main Gate",
-      "responseText": "Here is the way from Main gate to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from Main gate to Administration Building. Below the map are the Offices and Faculties located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Fgate.mp3?alt=media&token=b595ea6d-1e87-4e00-8c2a-ccc18e9cfdd7"
     },
     "lab1": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/lab1 to admin.gif",
       "title": "ComLab-1",
-      "responseText": "Here is the way from Computer Laboratory 1 to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from ICT Laboratory 1 to Administration Building. Below the map are the Offices, Faculty and Room located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Flab-1.mp3?alt=media&token=e92423ea-8a42-4976-90b2-c2a874fc88c0"
     },
     "lab2": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/lab 2 to admin.gif",
       "title": "comLab-2",
-      "responseText": "Here is the way from Computer Laboratory 2 to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from ICT Laboratory 2 to Administration Building. Below the map are the Offices, Faculty and Room located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Flab-2.mp3?alt=media&token=810841bf-6f99-4c0b-afa9-b617b949dbf0"
     },
     "yumul": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/yumul to admin bldg.gif",
       "title": "Yumul Building",
-      "responseText": "Here is the way from Yumul Building to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from Yumul Building to Administration Building. Below the map are the Offices, Faculty and Room located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Fyumul1.mp3?alt=media&token=54586166-a1be-4a2a-8cf0-ab466997e830"
+
     },
     "canteen": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/Canteen to admin bldg.gif",
       "title": "Canteen",
-      "responseText": "Here is the way from Canteen to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from Canteen to Administration Building. Below the map are the Offices, Faculty and Room located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Fcanteen1.mp3?alt=media&token=c0023e92-1a97-41b7-b0d9-5c30b34cc052"
     },
     "gymnasium": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/gym to admin bldg.gif",
       "title": "Gymnasium",
-      "responseText": "Here is the way from Gymnasium to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from Gymnasium to Administration Building. Below the map are the Offices, Faculty and Room located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Fgym1.mp3?alt=media&token=8d99cd92-278a-4b2f-a7c1-5f12a0a0029f"
     },
     "nantes": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/nantes to admin bldg.gif",
       "title": "Nantes",
-      "responseText": "Here is the way from Accounting and Marketing Building to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from Accounting and Marketing Building to Administration Building. Below the map are the Offices, Faculty and Room located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Fnantes1.mp3?alt=media&token=12fa7e57-3270-4de6-a744-33017644262f"
     },
     "grandstand": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/Grandstand to admin bldg.gif",
       "title": "Grandstand",
-      "responseText": "Here is the way from Grandstand to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from Grandstand to Administration Building. Below the map are the Offices, Faculty and Room located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Fgrandstand1.mp3?alt=media&token=491261f6-e72a-41bf-ba21-777105c26fcf"
     },
     "engineer": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/engineering to admin.gif",
       "title": "Engineer and Architecture Building",
-      "responseText": "Here is the way from Engineer and Architecture Building to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from Engineer and Architecture Building to Administration Building. Below the map are the Offices, Faculty and Room located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Farchi.mp3?alt=media&token=43d83b5b-c5c2-41a4-a730-bb5ee33b627a"
     },
     "education": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/educ bldg to admin bldg.gif",
       "title": "Education Building",
-      "responseText": "Here is the way from Education Building to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from Education Building to Administration Building. Below the map are the Offices, Faculty and Room located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Feduc1.mp3?alt=media&token=1c9a8f5e-5c54-4252-824e-ea08852eb041"
     },
     "science": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/science to admin.gif",
       "title": "Science Building",
-      "responseText": "Here is the way from Science Building to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from Science Building to Administration Building. Below the map are the Offices, Faculty and Room located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Fscience1.mp3?alt=media&token=0292acb4-c339-4676-a9b1-57abc3261ad0"
     },
     "hospitality": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/HM & plant lab to admin bldg.gif",
       "title": "Hospitality Management Building",
-      "responseText": "Here is the way from Hospitality Management Building to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from Hospitality Management Building to Administration Building. Below the map are the Offices, Faculty and Room located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Fhm1.mp3?alt=media&token=cc1467ac-add4-4036-ba72-de06a7d12a70"
     },
     "ecopark": {
       "clickedImage": "",
       "title": "Eco Park",
-      "responseText": "Here is the way from Eco Park to Admission Building. Below the map are the Offices, Faculty and Room located at Admission Building"
+      "responseText": "Here is the way from Eco Park to Administration Building. Below the map are the Offices, Faculty and Room located at Admission Building",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Fecopark.mp3?alt=media&token=ccf7d4d4-8b1f-4854-956a-6986f96310d2"
     }
 
   }

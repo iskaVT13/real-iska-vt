@@ -105,15 +105,15 @@ function Lab2Button() {
         <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={gate} />
         <p>MAIN GATE</p>
         <img onClick={() => handleImageClick('admission')} alt='Admission' className='admission-image' src={admission} />
-        <p>ADMISSION OFFICE</p>
+        <p>ADMINISTRATION OFFICE</p>
         <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src={lab1}/>
-        <p>COMPUTER LABORATORY 1</p>
+        <p>ICT LABORATORY 1</p>
         <img onClick={() => handleImageClick('yumul')} alt='yumul' className='yumul-image' src={yumul} />
         <p>YUMUL BUILDING</p>
         <img onClick={() => handleImageClick('canteen')} alt='canteen' className='canteen-image' src={canteen} />
         <p>CANTEEN</p>
         <img onClick={() => handleImageClick('nantes')}  alt='nantes' className='nantes-image' src={nantes} />
-        <p>ACCOUNTACY and MARKETING BUILDING</p>
+        <p>BUSINESS and ACCOUNTACY BUILDING</p>
         <img onClick={() => handleImageClick('gymnasium')} alt='gymnasium' className='gymnasium-image' src={gymnasium} />
         <p>GYMNASIUM</p>
         <img onClick={() => handleImageClick('education')} alt='education' className='education-image' src={education} />
@@ -123,11 +123,11 @@ function Lab2Button() {
         <img onClick={() => handleImageClick('grandstand')} alt='grandstand' className='grandstand-image' src={grandstand} />
         <p>GRANDSTAND</p>
         <img onClick={() => handleImageClick('engineer')}  alt='engineer' className='engineer-image' src={engineer} />
-        <p>ENGINEERING and ARCHTECTURE BUILDING</p>
+        <p>ENGINEERING, TECHNOLOGY and ARCHTECTURE BUILDING</p>
         <img onClick={() => handleImageClick('hospitality')}  alt='hospitality' className='jm-image' src={hospitality} />
         <p>HOSPITALITY MANAGEMENT BUILDING</p>
         <img onClick={() => handleImageClick('ecopark')}  alt='EcoPark' className='ecopark-image' src={ecopark} />
-        <p>Eco Park</p>
+        <p>ECO PARK</p>
       
     </div>
   )}
@@ -143,7 +143,8 @@ function Lab2Button() {
     <div className='gif'>
     <img  src={imageURL} alt={currentButton.title} />
     </div>
-    
+    <div className='direction-container'>
+</div>
   </div>
 )}
     </div>

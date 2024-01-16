@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
 import gate from '../areaImage/gate.jpg';
+import admission from '../areaImage/Admin Building.jpg';
 import lab1 from '..//areaImage/Lab 1.jpg';
 import lab2 from '../areaImage/Lab 2.jpg';
 import yumul from '../areaImage/Yumul Building.jpg';
@@ -108,30 +109,32 @@ function ComfortRoomButton() {
       </div>
         <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={gate} />
         <p>MAIN GATE</p>
+        <img onClick={() => handleImageClick('admission')} className="gate" alt="Main Gate" src={admission} />
+        <p>ADMINISTRATION OFFICE</p>
         <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src={lab1}/>
-        <p>COMPUTER LABORATORY 1</p>
+        <p>ICT LABORATORY 1</p>
         <img onClick={() => handleImageClick('lab2')}alt='lab2' className='lab2-image' src={lab2} />
-        <p>COMPUTER LABORATORY 2</p>
+        <p>ICT LABORATORY 2</p>
         <img onClick={() => handleImageClick('yumul')} alt='yumul' className='yumul-image' src={yumul} />
         <p>YUMUL BUILDING</p>
         <img onClick={() => handleImageClick('canteen')} alt='canteen' className='canteen-image' src={canteen} />
-        <p>CANTEEN</p>
+        <p>PUP CANTEEN</p>
         <img onClick={() => handleImageClick('nantes')}  alt='nantes' className='nantes-image' src={nantes} />
-        <p>ACCOUNTACY and MARKETING BUILDING</p>
+        <p>BUSINESS and ACCOUNTACY BUILDING</p>
         <img onClick={() => handleImageClick('gymnasium')} alt='gymnasium' className='gymnasium-image' src={gymnasium} />
-        <p>GYMNASIUM</p>
+        <p>PUP GYMNASIUM</p>
         <img onClick={() => handleImageClick('education')} alt='education' className='education-image' src={education} />
-        <p>EDUCATION BUILDING</p>
+        <p>EDUCATION and PUBLIC ADMINISTRATION BUILDING</p>
         <img onClick={() => handleImageClick('science')}  alt='science' className='science-image' src={science} />
         <p>HEALTH and SCIENCE BUILDING</p>
         <img onClick={() => handleImageClick('grandstand')} alt='grandstand' className='grandstand-image' src={grandstand} />
-        <p>GRANDSTAND</p>
+        <p>PUP GRANDSTAND</p>
         <img onClick={() => handleImageClick('engineer')}  alt='engineer' className='engineer-image' src={engineer} />
-        <p>ENGINEERING and ARCHTECTURE BUILDING</p>
+        <p>ENGINEERING, TECHNOLOGY and ARCHTECTURE BUILDING</p>
         <img onClick={() => handleImageClick('hospitality')}  alt='hospitality' className='jm-image' src={hospitality} />
         <p>HOSPITALITY MANAGEMENT BUILDING</p>
         <img onClick={() => handleImageClick('ecopark')}  alt='EcoPark' className='ecopark-image' src={ecopark} />
-        <p>Eco Park</p>
+        <p>PUP ECOPARK</p>
       
     </div>
   )}
@@ -146,7 +149,8 @@ function ComfortRoomButton() {
     <div className='gif'>
     <img  src={imageURL} alt={currentButton.title} />
     </div>
-    
+    <div className='direction-container'>
+</div>
   </div>
 )}
     </div>

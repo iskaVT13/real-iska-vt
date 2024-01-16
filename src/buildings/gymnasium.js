@@ -46,8 +46,13 @@ function GymButton() {
   }, [fetchImageURL]);
 
   const handleImageClick = (button) => {
+    const buttonData = responses[button];
     setCurrentButton(responses[button]);
     setIsActive(true);
+    
+    if (buttonData.speakVoice) {
+      playAudio(buttonData.speakVoice);
+    }
      // Hide elements with the textOther classname
      const hideTextOther = document.querySelectorAll('.textOther');
     hideTextOther.forEach((element) => {
@@ -67,6 +72,11 @@ function GymButton() {
      window.scrollTo(0, 0);
   };
 
+  const playAudio = (audioURL) => {
+    const audio = new Audio(audioURL);
+    audio.play();
+  };
+
   const handleBackButtonClick = () => {
     setCurrentButton('');
     setIsActive(false);
@@ -82,52 +92,40 @@ function GymButton() {
      // Scroll to the top
      window.scrollTo(0, 0);
   };
- // Function to handle text-to-speech synthesis
- const speakText = (text) => {
-  const synth = window.speechSynthesis;
-  const utterance = new SpeechSynthesisUtterance(text);
-
-  synth.speak(utterance);
-};
-
-useEffect(() => {
-  // Ensure that the SpeechSynthesis API is supported
-  if ('speechSynthesis' in window) {
-    // Use speakText function to speak the responseText
-    speakText(currentButton.responseText);
-  }
-}, [currentButton]);
 
   return (
     <div className="areaImage-container">
     {!isActive && (
     <div className="buttons-container">
+      <div className='title-area'>
+        <p>Please select your nearest area in campus, so that I can assist you to show the way to PUP Gymnasium</p>
+      </div>
         <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={gate} />
         <p>MAIN GATE</p>
         <img onClick={() => handleImageClick('admission')} alt='Admission' className='admission-image' src={admission} />
-        <p>ADMISSION OFFICE</p>
+        <p>ADMINISTRATION OFFICE</p>
         <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src={lab1}/>
-        <p>COMPUTER LABORATORY 1</p>
+        <p>ICT LABORATORY 1</p>
         <img onClick={() => handleImageClick('lab2')}alt='lab2' className='lab2-image' src={lab2} />
-        <p>COMPUTER LABORATORY 2</p>
+        <p>ICT LABORATORY 2</p>
         <img onClick={() => handleImageClick('yumul')} alt='yumul' className='yumul-image' src={yumul} />
         <p>YUMUL BUILDING</p>
         <img onClick={() => handleImageClick('canteen')} alt='canteen' className='canteen-image' src={canteen} />
         <p>CANTEEN</p>
         <img onClick={() => handleImageClick('nantes')}  alt='nantes' className='nantes-image' src={nantes} />
-        <p>ACCOUNTACY and MARKETING BUILDING</p>
+        <p>BUSINESS and ACCOUNTACY BUILDING</p>
         <img onClick={() => handleImageClick('education')} alt='education' className='education-image' src={education} />
-        <p>EDUCATION BUILDING</p>
+        <p>EDUCATION and PUBLIC ADMINISTRATION BUILDING</p>
         <img onClick={() => handleImageClick('science')}  alt='science' className='science-image' src={science} />
         <p>HEALTH and SCIENCE BUILDING</p>
         <img onClick={() => handleImageClick('grandstand')} alt='grandstand' className='grandstand-image' src={grandstand} />
         <p>GRANDSTAND</p>
         <img onClick={() => handleImageClick('engineer')}  alt='engineer' className='engineer-image' src={engineer} />
-        <p>ENGINEERING and ARCHTECTURE BUILDING</p>
+        <p>ENGINEERING, TECHNOLOGY and ARCHTECTURE BUILDING</p>
         <img onClick={() => handleImageClick('hospitality')}  alt='hospitality' className='jm-image' src={hospitality} />
         <p>HOSPITALITY MANAGEMENT BUILDING</p>
         <img onClick={() => handleImageClick('ecopark')}  alt='EcoPark' className='ecopark-image' src={ecopark} />
-        <p>Eco Park</p>
+        <p>PUP ECOPARK</p>
     </div>
   )}
 
@@ -142,7 +140,8 @@ useEffect(() => {
     <div className='gif'>
     <img  src={imageURL} alt={currentButton.title} />
     </div>
-    
+    <div className='direction-container'>
+</div>
   </div>
 )}
     </div>

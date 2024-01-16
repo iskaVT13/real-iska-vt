@@ -2,67 +2,80 @@
     "gate": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/Gate to Lab 2.gif",
       "title": "Main Gate",
-      "responseText": "Here is the way from Main gate to Computer Laboratory 2"
+      "responseText": "Here is the way from Main gate to Computer Laboratory 2",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Fgate5.mp3?alt=media&token=c39debc1-69b0-4dbe-bad8-d4052e8ba5be"
     },
     "admission": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/admin to ICT lab 2.gif",
         "title": "Admission Building",
-        "responseText": "Here is the way from Admission Building to Computer Laboratory 2"
+        "responseText": "Here is the way from Admission Building to Computer Laboratory 2",
+        "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Fadmin5.mp3?alt=media&token=ed05ae2b-7cb2-42e1-a78c-bad5f74dc765"
       },
     "lab1": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/lab 1 to Lab 2.gif",
       "title": "ComLab-1",
-      "responseText": "Here is the way from Computer Laboratory 1 to Computer Laboratory 2"
+      "responseText": "Here is the way from Computer Laboratory 1 to Computer Laboratory 2",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Flab1-5.mp3?alt=media&token=eab271ee-34c7-4ced-9fd4-86c14acc8b08"
     },
     "yumul": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/yumul to ict lab2.gif",
       "title": "Yumul Building",
-      "responseText": "Here is the way from Yumul Building to Computer Laboratory 2"
+      "responseText": "Here is the way from Yumul Building to Computer Laboratory 2",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Fyumul5.mp3?alt=media&token=017b89cf-f095-4dd5-b18f-f612af6e29c9"
     },
     "canteen": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/Canteen to ict lab2.gif",
       "title": "Canteen",
-      "responseText": "Here is the way from Canteen to Computer Laboratory 2"
+      "responseText": "Here is the way from Canteen to Computer Laboratory 2",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Fcanteen5.mp3?alt=media&token=ec97021f-bb69-40d7-a6d8-981cf668a68e"
     },
     "gymnasium": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/gym to ict lab2.gif",
       "title": "Gymnasium",
-      "responseText": "Here is the way from Gymnasium to Computer Laboratory 2"
+      "responseText": "Here is the way from Gymnasium to Computer Laboratory 2",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Fgym5.mp3?alt=media&token=52462ac6-0db8-440e-9709-273a151c0b1c"
     },
     "nantes": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/nantes to ict lab2.gif",
       "title": "Nantes",
-      "responseText": "Here is the way from Accounting and Marketing Building to Computer Laboratory 2"
+      "responseText": "Here is the way from Accounting and Marketing Building to Computer Laboratory 2",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Fnantes5.mp3?alt=media&token=0f36b3e5-a87f-4f5b-968a-02288691761e"
     },
     "grandstand": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/Grandstand to ict lab2.gif",
       "title": "Grandstand",
-      "responseText": "Here is the way from Grandstand to Computer Laboratory 2"
+      "responseText": "Here is the way from Grandstand to Computer Laboratory 2",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Fgranstand5.mp3?alt=media&token=acdae044-bf75-4146-8b10-81f9349b47d9"
     },
     "engineer": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/engr to lab 2.gif",
       "title": "Engineer and Architecture Building",
-      "responseText": "Here is the way from Engineer and Architecture Building to Computer Laboratory 2"
+      "responseText": "Here is the way from Engineer and Architecture Building to Computer Laboratory 2",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Farchi5.mp3?alt=media&token=96dfb048-fbe0-4047-adf9-4cf9487257a8"
     },
     "education": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/educ bldg to ict lab2.gif",
       "title": "Education Building",
-      "responseText": "Here is the way from Education Building to Computer Laboratory 2"
+      "responseText": "Here is the way from Education Building to Computer Laboratory 2",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Feduc5.mp3?alt=media&token=0ac9a017-6330-412b-bab3-ceb6bf94a59e"
     },
     "science": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/science to lab 2.gif",
       "title": "Science Building",
-      "responseText": "Here is the way from Science Building to Computer Laboratory 2"
+      "responseText": "Here is the way from Science Building to Computer Laboratory 2",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Fscience5.mp3?alt=media&token=e51d5172-7bed-4976-b36d-5e471d3748bb"
     },
     "hospitality": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab2/HM & plant lab to ict lab2.gif",
       "title": "Hospitality Management Building",
-      "responseText": "Here is the way from Hospitality Management Building to Computer Laboratory 2"
+      "responseText": "Here is the way from Hospitality Management Building to Computer Laboratory 2",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Fhm5.mp3?alt=media&token=6f53868a-ca33-47d0-a1c5-02acc56de8f8"
     },
     "ecopark": {
       "clickedImage": "",
       "title": "Eco Park",
-      "responseText": "Here is the way from Eco Park to Computer Laboratory 2"
+      "responseText": "Here is the way from Eco Park to Computer Laboratory 2",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab2%2Fecopark5.mp3?alt=media&token=45327488-1058-4d4c-9d60-6e60fc20e8d0"
     }
 
   }
