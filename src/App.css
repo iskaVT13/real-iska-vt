@@ -16,7 +16,7 @@
 /* Responsive styles for small screens (up to 767px) */
 @media only screen and (max-width: 767px) {
   body {
-    font-size: 16px; /* Adjust font size for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
   }
   /* Add more styles for small screens as needed */
 }
@@ -210,7 +210,7 @@ color: white;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  margin-right: 25px;
+  margin-right: 1em;
 
 }
 
@@ -232,9 +232,9 @@ input {
 /* Media Query for screens with a maximum width of 768px (typical mobile screens) */
 @media (max-width: 768px) {
   input {
-    width: 16em; /* Adjust the width to take up 90% of the parent container */
-    margin: 5px; /* Reduce the margin for smaller screens */
+    width: 15em; /* Adjust the width to take up 90% of the parent container */
     align-items: center;
+    justify-content: center;
   }
   body{
     font-size: 1em; /* Make the text slightly smaller on small screens */
@@ -293,7 +293,7 @@ input {
   align-items: center;
   position: fixed;
     display: flex;
-    top: 73%;
+    top: 65%;
     width: 100%;
     padding: 10px;
 }

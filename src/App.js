@@ -546,9 +546,6 @@ const handleGrandButtonClick = () => {
   setCurrentSpeak(speakGrandstand);
   setPlayAudio(true);
 
-        const textDisplay = `
-        Please select your nearest area in campus, so that I can assist you to show the way to Grandstand`;
-        displayOtherText(textDisplay);
   const hideAvatar = document.querySelectorAll('.avatar-container');
   hideAvatar.forEach((element) => {
     element.style.display = 'none';
@@ -666,12 +663,6 @@ const handleGrandButtonClick = () => {
 
   const toggleVirtualtour = () => {
     setVirtualTourOn(!isVirtualTourOn);
-    const hideandShow = document.querySelectorAll('.bottom, .avatar-container, .suggestions');
-    
-    hideandShow.forEach((element) => {
-      element.style.display = showVirtual ? '' : 'none';
-    });
-  
     // Optionally, you can update the state here if needed
     setVirtual(!showVirtual);
   };
@@ -2219,7 +2210,7 @@ const handleGrandButtonClick = () => {
         }
     },
     {
-      command: [103,'lab 1', 'lab * 1', 'laboratory 1', 'laboratory 1 *', '* laboratory 1 *', 'com lab 1', '*com * lab * 1', '* computer laboratory 1 *', 'computer lab 1',
+      command: [103] || ['lab 1', 'lab * 1', 'laboratory 1', 'laboratory 1 *', '* laboratory 1 *', 'com lab 1', '*com * lab * 1', '* computer laboratory 1 *', 'computer lab 1',
        '* computer * lab * 1 *', '* computer laboratory 1 *', 'ICT lab 1', 'ICT laboratory 1', '* ICT lab 1 *', 'IT lab 1', 'IT laboratory 1', '* IT lab * 1 *',
        '* IT laboratory 1 *' ],
       callback: () => {
@@ -2323,7 +2314,7 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-     command: [104,'lab 2', 'lab * 2', 'laboratory 2', 'laboratory 2 *', '* laboratory 2 *', 'com lab 2', '*com * lab * 2', '* computer laboratory 2 *', 'computer lab 2',
+     command: [104] || ['lab 2', 'lab * 2', 'laboratory 2', 'laboratory 2 *', '* laboratory 2 *', 'com lab 2', '*com * lab * 2', '* computer laboratory 2 *', 'computer lab 2',
       '* computer * lab * 2 *', '* computer laboratory 2 *', 'ICT lab 2', 'ICT laboratory 2', '* ICT lab 2 *', 'IT lab 2', 'IT laboratory 2', '* IT lab * 2 *',
       '* IT laboratory 2 *' ],
         callback: () => {

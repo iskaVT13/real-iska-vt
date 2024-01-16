@@ -2,19 +2,19 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
-import gate from '../areaImage/gate.jpg';
-import admission from '../areaImage/Admin Building.jpg';
-import lab1 from '..//areaImage/Lab 1.jpg';
-import yumul from '../areaImage/Yumul Building.jpg';
-import nantes from '../areaImage/Nantes (front view).jpg';
-import gymnasium from '../areaImage/Gym.jpg';
-import grandstand from '../areaImage/Grandstand.jpg';
-import science from '../areaImage/Health and Sciences Building.jpg';
-import education from '../areaImage/Educ Bldg.jpg';
-import engineer from '../areaImage/Engineering Building.jpg';
-import hospitality from '../areaImage/HM _ Plant Lab (front view).jpg';
-import ecopark from '../areaImage/eco park.jpg';
-import canteen from '../areaImage/Canteen.jpg';
+import gate from '../areaImage/gate.webp';
+import admission from '../areaImage/Admin Building.webp';
+import lab1 from '..//areaImage/Lab 1.webp';
+import yumul from '../areaImage/Yumul Building.webp';
+import canteen from '../areaImage/Canteen.webp';
+import nantes from '../areaImage/Nantes.webp';
+import gymnasium from '../areaImage/Gym.webp';
+import grandstand from '../areaImage/Grandstand.webp';
+import science from '../areaImage/Health and Sciences Building.webp';
+import education from '../areaImage/Educ Bldg.webp';
+import engineer from '../areaImage/Engineering Building.webp';
+import hospitality from '../areaImage/HM _ Plant Lab.webp';
+import ecopark from '../areaImage/eco park.webp';
 
 function Lab2Button() {
   const [isActive, setIsActive] = useState(false);

@@ -91,6 +91,7 @@ position: relative;
     position: sticky;
     border: #f1c500 solid 5px;
     border-radius: 3%;
+    height: 10em;
 }
 
 .directions h4{
@@ -111,7 +112,7 @@ position: relative;
 }
 
 .modal-close{
-    background-color: transparent;
+    background-color:#f1c500;
     border: none;
     :focus{
         outline: none;
@@ -158,18 +159,24 @@ position: relative;
     width: 20em;
   }
 
+  .pop-up{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
   .direction-modal {
     display: flex;
     background: #7E0001;
-    width: 80%;
+    width: 17em;
     align-items: center;
     justify-content: center;
-    height: 25vh;
-    padding: 20px;
+    height: 10em;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    top: 40vh;
-    left: 5vh;
+    top: 40%;
     position: fixed;
     border:#f1c500 solid 2px;
     overflow: hidden;
@@ -193,5 +200,5 @@ position: relative;
   }
 
   .modal-close:hover {
-    background-color: #f0f0f0;
+    background-color: #ffa908;
   }
