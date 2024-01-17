@@ -175,22 +175,6 @@ color: white;
   padding: 10px;
 }
 
-
-.textOther{
-  justify-content: space-around;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  padding: 10px;
-  color: white;
-  top: 7em;
-  position: fixed;
-  background-color: #7E0001;
-  z-index: 98;
-  width: 100%;
-  font-size: 2vh;
-}
-
 .container{
   top: 0;
   white-space: pre-line;
@@ -276,10 +260,15 @@ input {
   margin-right: 10px;
 }
 
-.error-message {
-  position: relative;
+.error {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  top: 40%;
+  position: fixed;
   z-index: 101;
-  background-color: #000000;
+  background-color:#f1c500;
 }
 
 .start{

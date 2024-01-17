@@ -8,6 +8,8 @@ const IskaDo = () => {
   return (
     <div>
       <div className='iskaDo'>
+        <p>        There are various things that i can do. Below are the detailed list.
+</p>
         <ul>
           <li>
             What I Can Do?

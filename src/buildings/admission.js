@@ -127,11 +127,7 @@ function AdmissionButton() {
   const handleBackButtonClick = () => {
     setCurrentButton('');
     setIsActive(false);
-    // Show elements with the textOther classname
-    const showTextOther = document.querySelectorAll('.textOther');
-    showTextOther.forEach((element) => {
-      element.style.display = ''; // Set to an empty string to use the default display value
-    });
+    
     const showReset = document.querySelectorAll('.reset-button');
     showReset.forEach((element) => {
       element.style.display = '';

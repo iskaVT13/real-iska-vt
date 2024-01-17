@@ -65,6 +65,8 @@ import Vr from './VRtour';
 
 import suggestionsData from './fileJSON/filter.json';
 
+import ErrorComponent from './showRespose/error';
+
 //ISKA will speak
 import speakHello from '././speakText/hello.mp3';
 import speakISKAdo from './speakText/doISKA.mp3';
@@ -243,14 +245,15 @@ const [resetButtonVisible, setResetButtonVisible] = useState(false);
 // State to control the visibility of the question list
 const [showQuestions, setShowQuestions] = useState(false);
 
+const [showError, setShowError] = useState(false);
+const [errorMessage, setErrorMessage] = useState('');
+
 const [showVirtual, setVirtual] = useState(false);
 
 // State for controlling the visibility of the year button
 const [yearbutton, setYearButtonVisible] = useState(false);
 // State for holding the selected year response
 const [selectedYearResponse, setSelectedYearResponse] = useState('');
-// State for displaying other text
-const [otherText, displayOtherText] = useState('');
 // State for controlling the visibility of programs button
 const [programsButton, setProgramsButton] = useState(false);
 // State for holding the selected program response
@@ -263,8 +266,6 @@ const [aboutResponse, setAboutResponse] = useState('');
 const [responseDisplayed, setResponseDisplayed] = useState(false);
 // State for controlling the visibility of the microphone
 const [microphoneHidden, setMicrophoneHidden] = useState(false);
-// State for tracking if a command is recognized
-const [commandRecognized, setCommandRecognized] = useState(false);
 const [recognizedProcessText, setRecognizedProcessText] = useState(' ');
 const [isQuestionIcon, setIsQuestionIcon] = useState(true);
 const [isVirtualTourOn, setVirtualTourOn] = useState(false);
@@ -361,12 +362,6 @@ const stopAudio = () => {
 
   const handleTextInput = (text) => {
     sendTextToCommands(text);
-
-    // Show elements with the textOther classname
-    const showTextOther = document.querySelectorAll('.textOther');
-    showTextOther.forEach((element) => {
-      element.style.display = ''; // Set to an empty string to use the default display value
-    });
     const showReset = document.querySelectorAll('.reset-button');
     showReset.forEach((element) => {
       element.style.display = '';
@@ -472,28 +467,9 @@ const handleYearButtonClick = (year) => {
     setShowEcoResponse(ecoo);
   }
 
-
-// Function to display the text and speak it
-const displayText = (text) => {
-  let message = new SpeechSynthesisUtterance(text);
-
-  // Get the list of available voices
-  let voices = window.speechSynthesis.getVoices();
-
-  // Find the English US female voice
-  let englishVoice = voices.find(voice => voice.lang === 'en-US' && voice.gender === 'female');
-
-  // Set the voice for the message
-  message.voice = englishVoice;
-
-  // Speak the message
-  window.speechSynthesis.speak(message);
-};
-
 const handleEnrollButtonClick = () => {
   setYearButtonVisible(true);
   setResetButtonVisible(true);
-  setCommandRecognized(true);
   setResponseDisplayed(true);
   setCurrentSpeak(speakEnroll);
   setPlayAudio(true);
@@ -512,7 +488,6 @@ const hideAvatar = document.querySelectorAll('.avatar-container');
 const handleAboutPUPButtonClick = () => {
   setAboutVisible(true);
   setResetButtonVisible(true);
-  setCommandRecognized(true);
   setResponseDisplayed(true);
   setCurrentSpeak(speakAbout);
   setPlayAudio(true);
@@ -531,7 +506,6 @@ const handleAboutPUPButtonClick = () => {
 const handleAdminButtonClick = () => {
   setAdmissionVisible (true);
   setResetButtonVisible(true);
-  setCommandRecognized(true);
   setResponseDisplayed(true);
   setCurrentSpeak(speakAdmin);
   setPlayAudio(true);
@@ -550,7 +524,6 @@ const handleAdminButtonClick = () => {
 const handleGrandButtonClick = () => {
   setGrandStandVisible(true);
   setResetButtonVisible(true);
-  setCommandRecognized(true);
   setResponseDisplayed(true);
   setCurrentSpeak(speakGrandstand);
   setPlayAudio(true);
@@ -568,12 +541,12 @@ const handleGrandButtonClick = () => {
 
   // Function for reset button event
   const resetDisplay = () => {
+    setShowError(false);
     stopAudio();
     setDisplayTextOnScreen('');
     setResetButtonVisible(false); // Hide the reset button
     setYearButtonVisible(false);
     setSelectedYearResponse(false);
-    displayOtherText(false);
     setSelectedProgram(false);
     setProgramsButton(false);
     setAboutResponse(false);
@@ -647,11 +620,6 @@ const handleGrandButtonClick = () => {
             element.style.display = 'none';
           });
 
-    const textDisplayContainer = document.querySelector('.textOther');
-    while (textDisplayContainer.firstChild) {
-      textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-    }
-
     const showAvatar = document.querySelectorAll('.avatar-container');
     showAvatar.forEach((element) => {
       element.style.display = '';
@@ -700,7 +668,6 @@ const handleGrandButtonClick = () => {
         setYearButtonVisible(false);
         
         setResponseDisplayed(false);
-        setCommandRecognized(false);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -783,7 +750,6 @@ const handleGrandButtonClick = () => {
       command: ['* map *', 'map *', '* map', 'map', 'university map', 'map of the university', 'show university map'],
       callback: () => {
         resetTranscript();
-        displayText('These is the map of P U P lopez quezon branch')
         setResetButtonVisible(true);
         setProgramsButton(false);
 
@@ -794,8 +760,6 @@ const handleGrandButtonClick = () => {
         setSelectedYearResponse(false);
         setYearButtonVisible(false);
 
-        setResponseDisplayed(true);
-        
         setResponseDisplayed(true);
         //CANTEEN
         setCanteenVisible(false);
@@ -896,7 +860,7 @@ const handleGrandButtonClick = () => {
 
         setResponseDisplayed(true); // Set responseDisplayed to true
         
-        setCommandRecognized(true);
+        
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -964,10 +928,6 @@ const handleGrandButtonClick = () => {
             element.style.display = 'none';
           });
 
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideAvatar = document.querySelectorAll('.avatar-container');
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
@@ -984,10 +944,6 @@ const handleGrandButtonClick = () => {
       command: ['* do *', '* do', 'do *', 'do'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `
-        There are various things that i can do. Below are the detailed list.
-        `;
-        displayOtherText(textDisplay);
 
         setCurrentSpeak(speakISKAdo);
         setPlayAudio(true);
@@ -1003,7 +959,6 @@ const handleGrandButtonClick = () => {
 
         setResponseDisplayed(true); // Set responseDisplayed to true
 
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -1076,10 +1031,6 @@ const handleGrandButtonClick = () => {
           element.style.display = 'none';
         });
         
-    const textDisplayContainer = document.querySelector('.textOther');
-    while (textDisplayContainer.firstChild) {
-      textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-    }
     const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
@@ -1111,7 +1062,6 @@ const handleGrandButtonClick = () => {
 
         setResponseDisplayed(true); // Set responseDisplayed to true
 
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -1184,10 +1134,6 @@ const handleGrandButtonClick = () => {
           element.style.display = 'none';
         });
         
-    const textDisplayContainer = document.querySelector('.textOther');
-    while (textDisplayContainer.firstChild) {
-      textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-    }
     const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
@@ -1220,7 +1166,6 @@ const handleGrandButtonClick = () => {
 
         setResponseDisplayed(true); // Set responseDisplayed to true
 
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -1288,10 +1233,7 @@ const handleGrandButtonClick = () => {
             element.style.display = 'none';
           });
         
-        const textDisplayContainer = document.querySelector('.textOther');
-    while (textDisplayContainer.firstChild) {
-      textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-    }
+
     const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
@@ -1326,8 +1268,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-
-        setCommandRecognized(true);
 
         //CANTEEN
         setCanteenVisible(true);
@@ -1432,8 +1372,6 @@ const handleGrandButtonClick = () => {
 
         setResponseDisplayed(true); // Set responseDisplayed to true
 
-        setCommandRecognized(true);
-
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -1534,7 +1472,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -1635,7 +1572,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -1736,7 +1672,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -1837,7 +1772,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -1938,7 +1872,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -2039,7 +1972,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -2141,7 +2073,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -2246,7 +2177,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -2350,7 +2280,7 @@ const handleGrandButtonClick = () => {
           setSelectedProgram(false);
   
           setResponseDisplayed(true); // Set responseDisplayed to true
-          setCommandRecognized(true);
+
           //CANTEEN
           setCanteenVisible(false);
           setCanteenResponse(false);
@@ -2452,7 +2382,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -2536,8 +2465,6 @@ const handleGrandButtonClick = () => {
       command: ['regular', '* regular', 'regular *', '* regular *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll as a regular student in PUP Lopez`;
-        displayOtherText(textDisplay);
 
         setCurrentSpeak(speakRegular);
         setPlayAudio(true);
@@ -2557,7 +2484,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -2644,8 +2570,6 @@ const handleGrandButtonClick = () => {
       command: ['irregular', '* irregular', 'irregular * ', '* irregular *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll Irregular Student in PUP Lopez`;
-        displayOtherText(textDisplay);
 
         setCurrentSpeak(speakIrregular);
         setPlayAudio(true);
@@ -2665,7 +2589,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -2752,8 +2675,6 @@ const handleGrandButtonClick = () => {
       command: ['freshmen', 'freshman'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll freshman student in PUP Lopez`;
-        displayOtherText(textDisplay);
 
         setCurrentSpeak(speakFreshmen);
         setPlayAudio(true);
@@ -2773,7 +2694,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -2859,8 +2779,6 @@ const handleGrandButtonClick = () => {
       command: ['transferee', '* transferee', 'transferee * ', '* transferee *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Here is the process on how to enroll a Transferee Student in PUP Lopez`;
-        displayOtherText(textDisplay);
 
         setCurrentSpeak(speakTransferee);
         setPlayAudio(true);
@@ -2880,7 +2798,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -2986,7 +2903,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -3093,7 +3009,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -3200,7 +3115,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -3306,7 +3220,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -3412,7 +3325,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -3500,12 +3412,10 @@ const handleGrandButtonClick = () => {
       command: ['hymn', '* hymn ', 'hymn *', '* hymn *', 'imno', '* imno', 'imno *', '* imno *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = 'Here is the PUP Hymn';
 
         setCurrentSpeak(speakHymn);
         setPlayAudio(true);
 
-        displayOtherText(textDisplay);
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -3521,7 +3431,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -3627,7 +3536,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -3732,7 +3640,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -3818,8 +3725,6 @@ const handleGrandButtonClick = () => {
       command: ['comfort room', '* comfort room', 'comfort room *', '* comfort room *'],
       callback: () => {
         resetTranscript();
-        const textDisplay = `Please select your nearest area in campus, so that I can assist you to show the way to nearest comfort room.`;
-        displayOtherText(textDisplay);
 
         setCurrentSpeak(speakCr);
         setPlayAudio(true);
@@ -3839,7 +3744,6 @@ const handleGrandButtonClick = () => {
         setSelectedProgram(false);
 
         setResponseDisplayed(true); // Set responseDisplayed to true
-        setCommandRecognized(true);
         //CANTEEN
         setCanteenVisible(false);
         setCanteenResponse(false);
@@ -3924,8 +3828,6 @@ const handleGrandButtonClick = () => {
         command: ['Eco Park', '* eco park', 'eco park *', '* eco park *'],
         callback: () => {
           resetTranscript();
-          const textDisplay = `Please select your nearest area in campus, so that I can assist you to show the way to Eco Park`;
-          displayOtherText(textDisplay);
 
           setCurrentSpeak(speakEco);
           setPlayAudio(true);
@@ -3945,7 +3847,7 @@ const handleGrandButtonClick = () => {
           setSelectedProgram(false);
   
           setResponseDisplayed(true); // Set responseDisplayed to true
-          setCommandRecognized(true);
+
           //CANTEEN
           setCanteenVisible(false);
           setCanteenResponse(false);
@@ -4030,6 +3932,13 @@ const handleGrandButtonClick = () => {
     
 ];
 
+  // Function to handle incorrect command
+  const handleIncorrectCommand = () => {
+    // Set the error message and show the error component
+    setErrorMessage('Incorrect command. Please try again.');
+    setShowError(true);
+  };
+
 // Function for searchInput command
 const sendTextToCommands = (text) => {
   const command = commands.find((cmd) => {
@@ -4052,11 +3961,10 @@ const sendTextToCommands = (text) => {
   } else {
     setCurrentSpeak(speakError);
     setPlayAudio(true);
-    
-    const textDisplay = `Sorry I currently do not have information about that.`
-    displayOtherText(textDisplay);
-    
-    setResetButtonVisible(true);
+
+    handleIncorrectCommand();
+
+    setResetButtonVisible(false);
     setAboutResponse(false);
     setAboutVisible(false);
     setDisplayTextOnScreen(false);
@@ -4116,12 +4024,6 @@ const sendTextToCommands = (text) => {
 
     setShowAvatar(false);
 
-
-    // Show elements with the textOther classname
-    const showTextOther = document.querySelectorAll('.textOther');
-    showTextOther.forEach((element) => {
-      element.style.display = ''; // Set to an empty string to use the default display value
-    });
     const showReset = document.querySelectorAll('.reset-button');
     showReset.forEach((element) => {
       element.style.display = '';
@@ -4196,11 +4098,6 @@ const sendTextToCommands = (text) => {
       )}
       </div>
       </header>
-      <section>
-
-      <div className='textOther'>
-  { commandRecognized && ((otherText))}
-  </div>
 
   <div className='buttons'>
           {yearbutton && (
@@ -4265,6 +4162,9 @@ const sendTextToCommands = (text) => {
         </div>
       )}
         </div>
+    <div className='error'>
+      {showError && <ErrorComponent errorMessage={errorMessage} onTryAgain={resetDisplay} />}
+    </div>
       <div className='container'>
      
       {showEregular && <Eregular />}
@@ -4301,7 +4201,6 @@ const sendTextToCommands = (text) => {
             )}
       </div>
       </div>
-      </section>
 
       <div className='suggestions'>
         <button onClick={handleEnrollButtonClick}>
