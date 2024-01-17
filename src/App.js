@@ -65,7 +65,7 @@ import Vr from './VRtour';
 
 import suggestionsData from './fileJSON/filter.json';
 
-import ErrorComponent from './showRespose/error';
+import ErrorComponent from './error';
 
 //ISKA will speak
 import speakHello from '././speakText/hello.mp3';

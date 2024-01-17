@@ -264,11 +264,22 @@ input {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 100%;
   top: 40%;
+  width: 100%;
   position: fixed;
   z-index: 101;
-  background-color:#f1c500;
+  display: flex;
+}
+
+.error-content{
+  background-color: #f1c500;
+  width: 20em;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px ;
 }
 
 .start{
