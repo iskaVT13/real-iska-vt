@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import './displayDesign.css';
 
 import History from '../showRespose/About/history';
@@ -16,10 +16,12 @@ function App() {
   const [showHymn, setShowHymn] = useState(false);
   const [playVoice, setPlayVoice] = useState(false);
   const [currentVoice, setCurrentVoice] = useState('');
+  const audioRef = useRef(null); // Add a reference to the audio element
 
 useEffect(() => {
   if (playVoice) {
     const audioPlayer = new Audio(currentVoice);
+    audioRef.current = audioPlayer;
 
     audioPlayer.play();
 
@@ -29,7 +31,15 @@ useEffect(() => {
   }
 }, [playVoice, currentVoice]);
 
+const stopAudio = () => {
+  if (audioRef.current) {
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0; // Reset the audio to the beginning
+  }
+};
+
   const handleHistoryButtonClick = () => {
+    stopAudio();
     setShowHistory(!showHistory);
     setShowMission(false);
     setShowHymn(false);
@@ -39,6 +49,7 @@ useEffect(() => {
     window.scrollTo(0, 0);
   };
   const handleMissionButtonClick = () => {
+    stopAudio();
     setShowMission(!showMission);
     setShowHistory(false);
     setShowHymn(false);
@@ -50,6 +61,7 @@ useEffect(() => {
   };
 
   const handleHymnButtonClick = () => {
+    stopAudio();
     setShowHymn(!showHymn);
     setShowHistory(false);
     setShowMission(false);

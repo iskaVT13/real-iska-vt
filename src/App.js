@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
@@ -331,10 +331,12 @@ const [showEcoResponse, setShowEcoResponse] = useState('');
 
 const [playAudio, setPlayAudio] = useState(false);
 const [currentSpeak, setCurrentSpeak] = useState('');
+const audioRef = useRef(null); // Add a reference to the audio element
 
 useEffect(() => {
   if (playAudio) {
     const audioPlayer = new Audio(currentSpeak);
+    audioRef.current = audioPlayer; // Store the reference to the audio element
 
     audioPlayer.play();
 
@@ -344,6 +346,12 @@ useEffect(() => {
   }
 }, [playAudio, currentSpeak]);
 
+const stopAudio = () => {
+  if (audioRef.current) {
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0; // Reset the audio to the beginning
+  }
+};
 
   const handleSuggestionClick = (suggestion) => {
     // Handle the suggestion click logic in the parent component
@@ -560,6 +568,7 @@ const handleGrandButtonClick = () => {
 
   // Function for reset button event
   const resetDisplay = () => {
+    stopAudio();
     setDisplayTextOnScreen('');
     setResetButtonVisible(false); // Hide the reset button
     setYearButtonVisible(false);
@@ -666,6 +675,8 @@ const handleGrandButtonClick = () => {
     setVirtualTourOn(!isVirtualTourOn);
     // Optionally, you can update the state here if needed
     setVirtual(!showVirtual);
+
+    
   };
   
   
@@ -1398,7 +1409,7 @@ const handleGrandButtonClick = () => {
     },
 
     {
-      command: ['* science ', 'science *', '* science *', 'science', 'two o three', '203', '* 203', '203 *', '204 *', '* 204', '*  205', ' 205 *', '206 *', '* 206', 'chemical lab', '* chemical lab', 'physical lab', '* physical lab', '105 *', '* 105', '106 *', '* 106', '107 *', '* 107', '108 *', '* 108'] || [203, 204, 205, 206, 108, 107, 106, 105],
+      command: ['* science ', 'science *', '* science *', 'science', 'two o three', '203', '* 203', '203 *', '204 *', '* 204', '*  205', ' 205 *', '206 *', '* 206', 'chemical lab', '* chemical lab', 'physical lab', '* physical lab', '105 *', '* 105', '106 *', '* 106', '107 *', '* 107', '108 *', '* 108', '204', '205', '206', '105', '106', '107', '108'] || [203, 204, 205, 206, 108, 107, 106, 105],
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
 
@@ -1500,7 +1511,7 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-      command: ['* 109', '* 110','* 111','* 112','* 113','* 114','* 115','* 116','* 211','* 210','* 209','* 208','* 207','* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* architecture *', '* 207', '* 208' ,'*  209', '* 210', '* 211','* 109','* 110','* 111','* 112','* 113','* 114','* 114','* 116', 'ict lab 3', '* ict lab 3', '* ict lab * 3', 'draft lab', '* draft lab * 3', '* draft lab 3 *'] || [109, 110, 111, 112, 113, 114, 115, 116, 207, 208, 209, 210, 211],
+      command: ['* 109', '* 110','* 111','* 112','* 113','* 114','* 115','* 116','* 211','* 210','* 209','* 208','* 207','* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* architecture *', '* 207', '* 208' ,'*  209', '* 210', '* 211','* 109','* 110','* 111','* 112','* 113','* 114','* 114','* 116', 'ict lab 3', '* ict lab 3', '* ict lab * 3', 'draft lab', '* draft lab * 3', '* draft lab 3 *', '109', '110', '111', '112', '113', '114', '115', '116', '207', '208', '209', '210', '211'] || [109, 110, 111, 112, 113, 114, 115, 116, 207, 208, 209, 210, 211],
       
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
@@ -1602,7 +1613,7 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-      command: ['* yumul', 'yumul *', '* yumul *', 'yumul', '* 200', '* 201', '* 202'] || [200, 201, 202],
+      command: ['* yumul', 'yumul *', '* yumul *', 'yumul', '* 200', '* 201', '* 202', '200', '201', '202'] || [200, 201, 202],
       callback: () => {
         resetTranscript();
 
@@ -1703,7 +1714,7 @@ const handleGrandButtonClick = () => {
       } 
     },
     {
-      command: ['* nantes', 'nantes *', '* nantes *', 'nantes', '* dental', 'dental *', 'business', '* business ', '* business *', '* business *' ,'* accounting *', '* 120', 'accounting', 'accounting *', '* accounting', '* accounting *', 'marketing', 'marketing *', '* marketing ', '* marketing*', ' * 121', '121 *', '* 122','122 *', 'medical faculty', 'medical *', '* medical', '* medical *', 'avr', '* avr', 'avr *', '* avr *', 'library', '* library', 'library *', 'speech lab', '* speech lab', '* 216', '216 *', '217 *', ' * 217', '* 218', '218 *', ' * 122', '122 *', '* 121', '121 *', '120 *', ' * 120'] || [216,217,218,120,121,122],
+      command: ['* nantes', 'nantes *', '* nantes *', 'nantes', '* dental', 'dental *', 'business', '* business ', '* business *', '* business *' ,'* accounting *', '* 120', 'accounting', 'accounting *', '* accounting', '* accounting *', 'marketing', 'marketing *', '* marketing ', '* marketing*', ' * 121', '121 *', '* 122','122 *', 'medical faculty', 'medical *', '* medical', '* medical *', 'avr', '* avr', 'avr *', '* avr *', 'library', '* library', 'library *', 'speech lab', '* speech lab', '* 216', '216 *', '217 *', ' * 217', '* 218', '218 *', ' * 122', '122 *', '* 121', '121 *', '120 *', ' * 120', '216', '217', '218', '219', '120', '121', '122'] || [216,217,218,120,121,122],
       callback: () => {
         resetTranscript();
 
@@ -2006,7 +2017,7 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-      command: ['education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *', 'public *', '* public', '* public *', '117 *','* 117', '118 *', '* 118', '119 *','* 119', '212 *','* 212', '213 *','* 213', '214 *','* 214', '215 *','* 215', 'csc ', '* csc ', '* csc *'] || [212,213,214,215,117,118,119],
+      command: ['education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *', 'public *', '* public', '* public *', '118','117 *','* 117', '118 *', '* 118', '119 *','* 119', '212 *','* 212', '213 *','* 213', '214 *','* 214', '215 *','* 215', 'csc ', '* csc ', '* csc *', '117', '119', '215', '214', '212', '213'] || [212,213,214,215,117,118,119],
       callback: () => {
         resetTranscript();
 
@@ -2211,7 +2222,7 @@ const handleGrandButtonClick = () => {
         }
     },
     {
-      command: [103] || ['lab 1', 'lab * 1', 'laboratory 1', 'laboratory 1 *', '* laboratory 1 *', 'com lab 1', '*com * lab * 1', '* computer laboratory 1 *', 'computer lab 1',
+      command: [103] || ['103','lab 1', 'lab * 1', 'laboratory 1', 'laboratory 1 *', '* laboratory 1 *', 'com lab 1', '*com * lab * 1', '* computer laboratory 1 *', 'computer lab 1',
        '* computer * lab * 1 *', '* computer laboratory 1 *', 'ICT lab 1', 'ICT laboratory 1', '* ICT lab 1 *', 'IT lab 1', 'IT laboratory 1', '* IT lab * 1 *',
        '* IT laboratory 1 *' ],
       callback: () => {
@@ -2315,7 +2326,7 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-     command: [104] || ['lab 2', 'lab * 2', 'laboratory 2', 'laboratory 2 *', '* laboratory 2 *', 'com lab 2', '*com * lab * 2', '* computer laboratory 2 *', 'computer lab 2',
+     command: [104] || ['104', 'lab 2', 'lab * 2', 'laboratory 2', 'laboratory 2 *', '* laboratory 2 *', 'com lab 2', '*com * lab * 2', '* computer laboratory 2 *', 'computer lab 2',
       '* computer * lab * 2 *', '* computer laboratory 2 *', 'ICT lab 2', 'ICT laboratory 2', '* ICT lab 2 *', 'IT lab 2', 'IT laboratory 2', '* IT lab * 2 *',
       '* IT laboratory 2 *' ],
         callback: () => {
@@ -2419,7 +2430,7 @@ const handleGrandButtonClick = () => {
        }
     },
     {
-      command: ['hospitality', '* hospitality', 'hospitality ', ' hospitality ', 'hm', 'kitchen lab', ' kitchen lab','kitchen lab ', " kitchen lab ", ' kitchen ','beverage','*beverage','tissue', 'tissue', 'tissue lab', '* tissue lab ', 'plant',' plant ', 'plant',' plant lab *', '* 100', '* 101', '* 102', '100 *', '101 *', '102 *'] || [100,101,102],
+      command: ['hospitality', '* hospitality', 'hospitality ', ' hospitality ', 'hm', 'kitchen lab', ' kitchen lab','kitchen lab ', " kitchen lab ", ' kitchen ','beverage','*beverage','tissue', 'tissue', 'tissue lab', '* tissue lab ', 'plant',' plant ', 'plant',' plant lab *', '* 100', '* 101', '* 102', '100 *', '101 *', '102 *', '100', '101', '102'] || [100,101,102],
       callback: () => {
         resetTranscript();
         

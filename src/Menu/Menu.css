@@ -117,12 +117,14 @@ button:hover .icon {
 }
 
 .popup-content-container {
+    display: flex;
+    font-size: 15px;
     max-height: calc(100% - 250px);
     overflow-y: auto;
     padding: 20px;
     height: 650px;
     width: 290px;
-    text-align: center;
+    text-align:justify;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
 

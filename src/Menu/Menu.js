@@ -4,14 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark, faMapLocationDot, faBell, faCircleQuestion, faCircleInfo, faBuilding, faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 import pupMap from '../pictures/map.jpg';
+import contentMapping from '../fileJSON/directionsBuilding.json';
 
 Modal.setAppElement('#root');
-
-const speakText = (text) => {
-  const speechSynthesis = window.speechSynthesis;
-  const speechText = new SpeechSynthesisUtterance(text);
-  speechSynthesis.speak(speechText);
-};
 
 const customModalStyles = {
   overlay: {
@@ -42,10 +37,17 @@ function Menu() {
   const [zoomLevel, setZoomLevel] = useState(1);
   const [touchStartDistance, setTouchStartDistance] = useState(0);
   const [isZooming, setIsZooming] = useState(false);
+  const audioRef = useRef(null); // Add a reference to the audio element
   
   const maxZoomLevel = 2;
 
   const mapRef = useRef(null);
+
+  const playAudio = (content) => {
+    const audio = new Audio(contentMapping[content]); // Adjust the path
+    audioRef.current = audio; // Store the reference to the audio element
+    audio.play();
+  };
 
   const openMenu = () => {
     setMenuIsOpen(true);
@@ -60,15 +62,22 @@ function Menu() {
     if (content === "Map") {
       setMapPopupOpen(true);
       setZoomLevel(1);
+      playAudio(content); // Call the playAudio function
     } else {
       setPopupContent(content);
-      speakText(content);
+      playAudio(content); // Call the playAudio function
     }
   };
+
 
   const closePopup = () => {
     setPopupContent(null);
     setMapPopupOpen(false);
+
+    // Pause the audio when closing the popup
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
   };
 
   const handlePinch = (e) => {
@@ -235,23 +244,22 @@ function PopupFrame({ content, onClose }) {
           {content === "Reminders" && (
             <div>
               {}
-              <p>In using the voice command, clear voice is required to ensure that ISKA will respond accurately with the request.</p> 
-              <p>Keywords can be used in the type command for a more efficient usage.</p>
-              <p>ISKA’s voice varies from different android devices.</p>
-              <p>ISKA will only respond to limited commands, a phrase “Sorry, I currently do not have any information about that” is displayed if questions/ queries asked are not available in the application.</p>
+              <p>
+              "In using the voice command, clear voice is required to ensure that Iska will respond accurately with the request. Keywords can be used in the text command for more efficient usage. Iska’s voice may vary among different devices. Iska will only respond to limited commands, a phrase “Sorry, I currently do not have information about that.” is displayed if questions or queries asked are not available in the application. Please note that Iska is not compatible with other devices and requires a stable internet connection for the best experience."
+              </p>
             </div>
           )}
 
           {content === "Help" && (
             <div>
               {}
-              <p>In using voice command:</p>
-              <p>Press first the microphone ans speak out the command. Try saying the suggested commands found in the help button at the upper right corner of the home page.</p>
-              <p>In using the type command:</p>
-              <p>Press the keyboard button located at the bottom right corner of the home page. A keyword can be typed on for easy searching. Additionally, some suggestion words for queries are available to be clicked on.</p>
-              <p>All the information and things ISKA can show.</p>
-              <p>Tap the Write button from the homepage, click the “What can you do” button. You can choose from the selection of the icon tiles the information you want to view.</p>
-              <p>To locate a place, office and building:</p>
+              <p>In using voice command:</p><br></br>
+              <p>PRESS first the microphone ans speak out the command. Try saying the suggested commands found in the help button at the upper right corner of the home page.</p> <br></br>
+              <p>In using the type command:</p><br></br>
+              <p>PRESS the keyboard button located at the bottom right corner of the home page. A keyword can be typed on for easy searching. Additionally, some suggestion words for queries are available to be clicked on.</p><br></br>
+              <p>All the information and things ISKA can show.</p><br></br>
+              <p>Tap the Write button from the homepage, click the “What can you do” button. You can choose from the selection of the icon tiles the information you want to view.</p><br></br>
+              <p>To locate a place, office and building:</p><br></br>
               <p>Tap the Map button in the Main Menu, click the search icon, then type the location or place that you want to locate and hit the send button.</p>
             </div>
           )}
@@ -259,11 +267,11 @@ function PopupFrame({ content, onClose }) {
           {content === "Information" && (
             <div>
               {}
-              <p>“ISKA” is a web-based application that aims to serve as PUPLQ virtual assistant that attends to the queries people commonly asked about the institutions.</p>
-              <p>There are two (2) ways to give command.</p>
-              <p>First by typing a command even just by using a keyword in the provided textbox, click the send button and then ISKA will answer the queries of the user.</p>
-              <p>Second, is by tapping the button to enable the microphone and give a voice command by starting with “Hey ISKA!” in every command.</p>
-              <p>You can just also click the suggested buttons for easy navigation.</p>
+              <p>“ISKA” is a web-based application that aims to serve as PUPLQ virtual tour and voice assistant that attends to the queries people commonly asked about the institutions.</p><br></br>
+              <p>There are two ways to give command.</p><br></br>
+              <p>First, by typing a command even just by using a keyword in the provided textbox, click the keyboard button and then ISKA will answer the queries of the user.</p><br></br>
+              <p>Second, is by tapping the button to enable the microphone and give a voice command. You can just also click the suggested buttons for easy navigation.</p><br></br>
+              <p>For accessing the Virtual tour, press the virtual tour button on the upper right corner. click the full screen for better experience. then you can enjoy your tour virtually</p><br></br>
             </div>
           )}
         </div>

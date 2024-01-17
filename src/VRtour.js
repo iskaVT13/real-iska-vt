@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 
 const MyIframeComponent = () => {
@@ -9,26 +9,6 @@ const MyIframeComponent = () => {
     maxWidth: '100%',
   };
 
-  useEffect(() => {
-    // Function to speak the text
-    const speakText = (text) => {
-      const synth = window.speechSynthesis;
-      const utterance = new SpeechSynthesisUtterance(text);
-      synth.speak(utterance);
-    };
-
-    // Text to be spoken
-    const textToSpeak = "Explore the P U P Lopez Branch virtually to discover its modern facilities and vibrant campus life. Perfect for prospective students and alumni, this immersive tour offers a glimpse into the dynamic academic environment of Polytechnic University of the Philippines Lopez Branch. Start your virtual exploration now!";
-
-    // Speak the text when the component mounts
-    speakText(textToSpeak);
-
-    // Cleanup function
-    return () => {
-      // Stop speaking when the component unmounts
-      window.speechSynthesis.cancel();
-    };
-  }, []);
 
   return (
     <div className='vr-container'>

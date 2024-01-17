@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './displayDesign.css';
 import DisplayComponent from '../showRespose/Enroll/regular';
 import Irregular from '../showRespose/Enroll/irregular';
@@ -17,20 +17,30 @@ function App() {
   const [showTransferee, setShowTransferee] = useState(false);
   const [playVoice, setPlayVoice] = useState(false);
   const [currentVoice, setCurrentVoice] = useState('');
+  const audioRef = useRef(null); // Add a reference to the audio element
 
 useEffect(() => {
   if (playVoice) {
     const audioPlayer = new Audio(currentVoice);
+    audioRef.current = audioPlayer; // Store the reference to the audio element
 
     audioPlayer.play();
-
+    
     audioPlayer.addEventListener('ended', () => {
       setPlayVoice(false);
     });
   }
 }, [playVoice, currentVoice]);
 
+const stopAudio = () => {
+  if (audioRef.current) {
+    audioRef.current.pause();
+    audioRef.current.currentTime = 0; // Reset the audio to the beginning
+  }
+};
+
   const handleRegularButtonClick = () => {
+    stopAudio();
     setShowRegular(!showRegular);
     setShowIrregular(false);
     setShowFreshmen(false);
@@ -41,6 +51,7 @@ useEffect(() => {
     window.scrollTo(0, 0);
   };
   const handleIrregularButtonClick = () => {
+    stopAudio();
     setShowIrregular(!showIrregular);
     setShowRegular(false);
     setShowFreshmen(false);
@@ -53,6 +64,7 @@ useEffect(() => {
 
   };
   const handleFreshmenButtonClick = () => {
+    stopAudio();
     setShowFreshmen(!showFreshmen);
     setShowIrregular(false);
     setShowRegular(false);
@@ -64,6 +76,7 @@ useEffect(() => {
     window.scrollTo(0, 0);
   }
   const handleTransfereeButtonClick = () => {
+    stopAudio();
     setShowTransferee(!showTransferee);
     setShowFreshmen(false);
     setShowIrregular(false);
