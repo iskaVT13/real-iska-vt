@@ -532,7 +532,7 @@ const handleGrandButtonClick = () => {
   setResponseDisplayed(true);
   setCurrentSpeak(speakGrandstand);
   setPlayAudio(true);
-  
+
   const hideMicAndSearch = document.querySelectorAll('.bottom');
   hideMicAndSearch.forEach((element) => {
     element.style.display = 'none';});
@@ -599,6 +599,7 @@ const handleGrandButtonClick = () => {
     setHMVisible(false);
     setHMResponse(false);
 
+    
 
 
     setShowEregular(false);
@@ -2461,7 +2462,7 @@ const handleGrandButtonClick = () => {
         setGrandStandVisible(false);
         setGrandStandResponse(false);
         //EDUCATION
-        setEducVisible(true);
+        setEducVisible(false);
         setEducResponse(false);
         //ADMISSION
         setAdmissionVisible(false);
