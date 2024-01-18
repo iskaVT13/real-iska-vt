@@ -96,12 +96,6 @@ function AdmissionButton() {
       playAudio(buttonData.speakVoice);
     }
 
-     // Hide elements with the textOther classname
-     const hideTextOther = document.querySelectorAll('.textOther');
-    hideTextOther.forEach((element) => {
-      element.style.display = 'none';
-    });
-
     const hideReset = document.querySelectorAll('.reset-button');
     hideReset.forEach((element) => {
       element.style.display = 'none';
@@ -109,11 +103,6 @@ function AdmissionButton() {
 
     const hideAvatar = document.querySelectorAll('.avatar-container');
     hideAvatar.forEach((element) => {
-      element.style.display = 'none';
-    });
-
-    const hideMicAndSearch = document.querySelectorAll('.bottom');
-    hideMicAndSearch.forEach((element) => {
       element.style.display = 'none';
     });
   
@@ -125,11 +114,6 @@ function AdmissionButton() {
 
     const showReset = document.querySelectorAll('.reset-button');
     showReset.forEach((element) => {
-      element.style.display = '';
-    });
-
-    const showMicAndSearch = document.querySelectorAll('.bottom');
-    showMicAndSearch.forEach((element) => {
       element.style.display = '';
     });
     

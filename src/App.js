@@ -510,6 +510,11 @@ const handleAdminButtonClick = () => {
   setCurrentSpeak(speakAdmin);
   setPlayAudio(true);
 
+  const hideMicAndSearch = document.querySelectorAll('.bottom');
+  hideMicAndSearch.forEach((element) => {
+    element.style.display = 'none';});
+  
+
   const hideAvatar = document.querySelectorAll('.avatar-container');
   hideAvatar.forEach((element) => {
     element.style.display = 'none';
@@ -527,6 +532,10 @@ const handleGrandButtonClick = () => {
   setResponseDisplayed(true);
   setCurrentSpeak(speakGrandstand);
   setPlayAudio(true);
+  
+  const hideMicAndSearch = document.querySelectorAll('.bottom');
+  hideMicAndSearch.forEach((element) => {
+    element.style.display = 'none';});
 
   const hideAvatar = document.querySelectorAll('.avatar-container');
   hideAvatar.forEach((element) => {
@@ -626,6 +635,10 @@ const handleGrandButtonClick = () => {
 
       const showSuggestions = document.querySelectorAll('.suggestions');
       showSuggestions.forEach((element) => {
+        element.style.display = '';
+      });
+      const showMicAndSearch = document.querySelectorAll('.bottom');
+      showMicAndSearch.forEach((element) => {
         element.style.display = '';
       });
 
@@ -1344,6 +1357,10 @@ const handleGrandButtonClick = () => {
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
           });
+            const hideMicAndSearch = document.querySelectorAll('.bottom');
+    hideMicAndSearch.forEach((element) => {
+      element.style.display = 'none';
+    });
         
       }
     },
@@ -1444,6 +1461,10 @@ const handleGrandButtonClick = () => {
         });
         const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -1547,6 +1568,10 @@ const handleGrandButtonClick = () => {
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
           });
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -1645,6 +1670,10 @@ const handleGrandButtonClick = () => {
         });
         const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
             element.style.display = 'none';
           });
       } 
@@ -1747,6 +1776,10 @@ const handleGrandButtonClick = () => {
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
           });
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -1845,6 +1878,10 @@ const handleGrandButtonClick = () => {
         });
         const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -1947,6 +1984,10 @@ const handleGrandButtonClick = () => {
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
           });
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
     },
     {
@@ -2046,6 +2087,10 @@ const handleGrandButtonClick = () => {
         });
         const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -2150,6 +2195,10 @@ const handleGrandButtonClick = () => {
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
           });
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
+            element.style.display = 'none';
+          });
         }
     },
     {
@@ -2251,6 +2300,10 @@ const handleGrandButtonClick = () => {
         });
         const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
+            element.style.display = 'none';
+          });
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -2357,6 +2410,10 @@ const handleGrandButtonClick = () => {
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
           });
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
+            element.style.display = 'none';
+          });
        }
     },
     {
@@ -2458,6 +2515,7 @@ const handleGrandButtonClick = () => {
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
           });
+          
       }
       
     },
@@ -3822,6 +3880,10 @@ const handleGrandButtonClick = () => {
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
           });
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
+            element.style.display = 'none';
+          });
       }
       },
       {
@@ -3908,6 +3970,11 @@ const handleGrandButtonClick = () => {
           setShowGoodmoral(false);
       
           setShowAvatar(false);
+
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
+            element.style.display = 'none';
+          });
   
           const hideList = document.querySelectorAll('.list-result');
           hideList.forEach((element) => {

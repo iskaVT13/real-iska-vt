@@ -48,11 +48,6 @@ function Lab2Button() {
   const handleImageClick = (button) => {
     setCurrentButton(responses[button]);
     setIsActive(true);
-     // Hide elements with the textOther classname
-     const hideTextOther = document.querySelectorAll('.textOther');
-    hideTextOther.forEach((element) => {
-      element.style.display = 'none';
-    });
 
     const hideReset = document.querySelectorAll('.reset-button');
     hideReset.forEach((element) => {

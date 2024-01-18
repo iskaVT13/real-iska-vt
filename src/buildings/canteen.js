@@ -63,11 +63,6 @@ function CanteenButton() {
       element.style.display = 'none';
     });
 
-    const hideMicAndSearch = document.querySelectorAll('.bottom');
-    hideMicAndSearch.forEach((element) => {
-      element.style.display = 'none';
-    });
-
     // Scroll to the top
     window.scrollTo(0, 0);
   };
@@ -81,20 +76,8 @@ function CanteenButton() {
     setCurrentButton('');
     setIsActive(false);
 
-    // Show elements with the textOther classname
-    const showTextOther = document.querySelectorAll('.textOther');
-    showTextOther.forEach((element) => {
-      element.style.display = ''; // Set to an empty string to use the default display value
-    });
-
     const showReset = document.querySelectorAll('.reset-button');
     showReset.forEach((element) => {
-      element.style.display = '';
-    });
-
-    
-    const showMicAndSearch = document.querySelectorAll('.bottom');
-    showMicAndSearch.forEach((element) => {
       element.style.display = '';
     });
     

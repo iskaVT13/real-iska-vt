@@ -93,12 +93,7 @@ function HmButton() {
         if (buttonData.speakVoice) {
       playAudio(buttonData.speakVoice);
     }
-     // Hide elements with the textOther classname
-     const hideTextOther = document.querySelectorAll('.textOther');
-    hideTextOther.forEach((element) => {
-      element.style.display = 'none';
-    });
-
+    
     const hideReset = document.querySelectorAll('.reset-button');
     hideReset.forEach((element) => {
       element.style.display = 'none';
