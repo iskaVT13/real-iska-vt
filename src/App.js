@@ -186,6 +186,7 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
               style={{ color: '#ffc800' }}
             />
           </div>
+          <div className='result'>
           <div className='list-result'>
           {inputText && suggestions.length > 0 && (
             <ul>
@@ -196,6 +197,7 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
               ))}
             </ul>
           )}
+        </div>
         </div>
 
           <input
@@ -570,6 +572,7 @@ const handleGrandButtonClick = () => {
     setScienceResponse(false);
 
     setEngineerVisible(false);
+    
     setEngineerResponse(false);
 
     setAdmissionVisible(false);
@@ -599,7 +602,7 @@ const handleGrandButtonClick = () => {
     setHMVisible(false);
     setHMResponse(false);
 
-    
+
 
 
     setShowEregular(false);

@@ -4,32 +4,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark, faMapLocationDot, faBell, faCircleQuestion, faCircleInfo, faBuilding, faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 import pupMap from '../pictures/map.jpg';
+import iskalogo from '../pictures/iska-logo.png';
 import contentMapping from '../fileJSON/directionsBuilding.json';
 
 Modal.setAppElement('#root');
 
 const customModalStyles = {
-  overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  },
-  content: {
-    border: 'none',
-    padding: '0',
-    position: 'relative',
-  },
+  overlay: {backgroundColor: 'rgba(0, 0, 0, 0.5)',},
+  content: {border: 'none', padding: '0', position: 'relative',},
 };
 
 const customMapModalStyles = {
-  overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  },
-  content: {
-    border: 'none',
-    padding: '0',
-    position: 'relative',
-  },
+  overlay: {backgroundColor: 'rgba(0, 0, 0, 0.5)',},
+  content: {border: 'none', padding: '0', position: 'relative',},
 };
-
 function Menu() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [popupContent, setPopupContent] = useState(null);
@@ -37,44 +25,31 @@ function Menu() {
   const [zoomLevel, setZoomLevel] = useState(1);
   const [touchStartDistance, setTouchStartDistance] = useState(0);
   const [isZooming, setIsZooming] = useState(false);
-  const audioRef = useRef(null); // Add a reference to the audio element
-  
+  const audioRef = useRef(null); 
   const maxZoomLevel = 2;
-
   const mapRef = useRef(null);
 
   const playAudio = (content) => {
-    const audio = new Audio(contentMapping[content]); // Adjust the path
-    audioRef.current = audio; // Store the reference to the audio element
+    const audio = new Audio(contentMapping[content]); 
+    audioRef.current = audio;
     audio.play();
-  };
-
-  const openMenu = () => {
-    setMenuIsOpen(true);
-  };
-
-  const closeMenu = () => {
-    setMenuIsOpen(false);
-    setPopupContent(null);
   };
 
   const openPopup = (content) => {
     if (content === "Map") {
       setMapPopupOpen(true);
       setZoomLevel(1);
-      playAudio(content); // Call the playAudio function
+      playAudio(content);
     } else {
       setPopupContent(content);
-      playAudio(content); // Call the playAudio function
+      playAudio(content);
     }
   };
-
 
   const closePopup = () => {
     setPopupContent(null);
     setMapPopupOpen(false);
 
-    // Pause the audio when closing the popup
     if (audioRef.current) {
       audioRef.current.pause();
     }
@@ -120,57 +95,72 @@ function Menu() {
   };
 
   return (
-    <div className="menu">
-      <FontAwesomeIcon onClick={openMenu} icon={faBars} size="2x" style={{ color: '#ffc800' }} />
-      <Modal
-        className="common-frame"
-        isOpen={menuIsOpen}
-        onRequestClose={closeMenu}
-        contentLabel="Menu Modal"
-        style={customModalStyles}
-      >
-        <div className="title-menu">MENU</div>
-        <FontAwesomeIcon className="close" onClick={closeMenu} icon={faXmark} size="2x" />
-        <div className="grid-buttons">
-          <div className="button-container">
-            <button onClick={() => openPopup("Map")}>
-              <FontAwesomeIcon icon={faMapLocationDot} size="2x" style={{ color: '#f0c908' }} className="icon" />
-              <span>MAP</span>
-            </button>
-          </div>
-          <div className="button-container">
-            <button onClick={() => openPopup("Reminders")}>
-              <FontAwesomeIcon icon={faBell} size="2x" style={{ color: '#f0c908' }} className="icon" />
-              <span>REMINDERS</span>
-            </button>
-          </div>
-          <div className="button-container">
-            <button onClick={() => openPopup("Help")}>
-              <FontAwesomeIcon icon={faCircleQuestion} size="2x" style={{ color: '#f0c908' }} className="icon" />
-              <span>HELP</span>
-            </button>
-          </div>
-          <div className="button-container">
-            <button onClick={() => openPopup("Information")}>
-              <FontAwesomeIcon icon={faCircleInfo} size="2x" style={{ color: '#f0c908' }} className="icon" />
-              <span>INFORMATION</span>
-            </button>
-          </div>
-          <div className='button-container'>
-          <button onClick={() => openPopup("Information")}>
-              <FontAwesomeIcon icon={faBuilding} size="2x" style={{ color: '#f0c908' }} className="icon" />
-              <span>BUILDING INFORMATION</span>
-            </button>
-          </div>
-          <div className='button-container'>
-          <button onClick={() => openPopup("Information")}>
-              <FontAwesomeIcon icon={faPeopleGroup} size="2x" style={{ color: '#f0c908' }} className="icon" />
-              <span>FACULTY TEACHERS</span>
-            </button>
-          </div>
+    <div>
+      <div className="menu" onClick={() => setMenuIsOpen(!menuIsOpen)}>
+        {menuIsOpen ? null : <FontAwesomeIcon icon={faBars} size="2x" style={{ color: '#ffc800' }} />}
+      </div>
+
+      <div className={`sidebar ${menuIsOpen ? 'open' : ''}`}>
+        <div className="close-btn" onClick={() => setMenuIsOpen(false)}>
+          <FontAwesomeIcon icon={faXmark} size="xl" />
         </div>
-        <div className="text">2023 | ISKA | PUP Lopez Quezon</div>
-      </Modal>
+
+        <div className="iconlogo">
+          <img className="imglogo" src={iskalogo} alt="logo"/>
+        </div>
+
+        <div className="option-buttons">
+        <a href="#" onClick={() => openPopup("Map")}>
+            <div className="option-item">
+              <div className="icon">
+                <FontAwesomeIcon icon={faMapLocationDot} size="2x" />
+              </div>
+              <div className="name">Map</div>
+            </div>
+          </a>
+          <a href="#" onClick={() => openPopup("Reminders")}>
+            <div className="option-item">
+              <div className="icon">
+                <FontAwesomeIcon icon={faBell} size="2x" />
+              </div>
+              <div className="name">Reminders</div>
+            </div>
+          </a>
+          <a href="#" onClick={() => openPopup("Help")}>
+            <div className="option-item">
+              <div className="icon">
+                <FontAwesomeIcon icon={faCircleQuestion} size="2x" />
+              </div>
+              <div className="name">Help</div>
+            </div>
+          </a>
+          <a href="#" onClick={() => openPopup("Information")}>
+            <div className="option-item">
+              <div className="icon">
+                <FontAwesomeIcon icon={faCircleInfo} size="2x" />
+              </div>
+              <div className="name">Information</div>
+            </div>
+          </a>
+          <a href="#" onClick={() => openPopup("Information")}>
+            <div className="option-item">
+              <div className="icon">
+                <FontAwesomeIcon icon={faBuilding} size="2x" />
+              </div>
+              <div className="name">Buildings</div>
+            </div>
+          </a>
+          <a href="#" onClick={() => openPopup("Information")}>
+            <div className="option-item">
+              <div className="icon">
+                <FontAwesomeIcon icon={faPeopleGroup} size="2x" />
+              </div>
+              <div className="name">Faculty</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div className="overlay" onClick={() => setMenuIsOpen(false)}></div>
 
       {popupContent && !mapPopupOpen && (
         <PopupFrame content={popupContent} onClose={closePopup} />
@@ -197,17 +187,8 @@ function Menu() {
           >
             <div className="map-popup-content">
               <div className="image-container">
-                <img
-                  ref={mapRef}
-                  src={pupMap}
-                  alt="PUP Map"
-                  className="map-image"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    transform: `scale(${zoomLevel})`,
-                    objectFit: 'scale-down',
-                  }}
+                <img ref={mapRef} src={pupMap} alt="PUP Map" className="map-image"
+                  style={{width: '100%', height: 'auto', transform: `scale(${zoomLevel})`, objectFit: 'scale-down',}}
                 />
               </div>
             </div>
@@ -218,7 +199,6 @@ function Menu() {
     </div>
   );
 }
-
 function PopupFrame({ content, onClose }) {
   const contentClass = `${content.toLowerCase()}-content`;
 
@@ -274,6 +254,28 @@ function PopupFrame({ content, onClose }) {
               <p>For accessing the Virtual tour, press the virtual tour button on the upper right corner. click the full screen for better experience. then you can enjoy your tour virtually</p><br></br>
             </div>
           )}
+
+          {content === "Building Information" && (
+            <div>
+              {}
+              <p>“ISKA” is a web-based application that aims to serve as PUPLQ virtual tour and voice assistant that attends to the queries people commonly asked about the institutions.</p><br></br>
+              <p>There are two ways to give command.</p><br></br>
+              <p>First, by typing a command even just by using a keyword in the provided textbox, click the keyboard button and then ISKA will answer the queries of the user.</p><br></br>
+              <p>Second, is by tapping the button to enable the microphone and give a voice command. You can just also click the suggested buttons for easy navigation.</p><br></br>
+              <p>For accessing the Virtual tour, press the virtual tour button on the upper right corner. click the full screen for better experience. then you can enjoy your tour virtually</p><br></br>
+            </div>
+          )}  
+
+          {content === "Faculty" && (
+            <div>
+              {}
+              <p>“ISKA” is a web-based application that aims to serve as PUPLQ virtual tour and voice assistant that attends to the queries people commonly asked about the institutions.</p><br></br>
+              <p>There are two ways to give command.</p><br></br>
+              <p>First, by typing a command even just by using a keyword in the provided textbox, click the keyboard button and then ISKA will answer the queries of the user.</p><br></br>
+              <p>Second, is by tapping the button to enable the microphone and give a voice command. You can just also click the suggested buttons for easy navigation.</p><br></br>
+              <p>For accessing the Virtual tour, press the virtual tour button on the upper right corner. click the full screen for better experience. then you can enjoy your tour virtually</p><br></br>
+            </div>
+          )}
         </div>
       </div>
       <div className="text">2023 | ISKA | PUP Lopez Quezon</div>
@@ -281,4 +283,4 @@ function PopupFrame({ content, onClose }) {
   );
 }
 
-export default Menu; //262
+export default Menu; //286

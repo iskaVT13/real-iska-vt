@@ -1,9 +1,123 @@
 .menu {
     cursor: pointer;
     height: 30px;
-    margin-bottom: 15px;
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 3px; 
+    z-index: 99; 
 }
 
+.menu-open {
+    background: rgba(0, 0, 0, 0%);
+}
+
+.sidebar {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    height: 100%;
+    width: 270px;
+    overflow-x: hidden;
+    transition: left 0.4s ease; 
+    background-color: #ab0303;
+    z-index: 9999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius:0px 20px 20px 0px;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar .option-buttons {
+    margin-top: 5px;
+}
+  
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color:#ffffff;
+    transition: 0.3s;
+}
+  
+.sidebar a:hover {
+    background-color: #ab0303;
+    color: #ffc800;
+    font-weight: bold;
+    padding: 25px 37px;
+    height: 86px;
+ }
+
+ .sidebar a:hover .icon {
+    font-size: 22px;
+}
+
+ .sidebar a .option-item {
+    align-items: center;
+    display: flex;
+ }
+
+ .sidebar a .icon {
+    color: #f0c908;
+    margin-right: 25px;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    font-size: 18px;
+}
+  
+.sidebar a .name {
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1.3em;
+    left: 1.2em;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.close-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    color: #f0c908;
+}
+
+.imglogo {
+    margin-top: 1em;
+    max-width: 7em;
+    max-height: fit-content;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.721);
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.4s ease;
+    z-index: 900;
+  }
+  
+  .sidebar.open ~ .overlay {
+    opacity: 0.5; 
+    pointer-events: auto;
+  }
+  
 
 .common-frame {
     color: #ffffff;
@@ -137,7 +251,6 @@ button:hover .icon {
     }
 }
 
-
 .image-container {
     position: relative;
     height: 410px;
@@ -170,8 +283,7 @@ button:hover .icon {
     height: auto;
     object-fit: scale-down; 
     transition: transform 0.3s;
-} /*166*/
-
+}
 
 .menu-content{
     width: 300px;
@@ -180,22 +292,21 @@ button:hover .icon {
     top: 50%;
     bottom: 50%;
     text-align: center;
-  }
-  /* Style the modal overlay */
-  .ReactModal__Overlay {
-    background: none; /* No background, fully transparent */
+}
+
+.ReactModal__Overlay {
+    background: none;
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000; /* Ensure the modal is above everything else */
-  }
+    z-index: 1000;
+}
   
-  /* Style the modal content */
-  .ReactModal__Content {
+.ReactModal__Content {
     background-color: #7E0001;
     border: 1px solid #ccc;
     padding: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 1001; /* Ensure the modal content is above the overlay */
-  }
+    z-index: 1001;
+}
