@@ -4106,6 +4106,15 @@ const sendTextToCommands = (text) => {
   const startListening = () => {
     SpeechRecognition.startListening();
     setSpeechActive(true);
+
+     // Set a timer for, let's say, 5 seconds (5000 milliseconds)
+  const timerDuration = 10000;
+
+  // After the specified time, stop listening
+  setTimeout(() => {
+    SpeechRecognition.stopListening();
+    setSpeechActive(false);
+  }, timerDuration);
   };
 
   // Function for stop commanding
