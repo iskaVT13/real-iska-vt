@@ -2516,6 +2516,10 @@ const handleGrandButtonClick = () => {
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
           });
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
+            element.style.display = 'none';
+          });
           
       }
       
