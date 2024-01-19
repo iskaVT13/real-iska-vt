@@ -2206,9 +2206,7 @@ const handleGrandButtonClick = () => {
         }
     },
     {
-      command: [103] || ['103','lab 1', 'lab * 1', 'laboratory 1', 'laboratory 1 *', '* laboratory 1 *', 'com lab 1', '*com * lab * 1', '* computer laboratory 1 *', 'computer lab 1',
-       '* computer * lab * 1 *', '* computer laboratory 1 *', 'ICT lab 1', 'ICT laboratory 1', '* ICT lab 1 *', 'IT lab 1', 'IT laboratory 1', '* IT lab * 1 *',
-       '* IT laboratory 1 *' ],
+      command: ['laboratory 1', 'com lab 1', '* computer laboratory 1 *', 'computer laboratory 1 ', 'ICT lab 1', 'ICT laboratory 1', 'IT lab 1', 'IT laboratory 1', '* 103'] || [103],
       callback: () => {
         resetTranscript();
 
@@ -2313,9 +2311,8 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-     command: [104] || ['104', 'lab 2', 'lab * 2', 'laboratory 2', 'laboratory 2 *', '* laboratory 2 *', 'com lab 2', '*com * lab * 2', '* computer laboratory 2 *', 'computer lab 2',
-      '* computer * lab * 2 *', '* computer laboratory 2 *', 'ICT lab 2', 'ICT laboratory 2', '* ICT lab 2 *', 'IT lab 2', 'IT laboratory 2', '* IT lab * 2 *',
-      '* IT laboratory 2 *' ],
+     command:['* 104', 'com lab 2', 'computer lab 2',
+       'ICT lab 2', 'ICT laboratory 2', 'IT lab 2', 'IT laboratory 2'] || [104],
         callback: () => {
           resetTranscript();
 
