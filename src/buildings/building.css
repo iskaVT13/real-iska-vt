@@ -38,7 +38,7 @@
     width: 45vh;
     height: fit-content;
     padding: 15px;
-    top: 8.5em;
+    top: 7em;
     
 }
 
@@ -46,12 +46,12 @@
     display: flex;
     position: relative;
     justify-content: space-between;
-    background-color: #f1c500;
     width: max-content;
-    left: 2%;
-    top: 10.5em;
+    left: 0;
+    top: 5.3em;
     padding: 10px;
     z-index: 99;
+    color: #f1c500;
 }
 
 

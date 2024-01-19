@@ -20,7 +20,7 @@
     width: 270px;
     overflow-x: hidden;
     transition: left 0.4s ease; 
-    background-color: #ab0303;
+    background-color:#7E0001;
     z-index: 9999;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border-radius:0px 20px 20px 0px;
@@ -28,10 +28,6 @@
 
 .sidebar.open {
     left: 0;
-}
-
-.sidebar .option-buttons {
-    margin-top: 5px;
 }
   
 .sidebar a {
@@ -69,7 +65,7 @@
     align-items: center;
     justify-content: center;
     width: 20px;
-    font-size: 18px;
+    font-size: 15px;
 }
   
 .sidebar a .name {
@@ -224,7 +220,7 @@ button:hover .icon {
 .popup-title {
     margin-top: 10px;
     padding-top: 20px;
-    color: #ffffff;
+    color:#f0c908;
     font-size: 24px;
     font-family: Geneva, Tahoma, sans-serif;
     text-align: center;

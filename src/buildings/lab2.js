@@ -2,6 +2,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 import gate from '../areaImage/gate.webp';
 import admission from '../areaImage/Admin Building.webp';
 import lab1 from '..//areaImage/Lab 1.webp';
@@ -131,9 +133,7 @@ function Lab2Button() {
 {isActive && (
   <div className="image-container">
     <p className='text-gif'>{currentButton.responseText}</p>
-    <button onClick={handleBackButtonClick} className="back-button">
-      Back
-    </button>
+    <FontAwesomeIcon className="back-button" onClick={handleBackButtonClick} icon={faArrowLeft} size="xl" style={{color: "#FFD43B",}} />
     <div className='gif'>
     <img  src={imageURL} alt={currentButton.title} />
     </div>
