@@ -381,7 +381,7 @@ input {
   bottom: 4.5em;
   width: 17.5em;
   text-align: left;
-  overflow:scroll;
+  overflow: auto;
   height: 10em;
   display: flex;
   border-radius: 10px;

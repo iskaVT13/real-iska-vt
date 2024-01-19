@@ -668,7 +668,7 @@ const handleGrandButtonClick = () => {
   // All the command user can ask for ISKA 
   const commands = [
     {
-      command: ['hi', 'hello', 'hey', '* hello *', '* hello', 'hello *'],
+      command: ['* hi','hi *', 'hello', 'hey', '* hello *', '* hello', 'hello *'],
       callback:() => {
         resetTranscript();
 
