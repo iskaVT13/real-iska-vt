@@ -1,5 +1,5 @@
 // CanteenButton.js
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,6 +17,9 @@ import education from '../areaImage/Educ Bldg.webp';
 import engineer from '../areaImage/Engineering Building.webp';
 import hospitality from '../areaImage/HM _ Plant Lab.webp';
 import ecopark from '../areaImage/eco park.webp';
+
+import voiceNantes from '../speakText/nantes.mp3';
+
 function AdmissionButton() {
   const [isActive, setIsActive] = useState(false);
   const [imageURL, setImageURL] = useState('');
@@ -25,6 +28,7 @@ function AdmissionButton() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [directCurrentButton, setDirectionCurrentButton] = useState('');
   const [currentAudio, setCurrentAudio] = useState(null);
+  const nantesAudio = useMemo(() => new Audio(voiceNantes), []);  
 
   useEffect(() => {
     Promise.all([
@@ -39,8 +43,11 @@ function AdmissionButton() {
       })
       .catch((error) => console.error('Error loading responses:', error));
 
+      nantesAudio.play();
+
+
     window.scrollTo(0, 0);
-  }, []);
+  }, [nantesAudio]);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -92,6 +99,11 @@ function AdmissionButton() {
     const buttonData = responses[button];
     setCurrentButton(responses[button]);
     setIsActive(true);
+
+    if (nantesAudio) {
+      nantesAudio.pause();
+      nantesAudio.currentTime = 0;
+    }
 
     if (buttonData.speakVoice) {
       playAudio(buttonData.speakVoice);

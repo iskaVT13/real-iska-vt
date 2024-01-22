@@ -72,7 +72,7 @@
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceHM%2FHealth%20to%20Hm.mp3?alt=media&token=90a60e10-7419-4cd6-9c20-aed0d1895412"
     },
     "ecopark": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingHM/EcoPark to HM.gif",
       "title": "Eco Park",
       "responseText": "Here is the way from Eco Park to Hospitality Management Building",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceHM%2FEcoPark%20to%20Hm.mp3?alt=media&token=6cdab689-dbff-4ef4-a788-a7ce93acc775"

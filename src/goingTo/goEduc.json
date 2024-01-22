@@ -72,7 +72,7 @@
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEduc%2FHM%20to%20Educ.mp3?alt=media&token=edc295b7-da73-4be8-822f-a0fee238676d"
     },
     "ecopark": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingEduc/EcoPark to Educ.gif",
       "title": "Eco Park",
       "responseText": "Here is the way from Eco Park to Education Building. Below the map are the Offices, Faculty and Room located at  Public Administration and Education Building",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEduc%2FEcoPark%20to%20Educ.mp3?alt=media&token=de75c9e7-4544-4368-9fb0-3037c0d62fe0"

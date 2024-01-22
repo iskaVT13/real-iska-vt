@@ -36,7 +36,7 @@
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FCanteen%20to%20Gym.mp3?alt=media&token=ea3db780-e22a-4fd4-805b-40e4e7b548d9"
     },
     "nantes": {
-      "clickedImage": "FRONT",
+      "clickedImage": "IT IS IN FRONT OF THE GYMNASIUM BUILDING",
       "title": "Nantes",
       "responseText": "The Gymnasium is in front of the Accounting and Marketing Building",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FBusinessAndAccountancy%20to%20Gym.mp3?alt=media&token=a1f96bae-d5ef-4713-9be3-f8e4cbc0771e"
@@ -72,7 +72,7 @@
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FHM%20to%20Gym.mp3?alt=media&token=5dc51e60-e891-4a73-aca5-715275110f50"
     },
     "ecopark": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/EcoPark to Gym.gif",
       "title": "Eco Park",
       "responseText": "Here is the way from Eco Park to Gymnasium",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2FEcoPark%20to%20Gym.mp3?alt=media&token=93f5c9c3-b2e1-485f-b6e8-7d386fd84c80"

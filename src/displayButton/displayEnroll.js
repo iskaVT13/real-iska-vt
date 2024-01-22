@@ -9,6 +9,7 @@ import voiceRegular from '../speakText/regular.mp3';
 import voiceIrregular from '../speakText/irregular.mp3';
 import voiceFreshmen from '../speakText/freshmen.mp3';
 import voiceTransferee from '../speakText/transferee.mp3';
+import voiceEnrollment from '../speakText/enrollment.mp3'; 
 
 function App() {
   const [showRegular, setShowRegular] = useState(false);
@@ -18,6 +19,7 @@ function App() {
   const [playVoice, setPlayVoice] = useState(false);
   const [currentVoice, setCurrentVoice] = useState('');
   const audioRef = useRef(null); // Add a reference to the audio element
+
 
 useEffect(() => {
   if (playVoice) {
@@ -38,6 +40,16 @@ const stopAudio = () => {
     audioRef.current.currentTime = 0; // Reset the audio to the beginning
   }
 };
+useEffect(() => {
+  // Play voiceEnrollment when the component mounts
+  setCurrentVoice(voiceEnrollment);
+  setPlayVoice(true);
+
+  // Cleanup function to stop audio when the component unmounts
+  return () => {
+    stopAudio();
+  };
+}, []);
 
   const handleRegularButtonClick = () => {
     stopAudio();

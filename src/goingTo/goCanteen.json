@@ -72,7 +72,7 @@
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCanteen%2FHM%20to%20Canteen.mp3?alt=media&token=69f285b5-ab61-41c2-b5df-f9c92e5a3b6f"
     },
     "ecopark": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingCanteen/EcoPark to Canteen.gif",
       "title": "Eco Park",
       "responseText": "Here is the way from Eco Park to Canteen",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCanteen%2FEco%20Park%20to%20Canteen.mp3?alt=media&token=77cdfb30-cd3f-4670-b880-9db81ffd2cbb"

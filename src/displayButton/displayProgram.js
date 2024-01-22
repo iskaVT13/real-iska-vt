@@ -7,6 +7,7 @@ import Diploma from '../showRespose/Programs/diploma';
 
 import voiceBachelor from '../speakText/bachelor.mp3';
 import voiceDiploma from '../speakText/diploma.mp3';
+import voicePrograms from '../speakText/courses.mp3'; 
 
 function App() {
   const [showBachelor, setShowBachelor] = useState(false);
@@ -34,7 +35,16 @@ const stopAudio = () => {
     audioRef.current.currentTime = 0; // Reset the audio to the beginning
   }
 };
+useEffect(() => {
+  // Play voicePrograms when the component mounts
+  setCurrentVoice(voicePrograms);
+  setPlayVoice(true);
 
+  // Cleanup function to stop audio when the component unmounts
+  return () => {
+    stopAudio();
+  };
+}, []);
   const handleBachelorButtonClick = () => {
     stopAudio();
     setShowBachelor(!showBachelor);

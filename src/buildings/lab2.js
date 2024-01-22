@@ -1,5 +1,5 @@
 // CanteenButton.js
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,11 +18,14 @@ import engineer from '../areaImage/Engineering Building.webp';
 import hospitality from '../areaImage/HM _ Plant Lab.webp';
 import ecopark from '../areaImage/eco park.webp';
 
+import voicelab2 from '../speakText/lab2.mp3';
+
 function Lab2Button() {
   const [isActive, setIsActive] = useState(false);
   const [imageURL, setImageURL] = useState('');
   const [currentButton, setCurrentButton] = useState('');
   const [responses, setResponses] = useState({});
+  const lab2Audio = useMemo(() => new Audio(voicelab2), []);  
 
   useEffect(() => {
     // Import the responses JSON file dynamically
@@ -30,8 +33,10 @@ function Lab2Button() {
       .then((responseModule) => setResponses(responseModule.default))
       .catch((error) => console.error('Error loading responses:', error));
 
+      lab2Audio.play();
+
       window.scrollTo(0, 0);
-  }, []);
+  }, [lab2Audio]);
 
   const fetchImageURL = useCallback(async () => {
     if (currentButton && currentButton.clickedImage) {
@@ -48,8 +53,17 @@ function Lab2Button() {
   }, [fetchImageURL]);
 
   const handleImageClick = (button) => {
+    const buttonData = responses[button];
     setCurrentButton(responses[button]);
     setIsActive(true);
+
+    if (lab2Audio) {
+      lab2Audio.pause();
+      lab2Audio.currentTime = 0;
+    }
+    if (buttonData.speakVoice) {
+      playAudio(buttonData.speakVoice);
+    }
 
     const hideReset = document.querySelectorAll('.reset-button');
     hideReset.forEach((element) => {
@@ -61,6 +75,11 @@ function Lab2Button() {
     });
      // Scroll to the top
      window.scrollTo(0, 0);
+  };
+
+  const playAudio = (audioURL) => {
+    const audio = new Audio(audioURL);
+    audio.play();
   };
 
   const handleBackButtonClick = () => {

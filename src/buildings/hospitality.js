@@ -1,5 +1,5 @@
 // CanteenButton.js
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo} from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,6 +18,8 @@ import education from '../areaImage/Educ Bldg.webp';
 import engineer from '../areaImage/Engineering Building.webp';
 import ecopark from '../areaImage/eco park.webp';
 
+import voiceHM from '../speakText/hospitality.mp3';
+
 function HmButton() {
   const [isActive, setIsActive] = useState(false);
   const [imageURL, setImageURL] = useState('');
@@ -26,6 +28,7 @@ function HmButton() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [directCurrentButton, setDirectionCurrentButton] = useState('');
   const [currentAudio, setCurrentAudio] = useState(null);
+  const hmAudio = useMemo(() => new Audio(voiceHM), []);  
 
   useEffect(() => {
     Promise.all([
@@ -40,8 +43,10 @@ function HmButton() {
       })
       .catch((error) => console.error('Error loading responses:', error));
 
+      hmAudio.play();
+
     window.scrollTo(0, 0);
-  }, []);
+  }, [hmAudio]);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -92,6 +97,12 @@ function HmButton() {
     const buttonData = responses[button];
     setCurrentButton(responses[button]);
     setIsActive(true);
+
+    if (hmAudio) {
+      hmAudio.pause();
+      hmAudio.currentTime = 0;
+    }
+
         if (buttonData.speakVoice) {
       playAudio(buttonData.speakVoice);
     }

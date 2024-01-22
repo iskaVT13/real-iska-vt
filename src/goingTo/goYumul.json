@@ -72,7 +72,7 @@
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fhm2.mp3?alt=media&token=e46834a5-48f1-4d4e-be91-3b421a94714b"
     },
     "ecopark": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/EcoPark to Yumul.gif",
       "title": "Eco Park",
       "responseText": "Here is the way from Eco Park to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fecopark.mp3?alt=media&token=09893413-9e2d-4bbb-b8d2-35b7f0b29f94"

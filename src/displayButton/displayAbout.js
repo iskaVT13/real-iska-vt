@@ -9,6 +9,7 @@ import Hymn from '../showRespose/About/hymn';
 import voiceHymn from '../speakText/hymn.mp3';
 import voiceMission from '../speakText/mission.mp3';
 import voiceHistory from '../speakText/history.mp3';
+import voiceAbout from '../speakText/aboutPUP.mp3'; 
 
 function App() {
   const [showHistory, setShowHistory] = useState(false);
@@ -37,6 +38,16 @@ const stopAudio = () => {
     audioRef.current.currentTime = 0; // Reset the audio to the beginning
   }
 };
+useEffect(() => {
+  // Play voiceAbout when the component mounts
+  setCurrentVoice(voiceAbout);
+  setPlayVoice(true);
+
+  // Cleanup function to stop audio when the component unmounts
+  return () => {
+    stopAudio();
+  };
+}, []);
 
   const handleHistoryButtonClick = () => {
     stopAudio();
@@ -76,7 +87,7 @@ const stopAudio = () => {
     <div>
       <div className='choices-button' >
       <div>
-        <p> Please choose from the options below to indicate the enrollment category you prefer.
+        <p> Here are some information about PUP Lopez. Please select below which one do you want to see.
 </p>
       </div>
       <button className={showHistory ? 'active-button' : ''} onClick={handleHistoryButtonClick}>HISTORY</button>

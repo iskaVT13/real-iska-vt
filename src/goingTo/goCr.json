@@ -2,7 +2,7 @@
     "gate": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/Gate to nearest CR.gif",
       "title": "Main Gate",
-      "responseText": "Here is the way from Main Gate to nearest comfort room in campus",
+      "responseText": "Here is the way from Main Gate to nearest comfort room in PUP Lopez",
       "speakVoice": ""
     },
     "admission": {
@@ -78,7 +78,7 @@
       "speakVoice": ""
     },
     "ecopark": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/EcoPark to GymCr.gif",
       "title": "Eco Park",
       "responseText": "Here is the way from Eco Park to nearest comfort room in campus",
       "speakVoice": ""

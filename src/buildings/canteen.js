@@ -1,5 +1,5 @@
 // CanteenButton.js
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,11 +18,14 @@ import engineer from '../areaImage/Engineering Building.webp';
 import hospitality from '../areaImage/HM _ Plant Lab.webp';
 import ecopark from '../areaImage/eco park.webp';
 
+import voiceCanteen from '../speakText/canteen.mp3';
+
 function CanteenButton() {
   const [isActive, setIsActive] = useState(false);
   const [imageURL, setImageURL] = useState('');
   const [currentButton, setCurrentButton] = useState('');
   const [responses, setResponses] = useState({});
+  const canteenAudio = useMemo(() => new Audio(voiceCanteen), []);  
 
   useEffect(() => {
     // Import the responses JSON file dynamically
@@ -30,8 +33,10 @@ function CanteenButton() {
       .then((responseModule) => setResponses(responseModule.default))
       .catch((error) => console.error('Error loading responses:', error));
 
+      canteenAudio.play();
+
       window.scrollTo(0, 0);
-  }, []);
+  }, [canteenAudio]);
 
   const fetchImageURL = useCallback(async () => {
     if (currentButton && currentButton.clickedImage) {
@@ -50,7 +55,12 @@ function CanteenButton() {
     const buttonData = responses[button];
     setCurrentButton(responses[button]);
     setIsActive(true);
-    
+
+    if (canteenAudio) {
+      canteenAudio.pause();
+      canteenAudio.currentTime = 0;
+    }
+
     if (buttonData.speakVoice) {
       playAudio(buttonData.speakVoice);
     }

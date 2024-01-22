@@ -72,7 +72,7 @@
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceNantes%2FHM%20to%20Nantes.mp3?alt=media&token=e7e9ae6e-a3f5-4696-882c-d99e0519a4f5"
     },
     "ecopark": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingNantes/EcoPark to Nantes.gif",
       "title": "Eco Park",
       "responseText": "Here is the way from Eco Park to Accounting and Marketing Building. Below the map are the Offices, Faculty and Room located at Acounting and Marketing Building",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceNantes%2FEcoPark%20to%20Nantes.mp3?alt=media&token=ceb38e69-26f1-4064-a5de-947e0bf50a25"

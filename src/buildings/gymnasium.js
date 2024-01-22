@@ -1,5 +1,5 @@
 // CanteenButton.js
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo} from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,11 +18,14 @@ import engineer from '../areaImage/Engineering Building.webp';
 import hospitality from '../areaImage/HM _ Plant Lab.webp';
 import ecopark from '../areaImage/eco park.webp';
 
+import voiceGym from '../speakText/gym.mp3';
+
 function GymButton() {
   const [isActive, setIsActive] = useState(false);
   const [imageURL, setImageURL] = useState('');
   const [currentButton, setCurrentButton] = useState('');
   const [responses, setResponses] = useState({});
+  const gymAudio = useMemo(() => new Audio(voiceGym), []);  
 
   useEffect(() => {
     // Import the responses JSON file dynamically
@@ -30,8 +33,10 @@ function GymButton() {
       .then((responseModule) => setResponses(responseModule.default))
       .catch((error) => console.error('Error loading responses:', error));
 
+      gymAudio.play();
+
       window.scrollTo(0, 0);
-  }, []);
+  }, [gymAudio]);
 
   const fetchImageURL = useCallback(async () => {
     if (currentButton && currentButton.clickedImage) {
@@ -51,6 +56,11 @@ function GymButton() {
     const buttonData = responses[button];
     setCurrentButton(responses[button]);
     setIsActive(true);
+
+    if (gymAudio) {
+      gymAudio.pause();
+      gymAudio.currentTime = 0;
+    }
     
     if (buttonData.speakVoice) {
       playAudio(buttonData.speakVoice);

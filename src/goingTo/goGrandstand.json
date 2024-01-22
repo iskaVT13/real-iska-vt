@@ -72,7 +72,7 @@
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FHM%20to%20Grandstand.mp3?alt=media&token=49ce4c1c-bc62-4f69-83ac-1285f2c1757c"
     },
     "ecopark": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/EcoPark to Grandstand.gif",
       "title": "Eco Park",
       "responseText": "Here is the way from Eco Park to Grandstand",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FEcoPark%20to%20Grandstand.mp3?alt=media&token=4ac5ebd4-4588-4be8-b10a-e5e5539c9983"

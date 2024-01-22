@@ -1,5 +1,5 @@
 // CanteenButton.js
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo} from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,20 +18,25 @@ import education from '../areaImage/Educ Bldg.webp';
 import engineer from '../areaImage/Engineering Building.webp';
 import hospitality from '../areaImage/HM _ Plant Lab.webp';
 
+import voiceEcopark from '../speakText/eco.mp3';
+
 function EcoParkButton() {
   const [isActive, setIsActive] = useState(false);
   const [imageURL, setImageURL] = useState('');
   const [currentButton, setCurrentButton] = useState('');
   const [responses, setResponses] = useState({});
+  const ecoparkAudio = useMemo(() => new Audio(voiceEcopark), []);  
 
   useEffect(() => {
     // Import the responses JSON file dynamically
     import('../goingTo/goEcoPark.json')
       .then((responseModule) => setResponses(responseModule.default))
       .catch((error) => console.error('Error loading responses:', error));
+      
+      ecoparkAudio.play();
 
       window.scrollTo(0, 0);
-  }, []);
+  }, [ecoparkAudio]);
 
   const fetchImageURL = useCallback(async () => {
     if (currentButton && currentButton.clickedImage) {
@@ -51,6 +56,11 @@ function EcoParkButton() {
     const buttonData = responses[button];
     setCurrentButton(responses[button]);
     setIsActive(true);
+
+    if (ecoparkAudio) {
+      ecoparkAudio.pause();
+      ecoparkAudio.currentTime = 0;
+    }
     if (buttonData.speakVoice) {
       playAudio(buttonData.speakVoice);
     }

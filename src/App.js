@@ -66,45 +66,7 @@ import Vr from './VRtour';
 import suggestionsData from './fileJSON/filter.json';
 
 import ErrorComponent from './error';
-
-//ISKA will speak
-import speakHello from '././speakText/hello.mp3';
-import speakISKAdo from './speakText/doISKA.mp3';
-import speakAbout from './speakText/aboutPUP.mp3';
-import speakBachelor from './speakText/bachelor.mp3';
-import speakDiploma from './speakText/diploma.mp3';
-import speakGrad from './speakText/grad.mp3';
 import speakError from './speakText/error.mp3';
-import speakMission from './speakText/mission.mp3';
-import speakCourses from './speakText/courses.mp3';
-import speakHistory from './speakText/history.mp3';
-import speakHymn from './speakText/hymn.mp3';
-import speakLister from './speakText/lister.mp3';
-import speakMoral from './speakText/moral.mp3';
-//Enrollment 
-import speakEnroll from './speakText/enrollment.mp3';
-import speakRegular from './speakText/regular.mp3';
-import speakIrregular from './speakText/irregular.mp3';
-import speakFreshmen from './speakText/freshmen.mp3';
-import speakTransferee from './speakText/transferee.mp3';
-//BUILDINGS
-import speakAdmin from './speakText/admin.mp3';
-import speakCanteen from './speakText/canteen.mp3';
-import speakYumul from './speakText/yumul.mp3';
-import speakLab1 from './speakText/lab1.mp3';
-import speakLab2 from './speakText/lab2.mp3';
-import speakScience from './speakText/science.mp3';
-import speakEngineering from './speakText/engineering.mp3';
-import speakEduc from './speakText/educ.mp3';
-import speakNantes from './speakText/nantes.mp3';
-import speakEco from './speakText/eco.mp3';
-import speakGrandstand from './speakText/grandstand.mp3';
-import speakGym from './speakText/gym.mp3';
-import speakHM from './speakText/hospitality.mp3';
-import speakCr from './speakText/cr.mp3';
-
-
-
 
 // Function for the searchInput 
 function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden, onSuggestionClick}) {
@@ -473,8 +435,6 @@ const handleEnrollButtonClick = () => {
   setYearButtonVisible(true);
   setResetButtonVisible(true);
   setResponseDisplayed(true);
-  setCurrentSpeak(speakEnroll);
-  setPlayAudio(true);
     
 const hideAvatar = document.querySelectorAll('.avatar-container');
   hideAvatar.forEach((element) => {
@@ -491,8 +451,6 @@ const handleAboutPUPButtonClick = () => {
   setAboutVisible(true);
   setResetButtonVisible(true);
   setResponseDisplayed(true);
-  setCurrentSpeak(speakAbout);
-  setPlayAudio(true);
 
   const hideAvatar = document.querySelectorAll('.avatar-container');
   hideAvatar.forEach((element) => {
@@ -509,8 +467,6 @@ const handleAdminButtonClick = () => {
   setAdmissionVisible (true);
   setResetButtonVisible(true);
   setResponseDisplayed(true);
-  setCurrentSpeak(speakAdmin);
-  setPlayAudio(true);
 
   const hideMicAndSearch = document.querySelectorAll('.bottom');
   hideMicAndSearch.forEach((element) => {
@@ -532,8 +488,6 @@ const handleGrandButtonClick = () => {
   setGrandStandVisible(true);
   setResetButtonVisible(true);
   setResponseDisplayed(true);
-  setCurrentSpeak(speakGrandstand);
-  setPlayAudio(true);
 
   const hideMicAndSearch = document.querySelectorAll('.bottom');
   hideMicAndSearch.forEach((element) => {
@@ -672,9 +626,6 @@ const handleGrandButtonClick = () => {
       callback:() => {
         resetTranscript();
 
-        setCurrentSpeak(speakHello);
-        setPlayAudio(true);
-
         setResetButtonVisible(true);
         setProgramsButton(false);
 
@@ -770,7 +721,6 @@ const handleGrandButtonClick = () => {
         setResetButtonVisible(true);
         setProgramsButton(false);
 
-
         setAboutResponse(false);
         setAboutVisible(false);
 
@@ -861,8 +811,7 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
         setYearButtonVisible(true);
-        setCurrentSpeak(speakEnroll);
-        setPlayAudio(true);
+
         setResetButtonVisible(true);
 
         setDisplayTextOnScreen(false);
@@ -962,9 +911,6 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript();
 
-        setCurrentSpeak(speakISKAdo);
-        setPlayAudio(true);
-
         setResetButtonVisible(true);
         setProgramsButton(false);
 
@@ -1059,9 +1005,6 @@ const handleGrandButtonClick = () => {
       command: ['About pup', '* about *', '* about', 'about *', '* about pup *', 'about pup *', '* about pup', 'about'],
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
-
-        setCurrentSpeak(speakAbout);
-        setPlayAudio(true);
 
         setResetButtonVisible(true); // Show the reset button after a command is executed
         setAboutVisible(true);
@@ -1166,9 +1109,6 @@ const handleGrandButtonClick = () => {
         resetTranscript(); // Reset the transcript when a command is executed
         setProgramsButton(true);
 
-        setCurrentSpeak(speakCourses);
-        setPlayAudio(true);
-
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setYearButtonVisible(false);
@@ -1266,9 +1206,6 @@ const handleGrandButtonClick = () => {
       command: ['* canteen', '* canteen *', 'canteen', 'canteen *'],
       callback:() => {
         resetTranscript(); // Reset the transcript when a command is executed
-
-        setCurrentSpeak(speakCanteen);
-        setPlayAudio(true);
 
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
@@ -1374,9 +1311,6 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
 
-        setCurrentSpeak(speakScience);
-        setPlayAudio(true);
-
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -1479,9 +1413,6 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
 
-        setCurrentSpeak(speakEngineering);
-        setPlayAudio(true);
-
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -1582,9 +1513,6 @@ const handleGrandButtonClick = () => {
       command: ['* yumul', 'yumul *', '* yumul *', 'yumul', '* 200', '* 201', '* 202', '200', '201', '202'] || [200, 201, 202],
       callback: () => {
         resetTranscript();
-
-        setCurrentSpeak(speakYumul);
-        setPlayAudio(true);
 
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
@@ -1687,9 +1615,6 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript();
 
-        setCurrentSpeak(speakNantes);
-        setPlayAudio(true);
-
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -1790,9 +1715,6 @@ const handleGrandButtonClick = () => {
       command: ['gymnasium', '* gymnasium', '* gymnasium *', 'gymnasium *', 'gym', '* gym', '* gym *', '* gym *', '*gym*'],
       callback: () => {
         resetTranscript();
-        
-        setCurrentSpeak(speakGym);
-        setPlayAudio(true);
 
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
@@ -1895,9 +1817,6 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript();
 
-        setCurrentSpeak(speakGrandstand);
-        setPlayAudio(true);
-
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -1998,9 +1917,6 @@ const handleGrandButtonClick = () => {
       command: ['education', '* education', 'education *', '* education *', 'educ', '* educ', 'educ *', '* educ *', 'public *', '* public', '* public *', '118','117 *','* 117', '118 *', '* 118', '119 *','* 119', '212 *','* 212', '213 *','* 213', '214 *','* 214', '215 *','* 215', 'csc ', '* csc ', '* csc *', '117', '119', '215', '214', '212', '213'] || [212,213,214,215,117,118,119],
       callback: () => {
         resetTranscript();
-
-        setCurrentSpeak(speakEduc);
-        setPlayAudio(true);
 
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
@@ -2103,9 +2019,6 @@ const handleGrandButtonClick = () => {
       command: ['admission', '* admission', 'admission *', '* admission *', 'osas', '* osas', 'osas *', '* osas *', 'cashier', '* cashier', '* cashier *', '* cashier *', 'registrar', '* registrar', ' registrar *', '* registrar *', 'academic ', '* academic', 'academic *', '* academic *', 'director office', '* director office', 'director * office ' ],
       callback: () => {
         resetTranscript();
-
-        setCurrentSpeak(speakAdmin);
-        setPlayAudio(true);
         
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
@@ -2210,9 +2123,6 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript();
 
-        setCurrentSpeak(speakLab1);
-        setPlayAudio(true);
-
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
         setProgramsButton(false);
@@ -2316,9 +2226,6 @@ const handleGrandButtonClick = () => {
         callback: () => {
           resetTranscript();
 
-          setCurrentSpeak(speakLab2);
-          setPlayAudio(true);
-
           setResetButtonVisible(true); // Show the reset button after a command is executed
   
           setProgramsButton(false);
@@ -2421,9 +2328,6 @@ const handleGrandButtonClick = () => {
       command: ['hospitality', '* hospitality', 'hospitality ', ' hospitality ', 'hm', 'kitchen lab', ' kitchen lab','kitchen lab ', " kitchen lab ", ' kitchen ','beverage','*beverage','tissue', 'tissue', 'tissue lab', '* tissue lab ', 'plant',' plant ', 'plant',' plant lab *', '* 100', '* 101', '* 102', '100 *', '101 *', '102 *', '100', '101', '102'] || [100,101,102],
       callback: () => {
         resetTranscript();
-        
-        setCurrentSpeak(speakHM);
-        setPlayAudio(true);
 
         setResetButtonVisible(true); // Show the reset button after a command is executed
 
@@ -2529,9 +2433,6 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript();
 
-        setCurrentSpeak(speakRegular);
-        setPlayAudio(true);
-
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -2633,9 +2534,6 @@ const handleGrandButtonClick = () => {
       command: ['irregular', '* irregular', 'irregular * ', '* irregular *'],
       callback: () => {
         resetTranscript();
-
-        setCurrentSpeak(speakIrregular);
-        setPlayAudio(true);
 
         setResetButtonVisible(true);
 
@@ -2739,9 +2637,6 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript();
 
-        setCurrentSpeak(speakFreshmen);
-        setPlayAudio(true);
-
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -2842,9 +2737,6 @@ const handleGrandButtonClick = () => {
       command: ['transferee', '* transferee', 'transferee * ', '* transferee *'],
       callback: () => {
         resetTranscript();
-
-        setCurrentSpeak(speakTransferee);
-        setPlayAudio(true);
 
         setResetButtonVisible(true);
 
@@ -2947,9 +2839,6 @@ const handleGrandButtonClick = () => {
       command: ['graduation', '* graduation', 'graduation * ', '* graduation *'],
       callback: () => {
         resetTranscript();
-
-        setCurrentSpeak(speakGrad);
-        setPlayAudio(true);
 
         setResetButtonVisible(true);
 
@@ -3054,9 +2943,6 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript();
 
-        setCurrentSpeak(speakBachelor);
-        setPlayAudio(true);
-
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -3160,9 +3046,6 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript();
 
-        setCurrentSpeak(speakDiploma);
-        setPlayAudio(true);
-
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -3265,9 +3148,6 @@ const handleGrandButtonClick = () => {
       callback: () => {
         resetTranscript();
 
-        setCurrentSpeak(speakHistory);
-        setPlayAudio(true);
-
         setResetButtonVisible(true);
 
         setProgramsButton(false);
@@ -3354,11 +3234,6 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
@@ -3369,9 +3244,6 @@ const handleGrandButtonClick = () => {
       command: ['mission', '* mission', 'mission *', '* mission *', 'vision', '* vision', 'vision *', '* vision *'],
       callback: () => {
         resetTranscript();
-
-        setCurrentSpeak(speakMission);
-        setPlayAudio(true);
 
         setResetButtonVisible(true);
 
@@ -3460,11 +3332,6 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
@@ -3475,9 +3342,6 @@ const handleGrandButtonClick = () => {
       command: ['hymn', '* hymn ', 'hymn *', '* hymn *', 'imno', '* imno', 'imno *', '* imno *'],
       callback: () => {
         resetTranscript();
-
-        setCurrentSpeak(speakHymn);
-        setPlayAudio(true);
 
         setResetButtonVisible(true);
 
@@ -3566,11 +3430,6 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
@@ -3581,8 +3440,6 @@ const handleGrandButtonClick = () => {
       command: ['lister', '* lister ', 'lister *', '* lister *', '* PL *'],
       callback: () => {
         resetTranscript();
-        setCurrentSpeak(speakLister);
-        setPlayAudio(true);
 
         setResetButtonVisible(true);
 
@@ -3670,10 +3527,6 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
@@ -3683,10 +3536,7 @@ const handleGrandButtonClick = () => {
     {
       command: ['moral', '* moral', 'moral * ', 'good moral', '* good moral', 'good moral *', '* good moral *'],
       callback: () => {
-        resetTranscript();
-
-        setCurrentSpeak(speakMoral);
-        setPlayAudio(true);
+        resetTranscript();;
 
         setResetButtonVisible(true);
 
@@ -3774,10 +3624,6 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideSuggestions = document.querySelectorAll('.suggestions');
           hideSuggestions.forEach((element) => {
             element.style.display = 'none';
@@ -3788,9 +3634,6 @@ const handleGrandButtonClick = () => {
       command: ['comfort room', '* comfort room', 'comfort room *', '* comfort room *'],
       callback: () => {
         resetTranscript();
-
-        setCurrentSpeak(speakCr);
-        setPlayAudio(true);
 
         setResetButtonVisible(true);
 
@@ -3867,6 +3710,7 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        
 
         const hideList = document.querySelectorAll('.list-result');
         hideList.forEach((element) => {
@@ -3877,14 +3721,10 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
-            element.style.display = 'none';
-          });
+        hideSuggestions.forEach((element) => {
+          element.style.display = 'none';
+        });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
           hideMicAndSearch.forEach((element) => {
             element.style.display = 'none';
@@ -3895,9 +3735,6 @@ const handleGrandButtonClick = () => {
         command: ['Eco Park', '* eco park', 'eco park *', '* eco park *'],
         callback: () => {
           resetTranscript();
-
-          setCurrentSpeak(speakEco);
-          setPlayAudio(true);
 
           setResetButtonVisible(true);
   
@@ -3990,10 +3827,7 @@ const handleGrandButtonClick = () => {
           hideAvatar.forEach((element) => {
             element.style.display = 'none';
           });
-          const textDisplayContainer = document.querySelector('.textOther');
-          while (textDisplayContainer.firstChild) {
-            textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-          }
+
           const hideSuggestions = document.querySelectorAll('.suggestions');
             hideSuggestions.forEach((element) => {
               element.style.display = 'none';

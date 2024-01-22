@@ -1,5 +1,5 @@
 // CanteenButton.js
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,6 +19,8 @@ import engineer from '../areaImage/Engineering Building.webp';
 import hospitality from '../areaImage/HM _ Plant Lab.webp';
 import ecopark from '../areaImage/eco park.webp';
 
+import voiceAdmin from '../speakText/admin.mp3';
+
 function AdmissionButton() {
   const [isActive, setIsActive] = useState(false);
   const [imageURL, setImageURL] = useState('');
@@ -27,7 +29,7 @@ function AdmissionButton() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [directCurrentButton, setDirectionCurrentButton] = useState('');
   const [currentAudio, setCurrentAudio] = useState(null);
-  
+  const adminAudio = useMemo(() => new Audio(voiceAdmin), []);  
 
   useEffect(() => {
     Promise.all([
@@ -42,8 +44,10 @@ function AdmissionButton() {
       })
       .catch((error) => console.error('Error loading responses:', error));
 
+      adminAudio.play();
+
     window.scrollTo(0, 0);
-  }, []);
+  }, [adminAudio]);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -51,11 +55,8 @@ function AdmissionButton() {
 
   const closeModal = () => {
     setIsModalOpen(false);
-
-  
   };
 
-  
   const playAudio = (audioURL) => {
     // Stop the current audio if it's playing
     if (currentAudio) {
@@ -99,6 +100,11 @@ function AdmissionButton() {
     setCurrentButton(responses[button]);
     setIsActive(true);
 
+    if (adminAudio) {
+      adminAudio.pause();
+      adminAudio.currentTime = 0;
+    }
+    
     if (buttonData.speakVoice) {
       playAudio(buttonData.speakVoice);
     }

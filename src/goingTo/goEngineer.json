@@ -73,7 +73,7 @@
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceArchi%2Fhm6.mp3?alt=media&token=92f5db5d-2aa9-4779-b31a-97ba539680d3"
     },
     "ecopark": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingEngineer/EcoPark to Engineering.gif",
       "title": "Eco Park",
       "responseText": "Here is the way from Eco Park to Architecture and Engineering Building. Below the map are the Offices, Faculty and Room located at Engineering and Architecture Building",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceArchi%2Fecopark6.mp3?alt=media&token=fe62d004-bee5-4579-9d0b-f7a4b2609923"

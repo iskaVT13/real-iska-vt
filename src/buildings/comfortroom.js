@@ -1,5 +1,5 @@
 // CanteenButton.js
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,11 +20,15 @@ import engineer from '../areaImage/Engineering Building.webp';
 import hospitality from '../areaImage/HM _ Plant Lab.webp';
 import ecopark from '../areaImage/eco park.webp';
 
+import voiceCr from '../speakText/cr.mp3';
+
 function ComfortRoomButton() {
   const [isActive, setIsActive] = useState(false);
   const [imageURL, setImageURL] = useState('');
   const [currentButton, setCurrentButton] = useState('');
   const [responses, setResponses] = useState({});
+  const [currentAudio, setCurrentAudio] = useState(null);
+  const crAudio = useMemo(() => new Audio(voiceCr), []);  
 
   useEffect(() => {
     // Import the responses JSON file dynamically
@@ -32,8 +36,10 @@ function ComfortRoomButton() {
       .then((responseModule) => setResponses(responseModule.default))
       .catch((error) => console.error('Error loading responses:', error));
 
+      crAudio.play();
+
       window.scrollTo(0, 0);
-  }, []);
+  }, [crAudio]);
 
   const fetchImageURL = useCallback(async () => {
     if (currentButton && currentButton.clickedImage) {
@@ -49,9 +55,31 @@ function ComfortRoomButton() {
     fetchImageURL();
   }, [fetchImageURL]);
 
+  const playAudio = (audioURL) => {
+    // Stop the current audio if it's playing
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
+    // Create and play the new audio
+    const audio = new Audio(audioURL);
+    audio.play();
+    setCurrentAudio(audio);
+  };
+
   const handleImageClick = (button) => {
+    const buttonData = responses[button];
     setCurrentButton(responses[button]);
     setIsActive(true);
+    if (crAudio) {
+      crAudio.pause();
+      crAudio.currentTime = 0;
+    }
+    if (buttonData.speakVoice) {
+      playAudio(buttonData.speakVoice);
+    }
+    
     const hideReset = document.querySelectorAll('.reset-button');
     hideReset.forEach((element) => {
       element.style.display = 'none';
@@ -79,21 +107,6 @@ function ComfortRoomButton() {
      // Scroll to the top
      window.scrollTo(0, 0);
   };
-   // Function to handle text-to-speech synthesis
-   const speakText = (text) => {
-    const synth = window.speechSynthesis;
-    const utterance = new SpeechSynthesisUtterance(text);
-
-    synth.speak(utterance);
-  };
-
-  useEffect(() => {
-    // Ensure that the SpeechSynthesis API is supported
-    if ('speechSynthesis' in window) {
-      // Use speakText function to speak the responseText
-      speakText(currentButton.responseText);
-    }
-  }, [currentButton]);
 
   return (
     <div className="areaImage-container">
