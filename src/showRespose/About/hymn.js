@@ -1,10 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import '../showResponse.css';
 import ReactPlayer from 'react-player';
 
 import hymnAudio from './Imno.mp4';
 
+import voiceHymn from '../../speakText/hymn.mp3'; 
+
 const Hymn = () => {
+
+  const [playVoice, setPlayVoice] = useState(false);
+  const [currentVoice, setCurrentVoice] = useState('');
+  const audioRef = useRef(null); // Add a reference to the audio element
+
+  useEffect(() => {
+    if (playVoice) {
+      const audioPlayer = new Audio(currentVoice);
+      audioRef.current = audioPlayer;
+  
+      audioPlayer.play();
+  
+      audioPlayer.addEventListener('ended', () => {
+        setPlayVoice(false);
+      });
+    }
+  }, [playVoice, currentVoice]);
+  
+  const stopAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0; // Reset the audio to the beginning
+    }
+  };
+
+  useEffect(() => {
+    // Play voiceHymn when the component mounts
+    setCurrentVoice(voiceHymn);
+    setPlayVoice(true);
+  
+    // Cleanup function to stop audio when the component unmounts
+    return () => {
+      stopAudio();
+    };
+  }, []);
 
   window.scrollTo(0, 0);
 

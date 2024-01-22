@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
@@ -6,8 +6,43 @@ import step5 from '../Enroll/enrollPicture/Irregular/step5.jpg';
 import step6 from '../Enroll/enrollPicture/Irregular/step6-1.jpeg';
 import stepsix from '../Enroll/enrollPicture/Irregular/step6-2.jpg';
 
+import voiceIrregular from '../../speakText/irregular.mp3'; 
 
 const Irregular = () => {
+  const [playVoice, setPlayVoice] = useState(false);
+  const [currentVoice, setCurrentVoice] = useState('');
+  const audioRef = useRef(null); // Add a reference to the audio element
+
+  useEffect(() => {
+    if (playVoice) {
+      const audioPlayer = new Audio(currentVoice);
+      audioRef.current = audioPlayer;
+  
+      audioPlayer.play();
+  
+      audioPlayer.addEventListener('ended', () => {
+        setPlayVoice(false);
+      });
+    }
+  }, [playVoice, currentVoice]);
+    
+  const stopAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0; // Reset the audio to the beginning
+    }
+  };
+
+  useEffect(() => {
+    // Play voiceIrregular when the component mounts
+    setCurrentVoice(voiceIrregular);
+    setPlayVoice(true);
+  
+    // Cleanup function to stop audio when the component unmounts
+    return () => {
+      stopAudio();
+    };
+  }, []);
   const justifyText = (text, x, y, maxWidth, lineHeight, pdf) => {
     if (typeof text !== 'string') {
       return;

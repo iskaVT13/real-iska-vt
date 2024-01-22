@@ -29,7 +29,7 @@ a{
 
 .download-button{
     right: 5%;
-    bottom: 10%;
+    bottom: 7em;
     position: fixed;
 }
 .download-button button{
@@ -47,11 +47,21 @@ a{
     background-color: #147932; /* Change the color to your desired hover color */
 
 }
-
+.title{
+    justify-content: center;
+    display: grid;
+    align-items: center;
+}
 .step ul {
+    justify-content: center;
+    align-items: center;
+    display: grid;
     color: white;
-    text-align: justify;
-    padding: 10px;
+    text-align: left;
+    padding: 15px;
+    list-style:square;
+    font-size: 20px;
+
 }
 .lyrics li{
     color: white;

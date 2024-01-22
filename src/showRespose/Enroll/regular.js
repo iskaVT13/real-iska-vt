@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
@@ -9,8 +9,43 @@ import step4 from '../Enroll/enrollPicture/Regular/s4.jpg';
 import step5 from '../Enroll/enrollPicture/Regular/s5.jpg';
 import step8 from '../Enroll/enrollPicture/Regular/s8.jpg';
 
+import voiceRegular from '../../speakText/regular.mp3'; 
 
 const Regular = () => {
+  const [playVoice, setPlayVoice] = useState(false);
+  const [currentVoice, setCurrentVoice] = useState('');
+  const audioRef = useRef(null); // Add a reference to the audio element
+
+  useEffect(() => {
+    if (playVoice) {
+      const audioPlayer = new Audio(currentVoice);
+      audioRef.current = audioPlayer;
+  
+      audioPlayer.play();
+  
+      audioPlayer.addEventListener('ended', () => {
+        setPlayVoice(false);
+      });
+    }
+  }, [playVoice, currentVoice]);
+  
+  const stopAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0; // Reset the audio to the beginning
+    }
+  };
+
+  useEffect(() => {
+    // Play voiceRegular when the component mounts
+    setCurrentVoice(voiceRegular);
+    setPlayVoice(true);
+  
+    // Cleanup function to stop audio when the component unmounts
+    return () => {
+      stopAudio();
+    };
+  }, []);
           
   const justifyText = (text, x, y, maxWidth, lineHeight, pdf) => {
     if (typeof text !== 'string') {
