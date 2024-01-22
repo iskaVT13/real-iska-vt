@@ -7,7 +7,7 @@ import './App.css';
 import iska from './pictures/iska-logo.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMicrophone, faHome, faCircleQuestion, faKeyboard, faPaperPlane, faTimes, faVideo, faClose} from '@fortawesome/free-solid-svg-icons';
+import { faMicrophone, faHome, faCircleQuestion, faKeyboard, faPaperPlane, faTimes, faClose, faVrCardboard} from '@fortawesome/free-solid-svg-icons';
 
 // Get and call the Menu.js 
 import Menu from './Menu/Menu';
@@ -441,8 +441,8 @@ const hideAvatar = document.querySelectorAll('.avatar-container');
     element.style.display = 'none';
           });
 
-          const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+          const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
 };
@@ -457,8 +457,8 @@ const handleAboutPUPButtonClick = () => {
     element.style.display = 'none';
           });
 
-          const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+          const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
 }
@@ -478,8 +478,8 @@ const handleAdminButtonClick = () => {
     element.style.display = 'none';
           });
 
-          const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+          const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
 }
@@ -498,8 +498,8 @@ const handleGrandButtonClick = () => {
     element.style.display = 'none';
           });
 
-          const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+          const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
 }
@@ -614,7 +614,6 @@ const handleGrandButtonClick = () => {
     setVirtualTourOn(!isVirtualTourOn);
     // Optionally, you can update the state here if needed
     setVirtual(!showVirtual);
-
     
   };
   
@@ -702,8 +701,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideList = document.querySelectorAll('.list-result');
@@ -799,8 +798,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
 
@@ -898,8 +897,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
         
@@ -994,8 +993,8 @@ const handleGrandButtonClick = () => {
           element.style.display = 'none';
         });
         
-    const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+    const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
 
@@ -1094,8 +1093,8 @@ const handleGrandButtonClick = () => {
           element.style.display = 'none';
         });
         
-    const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+    const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
 
@@ -1191,8 +1190,8 @@ const handleGrandButtonClick = () => {
           });
         
 
-    const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+    const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideAvatar = document.querySelectorAll('.avatar-container');
@@ -1294,8 +1293,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
             const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -1397,8 +1396,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -1499,8 +1498,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -1600,8 +1599,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -1701,8 +1700,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -1802,8 +1801,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -1903,8 +1902,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -2005,8 +2004,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -2108,8 +2107,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -2210,8 +2209,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -2314,8 +2313,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -2416,8 +2415,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -2524,8 +2523,8 @@ const handleGrandButtonClick = () => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -2626,8 +2625,8 @@ const handleGrandButtonClick = () => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -2727,8 +2726,8 @@ const handleGrandButtonClick = () => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -2829,8 +2828,8 @@ const handleGrandButtonClick = () => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -2932,8 +2931,8 @@ const handleGrandButtonClick = () => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -3035,8 +3034,8 @@ const handleGrandButtonClick = () => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -3137,8 +3136,8 @@ const handleGrandButtonClick = () => {
         while (textDisplayContainer.firstChild) {
           textDisplayContainer.removeChild(textDisplayContainer.firstChild);
         }
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -3234,8 +3233,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -3332,8 +3331,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -3430,8 +3429,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -3527,8 +3526,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -3624,8 +3623,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-          hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
       }
@@ -3721,8 +3720,8 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const hideSuggestions = document.querySelectorAll('.suggestions');
-        hideSuggestions.forEach((element) => {
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+        hideCloseVR.forEach((element) => {
           element.style.display = 'none';
         });
           const hideMicAndSearch = document.querySelectorAll('.bottom');
@@ -3828,8 +3827,8 @@ const handleGrandButtonClick = () => {
             element.style.display = 'none';
           });
 
-          const hideSuggestions = document.querySelectorAll('.suggestions');
-            hideSuggestions.forEach((element) => {
+          const hideCloseVR = document.querySelectorAll('.suggestions');
+            hideCloseVR.forEach((element) => {
               element.style.display = 'none';
             });
         }
@@ -3946,7 +3945,7 @@ const sendTextToCommands = (text) => {
     setSpeechActive(true);
 
      // Set a timer for, let's say, 5 seconds (5000 milliseconds)
-  const timerDuration = 10000;
+  const timerDuration = 5000;
 
   // After the specified time, stop listening
   setTimeout(() => {
@@ -3994,7 +3993,7 @@ const sendTextToCommands = (text) => {
       <div className='right-icon'>
 
       <FontAwesomeIcon className='questions' icon={isQuestionIcon ? faCircleQuestion : faTimes} size="2xl" style={{color: "#ffc800",}} onClick={toggleQuestions} />
-      <FontAwesomeIcon className='virtual' icon={isVirtualTourOn ? faClose : faVideo} size="xl" onClick={toggleVirtualtour}  style={{ color: isVirtualTourOn ? '#ffc800' : '#ffc800' }}/>
+      <FontAwesomeIcon className='virtual' icon={isVirtualTourOn ? faClose : faVrCardboard} size="xl" onClick={toggleVirtualtour}  style={{ color: isVirtualTourOn ? '#ffc800' : '#ffc800' }}/>
 
       {showQuestions && (
         <div className="question-list">

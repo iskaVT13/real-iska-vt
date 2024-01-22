@@ -159,6 +159,17 @@ color: white;
 
 }
 
+.close-vt{
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  color: #ffffff;
+  top: -3em;
+  left: -0.5em;
+  font-size: 20px;
+}
+
 .reset-button{
   position: fixed;
   display: flex;
@@ -193,11 +204,11 @@ color: white;
   top: 0;
   white-space: pre-line;
   color: rgb(255, 255, 255);
-  overflow:scroll;
+  overflow:auto;
   padding: 5px;
   line-height: 1.5; /* Adjust this value to control the line spacing */
   z-index: 50;
-  height: 200vh;
+  height: 118em;
   text-align: center;
 }
 
@@ -349,6 +360,7 @@ input {
 }
 
 .suggestions{
+  justify-content: flex-start;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -357,7 +369,8 @@ input {
     top: 67%;
     width: 100%;
     padding: 10px;
-    overflow-y: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .suggestions button{

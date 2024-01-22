@@ -38,6 +38,7 @@
     font-size: 20px;
     color:#ffffff;
     transition: 0.3s;
+    z-index: 105;
 }
   
 .sidebar a:hover {
@@ -60,7 +61,7 @@
  .sidebar a .icon {
     color: #f0c908;
     margin-right: 25px;
-    margin-left: 16px;
+    margin-left: .3em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,8 +70,7 @@
 }
   
 .sidebar a .name {
-    font-size: 1rem;
-    margin-left: 10px;
+    font-size: 15px;
 }
 
 .close-btn {
@@ -121,8 +121,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 500px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
     background-color: #7E0001;
     padding: 20px;
     border-radius: 5px;
@@ -142,10 +142,10 @@
 
 .close {
     cursor: pointer;
-    color: #c59595;
+    color: #ffffff;
     position: absolute;
     top: 8px;
-    right: 10px;
+    left: 10px;
     z-index: 9999;
 }
 
@@ -215,6 +215,7 @@ button:hover .icon {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow: auto;
 }
 
 .popup-title {
@@ -224,16 +225,24 @@ button:hover .icon {
     font-size: 24px;
     font-family: Geneva, Tahoma, sans-serif;
     text-align: center;
+    align-items: center;
+}
+
+.common-frame{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
 }
 
 .popup-content-container {
     display: flex;
-    font-size: 15px;
-    max-height: calc(100% - 250px);
-    overflow-y: auto;
-    padding: 20px;
-    height: 650px;
-    width: 290px;
+    font-size: 17px;
+    overflow: auto;
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
     text-align:justify;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
@@ -245,6 +254,13 @@ button:hover .icon {
     &::-webkit-scrollbar-thumb {
         background-color: transparent;
     }
+}
+
+.virtual-container{
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    top: 3em;
 }
 
 .image-container {
@@ -275,9 +291,9 @@ button:hover .icon {
 }
 
 .map-image {
-    width: 10vh;
-    height: auto;
-    object-fit: scale-down; 
+    position: relative;
+    width: 100%;
+    height: 100%;
     transition: transform 0.3s;
 }
 

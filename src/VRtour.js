@@ -1,9 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import jsonData from './fileJSON/directionsBuilding.json';
-
-const MyIframeComponent = () => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+const MyIframeComponent = ({ closeIframeComponent }) => {
   const [audioSrc, setAudioSrc] = useState(null);
+  const handleClose = () => {
+    // Add any additional logic to handle closing the virtual tour modal
+    // This function will be called when the close button is clicked
+    closeIframeComponent(); // Assuming closeIframeComponent is defined in Menu.js
+  };
 
   useEffect(() => {
     // Extract the MP3 URL from the imported JSON
@@ -13,7 +19,7 @@ const MyIframeComponent = () => {
 
   const iframeStyles = {
     width: '100%',
-    height: '600px',
+    height: '600px',  
     border: 'none',
     maxWidth: '100%',
   };
@@ -25,6 +31,11 @@ const MyIframeComponent = () => {
 
   return (
     <div className='vr-container'>
+{closeIframeComponent && (
+        <div className="close-vt" onClick={handleClose}>
+          <FontAwesomeIcon icon={faXmark} size="xl" />
+        </div>
+      )}
     <iframe
       title="Embedded Content"
       width="100%"

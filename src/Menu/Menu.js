@@ -1,11 +1,15 @@
 import React, { useState, useRef } from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark, faMapLocationDot, faBell, faCircleQuestion, faCircleInfo, faBuilding, faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faMapLocationDot, faBell, faCircleQuestion, faCircleInfo, faBuilding, faPeopleGroup, faBook, faVrCardboard} from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 import pupMap from '../pictures/map.jpg';
 import iskalogo from '../pictures/iska-logo.png';
 import contentMapping from '../fileJSON/directionsBuilding.json';
+
+import { Document, Page } from 'react-pdf'; // Import the necessary PDF dependencies
+import MyIframeComponent from '../VRtour'; // Update the path as needed
+
 
 Modal.setAppElement('#root');
 
@@ -18,6 +22,7 @@ const customMapModalStyles = {
   overlay: {backgroundColor: 'rgba(0, 0, 0, 0.5)',},
   content: {border: 'none', padding: '0', position: 'relative',},
 };
+
 function Menu() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [popupContent, setPopupContent] = useState(null);
@@ -28,6 +33,26 @@ function Menu() {
   const audioRef = useRef(null); 
   const maxZoomLevel = 2;
   const mapRef = useRef(null);
+  const [pdfPopupOpen, setPdfPopupOpen] = useState(false);
+  const [iframeComponentOpen, setIframeComponentOpen] = useState(false);
+
+const openIframeComponent = () => {
+  setIframeComponentOpen(true);
+  
+};
+
+const closeIframeComponent = () => {
+  setIframeComponentOpen(false);
+};
+
+
+  const openPdfPopup = () => {
+    setPdfPopupOpen(true);
+  };
+
+  const closePdfPopup = () => {
+    setPdfPopupOpen(false);
+  };
 
   const playAudio = (content) => {
     const audio = new Audio(contentMapping[content]); 
@@ -110,28 +135,37 @@ function Menu() {
         </div>
 
         <div className="option-buttons">
+        <a href="#" onClick={openPdfPopup}>
+          <div className="option-item">
+            <div className="icon">
+              <FontAwesomeIcon icon={faBook} size="2x" />
+            </div>
+            <div className="name">PUP Student Handbook</div>
+          </div>
+        </a>
         <a href="#" onClick={() => openPopup("Map")}>
             <div className="option-item">
               <div className="icon">
                 <FontAwesomeIcon icon={faMapLocationDot} size="2x" />
               </div>
-              <div className="name">Map</div>
+              <div className="name">PUP Lopez Map</div>
             </div>
           </a>
+          <a href="#" onClick={openIframeComponent}>
+  <div className="option-item">
+    <div className="icon">
+      {/* Replace with the desired icon */}
+      <FontAwesomeIcon icon={faVrCardboard} size="2x" />
+    </div>
+    <div className="name">Virtual Tour</div>
+  </div>
+</a>
           <a href="#" onClick={() => openPopup("Reminders")}>
             <div className="option-item">
               <div className="icon">
                 <FontAwesomeIcon icon={faBell} size="2x" />
               </div>
               <div className="name">Reminders</div>
-            </div>
-          </a>
-          <a href="#" onClick={() => openPopup("Help")}>
-            <div className="option-item">
-              <div className="icon">
-                <FontAwesomeIcon icon={faCircleQuestion} size="2x" />
-              </div>
-              <div className="name">Help</div>
             </div>
           </a>
           <a href="#" onClick={() => openPopup("Information")}>
@@ -158,6 +192,14 @@ function Menu() {
               <div className="name">Faculty</div>
             </div>
           </a>
+          <a href="#" onClick={() => openPopup("Help")}>
+            <div className="option-item">
+              <div className="icon">
+                <FontAwesomeIcon icon={faCircleQuestion} size="2x" />
+              </div>
+              <div className="name">Help</div>
+            </div>
+          </a>
         </div>
       </div>
       <div className="overlay" onClick={() => setMenuIsOpen(false)}></div>
@@ -166,14 +208,14 @@ function Menu() {
         <PopupFrame content={popupContent} onClose={closePopup} />
       )}
 
+
       {mapPopupOpen && (
         <Modal
           className="common-frame"
           isOpen={true}
           onRequestClose={closePopup}
           contentLabel="Map Modal"
-          style={customMapModalStyles}
-        >
+          style={customMapModalStyles}>
           <div className="popup-title">
             <span>PUP LOPEZ MAP</span>
           </div>
@@ -183,12 +225,11 @@ function Menu() {
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
-            onWheel={handlePinch}
-          >
+            onWheel={handlePinch}>
             <div className="map-popup-content">
               <div className="image-container">
                 <img ref={mapRef} src={pupMap} alt="PUP Map" className="map-image"
-                  style={{width: '100%', height: 'auto', transform: `scale(${zoomLevel})`, objectFit: 'scale-down',}}
+                  style={{width: '100%', height: '100%', transform: `scale(${zoomLevel})`, objectFit: 'scale-down',}}
                 />
               </div>
             </div>
@@ -196,6 +237,47 @@ function Menu() {
           <div className="text">2023 | ISKA | PUP Lopez Quezon</div>
         </Modal>
       )}
+       {pdfPopupOpen && (
+        <Modal
+          className="common-frame"
+          isOpen={true}
+          onRequestClose={closePdfPopup}
+          contentLabel="PDF Viewer Modal"
+          style={customModalStyles}>
+          <div className="popup-title">
+            <span>PDF Viewer</span>
+          </div>
+          <FontAwesomeIcon className="close" onClick={closePdfPopup} icon={faXmark} size="2x" />
+          <div className="popup-content">
+            {/* PDF viewer content */}
+            <Document
+              file="../PUP-Student-Handbook.pdf" // Replace with the path to your PDF file
+              onLoadSuccess={() => console.log('PDF loaded successfully')}
+            >
+              <Page pageNumber={1} />
+            </Document>
+          </div>
+          <div className="text">2023 | ISKA | PUP Lopez Quezon</div>
+        </Modal>
+      )}
+      {iframeComponentOpen && (
+  <Modal
+  
+    className="common-frame"
+    isOpen={true}
+    onRequestClose={closeIframeComponent}
+    contentLabel="Virtual Tour Modal"
+    style={customModalStyles}
+  >
+    <div className='virtual-container'>
+    <MyIframeComponent  closeIframeComponent={closeIframeComponent} />
+
+    </div>
+
+  </Modal>
+)}
+
+      {/* ... (existing code) */}
     </div>
   );
 }
