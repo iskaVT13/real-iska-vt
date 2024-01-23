@@ -251,7 +251,7 @@ const closeIframeComponent = () => {
           <div className="popup-content">
             {/* PDF viewer content */}
             <Document
-              file="../PUP-Student-Handbook.pdf" // Replace with the path to your PDF file
+              file={require('./StudentHandbook.pdf')} 
               onLoadSuccess={() => console.log('PDF loaded successfully')}
             >
               <Page pageNumber={1} />
@@ -276,7 +276,6 @@ const closeIframeComponent = () => {
     <MyIframeComponent  closeIframeComponent={closeIframeComponent} />
 
     </div>
-    <div className="text">2023 | ISKA | PUP Lopez Quezon</div>
 
   </Modal>
 )}
