@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/real-iska-vt/static/css/main.e7ae2c51.css",
-    "main.js": "/real-iska-vt/static/js/main.4c734714.js",
+    "main.css": "/real-iska-vt/static/css/main.765485c8.css",
+    "main.js": "/real-iska-vt/static/js/main.6e8bf67f.js",
     "static/js/498.fcaf40d7.chunk.js": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js",
     "static/js/703.59b532f8.chunk.js": "/real-iska-vt/static/js/703.59b532f8.chunk.js",
     "static/js/379.06dbaa89.chunk.js": "/real-iska-vt/static/js/379.06dbaa89.chunk.js",
@@ -31,7 +31,7 @@
     "static/js/231.9d6e206b.chunk.js": "/real-iska-vt/static/js/231.9d6e206b.chunk.js",
     "static/js/341.ce1d992e.chunk.js": "/real-iska-vt/static/js/341.ce1d992e.chunk.js",
     "static/js/520.2ea0615f.chunk.js": "/real-iska-vt/static/js/520.2ea0615f.chunk.js",
-    "static/js/154.fc01fc73.chunk.js": "/real-iska-vt/static/js/154.fc01fc73.chunk.js",
+    "static/js/154.4330475a.chunk.js": "/real-iska-vt/static/js/154.4330475a.chunk.js",
     "static/media/Imno.mp4": "/real-iska-vt/static/media/Imno.21b3beaa20d42284cf9e.mp4",
     "static/media/HM _ Plant Lab.webp": "/real-iska-vt/static/media/HM _ Plant Lab.9f272765f9b6a2d35a2d.webp",
     "static/media/Lab 1.webp": "/real-iska-vt/static/media/Lab 1.1621c7fe11c67f398e81.webp",
@@ -47,6 +47,7 @@
     "static/media/Nantes.webp": "/real-iska-vt/static/media/Nantes.a763238e02f7b2a26dce.webp",
     "static/media/Yumul Building.webp": "/real-iska-vt/static/media/Yumul Building.8606c9cae70c88499397.webp",
     "static/media/avatar.gif": "/real-iska-vt/static/media/avatar.da7d23b697f6e4fdafef.gif",
+    "static/media/StudentHandbook.pdf": "/real-iska-vt/static/media/StudentHandbook.82b114668574923db62d.pdf",
     "static/media/Lab 2.webp": "/real-iska-vt/static/media/Lab 2.c3a7ee84a80077c041aa.webp",
     "static/media/applyNow2.png": "/real-iska-vt/static/media/applyNow2.ed4edd29b1f0804d21c0.png",
     "static/media/step5.jpg": "/real-iska-vt/static/media/step5.d4cf3cb65fd9ad695386.jpg",
@@ -111,8 +112,8 @@
     "static/media/krona-one-latin-ext-400-normal.woff": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.fb9cd5f06d66cdcda94f.woff",
     "static/media/krona-one-latin-ext-400-normal.woff2": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.01120cafa274a6b13dba.woff2",
     "index.html": "/real-iska-vt/index.html",
-    "main.e7ae2c51.css.map": "/real-iska-vt/static/css/main.e7ae2c51.css.map",
-    "main.4c734714.js.map": "/real-iska-vt/static/js/main.4c734714.js.map",
+    "main.765485c8.css.map": "/real-iska-vt/static/css/main.765485c8.css.map",
+    "main.6e8bf67f.js.map": "/real-iska-vt/static/js/main.6e8bf67f.js.map",
     "498.fcaf40d7.chunk.js.map": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js.map",
     "703.59b532f8.chunk.js.map": "/real-iska-vt/static/js/703.59b532f8.chunk.js.map",
     "379.06dbaa89.chunk.js.map": "/real-iska-vt/static/js/379.06dbaa89.chunk.js.map",
@@ -131,7 +132,7 @@
     "reactPlayerPreview.b3f9eec1.chunk.js.map": "/real-iska-vt/static/js/reactPlayerPreview.b3f9eec1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7ae2c51.css",
-    "static/js/main.4c734714.js"
+    "static/css/main.765485c8.css",
+    "static/js/main.6e8bf67f.js"
   ]
 }
