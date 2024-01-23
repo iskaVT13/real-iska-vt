@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark, faMapLocationDot, faBell, faCircleQuestion, faCircleInfo, faBuilding, faPeopleGroup, faBook, faVrCardboard} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faArrowLeft, faMapLocationDot, faBell, faCircleQuestion, faCircleInfo, faBuilding, faPeopleGroup, faBook, faVrCardboard} from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 import pupMap from '../pictures/map.jpg';
 import iskalogo from '../pictures/iska-logo.png';
@@ -135,23 +135,23 @@ const closeIframeComponent = () => {
         </div>
 
         <div className="option-buttons">
-        <a href="#" onClick={openPdfPopup}>
+        <button onClick={openPdfPopup}>
           <div className="option-item">
             <div className="icon">
               <FontAwesomeIcon icon={faBook} size="2x" />
             </div>
             <div className="name">PUP Student Handbook</div>
           </div>
-        </a>
-        <a href="#" onClick={() => openPopup("Map")}>
+        </button>
+        <button onClick={() => openPopup("Map")}>
             <div className="option-item">
               <div className="icon">
                 <FontAwesomeIcon icon={faMapLocationDot} size="2x" />
               </div>
               <div className="name">PUP Lopez Map</div>
             </div>
-          </a>
-          <a href="#" onClick={openIframeComponent}>
+          </button>
+          <button onClick={openIframeComponent}>
   <div className="option-item">
     <div className="icon">
       {/* Replace with the desired icon */}
@@ -159,47 +159,47 @@ const closeIframeComponent = () => {
     </div>
     <div className="name">Virtual Tour</div>
   </div>
-</a>
-          <a href="#" onClick={() => openPopup("Reminders")}>
+</button>
+          <button onClick={() => openPopup("Reminders")}>
             <div className="option-item">
               <div className="icon">
                 <FontAwesomeIcon icon={faBell} size="2x" />
               </div>
               <div className="name">Reminders</div>
             </div>
-          </a>
-          <a href="#" onClick={() => openPopup("Information")}>
+          </button>
+          <button onClick={() => openPopup("Information")}>
             <div className="option-item">
               <div className="icon">
                 <FontAwesomeIcon icon={faCircleInfo} size="2x" />
               </div>
               <div className="name">Information</div>
             </div>
-          </a>
-          <a href="#" onClick={() => openPopup("Information")}>
+          </button>
+          <button onClick={() => openPopup("Information")}>
             <div className="option-item">
               <div className="icon">
                 <FontAwesomeIcon icon={faBuilding} size="2x" />
               </div>
               <div className="name">Buildings</div>
             </div>
-          </a>
-          <a href="#" onClick={() => openPopup("Information")}>
+          </button>
+          <button onClick={() => openPopup("Information")}>
             <div className="option-item">
               <div className="icon">
                 <FontAwesomeIcon icon={faPeopleGroup} size="2x" />
               </div>
               <div className="name">Faculty</div>
             </div>
-          </a>
-          <a href="#" onClick={() => openPopup("Help")}>
+          </button>
+          <button onClick={() => openPopup("Help")}>
             <div className="option-item">
               <div className="icon">
                 <FontAwesomeIcon icon={faCircleQuestion} size="2x" />
               </div>
               <div className="name">Help</div>
             </div>
-          </a>
+          </button>
         </div>
       </div>
       <div className="overlay" onClick={() => setMenuIsOpen(false)}></div>
@@ -219,7 +219,7 @@ const closeIframeComponent = () => {
           <div className="popup-title">
             <span>PUP LOPEZ MAP</span>
           </div>
-          <FontAwesomeIcon className="close" onClick={closePopup} icon={faXmark} size="2x" />
+          <FontAwesomeIcon className="close" onClick={closePopup} icon={faArrowLeft} size="xl" />
           <div
             className="popup-content"
             onTouchStart={handleTouchStart}
@@ -229,7 +229,7 @@ const closeIframeComponent = () => {
             <div className="map-popup-content">
               <div className="image-container">
                 <img ref={mapRef} src={pupMap} alt="PUP Map" className="map-image"
-                  style={{width: '100%', height: '100%', transform: `scale(${zoomLevel})`, objectFit: 'scale-down',}}
+                  style={{transform: `scale(${zoomLevel})`, objectFit: 'scale-down',}}
                 />
               </div>
             </div>
@@ -245,9 +245,9 @@ const closeIframeComponent = () => {
           contentLabel="PDF Viewer Modal"
           style={customModalStyles}>
           <div className="popup-title">
-            <span>PDF Viewer</span>
+            <span>PUP STUDENT HANDBOOK</span>
           </div>
-          <FontAwesomeIcon className="close" onClick={closePdfPopup} icon={faXmark} size="2x" />
+          <FontAwesomeIcon className="close" onClick={closePdfPopup} icon={faArrowLeft} size="xl" />
           <div className="popup-content">
             {/* PDF viewer content */}
             <Document
@@ -269,10 +269,14 @@ const closeIframeComponent = () => {
     contentLabel="Virtual Tour Modal"
     style={customModalStyles}
   >
+    <div className="popup-title">
+            <span>PUP LOPEZ VIRTUAL TOUR</span>
+          </div>
     <div className='virtual-container'>
     <MyIframeComponent  closeIframeComponent={closeIframeComponent} />
 
     </div>
+    <div className="text">2023 | ISKA | PUP Lopez Quezon</div>
 
   </Modal>
 )}
@@ -293,7 +297,7 @@ function PopupFrame({ content, onClose }) {
       style={customModalStyles}
     >
       <div className="popup-title">{content}</div>
-      <FontAwesomeIcon className="close" onClick={onClose} icon={faXmark} size="2x" />
+      <FontAwesomeIcon className="close" onClick={onClose} icon={faArrowLeft} size="xl" />
       <div className="popup-content">
         <div className={`popup-content-container ${contentClass}`}>
           {content === "Map" && (

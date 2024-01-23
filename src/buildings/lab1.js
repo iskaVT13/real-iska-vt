@@ -86,6 +86,10 @@ function Lab1Button() {
   };
 
   const handleBackButtonClick = () => {
+    if (lab1Audio) {
+      lab1Audio.pause();
+      lab1Audio.currentTime = 0;
+    }
     setCurrentButton('');
     setIsActive(false);
 

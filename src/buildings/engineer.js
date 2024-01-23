@@ -20,7 +20,7 @@ import ecopark from '../areaImage/eco park.webp';
 
 import voiceEngineer from '../speakText/engineering.mp3';
 
-function AdmissionButton() {
+function EngineerButton() {
   const [isActive, setIsActive] = useState(false);
   const [imageURL, setImageURL] = useState('');
   const [currentButton, setCurrentButton] = useState('');
@@ -54,6 +54,10 @@ function AdmissionButton() {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
   };
 
   const playAudio = (audioURL) => {
@@ -120,6 +124,10 @@ function AdmissionButton() {
   };
 
   const handleBackButtonClick = () => {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
     setCurrentButton('');
     setIsActive(false);
 
@@ -127,6 +135,8 @@ function AdmissionButton() {
     showReset.forEach((element) => {
       element.style.display = '';
     });
+
+    window.scrollTo(0, 0);
     
   };
 
@@ -275,4 +285,4 @@ Room 110
   );
 }
 
-export default AdmissionButton;
+export default EngineerButton;

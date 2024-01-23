@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import jsonData from './fileJSON/directionsBuilding.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 const MyIframeComponent = ({ closeIframeComponent }) => {
   const [audioSrc, setAudioSrc] = useState(null);
   const handleClose = () => {
@@ -33,7 +33,7 @@ const MyIframeComponent = ({ closeIframeComponent }) => {
     <div className='vr-container'>
 {closeIframeComponent && (
         <div className="close-vt" onClick={handleClose}>
-          <FontAwesomeIcon icon={faXmark} size="xl" />
+          <FontAwesomeIcon icon={faArrowLeft} size="xl" />
         </div>
       )}
     <iframe

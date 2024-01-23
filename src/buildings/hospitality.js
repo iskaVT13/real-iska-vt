@@ -54,6 +54,10 @@ function HmButton() {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
   };
 
   const playAudio = (audioURL) => {
@@ -121,6 +125,10 @@ function HmButton() {
   };
 
   const handleBackButtonClick = () => {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
     setCurrentButton('');
     setIsActive(false);
 

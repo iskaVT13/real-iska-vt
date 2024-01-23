@@ -86,6 +86,10 @@ function EcoParkButton() {
   };
 
   const handleBackButtonClick = () => {
+    if (ecoparkAudio) {
+      ecoparkAudio.pause();
+      ecoparkAudio.currentTime = 0;
+    }
     setCurrentButton('');
     setIsActive(false);
 

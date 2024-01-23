@@ -20,7 +20,7 @@ import ecopark from '../areaImage/eco park.webp';
 
 import voiceYumul from '../speakText/yumul.mp3';
 
-function AdmissionButton() {
+function YumulButton() {
   const [isActive, setIsActive] = useState(false);
   const [imageURL, setImageURL] = useState('');
   const [currentButton, setCurrentButton] = useState('');
@@ -53,6 +53,10 @@ function AdmissionButton() {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
   };
 
   const playAudio = (audioURL) => {
@@ -120,6 +124,10 @@ function AdmissionButton() {
   };
 
   const handleBackButtonClick = () => {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
     setCurrentButton('');
     setIsActive(false);
 
@@ -127,6 +135,8 @@ function AdmissionButton() {
     showReset.forEach((element) => {
       element.style.display = '';
     });
+
+    window.scrollTo(0, 0);
     
   };
 
@@ -240,4 +250,4 @@ ICTO or ICT Office
   );
 }
 
-export default AdmissionButton;
+export default YumulButton;

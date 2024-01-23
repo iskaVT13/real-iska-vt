@@ -30,38 +30,39 @@
     left: 0;
 }
   
-.sidebar a {
+.sidebar button{
     display: flex;
     align-items: center;
-    padding: 25px;
+    padding: 15px;
     text-decoration: none;
     font-size: 20px;
     color:#ffffff;
     transition: 0.3s;
     z-index: 105;
+    width: max-content;
 }
   
-.sidebar a:hover {
+.sidebar button:hover {
     background-color: #ab0303;
     color: #ffc800;
     font-weight: bold;
-    padding: 25px 37px;
-    height: 86px;
+    padding: 20px;
+    width: 100%;
  }
 
- .sidebar a:hover .icon {
-    font-size: 22px;
+ .sidebar button:hover .icon {
+    font-size: 15px;    
 }
 
- .sidebar a .option-item {
+ .sidebar button .option-item {
     align-items: center;
     display: flex;
  }
 
- .sidebar a .icon {
+ .sidebar button .icon {
     color: #f0c908;
     margin-right: 25px;
-    margin-left: .3em;
+    margin-left: .5em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +70,7 @@
     font-size: 15px;
 }
   
-.sidebar a .name {
+.sidebar button .name {
     font-size: 15px;
 }
 
@@ -260,7 +261,7 @@ button:hover .icon {
     padding: 10px;
     width: 100%;
     position: relative;
-    top: 3em;
+    top: -2em;
 }
 
 .image-container {
@@ -285,9 +286,11 @@ button:hover .icon {
 }
 
 .map-popup-content {
-    padding: 20px;
+    position: relative;
+    top: 3em;
+    padding: 10px;
     height: 600px;
-    width: 300px;
+    width: 340px;
 }
 
 .map-image {

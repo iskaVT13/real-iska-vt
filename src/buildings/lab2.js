@@ -83,6 +83,10 @@ function Lab2Button() {
   };
 
   const handleBackButtonClick = () => {
+    if (lab2Audio) {
+      lab2Audio.pause();
+      lab2Audio.currentTime = 0;
+    }
     setCurrentButton('');
     setIsActive(false);
 
@@ -93,22 +97,6 @@ function Lab2Button() {
      // Scroll to the top
      window.scrollTo(0, 0);
   };
-
-   // Function to handle text-to-speech synthesis
-   const speakText = (text) => {
-    const synth = window.speechSynthesis;
-    const utterance = new SpeechSynthesisUtterance(text);
-
-    synth.speak(utterance);
-  };
-
-  useEffect(() => {
-    // Ensure that the SpeechSynthesis API is supported
-    if ('speechSynthesis' in window) {
-      // Use speakText function to speak the responseText
-      speakText(currentButton.responseText);
-    }
-  }, [currentButton]);
 
   return (
     <div className="areaImage-container">

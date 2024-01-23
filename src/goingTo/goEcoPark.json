@@ -1,6 +1,6 @@
 {
     "gate": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/Gate to Eco Park.gif",
       "title": "Main Gate",
       "responseText": "Here is the way from Main gate to Eco Park",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FGate%20to%20EcoPark.mp3?alt=media&token=48f064bd-2cab-45b6-b6e2-ea50b0f482ae"
@@ -62,11 +62,11 @@
     "education": {
       "clickedImage": "",
       "title": "Education Building",
-      "responseText": "Here is the way from Education Building to Eco Park",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FEduc%20to%20EcoPark.mp3?alt=media&token=e9c891a3-053b-4733-8fc5-0b3cfe8d4311"
+      "responseText": "The Eco park is in front of the Education and Public Administration Building ",
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2Feductoeco.mp3?alt=media&token=9b34088a-82ca-42a7-93b9-bd93533d7a5e"
     },
     "science": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/science to ecopark.gif",
       "title": "Science Building",
       "responseText": "Here is the way from Science Building to Eco Park",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FHealth%20to%20EcoPark.mp3?alt=media&token=9b7c96f7-86ea-4a7e-8c5f-029e01c1478b"

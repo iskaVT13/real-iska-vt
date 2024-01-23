@@ -55,6 +55,10 @@ function AdmissionButton() {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
   };
 
   const playAudio = (audioURL) => {
@@ -128,6 +132,11 @@ function AdmissionButton() {
 
   
   const handleBackButtonClick = () => {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+  
     setCurrentButton('');
     setIsActive(false);
     
@@ -135,6 +144,8 @@ function AdmissionButton() {
     showReset.forEach((element) => {
       element.style.display = '';
     });
+    window.scrollTo(0, 0);
+
     
   };
 

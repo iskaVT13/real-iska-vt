@@ -85,6 +85,10 @@ function CanteenButton() {
   };
 
   const handleBackButtonClick = () => {
+    if (canteenAudio) {
+      canteenAudio.pause();
+      canteenAudio.currentTime = 0;
+    }
     setCurrentButton('');
     setIsActive(false);
 

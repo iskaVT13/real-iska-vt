@@ -85,6 +85,10 @@ function GymButton() {
   };
 
   const handleBackButtonClick = () => {
+    if (gymAudio) {
+      gymAudio.pause();
+      gymAudio.currentTime = 0;
+    }
     setCurrentButton('');
     setIsActive(false);
 
