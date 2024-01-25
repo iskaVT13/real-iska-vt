@@ -67,6 +67,8 @@ import suggestionsData from './fileJSON/filter.json';
 
 import ErrorComponent from './error';
 import speakError from './speakText/error.mp3';
+import helloIska from './speakText/hello.mp3';
+import iskaDo from './speakText/doISKA.mp3';
 
 // Function for the searchInput 
 function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden, onSuggestionClick}) {
@@ -621,9 +623,11 @@ const handleGrandButtonClick = () => {
   // All the command user can ask for ISKA 
   const commands = [
     {
-      command: ['* hi','hi *', 'hello', 'hey', '* hello *', '* hello', 'hello *'],
+      command: ['* hi','hi *', 'hello', 'hey', '* hello *', '* hello', 'hello *', 'who are you', '* you'],
       callback:() => {
         resetTranscript();
+        setCurrentSpeak(helloIska);
+        setPlayAudio(true);
 
         setResetButtonVisible(true);
         setProgramsButton(false);
@@ -909,6 +913,8 @@ const handleGrandButtonClick = () => {
       command: ['* do *', '* do', 'do *', 'do'],
       callback: () => {
         resetTranscript();
+        setCurrentSpeak(iskaDo);
+        setPlayAudio(true);
 
         setResetButtonVisible(true);
         setProgramsButton(false);
@@ -2926,11 +2932,6 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideCloseVR = document.querySelectorAll('.suggestions');
           hideCloseVR.forEach((element) => {
             element.style.display = 'none';
@@ -3338,7 +3339,7 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-      command: ['hymn', '* hymn ', 'hymn *', '* hymn *', 'imno', '* imno', 'imno *', '* imno *'],
+      command: ['* hymn', 'hymn *', '* hymn *', 'imno', '* imno', 'imno *', '* imno *'],
       callback: () => {
         resetTranscript();
 
@@ -3436,7 +3437,7 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-      command: ['lister', '* lister ', 'lister *', '* lister *', '* PL *'],
+      command: ['* lister'],
       callback: () => {
         resetTranscript();
 

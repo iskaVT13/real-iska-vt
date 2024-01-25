@@ -1,14 +1,14 @@
 import React, { useState, useRef } from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark, faArrowLeft, faMapLocationDot, faBell, faCircleQuestion, faCircleInfo, faBuilding, faPeopleGroup, faBook, faVrCardboard} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faArrowLeft, faMapLocationDot, faBell, faCircleQuestion, faBook, faCircleInfo, faPeopleGroup, faVrCardboard, faFilePdf} from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 import pupMap from '../pictures/map.jpg';
 import iskalogo from '../pictures/iska-logo.png';
 import contentMapping from '../fileJSON/directionsBuilding.json';
 
-import { Document, Page } from 'react-pdf'; // Import the necessary PDF dependencies
 import MyIframeComponent from '../VRtour'; // Update the path as needed
+import pdfData from './handbook.json';
 
 
 Modal.setAppElement('#root');
@@ -33,8 +33,37 @@ function Menu() {
   const audioRef = useRef(null); 
   const maxZoomLevel = 2;
   const mapRef = useRef(null);
-  const [pdfPopupOpen, setPdfPopupOpen] = useState(false);
   const [iframeComponentOpen, setIframeComponentOpen] = useState(false);
+  const [pdfLink, setPdfLink] = useState(null);
+const [pdfModalOpen, setPdfModalOpen] = useState(false);
+// ... (Inside the Menu function component)
+const [secondPdfLink, setSecondPdfLink] = useState(null);
+
+// ... (Inside the Menu function component)
+const openSecondPdfModal = () => {
+  // Retrieve the second PDF link from the JSON file
+  setSecondPdfLink(pdfData.secondPdfLink);
+  setPdfModalOpen(true);
+
+  playAudio("UserManual");
+};
+
+const openPdfModal = () => {
+  setPdfLink(pdfData.pdfLink);
+  setPdfModalOpen(true);
+
+  playAudio("handbook");
+};
+
+const closePdfModal = () => {
+  setPdfLink(null);
+  setPdfModalOpen(false);
+
+  if (audioRef.current) {
+    audioRef.current.pause();
+  }
+};
+
 
 const openIframeComponent = () => {
   setIframeComponentOpen(true);
@@ -44,15 +73,6 @@ const openIframeComponent = () => {
 const closeIframeComponent = () => {
   setIframeComponentOpen(false);
 };
-
-
-  const openPdfPopup = () => {
-    setPdfPopupOpen(true);
-  };
-
-  const closePdfPopup = () => {
-    setPdfPopupOpen(false);
-  };
 
   const playAudio = (content) => {
     const audio = new Audio(contentMapping[content]); 
@@ -135,14 +155,14 @@ const closeIframeComponent = () => {
         </div>
 
         <div className="option-buttons">
-        <button onClick={openPdfPopup}>
-          <div className="option-item">
-            <div className="icon">
-              <FontAwesomeIcon icon={faBook} size="2x" />
-            </div>
-            <div className="name">PUP Student Handbook</div>
+        <button onClick={openPdfModal}>
+        <div className="option-item">
+          <div className="icon">
+            <FontAwesomeIcon icon={faBook} size="2x" />
           </div>
-        </button>
+          <div className="name">PUP Student Handbook</div>
+        </div>
+      </button>
         <button onClick={() => openPopup("Map")}>
             <div className="option-item">
               <div className="icon">
@@ -160,6 +180,15 @@ const closeIframeComponent = () => {
     <div className="name">Virtual Tour</div>
   </div>
 </button>
+<button onClick={openSecondPdfModal}>
+  <div className="option-item">
+    <div className="icon">
+      <FontAwesomeIcon icon={faFilePdf} size="2x" />
+    </div>
+    <div className="name">User Manual</div>
+  </div>
+</button>
+
           <button onClick={() => openPopup("Reminders")}>
             <div className="option-item">
               <div className="icon">
@@ -174,14 +203,6 @@ const closeIframeComponent = () => {
                 <FontAwesomeIcon icon={faCircleInfo} size="2x" />
               </div>
               <div className="name">Information</div>
-            </div>
-          </button>
-          <button onClick={() => openPopup("Information")}>
-            <div className="option-item">
-              <div className="icon">
-                <FontAwesomeIcon icon={faBuilding} size="2x" />
-              </div>
-              <div className="name">Buildings</div>
             </div>
           </button>
           <button onClick={() => openPopup("Information")}>
@@ -237,29 +258,6 @@ const closeIframeComponent = () => {
           <div className="text">2023 | ISKA | PUP Lopez Quezon</div>
         </Modal>
       )}
-       {pdfPopupOpen && (
-        <Modal
-          className="common-frame"
-          isOpen={true}
-          onRequestClose={closePdfPopup}
-          contentLabel="PDF Viewer Modal"
-          style={customModalStyles}>
-          <div className="popup-title">
-            <span>PUP STUDENT HANDBOOK</span>
-          </div>
-          <FontAwesomeIcon className="close" onClick={closePdfPopup} icon={faArrowLeft} size="xl" />
-          <div className="popup-content">
-            {/* PDF viewer content */}
-            <Document
-              file={require('./StudentHandbook.pdf')} 
-              onLoadSuccess={() => console.log('PDF loaded successfully')}
-            >
-              <Page pageNumber={1} />
-            </Document>
-          </div>
-          <div className="text">2023 | ISKA | PUP Lopez Quezon</div>
-        </Modal>
-      )}
       {iframeComponentOpen && (
   <Modal
   
@@ -279,8 +277,28 @@ const closeIframeComponent = () => {
 
   </Modal>
 )}
+{pdfModalOpen && (
+  <Modal
+    className="common-frame"
+    isOpen={true}
+    onRequestClose={closePdfModal}
+    contentLabel="PDF Modal"
+    style={customModalStyles}
+  >
+    <div className="popup-title">
+    <span>{pdfLink ? 'PUP Student Handbook' : '"ISKA" User Manual'}</span>
+    </div>
+    <FontAwesomeIcon className="close" onClick={closePdfModal} icon={faArrowLeft} size="xl" />
+    <div className="popup-content">
+      <div className="pdf-content-container">
+        {/* Display the PDF link or embed a PDF viewer */}
+        <iframe title="PDF Viewer" src={pdfLink || secondPdfLink} width="100%" height="100%" frameBorder="0"></iframe>
+      </div>
+    </div>
+    <div className="text">2023 | ISKA | PUP Lopez Quezon</div>
+  </Modal>
+)}
 
-      {/* ... (existing code) */}
     </div>
   );
 }

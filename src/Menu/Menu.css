@@ -8,6 +8,17 @@
     z-index: 99; 
 }
 
+.pdf-content-container{
+    top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 15px;
+    width: 400px;
+    height: 33em;
+}
+
 .menu-open {
     background: rgba(0, 0, 0, 0%);
 }
@@ -140,6 +151,8 @@
     text-align: center;
     
 }
+
+
 
 .close {
     cursor: pointer;

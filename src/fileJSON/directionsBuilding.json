@@ -268,7 +268,9 @@
       "Reminders": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceMenu%2FReminders.mp3?alt=media&token=d90249bc-cfac-4969-85aa-21e492a9d679",
       "Help": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceMenu%2FHelp.mp3?alt=media&token=31185cf9-506d-4a94-bd05-b493eb73ef2e",
       "Information": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceMenu%2FInformation.mp3?alt=media&token=2b2e6ec4-185a-45cd-a53e-793c2d98d83c",
-      "virtualTour": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceMenu%2Fvr.mp3?alt=media&token=0dd970b4-84fe-4f38-b617-325d524f9b29"
+      "virtualTour": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceMenu%2Fvr.mp3?alt=media&token=0dd970b4-84fe-4f38-b617-325d524f9b29",
+      "UserManual": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/pdf%2Fusermanual.mp3?alt=media&token=5e48ce28-70b9-47d2-8495-07f1c0382540",
+      "handbook": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/pdf%2Fhandbook.mp3?alt=media&token=717ae1a9-f5a6-4fd5-9504-6141208da012"
 
 
 

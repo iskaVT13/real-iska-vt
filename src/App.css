@@ -352,6 +352,7 @@ input {
 .transcript{
   color: white;
   position:fixed;
+  top: 87%;
   text-align: center;
   justify-content: center;
   align-items: center;
