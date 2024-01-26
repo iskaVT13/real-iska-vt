@@ -69,6 +69,9 @@ import ErrorComponent from './error';
 import speakError from './speakText/error.mp3';
 import helloIska from './speakText/hello.mp3';
 import iskaDo from './speakText/doISKA.mp3';
+import Director from './showRespose/director';
+import Founded from './showRespose/About/founded';
+import EntranceTest from './showRespose/entranceTest';
 
 // Function for the searchInput 
 function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden, onSuggestionClick}) {
@@ -299,6 +302,10 @@ const [showEcoResponse, setShowEcoResponse] = useState('');
 const [playAudio, setPlayAudio] = useState(false);
 const [currentSpeak, setCurrentSpeak] = useState('');
 const audioRef = useRef(null); // Add a reference to the audio element
+
+const [showDirector, setShowDirector] = useState(false);
+const [showFounded, setShowFounded] = useState(false);
+const [showEntranceTest, setShowEntranceTest] = useState(false);
 
 useEffect(() => {
   if (playAudio) {
@@ -583,6 +590,11 @@ const handleGrandButtonClick = () => {
 
     setShowEcoVisible(false);
     setShowEcoResponse(false);
+    setShowDirector(false);
+    setShowFounded(false);
+    setShowEntranceTest(false);
+
+
 
     const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -623,7 +635,7 @@ const handleGrandButtonClick = () => {
   // All the command user can ask for ISKA 
   const commands = [
     {
-      command: ['* hi','hi *', 'hello', 'hey', '* hello *', '* hello', 'hello *', 'who are you', '* you'],
+      command: ['* hi','hi *', 'hello', 'hey', '* hello *', '* hello', 'hello *'],
       callback:() => {
         resetTranscript();
         setCurrentSpeak(helloIska);
@@ -696,6 +708,9 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);        
 
         setShowAvatar(true);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -788,6 +803,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -887,6 +906,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -984,6 +1007,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1084,6 +1111,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1185,6 +1216,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1285,6 +1320,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1389,6 +1428,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1490,6 +1533,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1591,6 +1638,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1692,6 +1743,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1793,6 +1848,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1894,6 +1953,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1996,6 +2059,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2099,6 +2166,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2201,6 +2272,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2305,6 +2380,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2407,6 +2486,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2511,6 +2594,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
           //ECOPARK
           setShowEcoVisible(false);
@@ -2613,6 +2700,11 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2715,6 +2807,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2815,6 +2911,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2918,6 +3018,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3016,6 +3120,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3118,6 +3226,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3220,6 +3332,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3318,6 +3434,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3416,6 +3536,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3513,6 +3637,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3610,6 +3738,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(true);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3710,6 +3842,10 @@ const handleGrandButtonClick = () => {
         setShowGoodmoral(false);
     
         setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+
         
 
         const hideList = document.querySelectorAll('.list-result');
@@ -3812,6 +3948,10 @@ const handleGrandButtonClick = () => {
           setShowGoodmoral(false);
       
           setShowAvatar(false);
+          setShowDirector(false);
+          setShowFounded(false);
+          setShowEntranceTest(false);
+
 
           const hideMicAndSearch = document.querySelectorAll('.bottom');
           hideMicAndSearch.forEach((element) => {
@@ -3833,7 +3973,328 @@ const handleGrandButtonClick = () => {
               element.style.display = 'none';
             });
         }
+        },
+  {
+  command: ['director'],
+  callback: () => {
+    resetTranscript();
+
+          setResetButtonVisible(true);
+  
+          setProgramsButton(false);
+  
+          setYearButtonVisible(false);
+          setSelectedYearResponse(false);
+  
+          setDisplayTextOnScreen(false);
+  
+          setAboutVisible(false);
+          setAboutResponse(false);
+  
+          setSelectedProgram(false);
+  
+          setResponseDisplayed(true); // Set responseDisplayed to true
+
+          //CANTEEN
+          setCanteenVisible(false);
+          setCanteenResponse(false);
+          //SCIENCE
+          setScienceVisible(false);
+          setScienceResponse(false);
+          //ENGINEER
+          setEngineerVisible(false);
+          setEngineerResponse(false);
+          //YUMUL
+          setYumulVisible(false);
+          setYumulResponse(false);
+          //NANTES
+          setNantesVisible(false);
+          setNantesResponse(false);
+          //GYMNASIUM
+          setGymVisible(false);
+          setGymResponse(false);
+          //GRANDSTAND
+          setGrandStandVisible(false);
+          setGrandStandResponse(false);
+          //EDUCATION
+          setEducVisible(false);
+          setEducResponse(false);
+          //ADMISSION
+          setAdmissionVisible(false);
+          setAdmissionResponse(false);
+          //LAB1
+          setLab1Visible(false);
+          setLab1Response(false);
+          //LAB2
+          setLab2Visible(false);
+          setLab2Response(false);
+          //HOSPITALITY
+          setHMVisible(false);
+          setHMResponse(false);
+          //COMFORT ROOM
+          setShowCrVisible(false);
+          setShowCrResponse(false);
+          //ECOPARK
+          setShowEcoVisible(false);
+          setShowEcoResponse(false);
+  
+          setShowEregular(false);
+          setShowEirregular(false);
+          setShowEfreshmen(false);
+          seteShowEtransferee(false);
+  
+          setShowGrad(false);
+          setShowBachelor(false);
+          setShowDiploma(false);
+          setShowHistory(false);
+          setShowMission(false);
+          setShowVision(false);
+          setShowHymn(false);
+          setShowAchiever(false);
+          setShowIska(false);
+          setShowGoodmoral(false);
+      
+          setShowAvatar(false);
+          setShowDirector(true);
+          setShowFounded(false);
+          setShowEntranceTest(false);
+
+
+
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
+            element.style.display = 'none';
+          });
+  
+          const hideList = document.querySelectorAll('.list-result');
+          hideList.forEach((element) => {
+                  element.style.display = 'none';
+                });
+  
+          const hideAvatar = document.querySelectorAll('.avatar-container');
+          hideAvatar.forEach((element) => {
+            element.style.display = 'none';
+          });
+
+          const hideCloseVR = document.querySelectorAll('.suggestions');
+            hideCloseVR.forEach((element) => {
+              element.style.display = 'none';
+            });
         }
+  },
+  {
+    command: ['founded'],
+    callback: () => {
+      resetTranscript();
+  
+            setResetButtonVisible(true);
+    
+            setProgramsButton(false);
+    
+            setYearButtonVisible(false);
+            setSelectedYearResponse(false);
+    
+            setDisplayTextOnScreen(false);
+    
+            setAboutVisible(false);
+            setAboutResponse(false);
+    
+            setSelectedProgram(false);
+    
+            setResponseDisplayed(true); // Set responseDisplayed to true
+  
+            //CANTEEN
+            setCanteenVisible(false);
+            setCanteenResponse(false);
+            //SCIENCE
+            setScienceVisible(false);
+            setScienceResponse(false);
+            //ENGINEER
+            setEngineerVisible(false);
+            setEngineerResponse(false);
+            //YUMUL
+            setYumulVisible(false);
+            setYumulResponse(false);
+            //NANTES
+            setNantesVisible(false);
+            setNantesResponse(false);
+            //GYMNASIUM
+            setGymVisible(false);
+            setGymResponse(false);
+            //GRANDSTAND
+            setGrandStandVisible(false);
+            setGrandStandResponse(false);
+            //EDUCATION
+            setEducVisible(false);
+            setEducResponse(false);
+            //ADMISSION
+            setAdmissionVisible(false);
+            setAdmissionResponse(false);
+            //LAB1
+            setLab1Visible(false);
+            setLab1Response(false);
+            //LAB2
+            setLab2Visible(false);
+            setLab2Response(false);
+            //HOSPITALITY
+            setHMVisible(false);
+            setHMResponse(false);
+            //COMFORT ROOM
+            setShowCrVisible(false);
+            setShowCrResponse(false);
+            //ECOPARK
+            setShowEcoVisible(false);
+            setShowEcoResponse(false);
+    
+            setShowEregular(false);
+            setShowEirregular(false);
+            setShowEfreshmen(false);
+            seteShowEtransferee(false);
+    
+            setShowGrad(false);
+            setShowBachelor(false);
+            setShowDiploma(false);
+            setShowHistory(false);
+            setShowMission(false);
+            setShowVision(false);
+            setShowHymn(false);
+            setShowAchiever(false);
+            setShowIska(false);
+            setShowGoodmoral(false);
+        
+            setShowAvatar(false);
+            setShowDirector(false);
+            setShowFounded(true);
+            setShowEntranceTest(false);
+
+  
+            const hideMicAndSearch = document.querySelectorAll('.bottom');
+            hideMicAndSearch.forEach((element) => {
+              element.style.display = 'none';
+            });
+    
+            const hideList = document.querySelectorAll('.list-result');
+            hideList.forEach((element) => {
+                    element.style.display = 'none';
+                  });
+    
+            const hideAvatar = document.querySelectorAll('.avatar-container');
+            hideAvatar.forEach((element) => {
+              element.style.display = 'none';
+            });
+  
+            const hideCloseVR = document.querySelectorAll('.suggestions');
+              hideCloseVR.forEach((element) => {
+                element.style.display = 'none';
+              });
+          }
+    },
+    {
+      command: ['Entrance', 'Test', 'Exam'],
+      callback: () => {
+        resetTranscript();
+    
+              setResetButtonVisible(true);
+      
+              setProgramsButton(false);
+      
+              setYearButtonVisible(false);
+              setSelectedYearResponse(false);
+      
+              setDisplayTextOnScreen(false);
+      
+              setAboutVisible(false);
+              setAboutResponse(false);
+      
+              setSelectedProgram(false);
+      
+              setResponseDisplayed(true); // Set responseDisplayed to true
+    
+              //CANTEEN
+              setCanteenVisible(false);
+              setCanteenResponse(false);
+              //SCIENCE
+              setScienceVisible(false);
+              setScienceResponse(false);
+              //ENGINEER
+              setEngineerVisible(false);
+              setEngineerResponse(false);
+              //YUMUL
+              setYumulVisible(false);
+              setYumulResponse(false);
+              //NANTES
+              setNantesVisible(false);
+              setNantesResponse(false);
+              //GYMNASIUM
+              setGymVisible(false);
+              setGymResponse(false);
+              //GRANDSTAND
+              setGrandStandVisible(false);
+              setGrandStandResponse(false);
+              //EDUCATION
+              setEducVisible(false);
+              setEducResponse(false);
+              //ADMISSION
+              setAdmissionVisible(false);
+              setAdmissionResponse(false);
+              //LAB1
+              setLab1Visible(false);
+              setLab1Response(false);
+              //LAB2
+              setLab2Visible(false);
+              setLab2Response(false);
+              //HOSPITALITY
+              setHMVisible(false);
+              setHMResponse(false);
+              //COMFORT ROOM
+              setShowCrVisible(false);
+              setShowCrResponse(false);
+              //ECOPARK
+              setShowEcoVisible(false);
+              setShowEcoResponse(false);
+      
+              setShowEregular(false);
+              setShowEirregular(false);
+              setShowEfreshmen(false);
+              seteShowEtransferee(false);
+      
+              setShowGrad(false);
+              setShowBachelor(false);
+              setShowDiploma(false);
+              setShowHistory(false);
+              setShowMission(false);
+              setShowVision(false);
+              setShowHymn(false);
+              setShowAchiever(false);
+              setShowIska(false);
+              setShowGoodmoral(false);
+          
+              setShowAvatar(false);
+              setShowDirector(false);
+              setShowFounded(false);
+              setShowEntranceTest(true);
+    
+              const hideMicAndSearch = document.querySelectorAll('.bottom');
+              hideMicAndSearch.forEach((element) => {
+                element.style.display = 'none';
+              });
+      
+              const hideList = document.querySelectorAll('.list-result');
+              hideList.forEach((element) => {
+                      element.style.display = 'none';
+                    });
+      
+              const hideAvatar = document.querySelectorAll('.avatar-container');
+              hideAvatar.forEach((element) => {
+                element.style.display = 'none';
+              });
+    
+              const hideCloseVR = document.querySelectorAll('.suggestions');
+                hideCloseVR.forEach((element) => {
+                  element.style.display = 'none';
+                });
+            }
+      },
 
     
 ];
@@ -3927,6 +4388,10 @@ const sendTextToCommands = (text) => {
     setShowBachelor(false);
     setShowDiploma(false);
     setShowGoodmoral(false);
+    setShowDirector(false);
+    setShowFounded(false);
+    setShowEntranceTest(false);
+
 
     setShowAvatar(false);
 
@@ -4097,6 +4562,9 @@ const sendTextToCommands = (text) => {
       {showIskaDo && <IskaDo />}
       {showGoodMoral && <Goodmoral />}
       {showAvatar && <Avatar />}
+      {showDirector && <Director/>}
+      {showFounded && <Founded/>}
+      {showEntranceTest && <EntranceTest/>}
       <Avatar />
 
         <div className="otherResponse">

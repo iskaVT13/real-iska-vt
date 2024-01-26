@@ -4,7 +4,7 @@
     justify-content: space-around;
     overflow: hidden;
     position: relative;
-    background-color: #7E0001;
+    background-color: #730000;
     z-index: 99;
     top: 7em;
     padding: 5px;
@@ -29,7 +29,7 @@
     text-align: center;
     border-radius: 10px;
     margin: 3px;
-    background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
+    background: linear-gradient(to bottom, #9b000a, #ffbd00); /* Gradient color */
     color: white; /* Text color */
     border: none;
     cursor: pointer;
@@ -43,11 +43,11 @@
 }
 
 .choices-button button:hover{
-    background: linear-gradient(to bottom, #f1c500, #c40606); /* Gradient color */
+    background: linear-gradient(to bottom, #ffbd00, #9b000a); /* Gradient color */
 }
 
 .choices-button button.active-button {
-    background: linear-gradient(to bottom, #ea9800, #ea9800); /* Active button gradient color */
+    background: linear-gradient(to bottom, #ffbd00, #ffbd00); /* Active button gradient color */
     color: #ffffff;
   }
 

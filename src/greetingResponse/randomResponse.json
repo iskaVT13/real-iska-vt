@@ -1,13 +1,65 @@
   {
     "audioItems": [
       {
-        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/audio%2Faudio.mp3?alt=media&token=51f0cd42-2f50-4723-bc6d-a5e8aa697a84",
-        "displayText": "Welcome to ISKA!"
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F1.mp3?alt=media&token=4ffd9e50-915f-4082-864d-624153738dee",
+        "displayText": "Welcome to PUP Lopez Branch"
       },
       {
-        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fadmission.mp3?alt=media&token=4ebd55d0-0d59-4632-80fc-5b30c3daecfa",
-        "displayText": "How can I help you today?"
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F2.mp3?alt=media&token=51cfb482-e670-4510-b175-5266b19ce214",
+        "displayText": "Ready to Embark on a Virtual Tour?"
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F3.mp3?alt=media&token=26388953-29c5-474d-bd25-1396cf675d0c",
+        "displayText": "Just let me know where you'd like to go, and I'll guide you with our interactive 2D map."
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F4.mp3?alt=media&token=72795789-fd3e-4d65-9141-8fdbead4e6da",
+        "displayText": "Explore the campus hassle-free!"
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F5.mp3?alt=media&token=dfe2b10e-988e-4d28-a1f3-904850d7c22c",
+        "displayText": "Are you Ready to explore?"
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F6.mp3?alt=media&token=ac017a46-8326-4c53-ac45-9f3ec97ab9dd",
+        "displayText": "I'm excited to show you around."
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F7.mp3?alt=media&token=63ebaac3-a49c-4390-ad12-45977044a638",
+        "displayText": "I'm here to guide you. Where's your destination?"
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F8.mp3?alt=media&token=0b61b49a-a53c-4b00-b2c6-ff4c743039f6",
+        "displayText": "Gotcha! Playful taps are my favorite."
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F9.mp3?alt=media&token=a0a72039-9f0b-4185-979b-02b5ef837b0e",
+        "displayText": "A gentle touch! You're in control here. "
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F10.mp3?alt=media&token=40703c05-11ad-4db1-977b-b82bc72bb0a2",
+        "displayText": "A touch filled with gratitude! Thanks for choosing me."
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F11.mp3?alt=media&token=8326e146-66c3-4905-a0c7-57515bd5e878",
+        "displayText": "Whoa, that was fast! Startled me a bit there."
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F12.mp3?alt=media&token=9b363786-8b45-4c39-b520-1fa4dd83b152",
+        "displayText": "Ouch! That was a bit rough. Handle with care, please. "
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F13.mp3?alt=media&token=49fd6ba7-96f0-4534-8c52-3d5b4dc7b620",
+        "displayText": "Ticklish touch! You've got a knack for it."
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F14.mp3?alt=media&token=5d4f6299-2469-445a-8599-34a2dd15a74f",
+        "displayText": "I admit, my knowledge has its limits. If you have specific queries, I'll do my best, but I might not have all the answers."
+      },
+      {
+        "audioLink":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/randomResponse%2F15.mp3?alt=media&token=9ed83144-0500-48b5-b571-831669c81bc2",
+        "displayText": "Hi there, Don't know what to say? Tap the Icon on the Upper right corner of the screen for the suggested question."
       }
-        ]
+    ]
   }
   

@@ -51,7 +51,7 @@
     top: 5.3em;
     padding: 10px;
     z-index: 99;
-    color: #f1c500;
+    color: white;
 }
 
 
@@ -86,7 +86,7 @@ position: relative;
     top: 0;
     width: 15em;
     position: sticky;
-    border: #f1c500 solid 5px;
+    border: #ffbd00 solid 5px;
     border-radius: 3%;
     height: 10em;
 }
@@ -109,7 +109,7 @@ position: relative;
 }
 
 .modal-close{
-    background-color:#f1c500;
+    background-color:#ffbd00;
     border: none;
     :focus{
         outline: none;
@@ -147,7 +147,7 @@ position: relative;
     display:inline;
     padding: 15px;
     margin-bottom: 5px;
-    background-color: #ffaa00;
+    background-color: #ffbd00;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -167,7 +167,7 @@ position: relative;
 
   .direction-modal {
     display: flex;
-    background: #ba2828;
+    background: #9b000a;
     width: 18.5em;
     align-items: center;
     justify-content: center;
@@ -176,7 +176,7 @@ position: relative;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     top: 40%;
     position: fixed;
-    border:#f1c500 solid 2px;
+    border:#ffbd00 solid 2px;
     overflow: hidden;
     overflow: hidden;
     
@@ -190,7 +190,7 @@ position: relative;
 
   .modal-close {
     margin: 10px;
-    background-color: #ffa908;
+    background-color: #ffbd00;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -200,5 +200,5 @@ position: relative;
   }
 
   .modal-close:hover {
-    background-color:darkred;
+    background-color:730000;
   }

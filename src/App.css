@@ -71,7 +71,7 @@
 
 body{
   position: relative;
-  background-color: #7E0001;
+  background-color: #730000;
   justify-content: center;
   align-items: center;
   display: block;
@@ -92,7 +92,7 @@ body{
 }
 
 header{
-  background-color: #7E0001;
+  background-color: #730000;
   justify-content: space-around;
   display: flex;
   top: 0;
@@ -105,7 +105,7 @@ header{
 }
 
 .logo-name {
-  background-color: #7E0001;
+  background-color: #730000;
   display: flexbox;
   position: relative;
   justify-content: center;
@@ -133,9 +133,9 @@ header{
 }
 
 .question-list {
-  border: 5px solid darkgoldenrod;
+  border: 5px solid #ffbd00;
   background-color: white;
-  color: rgb(236, 166, 4);
+  color: #730000;
   position: absolute;
   width: 190px;
   height: max-content;
@@ -147,7 +147,7 @@ header{
 }
 
 .logo-name span{
-  color: rgb(236, 166, 4);
+  color: #ffbd00;
   font-family: 'Krona One';
 }
 
@@ -227,7 +227,7 @@ color: white;
 
 
 .bottom{
-  background-color: #7E0001;
+  background-color: #730000;
   padding: 5px;
   bottom: 0;
   position: fixed;
@@ -241,7 +241,7 @@ color: white;
 }
 
 .text-input{
-  background-color: #7E0001;
+  background-color: #730000;
 }
 
 .mic{
@@ -258,7 +258,7 @@ color: white;
   overflow: hidden;
   padding: 10px;
   width: max-content;
-  background-color: #7E0001;
+  background-color: #730000;
 
 }
 
@@ -277,7 +277,7 @@ input {
   width: 20em; /* Use the full width of the parent container */
   margin: 10px; /* You can use shorthand property for margin */
   border-radius: 10px;
-  border-color: #f1c500;
+  border-color: #ffbd00;
 }
 
 /* Media Query for screens with a maximum width of 768px (typical mobile screens) */
@@ -311,13 +311,19 @@ input {
   position: fixed;
   z-index: 101;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.548);
-  overflow: hidden;
+  overflow: hidden;                                               
+  color: white;
+}
+
+.error button{
+  background-color: #ffbd00;
 }
 
 .error-content{
-  background-color: #f1c500;
-  width: 20em;
+  border-color:#ffbd00 solid 10px;
+  color: #730000;
+  background-color: #f3efd0;
+  width: 15em;
   align-items: center;
   position: relative;
   justify-content: center;
@@ -333,7 +339,7 @@ input {
   width: 30px;
   height: 30px;
   align-items: center;
-  background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
+  background: linear-gradient(to bottom, #9b000a, #ffbd00); /* Gradient color */
   padding: 20px ;
   border-radius: 100px;
 }
@@ -344,7 +350,7 @@ input {
   width: 30px;
   height: 30px;
   align-items: center;
-  background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
+  background: linear-gradient(to bottom, #9b000a, #ffbd00); /* Gradient color */
   padding: 20px 20px;
   border-radius: 100px;
 }
@@ -367,7 +373,7 @@ input {
   align-items: center;
   position: fixed;
     display: flex;
-    top: 67%;
+    top: 74%;
     width: 100%;
     padding: 10px;
     overflow-x: auto;
@@ -375,7 +381,7 @@ input {
 }
 
 .suggestions button{
-  background: linear-gradient(to bottom, #c40606, #f1c500); /* Gradient color */
+  background: linear-gradient(to bottom, #9b000a, #ffbd00); /* Gradient color */
   border: none;
   padding: 5px;
   border-radius: 15px;
@@ -391,7 +397,7 @@ input {
 
 .list-result {
   position: fixed;
-  color:#7E0001;
+  color:#730000;
   bottom: 4.5em;
   width: 17.5em;
   text-align: left;
@@ -408,7 +414,7 @@ input {
 }
 
 .list-result::-webkit-scrollbar-thumb {
-  background-color: #f1c500;
+  background-color:#ffbd00;
   border-radius: 10px;
 }
 
@@ -418,11 +424,11 @@ input {
 
 .list-result li{
   padding: 7px;
-  border: 1px solid #7E0001;
+  border: 1px solid #730000;
   background-color: white;
 }
 
 .list-result :hover{
   cursor: pointer;
-  background-color: #f1c500;
+  background-color:#ffbd00;
 }
