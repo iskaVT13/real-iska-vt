@@ -444,6 +444,8 @@ const handleEnrollButtonClick = () => {
   setYearButtonVisible(true);
   setResetButtonVisible(true);
   setResponseDisplayed(true);
+
+  window.scroll(0, 0);
     
 const hideAvatar = document.querySelectorAll('.avatar-container');
   hideAvatar.forEach((element) => {
@@ -461,6 +463,8 @@ const handleAboutPUPButtonClick = () => {
   setResetButtonVisible(true);
   setResponseDisplayed(true);
 
+  window.scroll(0, 0);
+
   const hideAvatar = document.querySelectorAll('.avatar-container');
   hideAvatar.forEach((element) => {
     element.style.display = 'none';
@@ -476,6 +480,8 @@ const handleAdminButtonClick = () => {
   setAdmissionVisible (true);
   setResetButtonVisible(true);
   setResponseDisplayed(true);
+
+  window.scroll(0, 0);
 
   const hideMicAndSearch = document.querySelectorAll('.bottom');
   hideMicAndSearch.forEach((element) => {
@@ -511,6 +517,8 @@ const handleGrandButtonClick = () => {
           hideCloseVR.forEach((element) => {
             element.style.display = 'none';
           });
+
+  window.scroll(0, 0);
 }
 
   // Function for reset button event
@@ -593,8 +601,6 @@ const handleGrandButtonClick = () => {
     setShowDirector(false);
     setShowFounded(false);
     setShowEntranceTest(false);
-
-
 
     const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
