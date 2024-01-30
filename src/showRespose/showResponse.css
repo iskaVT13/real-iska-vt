@@ -97,4 +97,36 @@ a{
     font-size: 2vh;
 }
 
+.org-button{
+    z-index: 100;
+    width: 100%;
+    top: 10em;
+    position: relative;
+    align-items: center;
+}
+.button-org{
+    position: relative;
+    align-items: center;
+    width: 100%;
+    display: block;
+    padding: 5px;
+}
+.button-org button{
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(to bottom, #9b000a, #ffbd00); /* Gradient color */
+    height: 5em;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+    justify-content: center;
+    padding: 10px;
+}
+.org{
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 

@@ -73,6 +73,8 @@ import Director from './showRespose/director';
 import Founded from './showRespose/About/founded';
 import EntranceTest from './showRespose/entranceTest';
 
+import Orgchart from './showRespose/org';
+
 // Function for the searchInput 
 function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden, onSuggestionClick}) {
   const [showInput, setShowInput] = useState(false);
@@ -128,7 +130,6 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
     setInputText('');
     window.scrollTo(0, 0);
   };
-
 
   // Returning and displaying the searchInput 
   return (
@@ -306,6 +307,8 @@ const audioRef = useRef(null); // Add a reference to the audio element
 const [showDirector, setShowDirector] = useState(false);
 const [showFounded, setShowFounded] = useState(false);
 const [showEntranceTest, setShowEntranceTest] = useState(false);
+
+const [showOrgButton, setShowOrgButton] = useState(false);
 
 useEffect(() => {
   if (playAudio) {
@@ -641,7 +644,7 @@ const handleGrandButtonClick = () => {
   // All the command user can ask for ISKA 
   const commands = [
     {
-      command: ['* hi','hi *', 'hello', 'hey', '* hello *', '* hello', 'hello *'],
+      command: ['* hi','hi *', 'hello', 'hey', '* hello *', '* hello', 'hello *', 'who are you', '* you'],
       callback:() => {
         resetTranscript();
         setCurrentSpeak(helloIska);
@@ -717,6 +720,7 @@ const handleGrandButtonClick = () => {
         setShowDirector(false);
         setShowFounded(false);
         setShowEntranceTest(false);
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -736,103 +740,6 @@ const handleGrandButtonClick = () => {
           });
       }
 
-    },
-
-    {
-      command: ['* map *', 'map *', '* map', 'map', 'university map', 'map of the university', 'show university map'],
-      callback: () => {
-        resetTranscript();
-        setResetButtonVisible(true);
-        setProgramsButton(false);
-
-        setAboutResponse(false);
-        setAboutVisible(false);
-
-        setSelectedYearResponse(false);
-        setYearButtonVisible(false);
-
-        setResponseDisplayed(true);
-        //CANTEEN
-        setCanteenVisible(false);
-        setCanteenResponse(false);
-        //SCIENCE
-        setScienceVisible(false);
-        setScienceResponse(false);
-        //ENGINEER
-        setEngineerVisible(false);
-        setEngineerResponse(false);
-        //YUMUL
-        setYumulVisible(false);
-        setYumulResponse(false);
-        //NANTES
-        setNantesVisible(false);
-        setNantesResponse(false);
-        //GYMNASIUM
-        setGymVisible(false);
-        setGymResponse(false);
-        //GRANDSTAND
-        setGrandStandVisible(false);
-        setGrandStandResponse(false);
-        //EDUCATION
-        setEducVisible(false);
-        setEducResponse(false);
-        //ADMISSION
-        setAdmissionVisible(false);
-        setAdmissionResponse(false);
-        //LAB1
-        setLab1Visible(false);
-        setLab1Response(false);
-        //LAB2
-        setLab2Visible(false);
-        setLab2Response(false);
-        //HOSPITALITY
-        setHMVisible(false);
-        setHMResponse(false);
-        //COMFORT ROOM
-        setShowCrVisible(false);
-        setShowCrResponse(false);
-
-        setShowEregular(false);
-        setShowEirregular(false);
-        setShowEfreshmen(false);
-        seteShowEtransferee(false);
-
-        setShowGrad(false);
-        setShowBachelor(false);
-        setShowDiploma(false);
-        setShowHistory(false);
-        setShowMission(false);
-        setShowVision(false);
-        setShowHymn(false);
-        setShowAchiever(false);
-        setShowIska(false);
-        setShowGoodmoral(false);
-    
-        setShowAvatar(false);
-        setShowDirector(false);
-        setShowFounded(false);
-        setShowEntranceTest(false);
-
-
-                  //ECOPARK
-                  setShowEcoVisible(false);
-                  setShowEcoResponse(false);
-
-        const hideList = document.querySelectorAll('.list-result');
-    hideList.forEach((element) => {
-            element.style.display = 'none';
-          });
-
-        const hideAvatar = document.querySelectorAll('.avatar-container');
-        hideAvatar.forEach((element) => {
-          element.style.display = 'none';
-        });
-        const hideCloseVR = document.querySelectorAll('.suggestions');
-          hideCloseVR.forEach((element) => {
-            element.style.display = 'none';
-          });
-
-      },
     },
     {
       command: ['* enroll *', '* enroll', 'enroll *', 'enroll', 'enrollment', '* enrollment', 'enrollment *', '* enrollment *'],
@@ -916,6 +823,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1017,6 +925,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1121,6 +1030,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1226,6 +1136,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1330,6 +1241,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1357,7 +1269,7 @@ const handleGrandButtonClick = () => {
     },
 
     {
-      command: ['* science ', 'science *', '* science *', 'science', 'two o three', '203', '* 203', '203 *', '204 *', '* 204', '*  205', ' 205 *', '206 *', '* 206', 'chemical lab', '* chemical lab', 'physical lab', '* physical lab', '105 *', '* 105', '106 *', '* 106', '107 *', '* 107', '108 *', '* 108', '204', '205', '206', '105', '106', '107', '108'] || [203, 204, 205, 206, 108, 107, 106, 105],
+      command: ['* health *', '* health','health','* science ', 'science *', '* science *', 'science', 'two o three', '203', '* 203', '203 *', '204 *', '* 204', '*  205', ' 205 *', '206 *', '* 206', 'chemical lab', '* chemical lab', 'physical lab', '* physical lab', '105 *', '* 105', '106 *', '* 106', '107 *', '* 107', '108 *', '* 108', '204', '205', '206', '105', '106', '107', '108'] || [203, 204, 205, 206, 108, 107, 106, 105],
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
 
@@ -1438,6 +1350,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1462,7 +1375,7 @@ const handleGrandButtonClick = () => {
       }
     },
     {
-      command: ['* 109', '* 110','* 111','* 112','* 113','* 114','* 115','* 116','* 211','* 210','* 209','* 208','* 207','* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* architecture *', '* 207', '* 208' ,'*  209', '* 210', '* 211','* 109','* 110','* 111','* 112','* 113','* 114','* 114','* 116', 'ict lab 3', '* ict lab 3', '* ict lab * 3', 'draft lab', '* draft lab * 3', '* draft lab 3 *', '109', '110', '111', '112', '113', '114', '115', '116', '207', '208', '209', '210', '211'] || [109, 110, 111, 112, 113, 114, 115, 116, 207, 208, 209, 210, 211],
+      command: ['* ict laboratory 3','ict laboratory 3','* 109', '* 110','* 111','* 112','* 113','* 114','* 115','* 116','* 211','* 210','* 209','* 208','* 207','* engineer', 'engineer *', '* engineer *', 'engineer', '* engineering', 'engineering *', '* engineering *', 'engineering', 'architecture', '* architecture', 'architecture *', '* architecture *', '* 207', '* 208' ,'*  209', '* 210', '* 211','* 109','* 110','* 111','* 112','* 113','* 114','* 114','* 116', 'ict lab 3', '* ict lab 3', '* ict lab * 3', 'draft lab', '* draft lab * 3', '* draft lab 3 *', '109', '110', '111', '112', '113', '114', '115', '116', '207', '208', '209', '210', '211'] || [109, 110, 111, 112, 113, 114, 115, 116, 207, 208, 209, 210, 211],
       
       callback: () => {
         resetTranscript(); // Reset the transcript when a command is executed
@@ -1543,6 +1456,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1648,6 +1562,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1753,6 +1668,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1858,6 +1774,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1963,6 +1880,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2069,6 +1987,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2176,6 +2095,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2282,6 +2202,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2390,6 +2311,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2496,6 +2418,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2604,6 +2527,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
           //ECOPARK
           setShowEcoVisible(false);
@@ -2618,10 +2542,6 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideCloseVR = document.querySelectorAll('.suggestions');
           hideCloseVR.forEach((element) => {
             element.style.display = 'none';
@@ -2710,7 +2630,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
-
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2725,10 +2645,6 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideCloseVR = document.querySelectorAll('.suggestions');
           hideCloseVR.forEach((element) => {
             element.style.display = 'none';
@@ -2817,6 +2733,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2830,10 +2747,6 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideCloseVR = document.querySelectorAll('.suggestions');
           hideCloseVR.forEach((element) => {
             element.style.display = 'none';
@@ -2921,6 +2834,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -2935,11 +2849,6 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideCloseVR = document.querySelectorAll('.suggestions');
           hideCloseVR.forEach((element) => {
             element.style.display = 'none';
@@ -3028,6 +2937,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3130,6 +3040,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3144,11 +3055,6 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideCloseVR = document.querySelectorAll('.suggestions');
           hideCloseVR.forEach((element) => {
             element.style.display = 'none';
@@ -3240,6 +3146,7 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowOrgButton(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -3250,11 +3157,6 @@ const handleGrandButtonClick = () => {
         hideAvatar.forEach((element) => {
           element.style.display = 'none';
         });
-
-        const textDisplayContainer = document.querySelector('.textOther');
-        while (textDisplayContainer.firstChild) {
-          textDisplayContainer.removeChild(textDisplayContainer.firstChild);
-        }
         const hideCloseVR = document.querySelectorAll('.suggestions');
           hideCloseVR.forEach((element) => {
             element.style.display = 'none';
@@ -3346,6 +3248,8 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+
+                  setShowOrgButton(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -3449,6 +3353,8 @@ const handleGrandButtonClick = () => {
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
 
+                  setShowOrgButton(false);
+
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
             element.style.display = 'none';
@@ -3546,6 +3452,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3646,7 +3553,7 @@ const handleGrandButtonClick = () => {
         setShowDirector(false);
         setShowFounded(false);
         setShowEntranceTest(false);
-
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3747,7 +3654,7 @@ const handleGrandButtonClick = () => {
         setShowDirector(false);
         setShowFounded(false);
         setShowEntranceTest(false);
-
+        setShowOrgButton(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -3852,7 +3759,7 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
 
-        
+        setShowOrgButton(false);
 
         const hideList = document.querySelectorAll('.list-result');
         hideList.forEach((element) => {
@@ -3958,6 +3865,7 @@ const handleGrandButtonClick = () => {
           setShowFounded(false);
           setShowEntranceTest(false);
 
+          setShowOrgButton(false);
 
           const hideMicAndSearch = document.querySelectorAll('.bottom');
           hideMicAndSearch.forEach((element) => {
@@ -3981,7 +3889,7 @@ const handleGrandButtonClick = () => {
         }
         },
   {
-  command: ['director'],
+  command: ['director', '* director', '* director *'],
   callback: () => {
     resetTranscript();
 
@@ -4064,8 +3972,7 @@ const handleGrandButtonClick = () => {
           setShowDirector(true);
           setShowFounded(false);
           setShowEntranceTest(false);
-
-
+          setShowOrgButton(false);
 
           const hideMicAndSearch = document.querySelectorAll('.bottom');
           hideMicAndSearch.forEach((element) => {
@@ -4089,7 +3996,7 @@ const handleGrandButtonClick = () => {
         }
   },
   {
-    command: ['founded'],
+    command: ['founded', 'founder'],
     callback: () => {
       resetTranscript();
   
@@ -4173,7 +4080,8 @@ const handleGrandButtonClick = () => {
             setShowFounded(true);
             setShowEntranceTest(false);
 
-  
+            setShowOrgButton(false);
+
             const hideMicAndSearch = document.querySelectorAll('.bottom');
             hideMicAndSearch.forEach((element) => {
               element.style.display = 'none';
@@ -4196,7 +4104,7 @@ const handleGrandButtonClick = () => {
           }
     },
     {
-      command: ['Entrance', 'Test', 'Exam'],
+      command: ['Entrance', 'Test', 'Exam', '* entrance', '* entrance *', 'test *', '* test ', '* test *', '* exam ', '* exam *'],
       callback: () => {
         resetTranscript();
     
@@ -4279,6 +4187,7 @@ const handleGrandButtonClick = () => {
               setShowDirector(false);
               setShowFounded(false);
               setShowEntranceTest(true);
+              setShowOrgButton(false);
     
               const hideMicAndSearch = document.querySelectorAll('.bottom');
               hideMicAndSearch.forEach((element) => {
@@ -4301,6 +4210,113 @@ const handleGrandButtonClick = () => {
                 });
             }
       },
+      {
+        command: ['org'],
+        callback: () => {
+          resetTranscript();
+          setShowOrgButton(true);
+          setResetButtonVisible(true);
+      
+          setProgramsButton(false);
+  
+          setYearButtonVisible(false);
+          setSelectedYearResponse(false);
+  
+          setDisplayTextOnScreen(false);
+  
+          setAboutVisible(false);
+          setAboutResponse(false);
+  
+          setSelectedProgram(false);
+  
+          setResponseDisplayed(true); // Set responseDisplayed to true
+
+          //CANTEEN
+          setCanteenVisible(false);
+          setCanteenResponse(false);
+          //SCIENCE
+          setScienceVisible(false);
+          setScienceResponse(false);
+          //ENGINEER
+          setEngineerVisible(false);
+          setEngineerResponse(false);
+          //YUMUL
+          setYumulVisible(false);
+          setYumulResponse(false);
+          //NANTES
+          setNantesVisible(false);
+          setNantesResponse(false);
+          //GYMNASIUM
+          setGymVisible(false);
+          setGymResponse(false);
+          //GRANDSTAND
+          setGrandStandVisible(false);
+          setGrandStandResponse(false);
+          //EDUCATION
+          setEducVisible(false);
+          setEducResponse(false);
+          //ADMISSION
+          setAdmissionVisible(false);
+          setAdmissionResponse(false);
+          //LAB1
+          setLab1Visible(false);
+          setLab1Response(false);
+          //LAB2
+          setLab2Visible(false);
+          setLab2Response(false);
+          //HOSPITALITY
+          setHMVisible(false);
+          setHMResponse(false);
+          //COMFORT ROOM
+          setShowCrVisible(false);
+          setShowCrResponse(false);
+          //ECOPARK
+          setShowEcoVisible(false);
+          setShowEcoResponse(false);
+  
+          setShowEregular(false);
+          setShowEirregular(false);
+          setShowEfreshmen(false);
+          seteShowEtransferee(false);
+  
+          setShowGrad(false);
+          setShowBachelor(false);
+          setShowDiploma(false);
+          setShowHistory(false);
+          setShowMission(false);
+          setShowVision(false);
+          setShowHymn(false);
+          setShowAchiever(false);
+          setShowIska(false);
+          setShowGoodmoral(false);
+      
+          setShowAvatar(false);
+          setShowDirector(false);
+          setShowFounded(false);
+          setShowEntranceTest(false);
+
+          const hideMicAndSearch = document.querySelectorAll('.bottom');
+          hideMicAndSearch.forEach((element) => {
+            element.style.display = 'none';
+          });
+  
+          const hideList = document.querySelectorAll('.list-result');
+          hideList.forEach((element) => {
+                  element.style.display = 'none';
+                });
+  
+          const hideAvatar = document.querySelectorAll('.avatar-container');
+          hideAvatar.forEach((element) => {
+            element.style.display = 'none';
+          });
+
+          const hideCloseVR = document.querySelectorAll('.suggestions');
+            hideCloseVR.forEach((element) => {
+              element.style.display = 'none';
+
+        });
+      }
+    }
 
     
 ];
@@ -4413,8 +4429,11 @@ const sendTextToCommands = (text) => {
 
   // Function for listening to saying
   const startListening = () => {
-    SpeechRecognition.startListening();
     setSpeechActive(true);
+
+    const language = 'fil-PH'; // Filipino language code
+
+    SpeechRecognition.startListening({ language });
 
      // Set a timer for, let's say, 5 seconds (5000 milliseconds)
   const timerDuration = 5000;
@@ -4572,6 +4591,7 @@ const sendTextToCommands = (text) => {
       {showFounded && <Founded/>}
       {showEntranceTest && <EntranceTest/>}
       <Avatar />
+      {showOrgButton && <Orgchart />}
 
         <div className="otherResponse">
           <p className="displayResponse">
