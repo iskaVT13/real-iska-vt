@@ -5,6 +5,20 @@ import './building.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 
+import gate from '../areaImage/gate.webp';
+import admin from '../areaImage/admin.webp';
+import lab1 from '../areaImage/lab1.webp';
+import lab2 from '../areaImage/lab2.webp';
+import yumul from '../areaImage/yumul.webp';
+import canteen from '../areaImage/canteen.webp';
+import science from '../areaImage/science.webp';
+import archi from '../areaImage/archi.webp';
+import educ from '../areaImage/educ.webp';
+import nantes from '../areaImage/nantes.webp';
+import hm from '../areaImage/hm.webp';
+import gym from '../areaImage/gym.webp';
+import grand from '../areaImage/grand.webp';
+
 import voiceEcopark from '../speakText/eco.mp3';
 
 function EcoParkButton() {
@@ -97,32 +111,60 @@ function EcoParkButton() {
       <div className='title-area'>
         <p>Please select your nearest area in campus, so that I can assist you to show the way to Eco Park</p>
       </div>
-      <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2Fgate%20(1).webp?alt=media&token=44f62453-fc85-4040-99d4-a7654baff62d" />
-        <p>MAIN GATE</p>
-        <img onClick={() => handleImageClick('admission')} className="gate" alt="Main Gate" src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2FAdmin%20Building.webp?alt=media&token=0596943a-1f48-4f0b-87f8-91ca7324df12" />
-        <p>ADMINISTRATION OFFICE</p>
-        <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2FLab%201.webp?alt=media&token=c06d273a-56fd-406c-9568-f01e5ccca21d"/>
-        <p>ICT LABORATORY 1</p>
-        <img onClick={() => handleImageClick('lab2')}alt='lab2' className='lab2-image' src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2FLab%202.webp?alt=media&token=a289350c-ccc9-457e-a37b-be966f2741b1" />
-        <p>ICT LABORATORY 2</p>
-        <img onClick={() => handleImageClick('yumul')} alt='yumul' className='yumul-image' src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2FYumul%20Building.webp?alt=media&token=53b6c99c-008a-4eb6-95d1-8d9a55f1f4de" />
-        <p>YUMUL BUILDING</p>
-        <img onClick={() => handleImageClick('canteen')} alt='canteen' className='canteen-image' src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2FCanteen.webp?alt=media&token=23f3d145-1044-4b1c-8da5-acebc85204ff" />
-        <p>PUP CANTEEN</p>
-        <img onClick={() => handleImageClick('nantes')}  alt='nantes' className='nantes-image' src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2FNantes.webp?alt=media&token=d63de311-d4da-419d-b811-7e053abf976f" />
-        <p>BUSINESS and ACCOUNTACY BUILDING</p>
-        <img onClick={() => handleImageClick('gymnasium')} alt='gymnasium' className='gymnasium-image' src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2FGym.webp?alt=media&token=c675c3fc-5f1c-445b-9e3d-ad88cc83d8a3" />
-        <p>PUP GYMNASIUM</p>
-        <img onClick={() => handleImageClick('education')} alt='education' className='education-image' src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2FEduc%20Bldg.webp?alt=media&token=0c781476-49a0-43f7-a8b0-197f5df85c69"/>
-        <p>EDUCATION and PUBLIC ADMINISTRATION BUILDING</p>
-        <img onClick={() => handleImageClick('science')}  alt='science' className='science-image' src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2FHealth%20and%20Sciences%20Building.webp?alt=media&token=206a95ea-231c-47a7-8334-e05fcd34bec0" />
-        <p>HEALTH and SCIENCE BUILDING</p>
-        <img onClick={() => handleImageClick('grandstand')} alt='grandstand' className='grandstand-image' src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2FGrandstand.webp?alt=media&token=a57cdef3-ec6b-4110-9a89-595bb0405f44" />
-        <p>PUP GRANDSTAND</p>
-        <img onClick={() => handleImageClick('engineer')}  alt='engineer' className='engineer-image' src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2FEngineering%20Building.webp?alt=media&token=c8ce836e-5a78-49d2-a86d-89f377b6151a" />
-        <p>ENGINEERING, TECHNOLOGY and ARCHTECTURE BUILDING</p>
-        <img onClick={() => handleImageClick('hospitality')}  alt='hospitality' className='jm-image' src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/BuildingImage%2FHM%20_%20Plant%20Lab%20(front%20view).webp?alt=media&token=ad01d055-7379-4fbe-b6f6-bc63d307fc70" />
-        <p>HOSPITALITY MANAGEMENT BUILDING</p>
+      <div className='image-grid'>
+    <div className='image-text'>
+    <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={gate} />
+        <p>Main Gate</p>
+    </div>
+    <div className='image-text'>
+    <img onClick={() => handleImageClick('admin')} className="gate" alt="Admin" src={admin} />
+        <p>Administration Building</p>
+    </div>
+    <div className='image-text'>
+    <img onClick={() => handleImageClick('canteen')} className="gate" alt="Canteen" src={canteen} />
+        <p>PUP Canteen</p>
+    </div>
+    <div className='image-text'>
+    <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src={lab1} />
+        <p>ICT Laboratory 1</p>
+    </div>
+    <div className='image-text'>
+    <img onClick={() => handleImageClick('lab2')}alt='lab2' className='lab2-image' src={lab2} />
+        <p>ICT Laboratory 2</p>
+    </div>
+    <div className='image-text'>
+        <img onClick={() => handleImageClick('yumul')} alt='yumul' className='yumul-image' src={yumul} />
+        <p>Yumul Building</p>
+    </div>
+    <div className='image-text'>
+        <img onClick={() => handleImageClick('nantes')}  alt='nantes' className='nantes-image' src={nantes} />
+        <p>Business and Accountancy Building</p>
+    </div>
+    <div className='image-text'>
+        <img onClick={() => handleImageClick('gymnasium')} alt='gymnasium' className='gymnasium-image' src={gym} />
+        <p>PUP Gymnasium</p>
+    </div>
+    <div className='image-text'>
+        <img onClick={() => handleImageClick('education')} alt='education' className='education-image' src={educ} />
+        <p>Education and Public Administration Building</p>
+    </div>
+    <div className='image-text'>
+        <img onClick={() => handleImageClick('science')}  alt='science' className='science-image' src={science} />
+        <p>Health and Science Building</p>
+    </div>
+    <div className='image-text'>
+        <img onClick={() => handleImageClick('grandstand')} alt='grandstand' className='grandstand-image' src={grand} />
+        <p>PUP Grandstand</p>
+    </div>
+    <div className='image-text'>
+        <img onClick={() => handleImageClick('engineer')}  alt='engineer' className='engineer-image' src={archi} />
+        <p>Enigineering, Technology and Architecture Building</p>
+    </div>
+    <div className='image-text'>
+        <img onClick={() => handleImageClick('hospitality')}  alt='hospitality' className='jm-image' src={hm} />
+        <p>Hospitality Management Building</p>
+    </div>
+        </div>
     </div>
   )}
 

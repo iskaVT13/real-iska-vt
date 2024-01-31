@@ -189,13 +189,14 @@ color: white;
 .virtual{
   display: block;
   padding: 5px;
+  z-index: 98;
 }
 
 .vr-box{
   position: fixed;
   top: 13%;
   width: 100%;
-  z-index: 102;
+  z-index: 100;
   padding: 2vh;
   padding: 10px;
 }

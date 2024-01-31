@@ -4441,7 +4441,7 @@ const sendTextToCommands = (text) => {
   const startListening = () => {
     setSpeechActive(true);
 
-    const language = 'fil-PH'; // Filipino language code
+    const language = 'English-US';
 
     SpeechRecognition.startListening({ language });
 
