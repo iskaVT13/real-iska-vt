@@ -77,16 +77,24 @@ import Orgchart from './showRespose/org';
 
 // Function for the searchInput 
 function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden, onSuggestionClick}) {
-  const [showInput, setShowInput] = useState(false);
+  const [showInput, setShowInput] = useState(true);
   const [inputText, setInputText] = useState('');
   const [suggestions, setSuggestions] = useState(['']);
+
 
   // Handle of showing the searchInput
   const handleShowInput = () => {
     setShowInput(true);
     setMicrophoneHidden(true); // Hide the microphone button when input is shown
-
+    
   };
+
+  useEffect(() => {
+    // Show the input by default when the component mounts
+    setShowInput(true);
+    setMicrophoneHidden(true);
+  }, [setMicrophoneHidden, setShowInput]); // Empty dependency array ensures this effect runs only once
+
 
   // Handle the close button 
   const handleCloseButtonClick = () => {
@@ -134,15 +142,6 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
   // Returning and displaying the searchInput 
   return (
     <div className='input'>
-      {!showInput && ( // Conditionally render the faKeyboard icon when showInput is false
-        <FontAwesomeIcon
-          className="keyBoard"
-          onClick={handleShowInput} // Showing searchInput
-          icon={faKeyboard}
-          size="xl"
-          style={{ color: '#ffc800' }}
-        />
-      )}
       <div>
         {showInput && (
         <div className="center-input">
@@ -201,6 +200,16 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
           }}
         />
       )}
+      {!showInput && (
+        <FontAwesomeIcon
+          className="keyBoard"
+          onClick={handleShowInput}
+          icon={faKeyboard}
+          size="xl"
+          style={{ color: '#ffc800' }}
+        />
+      )}
+      
     </div>
   );
 }
@@ -604,6 +613,7 @@ const handleGrandButtonClick = () => {
     setShowDirector(false);
     setShowFounded(false);
     setShowEntranceTest(false);
+    setShowOrgButton(false);
 
     const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -4211,7 +4221,7 @@ const handleGrandButtonClick = () => {
             }
       },
       {
-        command: ['org'],
+        command: ['org', 'organization', '* organization', 'coordinator', '* coordinator', '* department', '* department'],
         callback: () => {
           resetTranscript();
           setShowOrgButton(true);
@@ -4229,7 +4239,7 @@ const handleGrandButtonClick = () => {
   
           setSelectedProgram(false);
   
-          setResponseDisplayed(true); // Set responseDisplayed to true
+          setResponseDisplayed(false); // Set responseDisplayed to true
 
           //CANTEEN
           setCanteenVisible(false);
@@ -4557,6 +4567,7 @@ const sendTextToCommands = (text) => {
           {showEcoVisible && (
             <EcoPark onEcoButtonClick = {handleEcoButtonClick} />
           )}
+          
 
         </div>
        

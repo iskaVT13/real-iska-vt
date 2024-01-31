@@ -402,7 +402,7 @@ input {
   width: 17.5em;
   text-align: left;
   overflow: auto;
-  height: 10em;
+  height: 4.5em;
   display: flex;
   border-radius: 10px;
 }
@@ -426,6 +426,7 @@ input {
   padding: 7px;
   border: 1px solid #730000;
   background-color: white;
+  font-size: 12px;
 }
 
 .list-result :hover{

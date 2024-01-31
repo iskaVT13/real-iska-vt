@@ -98,7 +98,6 @@ a{
 }
 
 .org-button{
-    z-index: 100;
     width: 100%;
     top: 10em;
     position: relative;
@@ -122,11 +121,14 @@ a{
     justify-content: center;
     padding: 10px;
 }
+
 .org{
+    width: 100%;
     position: relative;
     text-align: center;
     align-items: center;
     justify-content: center;
+    z-index: 150;
 }
 
 
