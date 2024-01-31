@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/real-iska-vt/static/css/main.612cd337.css",
-    "main.js": "/real-iska-vt/static/js/main.49c56b68.js",
+    "main.css": "/real-iska-vt/static/css/main.9f0d2e06.css",
+    "main.js": "/real-iska-vt/static/js/main.cdca1f3a.js",
     "static/js/498.fcaf40d7.chunk.js": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js",
     "static/js/703.59b532f8.chunk.js": "/real-iska-vt/static/js/703.59b532f8.chunk.js",
     "static/js/379.06dbaa89.chunk.js": "/real-iska-vt/static/js/379.06dbaa89.chunk.js",
@@ -33,21 +33,7 @@
     "static/js/520.2ea0615f.chunk.js": "/real-iska-vt/static/js/520.2ea0615f.chunk.js",
     "static/js/154.4330475a.chunk.js": "/real-iska-vt/static/js/154.4330475a.chunk.js",
     "static/media/Imno.mp4": "/real-iska-vt/static/media/Imno.21b3beaa20d42284cf9e.mp4",
-    "static/media/HM _ Plant Lab.webp": "/real-iska-vt/static/media/HM _ Plant Lab.9f272765f9b6a2d35a2d.webp",
-    "static/media/Lab 1.webp": "/real-iska-vt/static/media/Lab 1.1621c7fe11c67f398e81.webp",
-    "static/media/Canteen.webp": "/real-iska-vt/static/media/Canteen.08a369005dddd90a164a.webp",
-    "static/media/Grandstand.webp": "/real-iska-vt/static/media/Grandstand.7c3b18b5717a63d9ca9e.webp",
-    "static/media/eco park.webp": "/real-iska-vt/static/media/eco park.c19461565641b3be2112.webp",
-    "static/media/Gym.webp": "/real-iska-vt/static/media/Gym.5881ad93516d103cacd6.webp",
-    "static/media/Health and Sciences Building.webp": "/real-iska-vt/static/media/Health and Sciences Building.0e2748fad99f3d6787ec.webp",
-    "static/media/Engineering Building.webp": "/real-iska-vt/static/media/Engineering Building.c12419c13b6c3e265cc2.webp",
-    "static/media/gate.webp": "/real-iska-vt/static/media/gate.af079e3c75e0018e6255.webp",
-    "static/media/Admin Building.webp": "/real-iska-vt/static/media/Admin Building.415daace2d624b82a09b.webp",
-    "static/media/Educ Bldg.webp": "/real-iska-vt/static/media/Educ Bldg.b6eb2353548ee4bf3748.webp",
-    "static/media/Nantes.webp": "/real-iska-vt/static/media/Nantes.a763238e02f7b2a26dce.webp",
-    "static/media/Yumul Building.webp": "/real-iska-vt/static/media/Yumul Building.8606c9cae70c88499397.webp",
     "static/media/avatar.gif": "/real-iska-vt/static/media/avatar.da7d23b697f6e4fdafef.gif",
-    "static/media/Lab 2.webp": "/real-iska-vt/static/media/Lab 2.c3a7ee84a80077c041aa.webp",
     "static/media/applyNow2.png": "/real-iska-vt/static/media/applyNow2.ed4edd29b1f0804d21c0.png",
     "static/media/step5.jpg": "/real-iska-vt/static/media/step5.d4cf3cb65fd9ad695386.jpg",
     "static/media/step8.jpg": "/real-iska-vt/static/media/step8.120dbf77d0c063b0d6a7.jpg",
@@ -117,8 +103,8 @@
     "static/media/krona-one-latin-ext-400-normal.woff": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.fb9cd5f06d66cdcda94f.woff",
     "static/media/krona-one-latin-ext-400-normal.woff2": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.01120cafa274a6b13dba.woff2",
     "index.html": "/real-iska-vt/index.html",
-    "main.612cd337.css.map": "/real-iska-vt/static/css/main.612cd337.css.map",
-    "main.49c56b68.js.map": "/real-iska-vt/static/js/main.49c56b68.js.map",
+    "main.9f0d2e06.css.map": "/real-iska-vt/static/css/main.9f0d2e06.css.map",
+    "main.cdca1f3a.js.map": "/real-iska-vt/static/js/main.cdca1f3a.js.map",
     "498.fcaf40d7.chunk.js.map": "/real-iska-vt/static/js/498.fcaf40d7.chunk.js.map",
     "703.59b532f8.chunk.js.map": "/real-iska-vt/static/js/703.59b532f8.chunk.js.map",
     "379.06dbaa89.chunk.js.map": "/real-iska-vt/static/js/379.06dbaa89.chunk.js.map",
@@ -137,7 +123,7 @@
     "reactPlayerPreview.b3f9eec1.chunk.js.map": "/real-iska-vt/static/js/reactPlayerPreview.b3f9eec1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.612cd337.css",
-    "static/js/main.49c56b68.js"
+    "static/css/main.9f0d2e06.css",
+    "static/js/main.cdca1f3a.js"
   ]
 }
