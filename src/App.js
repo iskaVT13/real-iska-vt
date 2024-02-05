@@ -4221,7 +4221,7 @@ const handleGrandButtonClick = () => {
             }
       },
       {
-        command: ['org', 'organization', '* organization', 'coordinator', '* coordinator', '* department', '* department'],
+        command: ['org', 'organization', '* organization', 'coordinator', '* coordinator', '* department', '* department', 'professor', '* professor'],
         callback: () => {
           resetTranscript();
           setShowOrgButton(true);

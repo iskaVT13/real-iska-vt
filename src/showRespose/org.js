@@ -14,14 +14,10 @@ const Org = () => {
 
   const handleButtonClick = (subComponent) => {
     setCurrentSubComponent(subComponent);
-
-    const hideTitleOrg = document.querySelectorAll('.title-org');
-    hideTitleOrg.forEach((element) => {
-            element.style.display = 'none';
-          });
   };
 
   const renderSubComponent = () => {
+    
     switch (currentSubComponent) {
       case 'Itdep':
         return <Itdep onBack={() => setCurrentSubComponent(null)} />;
@@ -41,11 +37,11 @@ const Org = () => {
 
   return (
     <div className='org-button'>
-      <div className='title-org'>Academic Organization</div>
       {currentSubComponent ? (
         renderSubComponent()
       ) : (
         <>
+        <div className='title-org'>Academic Organization</div>
         <div className='button-org'>
           <button onClick={() => handleButtonClick('Itdep')}>IT Coordinator</button>
           <button onClick={() => handleButtonClick('Educdep')}>Education Coordinator</button>

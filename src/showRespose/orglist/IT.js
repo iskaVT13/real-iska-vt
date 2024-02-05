@@ -1,30 +1,37 @@
 // SubComponent.js
 
 import React from 'react';
+import orgImage from './org.json';
+import '../showResponse.css';
 
 
 const SubComponent = ({ onBack }) => {
 
   return (
     <div className='org-chart'>
+      <div className='org-title'>IT Coordinator</div>
       <button onClick={onBack}>Back</button>
       
-      <div className='employee'>
-        <img src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fiska-iconn.ico?alt=media&token=bf6a6a44-d91a-4c75-84b6-0a52f3d64c90" alt='CEO' />
-        <p>CEO</p>
-        <div className='subordinates'>
-          <img src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fiska-iconn.ico?alt=media&token=bf6a6a44-d91a-4c75-84b6-0a52f3d64c90" alt='IT Director' />
-          <p>IT Director</p>
-          <div className='subordinates'>
-            <img src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fiska-iconn.ico?alt=media&token=bf6a6a44-d91a-4c75-84b6-0a52f3d64c90" alt='IT Coordinator' />
-            <p>IT Coordinator</p>
-            {/* Add more components for IT Coordinator's subordinates if any */}
-          </div>
-          <div className='subordinates'>
-            <img src="https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fiska-iconn.ico?alt=media&token=bf6a6a44-d91a-4c75-84b6-0a52f3d64c90" alt='IT Manager' />
-            <p>IT Manager</p>
-            {/* Add more components for IT Manager's subordinates if any */}
-          </div>
+      <div className='image-pic'>
+        <div className='image-name'>
+        <img src={orgImage.it1} alt='it1' />
+        <p>Mr. Lynel P. Tabien</p>
+        </div>
+        <div className='image-name'>
+        <img src={orgImage.it2} alt='it1' />
+        <p>Ms. Marie Andrea E. Zurbano </p>
+        </div>
+        <div className='image-name'>
+        <img src={orgImage.it3} alt='it1' />
+        <p>Mrs. Icon C. Obmerga</p>
+        </div>
+        <div className='image-name'>
+        <img src={orgImage.it4} alt='it1' />
+        <p>Mr. Mark Vence V. Dunca</p>
+        </div>
+        <div className='image-name'>
+        <img src={orgImage.it5} alt='it1' />
+        <p>Mrs. Rosario De Asis Anulao</p>
         </div>
       </div>
     
