@@ -1,30 +1,37 @@
 {
     "admin1": {
       "directionsText": "The Office of the Registrar is located at first floor of the building, third window.",
+      "img": "",
       "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fregistrar.mp3?alt=media&token=c892d51b-d5c0-49c5-a538-5f40e0d92c47"
     },
     "admin2": {
       "directionsText": "The Accounting Office is located at first floor, upon entering the building",
+      "img": "",
       "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Facc.mp3?alt=media&token=569c3506-87b4-4fdb-a314-f614a0ff58b8"
     },
     "admin3": {
       "directionsText": "The Cashier Office is located at first floor, second window.",
+      "img": "",
       "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fcash.mp3?alt=media&token=91795120-4fbe-4664-aa13-89d0610e74d2"
     },
     "admin4": {
       "directionsText": " The Admission Office is located at first floor, last window of the building",
+      "img": "",
       "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fadmission.mp3?alt=media&token=4ebd55d0-0d59-4632-80fc-5b30c3daecfa"
     },
     "admin5": {
         "directionsText": "The Office of OSAS is located at  second floor, first window ",
+        "img": "",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fosas.mp3?alt=media&token=8e42f6a3-8add-49a3-8b7c-1701de2e1acf"
       },
       "admin6": {
         "directionsText": " the Director's Office is located at second floor, second window ",
+        "img": "",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fdirector.mp3?alt=media&token=5277a41c-5f24-490f-8bb3-b516ae48c13c"
       },
       "admin7": {
         "directionsText": " The Academic and OJT Office is located at second floor, last window of the building",
+        "img": "",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Facads.mp3?alt=media&token=d775dbf6-ff3a-4b6b-abf8-f0602d8a406c"
       },
 

@@ -647,6 +647,11 @@ const handleGrandButtonClick = () => {
     setVirtualTourOn(!isVirtualTourOn);
     // Optionally, you can update the state here if needed
     setVirtual(!showVirtual);
+      // Toggle the visibility of the element with classname "bottom"
+  const bottomElement = document.querySelector('.bottom', 'mic');
+  if (bottomElement) {
+    bottomElement.style.display = isVirtualTourOn ? '' : 'none';
+  }
     
   };
   
@@ -4334,7 +4339,7 @@ const handleGrandButtonClick = () => {
   // Function to handle incorrect command
   const handleIncorrectCommand = () => {
     // Set the error message and show the error component
-    setErrorMessage('Incorrect command. Please try again.');
+    setErrorMessage("Sorry, I currently don't have information about that.");
     setShowError(true);
   };
 

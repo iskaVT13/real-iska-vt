@@ -196,7 +196,7 @@ color: white;
   position: fixed;
   top: 13%;
   width: 100%;
-  z-index: 100;
+  z-index: 99;
   padding: 2vh;
   padding: 10px;
 }
@@ -209,8 +209,9 @@ color: white;
   padding: 5px;
   line-height: 1.5; /* Adjust this value to control the line spacing */
   z-index: 50;
-  height: 118em;
+  height: 20em;
   text-align: center;
+  position: relative;
 }
 
 .displayResponse{

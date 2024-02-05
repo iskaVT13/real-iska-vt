@@ -7,8 +7,10 @@ import pupMap from '../pictures/map.jpg';
 import iskalogo from '../pictures/iska-logo.png';
 import contentMapping from '../fileJSON/directionsBuilding.json';
 
-import MyIframeComponent from '../VRtour'; // Update the path as needed
+import MyVirtualTour from '../VRtour'; // Update the path as needed
 import pdfData from './handbook.json';
+
+import OrgComponent from '../showRespose/org';
 
 
 Modal.setAppElement('#root');
@@ -39,6 +41,8 @@ const [pdfModalOpen, setPdfModalOpen] = useState(false);
 // ... (Inside the Menu function component)
 const [secondPdfLink, setSecondPdfLink] = useState(null);
 
+const [openOrg, setOrgOpen] = useState(false);
+
 // ... (Inside the Menu function component)
 const openSecondPdfModal = () => {
   // Retrieve the second PDF link from the JSON file
@@ -47,6 +51,14 @@ const openSecondPdfModal = () => {
 
   playAudio("UserManual");
 };
+
+const openOrgComponent = () => {
+  setOrgOpen(true);
+}
+
+const closeOrgComponent = () => {
+  setOrgOpen(false);
+}
 
 const openPdfModal = () => {
   setPdfLink(pdfData.pdfLink);
@@ -205,7 +217,7 @@ const closeIframeComponent = () => {
               <div className="name">Information</div>
             </div>
           </button>
-          <button onClick={() => openPopup("Information")}>
+          <button onClick={openOrgComponent}>
             <div className="option-item">
               <div className="icon">
                 <FontAwesomeIcon icon={faPeopleGroup} size="2x" />
@@ -260,7 +272,6 @@ const closeIframeComponent = () => {
       )}
       {iframeComponentOpen && (
   <Modal
-  
     className="common-frame"
     isOpen={true}
     onRequestClose={closeIframeComponent}
@@ -271,7 +282,26 @@ const closeIframeComponent = () => {
             <span>PUP LOPEZ VIRTUAL TOUR</span>
           </div>
     <div className='virtual-container'>
-    <MyIframeComponent  closeIframeComponent={closeIframeComponent} />
+    <MyVirtualTour  closeIframeComponent={closeIframeComponent} />
+
+    </div>
+
+  </Modal>
+)}
+{openOrg && (
+  <Modal
+    className="common-frame"
+    isOpen={true}
+    onRequestClose={closeOrgComponent}
+    contentLabel="Virtual Tour Modal"
+    style={customModalStyles}
+  >
+    <div className="popup-title">
+    <FontAwesomeIcon className="close" onClick={closeOrgComponent} icon={faArrowLeft} size="xl" />
+            <span>FACULTIES DEPARTMENT</span>
+          </div>
+    <div className='org-container'>
+    <OrgComponent  closeOrgComponent={closeOrgComponent} />
 
     </div>
 
