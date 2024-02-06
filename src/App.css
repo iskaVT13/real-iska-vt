@@ -202,16 +202,15 @@ color: white;
 }
 
 .container{
-  top: 0;
   white-space: pre-line;
   color: rgb(255, 255, 255);
   overflow:auto;
   padding: 5px;
   line-height: 1.5; /* Adjust this value to control the line spacing */
-  z-index: 50;
-  height: 20em;
+  z-index: 98;
+  height: 90em;
   text-align: center;
-  position: relative;
+  position: static;
 }
 
 .displayResponse{

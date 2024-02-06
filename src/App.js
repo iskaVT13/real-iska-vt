@@ -4606,8 +4606,8 @@ const sendTextToCommands = (text) => {
       {showDirector && <Director/>}
       {showFounded && <Founded/>}
       {showEntranceTest && <EntranceTest/>}
-      <Avatar />
       {showOrgButton && <Orgchart />}
+      <Avatar />
 
         <div className="otherResponse">
           <p className="displayResponse">

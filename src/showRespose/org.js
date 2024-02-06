@@ -6,6 +6,7 @@ import Educdep from './orglist/educ';
 import ArchiDep from './orglist/archi';
 import Civildep from './orglist/civil';
 import Biodep from './orglist/bio';
+import Elec from './orglist/elec';
 
 import './showResponse.css';
 
@@ -29,6 +30,8 @@ const Org = () => {
         return <Civildep onBack={() => setCurrentSubComponent(null)} />;
       case 'Biodep':
         return <Biodep onBack={() => setCurrentSubComponent(null)} />;
+        case 'Elec':
+        return <Elec onBack={() => setCurrentSubComponent(null)} />;
       default:
         return null;
     }
@@ -47,6 +50,7 @@ const Org = () => {
           <button onClick={() => handleButtonClick('Educdep')}>Education Department</button>
           <button onClick={() => handleButtonClick('ArchiDep')}>Architecture Department</button>
           <button onClick={() => handleButtonClick('Civildep')}>Civil Engineer Department</button>
+          <button onClick={() => handleButtonClick('Elec')}>Electrical Engineer Department</button>
           <button onClick={() => handleButtonClick('Biodep')}>Biology Department</button>
           <button onClick={() => handleButtonClick('Biodep')}>Accounting Department</button>
           <button onClick={() => handleButtonClick('Biodep')}>Agriculture Management Department</button>

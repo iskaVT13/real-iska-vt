@@ -103,6 +103,7 @@ a{
 
 .org-button{
     width: 100%;
+    height: 100em;
     top: 8em;
     position: relative;
     align-items: center;
@@ -111,6 +112,7 @@ a{
     position: relative;
     align-items: center;
     width: 100%;
+    height: 100%;
     display: block;
     padding: 5px;
 }
@@ -136,14 +138,19 @@ a{
     justify-content: center;
     gap: 10px;
     padding: 5px;
+    height: 100em;
+    z-index: 99;
+    position: relative;
 }
 
 .image-pic img{
-    max-width: 100%;
+    width: 20.7em;
     height: 20em;
     cursor: pointer;
     border: #ffbd00 solid 3px;
     border-radius: 10%;
+    position: relative;
+    
 }
 
 .image-pic p{
@@ -151,17 +158,25 @@ a{
     flex-wrap: wrap;
     justify-content:center;
     position: relative;
+    text-align: center;
+    align-items: center;
+    width: 10em;
 }
 
 .image-name p{
-    top: -3em;
+    top: -3.5em;
     padding: 10px;
-    font-size: 20px;
+    font-size: 15px;
     position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.778);
-    border-radius: (80px, 80px, 80px);
-
+    background-color:#ffbd00;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    left: 0;
   }
 @media screen and (min-width: 768px) {
     .image-pic {
@@ -178,11 +193,12 @@ a{
 
 .org{
     width: 100%;
+    height: 100em;
     position: relative;
     text-align: center;
     align-items: center;
     justify-content: center;
-    z-index: 150;
+    z-index: 101;
 }
 
 
