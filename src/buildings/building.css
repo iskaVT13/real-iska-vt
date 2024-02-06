@@ -33,9 +33,8 @@
     position: relative;
     width: 45vh;
     height: fit-content;
-    padding: 15px;
-    top: 8em;
-    
+    padding: 5px;
+    top: 8em;    
 }
 
 .back-button{
@@ -167,8 +166,7 @@ height: 100%;
     text-align: center;
     position: relative;
     display: block;
-    padding: 25px;
-    top: 5.9em;
+    top: 9em;
     color: white;
   }
 
@@ -240,4 +238,24 @@ height: 100%;
 
   .modal-close:hover {
     background-color:730000;
+  }
+
+  .image-button-grid{
+    display: grid;
+    justify-content: center;
+    padding: 5px;
+    align-content: center;
+    gap: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    .image-button-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Mobile styles - 1 column */
+  @media screen and (max-width: 767px) {
+    .image-button-grid {
+      grid-template-columns: (2, 2fr);
+    }
   }

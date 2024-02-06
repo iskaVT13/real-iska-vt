@@ -43,11 +43,18 @@ const Org = () => {
         <>
         <div className='title-org'>Academic Organization</div>
         <div className='button-org'>
-          <button onClick={() => handleButtonClick('Itdep')}>IT Coordinator</button>
-          <button onClick={() => handleButtonClick('Educdep')}>Education Coordinator</button>
-          <button onClick={() => handleButtonClick('ArchiDep')}>Architecture Coordinator</button>
-          <button onClick={() => handleButtonClick('Civildep')}>Civil Engineer Coordinator</button>
-          <button onClick={() => handleButtonClick('Biodep')}>Biology Coordinator</button>
+          <button onClick={() => handleButtonClick('Itdep')}>IT Department</button>
+          <button onClick={() => handleButtonClick('Educdep')}>Education Department</button>
+          <button onClick={() => handleButtonClick('ArchiDep')}>Architecture Department</button>
+          <button onClick={() => handleButtonClick('Civildep')}>Civil Engineer Department</button>
+          <button onClick={() => handleButtonClick('Biodep')}>Biology Department</button>
+          <button onClick={() => handleButtonClick('Biodep')}>Accounting Department</button>
+          <button onClick={() => handleButtonClick('Biodep')}>Agriculture Management Department</button>
+          <button onClick={() => handleButtonClick('Biodep')}>Hospitality Management Department</button>
+          <button onClick={() => handleButtonClick('Biodep')}>Office Administration Department</button>
+          <button onClick={() => handleButtonClick('Biodep')}>Public Administration Department</button>
+          <button onClick={() => handleButtonClick('Biodep')}>Marketing Management Department</button>
+          <button onClick={() => handleButtonClick('Biodep')}>Nutritionist Department</button>
           </div>
         </>
         

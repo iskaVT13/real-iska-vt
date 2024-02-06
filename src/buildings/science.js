@@ -211,6 +211,7 @@ function ScienceButton() {
         <div className="image-container">
           <p className='text-gif'>{currentButton.responseText}</p>
           <FontAwesomeIcon className="back-button" onClick={handleBackButtonClick} icon={faArrowLeft} size="xl" style={{color: "#FFD43B",}} />
+          <div className='image-button-grid'>
           <div className='gif'>
           <img  src={imageURL} alt={currentButton.title} />
           </div>
@@ -259,7 +260,7 @@ Room 105 (Food Laboratory)
   </li>
 </ul>
 </div>
-
+</div>
             {/* Modal for displaying text */}
             <div className='pop-up' >
             {isModalOpen && (
