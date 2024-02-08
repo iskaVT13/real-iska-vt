@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
-import voiceMoral from '../../speakText/moral.mp3'; 
+import voiceMoral from '../../speakVoice/moral.mp3'; 
 
 const Goodmoral = () => {
   const [playVoice, setPlayVoice] = useState(false);

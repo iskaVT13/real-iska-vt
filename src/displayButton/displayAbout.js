@@ -5,16 +5,22 @@ import './displayDesign.css';
 import History from '../showRespose/About/history';
 import Mission from '../showRespose/About/mission';
 import Hymn from '../showRespose/About/hymn';
+import Pillars from '../showRespose/About/pillars';
+import Philo from '../showRespose/About/philo';
 
-import voiceHymn from '../speakText/hymn.mp3';
-import voiceMission from '../speakText/mission.mp3';
-import voiceHistory from '../speakText/history.mp3';
-import voiceAbout from '../speakText/aboutPUP.mp3'; 
+import voiceHymn from '../speakVoice/hymn.mp3';
+import voiceMission from '../speakVoice/mission.mp3';
+import voiceHistory from '../speakVoice/history.mp3';
+import voiceAbout from '../speakVoice/aboutPUP.mp3';
+import voicePillars from '../speakVoice/pillars.mp3';
+import voicePhilo from '../speakVoice/philo.mp3';
 
 function App() {
   const [showHistory, setShowHistory] = useState(false);
   const [showMission, setShowMission] = useState(false);
   const [showHymn, setShowHymn] = useState(false);
+  const [showPillars, setShowPillars] = useState(false);
+  const [showPhilo, setShowPhilo] = useState(false);
   const [playVoice, setPlayVoice] = useState(false);
   const [currentVoice, setCurrentVoice] = useState('');
   const audioRef = useRef(null); // Add a reference to the audio element
@@ -56,6 +62,8 @@ useEffect(() => {
     setShowHymn(false);
     setCurrentVoice(voiceHistory);
     setPlayVoice(true);
+    setShowPhilo(false);
+    setShowPillars(false);
     
     window.scrollTo(0, 0);
   };
@@ -66,6 +74,8 @@ useEffect(() => {
     setShowHymn(false);
     setCurrentVoice(voiceMission);
     setPlayVoice(true);
+    setShowPhilo(false);
+    setShowPillars(false);
 
     window.scrollTo(0, 0);
 
@@ -78,9 +88,35 @@ useEffect(() => {
     setShowMission(false);
     setCurrentVoice(voiceHymn);
     setPlayVoice(true);
+    setShowPhilo(false);
+    setShowPillars(false);
 
     window.scrollTo(0, 0);
 
+  };
+
+  const handlePillarButtonClick = () => {
+    stopAudio();
+    setShowPillars(!showPillars);
+    setShowHistory(false);
+    setShowMission(false);
+    setShowPhilo(false)
+    setCurrentVoice(voicePillars);
+    setPlayVoice(true);
+
+    window.scrollTo(0, 0);
+  };
+  const handlePhiloButtonClick = () => {
+    stopAudio();
+    setShowPhilo(!showPhilo);
+    setShowHistory(false);
+    setShowMission(false);
+    setShowPhilo(true)
+    setShowPillars(false);
+    setCurrentVoice(voicePhilo);
+    setPlayVoice(true);
+
+    window.scrollTo(0, 0);
   }
 
   return (
@@ -93,12 +129,16 @@ useEffect(() => {
       <button className={showHistory ? 'active-button' : ''} onClick={handleHistoryButtonClick}>HISTORY</button>
       <button className={showMission ? 'active-button' : ''} onClick={handleMissionButtonClick}>MISSION and VISION</button>
       <button className={showHymn ? 'active-button' : ''} onClick={handleHymnButtonClick}> PUP HYMN</button>
+      <button className={showPillars ? 'active-button' : ''} onClick={handlePillarButtonClick}> 10 PILLARS</button>
+      <button className={showPhilo ? 'active-button' : ''} onClick={handlePhiloButtonClick}> PUP PHILOSOPHY</button>
       </div>
       <br></br>
       <div>
       {showHistory && <History />}
       {showMission && <Mission />}
       {showHymn && <Hymn />}
+      {showPillars && <Pillars />}
+      {showPhilo && <Philo />}
       </div>
     </div>
   );

@@ -136,16 +136,15 @@ a{
 .image-pic{
     display: grid;
     justify-content: center;
-    gap: 10px;
-    padding: 5px;
-    height: 100em;
+    gap: 15px;
+    padding: 15px;
     z-index: 99;
     position: relative;
 }
 
 .image-pic img{
-    width: 20.7em;
-    height: 20em;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
     border: #ffbd00 solid 3px;
     border-radius: 10%;

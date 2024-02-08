@@ -19,7 +19,7 @@ import hm from '../areaImage/hm.webp';
 import gym from '../areaImage/gym.webp';
 import grand from '../areaImage/grand.webp';
 
-import voiceLab1 from '../speakText/lab1.mp3';
+import voiceLab1 from '../speakVoice/lab1.mp3';
 
 function Lab1Button() {
   const [isActive, setIsActive] = useState(false);

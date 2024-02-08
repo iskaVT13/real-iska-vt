@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './showResponse.css';
-import voiceEntranceTest from '../speakText/entranceTest.mp3'; 
+import voiceEntranceTest from '../speakVoice/entranceTest.mp3'; 
 
 const EntranceTest = () => {
   const [playVoice, setPlayVoice] = useState(false);

@@ -5,9 +5,9 @@ import './displayDesign.css';
 import Bachelor from '../showRespose/Programs/bachelor';
 import Diploma from '../showRespose/Programs/diploma';
 
-import voiceBachelor from '../speakText/bachelor.mp3';
-import voiceDiploma from '../speakText/diploma.mp3';
-import voicePrograms from '../speakText/courses.mp3'; 
+import voiceBachelor from '../speakVoice/bachelor.mp3';
+import voiceDiploma from '../speakVoice/diploma.mp3';
+import voicePrograms from '../speakVoice/courses.mp3'; 
 
 function App() {
   const [showBachelor, setShowBachelor] = useState(false);

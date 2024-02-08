@@ -19,7 +19,7 @@ import hm from '../areaImage/hm.webp';
 import gym from '../areaImage/gym.webp';
 import grand from '../areaImage/grand.webp';
 
-import voiceYumul from '../speakText/yumul.mp3';
+import voiceYumul from '../speakVoice/yumul.mp3';
 
 function YumulButton() {
   const [isActive, setIsActive] = useState(false);

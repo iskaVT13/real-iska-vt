@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './showResponse.css';
-import voiceDirector from '../speakText/Director.mp3'; 
+import voiceDirector from '../speakVoice/Director.mp3'; 
 
 import tempPic from '../pictures/placePic/pup-logo.png';
 

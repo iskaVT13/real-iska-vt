@@ -5,11 +5,11 @@ import DisplayComponent from '../showRespose/Enroll/regular';
 import Irregular from '../showRespose/Enroll/irregular';
 import Freshmen from '../showRespose/Enroll/freshmen';
 import Transferee from '../showRespose/Enroll/transferee';
-import voiceRegular from '../speakText/regular.mp3';
-import voiceIrregular from '../speakText/irregular.mp3';
-import voiceFreshmen from '../speakText/freshmen.mp3';
-import voiceTransferee from '../speakText/transferee.mp3';
-import voiceEnrollment from '../speakText/enrollment.mp3'; 
+import voiceRegular from '../speakVoice/regular.mp3';
+import voiceIrregular from '../speakVoice/irregular.mp3';
+import voiceFreshmen from '../speakVoice/freshmen.mp3';
+import voiceTransferee from '../speakVoice/transferee.mp3';
+import voiceEnrollment from '../speakVoice/enrollment.mp3'; 
 
 function App() {
   const [showRegular, setShowRegular] = useState(false);

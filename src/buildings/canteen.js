@@ -19,7 +19,7 @@ import hm from '../areaImage/hm.webp';
 import gym from '../areaImage/gym.webp';
 import grand from '../areaImage/grand.webp';
 
-import voiceCanteen from '../speakText/canteen.mp3';
+import voiceCanteen from '../speakVoice/canteen.mp3';
 
 function CanteenButton() {
   const [isActive, setIsActive] = useState(false);

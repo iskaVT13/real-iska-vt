@@ -6,7 +6,7 @@ import step5 from '../Enroll/enrollPicture/Irregular/step5.jpg';
 import step6 from '../Enroll/enrollPicture/Irregular/step6-1.jpeg';
 import stepsix from '../Enroll/enrollPicture/Irregular/step6-2.jpg';
 
-import voiceIrregular from '../../speakText/irregular.mp3'; 
+import voiceIrregular from '../../speakVoice/irregular.mp3'; 
 
 const Irregular = () => {
   const [playVoice, setPlayVoice] = useState(false);

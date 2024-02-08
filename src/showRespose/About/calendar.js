@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../showResponse.css';
-import voiceFounded from '../../speakVoice/Founded.mp3'; 
+import voiceCalendar from '../../speakVoice/calendar.mp3'; 
 
-const Founded = () => {
+import tempPic from '../../pictures/placePic/pup-logo.png';
+
+const Calendar = () => {
   const [playVoice, setPlayVoice] = useState(false);
   const [currentVoice, setCurrentVoice] = useState('');
   const audioRef = useRef(null); // Add a reference to the audio element
@@ -29,7 +31,7 @@ const Founded = () => {
 
   useEffect(() => {
     // Play voiceHistory when the component mounts
-    setCurrentVoice(voiceFounded);
+    setCurrentVoice(voiceCalendar);
     setPlayVoice(true);
   
     // Cleanup function to stop audio when the component unmounts
@@ -41,9 +43,10 @@ const Founded = () => {
 
   return (
     <div className='step'>
-      <h2>History of PUP Lopez Branch</h2>
-      <p>The PUP Lopez Branch was established in February 13, 1979 during the Presidency of Dr. Pablo T. Mateo Jr.</p>
+      <h2>The PUP Lopez Branch Calendar</h2>
+      <img className='screenshot' src={tempPic} alt='pup-logo' />
+      <h3>Assoc. Prof. Ronaldo G. Bulfa, MBA</h3>
     </div>
   );
 };
-export default Founded;
+export default Calendar;

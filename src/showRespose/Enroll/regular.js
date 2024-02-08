@@ -9,7 +9,7 @@ import step4 from '../Enroll/enrollPicture/Regular/s4.jpg';
 import step5 from '../Enroll/enrollPicture/Regular/s5.jpg';
 import step8 from '../Enroll/enrollPicture/Regular/s8.jpg';
 
-import voiceRegular from '../../speakText/regular.mp3'; 
+import voiceRegular from '../../speakVoice/regular.mp3'; 
 
 const Regular = () => {
   const [playVoice, setPlayVoice] = useState(false);

@@ -19,7 +19,7 @@ import nantes from '../areaImage/nantes.webp';
 import hm from '../areaImage/hm.webp';
 import gym from '../areaImage/gym.webp';
 
-import voiceGrandstand from '../speakText/grandstand.mp3';
+import voiceGrandstand from '../speakVoice/grandstand.mp3';
 
 function GrandstandButton() {
   const [isActive, setIsActive] = useState(false);

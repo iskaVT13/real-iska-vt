@@ -19,7 +19,7 @@ import nantes from '../areaImage/nantes.webp';
 import gym from '../areaImage/gym.webp';
 import grand from '../areaImage/grand.webp';
 
-import voiceHM from '../speakText/hospitality.mp3';
+import voiceHM from '../speakVoice/hospitality.mp3';
 
 function HmButton() {
   const [isActive, setIsActive] = useState(false);

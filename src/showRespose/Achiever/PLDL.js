@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
-import voiceLister from '../../speakText/lister.mp3'; 
+import voiceLister from '../../speakVoice/lister.mp3'; 
 
 const Achiever = () => {
   const [playVoice, setPlayVoice] = useState(false);

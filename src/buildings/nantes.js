@@ -19,7 +19,7 @@ import hm from '../areaImage/hm.webp';
 import gym from '../areaImage/gym.webp';
 import grand from '../areaImage/grand.webp';
 
-import voiceNantes from '../speakText/nantes.mp3';
+import voiceNantes from '../speakVoice/nantes.mp3';
 
 function AdmissionButton() {
   const [isActive, setIsActive] = useState(false);

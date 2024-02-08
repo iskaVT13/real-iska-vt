@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../showResponse.css';
 
-import voiceMission from '../../speakText/mission.mp3'; 
+import voiceMission from '../../speakVoice/mission.mp3'; 
 
 const Mission = () => {
   const [playVoice, setPlayVoice] = useState(false);

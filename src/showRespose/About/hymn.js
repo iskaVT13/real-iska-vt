@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 
 import hymnAudio from './Imno.mp4';
 
-import voiceHymn from '../../speakText/hymn.mp3'; 
+import voiceHymn from '../../speakVoice/hymn.mp3'; 
 
 const Hymn = () => {
 

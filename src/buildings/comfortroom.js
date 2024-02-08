@@ -20,7 +20,7 @@ import hm from '../areaImage/hm.webp';
 import gym from '../areaImage/gym.webp';
 import grand from '../areaImage/grand.webp';
 
-import voiceCr from '../speakText/cr.mp3';
+import voiceCr from '../speakVoice/cr.mp3';
 
 function ComfortRoomButton() {
   const [isActive, setIsActive] = useState(false);

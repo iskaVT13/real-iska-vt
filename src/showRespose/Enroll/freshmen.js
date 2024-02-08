@@ -19,7 +19,7 @@ import step11 from '../Enroll/enrollPicture/Freshmen/step11.jpg';
 import step12 from '../Enroll/enrollPicture/Freshmen/step12.png';
 import step13 from '../Enroll/enrollPicture/Freshmen/step13.jpg';
 
-import voiceFreshmen from '../../speakText/freshmen.mp3'; 
+import voiceFreshmen from '../../speakVoice/freshmen.mp3'; 
 
 const Freshmen = () => {
   const [playVoice, setPlayVoice] = useState(false);

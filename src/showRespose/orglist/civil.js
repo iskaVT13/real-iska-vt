@@ -14,15 +14,15 @@ const SubComponent = ({ onBack }) => {
       
       <div className='image-pic'>
         <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
+        <img src={orgImage.ce1} alt='it1' />
         <p>Engr. Jer Anthony Palo (PICE)</p>
         </div>
         <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
+        <img src={orgImage.ce2} alt='it1' />
         <p>Engr. Cesar Bermundo</p>
         </div>
         <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
+        <img src={orgImage.ce3} alt='it1' />
         <p>Engr. Jomar Alcantara</p>
         </div>
       </div>

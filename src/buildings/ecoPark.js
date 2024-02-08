@@ -19,7 +19,7 @@ import hm from '../areaImage/hm.webp';
 import gym from '../areaImage/gym.webp';
 import grand from '../areaImage/grand.webp';
 
-import voiceEcopark from '../speakText/eco.mp3';
+import voiceEcopark from '../speakVoice/eco.mp3';
 
 function EcoParkButton() {
   const [isActive, setIsActive] = useState(false);

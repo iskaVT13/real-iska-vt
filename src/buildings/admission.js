@@ -20,7 +20,7 @@ import gym from '../areaImage/gym.webp';
 import grand from '../areaImage/grand.webp';
 
 
-import voiceAdmin from '../speakText/admin.mp3';
+import voiceAdmin from '../speakVoice/admin.mp3';
 
 function AdmissionButton() {
   const [isActive, setIsActive] = useState(false);

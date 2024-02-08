@@ -12,9 +12,6 @@ import { faMicrophone, faHome, faCircleQuestion, faKeyboard, faPaperPlane, faTim
 // Get and call the Menu.js 
 import Menu from './Menu/Menu';
 
-// Get the response to a command
-import Responses from './fileJSON/dataResponse.json';
-
 // calling the button when commanding 
 import YearButtons from './displayButton/displayEnroll';
 import Program from './displayButton/displayProgram';
@@ -41,6 +38,9 @@ import History from './showRespose/About/history';
 import Mission from './showRespose/About/mission';
 import Vision from './showRespose/About/vision';
 import Hymn from './showRespose/About/hymn';
+import Pillars from './showRespose/About/pillars';
+import Philo from './showRespose/About/philo';
+import Calendar from './showRespose/About/calendar';
 
 import Achiever from './showRespose/Achiever/PLDL';
 import Goodmoral from './showRespose/goodMoral/goodmoral';
@@ -66,9 +66,9 @@ import Vr from './VRtour';
 import suggestionsData from './fileJSON/filter.json';
 
 import ErrorComponent from './error';
-import speakError from './speakText/error.mp3';
-import helloIska from './speakText/hello.mp3';
-import iskaDo from './speakText/doISKA.mp3';
+import speakError from './speakVoice/error.mp3';
+import helloIska from './speakVoice/hello.mp3';
+import iskaDo from './speakVoice/doISKA.mp3';
 import Director from './showRespose/director';
 import Founded from './showRespose/About/founded';
 import EntranceTest from './showRespose/entranceTest';
@@ -167,7 +167,7 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
         </div>
         </div>
 
-          <input
+          <input id='keyword'
             type="text"
             placeholder="Type a keyword..."
             value={inputText}
@@ -266,6 +266,10 @@ const [showAvatar, setShowAvatar] = useState(false);
 const [showGoodMoral, setShowGoodmoral] = useState(false);
 const [showIskaDo, setShowIska] = useState(false);
 
+const [showPillars, setShowPillars] = useState(false);
+const [showCalendar, setShowCalendar] = useState(false);
+const [showPhilo, setShowPhilo] = useState(false);
+
 //CANTEEN
 const [canteenButton, setCanteenVisible] = useState(false);
 const [canteenResponse, setCanteenResponse] = useState('');
@@ -355,7 +359,7 @@ const stopAudio = () => {
 
 // Function to handle a year button click event
 const handleYearButtonClick = (year) => {
-  const response = Responses[year];  // Retrieve the response associated with the selected year
+  const response = [year];  // Retrieve the response associated with the selected year
 
     setSelectedYearResponse(response);
 
@@ -363,7 +367,7 @@ const handleYearButtonClick = (year) => {
 
   // Function to handle a program button click event
   const handleProgramButtonClick = (programs) => {
-    const program = Responses[programs];  // Retrieve the response associated with the selected year
+    const program = [programs];  // Retrieve the response associated with the selected year
 
     setSelectedProgram(program);
 
@@ -371,83 +375,83 @@ const handleYearButtonClick = (year) => {
 
   // Function to handle a about button click event
   const handleAboutButtonClick = (about) => {
-    const abouts = Responses[about];
+    const abouts = [about];
     setAboutResponse(abouts);
 
   };
 
   const handleCanteenButtonClick = (canteen) => {
-    const canteenn = Responses[canteen];
+    const canteenn = [canteen];
 
     setCanteenResponse(canteenn);
   }
 
   const handleScienceButtonClick = (science) => {
-    const sciencee = Responses[science];
+    const sciencee = [science];
 
     setScienceResponse(sciencee);
   }
 
   const handleEngineerButtonClick = (engineer) => {
-    const engineerr = Responses[engineer];
+    const engineerr = [engineer];
 
     setEngineerResponse(engineerr);
   }
 
   const handleEducButtonClick = (educ) => {
-    const educc = Responses[educ];
+    const educc = [educ];
 
     setEducResponse(educc);
   }
   const handleAdmissionButtonClick = (admission) => {
-    const admissionn = Responses[admission];
+    const admissionn = [admission];
 
     setAdmissionResponse(admissionn);
   }
   const handleGrandstandButtonClick = (grandstand) => {
-    const grandstandd = Responses[grandstand];
+    const grandstandd = [grandstand];
 
     setGrandStandResponse(grandstandd);
   }
   const handleGymButtonClick = (gym) => {
-    const gymm = Responses[gym];
+    const gymm = [gym];
 
     setGymResponse(gymm);
   }
   const handlelab1ButtonClick = (lab1) => {
-    const lab1b = Responses[lab1];
+    const lab1b = [lab1];
 
     setLab1Response(lab1b);
   }
   const handleLab2ButtonClick = (lab2) => {
-    const lab2b = Responses[lab2];
+    const lab2b = [lab2];
 
     setLab2Response(lab2b);
   }
 
   const handleHMButtonClick = (hm) => {
-    const hMm = Responses[hm];
+    const hMm = [hm];
 
     setHMResponse(hMm);
   }
 
   const handleNantesButtonClick = (nantes) => {
-    const nantesh = Responses[nantes];
+    const nantesh = [nantes];
 
     setNantesResponse(nantesh);
   }
   const handleYumulButtonClick = (yumul) => {
-    const yumull = Responses[yumul];
+    const yumull = [yumul];
 
     setYumulResponse(yumull);
   }
   const handleCrButtonClick = (cr) => {
-    const crr = Responses[cr];
+    const crr = [cr];
 
     setShowCrResponse(crr);
   }
   const handleEcoButtonClick = (eco) => {
-    const ecoo = Responses[eco];
+    const ecoo = [eco];
 
     setShowEcoResponse(ecoo);
   }
@@ -614,6 +618,9 @@ const handleGrandButtonClick = () => {
     setShowFounded(false);
     setShowEntranceTest(false);
     setShowOrgButton(false);
+    setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
     const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -736,6 +743,9 @@ const handleGrandButtonClick = () => {
         setShowFounded(false);
         setShowEntranceTest(false);
         setShowOrgButton(false);
+        setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -839,6 +849,9 @@ const handleGrandButtonClick = () => {
         setShowEntranceTest(false);
 
         setShowOrgButton(false);
+        setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -941,6 +954,9 @@ const handleGrandButtonClick = () => {
         setShowEntranceTest(false);
 
         setShowOrgButton(false);
+        setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1046,6 +1062,9 @@ const handleGrandButtonClick = () => {
         setShowEntranceTest(false);
 
         setShowOrgButton(false);
+        setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1152,6 +1171,9 @@ const handleGrandButtonClick = () => {
         setShowEntranceTest(false);
 
         setShowOrgButton(false);
+        setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1257,6 +1279,9 @@ const handleGrandButtonClick = () => {
         setShowEntranceTest(false);
 
         setShowOrgButton(false);
+        setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1366,6 +1391,9 @@ const handleGrandButtonClick = () => {
         setShowEntranceTest(false);
 
         setShowOrgButton(false);
+        setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1472,6 +1500,9 @@ const handleGrandButtonClick = () => {
         setShowEntranceTest(false);
 
         setShowOrgButton(false);
+        setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1578,6 +1609,9 @@ const handleGrandButtonClick = () => {
         setShowEntranceTest(false);
 
         setShowOrgButton(false);
+        setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1684,6 +1718,9 @@ const handleGrandButtonClick = () => {
         setShowEntranceTest(false);
 
         setShowOrgButton(false);
+        setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
                   //ECOPARK
                   setShowEcoVisible(false);
@@ -1794,6 +1831,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -1900,6 +1940,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -2007,6 +2050,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -2115,6 +2161,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -2222,6 +2271,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -2331,6 +2383,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -2438,6 +2493,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -2547,6 +2605,9 @@ const handleGrandButtonClick = () => {
           //ECOPARK
           setShowEcoVisible(false);
           setShowEcoResponse(false);
+          setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -2650,6 +2711,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -2753,6 +2817,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -2854,6 +2921,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
         hideList.forEach((element) => {
@@ -2957,6 +3027,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -3060,6 +3133,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -3162,6 +3238,9 @@ const handleGrandButtonClick = () => {
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
                   setShowOrgButton(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -3265,6 +3344,9 @@ const handleGrandButtonClick = () => {
                   setShowEcoResponse(false);
 
                   setShowOrgButton(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -3369,6 +3451,9 @@ const handleGrandButtonClick = () => {
                   setShowEcoResponse(false);
 
                   setShowOrgButton(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -3472,6 +3557,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -3573,6 +3661,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
     hideList.forEach((element) => {
@@ -3674,6 +3765,9 @@ const handleGrandButtonClick = () => {
                   //ECOPARK
                   setShowEcoVisible(false);
                   setShowEcoResponse(false);
+                  setShowPillars(false);
+                  setShowPhilo(false);
+                  setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
         hideList.forEach((element) => {
@@ -3775,6 +3869,9 @@ const handleGrandButtonClick = () => {
         setShowEntranceTest(false);
 
         setShowOrgButton(false);
+        setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
         const hideList = document.querySelectorAll('.list-result');
         hideList.forEach((element) => {
@@ -3881,6 +3978,9 @@ const handleGrandButtonClick = () => {
           setShowEntranceTest(false);
 
           setShowOrgButton(false);
+          setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
           const hideMicAndSearch = document.querySelectorAll('.bottom');
           hideMicAndSearch.forEach((element) => {
@@ -3988,6 +4088,9 @@ const handleGrandButtonClick = () => {
           setShowFounded(false);
           setShowEntranceTest(false);
           setShowOrgButton(false);
+          setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
           const hideMicAndSearch = document.querySelectorAll('.bottom');
           hideMicAndSearch.forEach((element) => {
@@ -4096,6 +4199,9 @@ const handleGrandButtonClick = () => {
             setShowEntranceTest(false);
 
             setShowOrgButton(false);
+            setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
             const hideMicAndSearch = document.querySelectorAll('.bottom');
             hideMicAndSearch.forEach((element) => {
@@ -4203,6 +4309,9 @@ const handleGrandButtonClick = () => {
               setShowFounded(false);
               setShowEntranceTest(true);
               setShowOrgButton(false);
+              setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
     
               const hideMicAndSearch = document.querySelectorAll('.bottom');
               hideMicAndSearch.forEach((element) => {
@@ -4309,6 +4418,9 @@ const handleGrandButtonClick = () => {
           setShowDirector(false);
           setShowFounded(false);
           setShowEntranceTest(false);
+          setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
           const hideMicAndSearch = document.querySelectorAll('.bottom');
           hideMicAndSearch.forEach((element) => {
@@ -4330,6 +4442,336 @@ const handleGrandButtonClick = () => {
               element.style.display = 'none';
 
         });
+      }
+    },
+    {
+      command: ['pillars', '* pillars', '* pillars *'],
+      callback: () => {
+        resetTranscript();
+        setShowOrgButton(false);
+        setResetButtonVisible(true);
+    
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(false); // Set responseDisplayed to true
+
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
+        //ECOPARK
+        setShowEcoVisible(false);
+        setShowEcoResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+        setShowPillars(true);
+        setShowPhilo(false);
+        setShowCalendar(false);
+
+        const hideMicAndSearch = document.querySelectorAll('.bottom');
+        hideMicAndSearch.forEach((element) => {
+          element.style.display = 'none';
+        });
+
+        const hideList = document.querySelectorAll('.list-result');
+        hideList.forEach((element) => {
+                element.style.display = 'none';
+              });
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
+
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
+            element.style.display = 'none';
+
+      });
+      }
+    },
+    {
+    command: ['calendar', '* calendar', '* calendar *'],
+    callback: () => {
+      resetTranscript();
+      setShowOrgButton(false);
+      setResetButtonVisible(true);
+  
+      setProgramsButton(false);
+
+      setYearButtonVisible(false);
+      setSelectedYearResponse(false);
+
+      setDisplayTextOnScreen(false);
+
+      setAboutVisible(false);
+      setAboutResponse(false);
+
+      setSelectedProgram(false);
+
+      setResponseDisplayed(false); // Set responseDisplayed to true
+
+      //CANTEEN
+      setCanteenVisible(false);
+      setCanteenResponse(false);
+      //SCIENCE
+      setScienceVisible(false);
+      setScienceResponse(false);
+      //ENGINEER
+      setEngineerVisible(false);
+      setEngineerResponse(false);
+      //YUMUL
+      setYumulVisible(false);
+      setYumulResponse(false);
+      //NANTES
+      setNantesVisible(false);
+      setNantesResponse(false);
+      //GYMNASIUM
+      setGymVisible(false);
+      setGymResponse(false);
+      //GRANDSTAND
+      setGrandStandVisible(false);
+      setGrandStandResponse(false);
+      //EDUCATION
+      setEducVisible(false);
+      setEducResponse(false);
+      //ADMISSION
+      setAdmissionVisible(false);
+      setAdmissionResponse(false);
+      //LAB1
+      setLab1Visible(false);
+      setLab1Response(false);
+      //LAB2
+      setLab2Visible(false);
+      setLab2Response(false);
+      //HOSPITALITY
+      setHMVisible(false);
+      setHMResponse(false);
+      //COMFORT ROOM
+      setShowCrVisible(false);
+      setShowCrResponse(false);
+      //ECOPARK
+      setShowEcoVisible(false);
+      setShowEcoResponse(false);
+
+      setShowEregular(false);
+      setShowEirregular(false);
+      setShowEfreshmen(false);
+      seteShowEtransferee(false);
+
+      setShowGrad(false);
+      setShowBachelor(false);
+      setShowDiploma(false);
+      setShowHistory(false);
+      setShowMission(false);
+      setShowVision(false);
+      setShowHymn(false);
+      setShowAchiever(false);
+      setShowIska(false);
+      setShowGoodmoral(false);
+  
+      setShowAvatar(false);
+      setShowDirector(false);
+      setShowFounded(false);
+      setShowEntranceTest(false);
+      setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(true);
+
+      const hideMicAndSearch = document.querySelectorAll('.bottom');
+      hideMicAndSearch.forEach((element) => {
+        element.style.display = 'none';
+      });
+
+      const hideList = document.querySelectorAll('.list-result');
+      hideList.forEach((element) => {
+              element.style.display = 'none';
+            });
+
+      const hideAvatar = document.querySelectorAll('.avatar-container');
+      hideAvatar.forEach((element) => {
+        element.style.display = 'none';
+      });
+
+      const hideCloseVR = document.querySelectorAll('.suggestions');
+        hideCloseVR.forEach((element) => {
+          element.style.display = 'none';
+
+    });
+    }
+    },
+    {
+      command: ['philosophy', '* philosophy', '* philossphy *'],
+      callback: () => {
+        resetTranscript();
+        setShowOrgButton(false);
+        setResetButtonVisible(true);
+    
+        setProgramsButton(false);
+
+        setYearButtonVisible(false);
+        setSelectedYearResponse(false);
+
+        setDisplayTextOnScreen(false);
+
+        setAboutVisible(false);
+        setAboutResponse(false);
+
+        setSelectedProgram(false);
+
+        setResponseDisplayed(false); // Set responseDisplayed to true
+
+        //CANTEEN
+        setCanteenVisible(false);
+        setCanteenResponse(false);
+        //SCIENCE
+        setScienceVisible(false);
+        setScienceResponse(false);
+        //ENGINEER
+        setEngineerVisible(false);
+        setEngineerResponse(false);
+        //YUMUL
+        setYumulVisible(false);
+        setYumulResponse(false);
+        //NANTES
+        setNantesVisible(false);
+        setNantesResponse(false);
+        //GYMNASIUM
+        setGymVisible(false);
+        setGymResponse(false);
+        //GRANDSTAND
+        setGrandStandVisible(false);
+        setGrandStandResponse(false);
+        //EDUCATION
+        setEducVisible(false);
+        setEducResponse(false);
+        //ADMISSION
+        setAdmissionVisible(false);
+        setAdmissionResponse(false);
+        //LAB1
+        setLab1Visible(false);
+        setLab1Response(false);
+        //LAB2
+        setLab2Visible(false);
+        setLab2Response(false);
+        //HOSPITALITY
+        setHMVisible(false);
+        setHMResponse(false);
+        //COMFORT ROOM
+        setShowCrVisible(false);
+        setShowCrResponse(false);
+        //ECOPARK
+        setShowEcoVisible(false);
+        setShowEcoResponse(false);
+
+        setShowEregular(false);
+        setShowEirregular(false);
+        setShowEfreshmen(false);
+        seteShowEtransferee(false);
+
+        setShowGrad(false);
+        setShowBachelor(false);
+        setShowDiploma(false);
+        setShowHistory(false);
+        setShowMission(false);
+        setShowVision(false);
+        setShowHymn(false);
+        setShowAchiever(false);
+        setShowIska(false);
+        setShowGoodmoral(false);
+    
+        setShowAvatar(false);
+        setShowDirector(false);
+        setShowFounded(false);
+        setShowEntranceTest(false);
+        setShowPillars(false);
+        setShowPhilo(true);
+        setShowCalendar(false);
+
+        const hideMicAndSearch = document.querySelectorAll('.bottom');
+        hideMicAndSearch.forEach((element) => {
+          element.style.display = 'none';
+        });
+
+        const hideList = document.querySelectorAll('.list-result');
+        hideList.forEach((element) => {
+                element.style.display = 'none';
+              });
+
+        const hideAvatar = document.querySelectorAll('.avatar-container');
+        hideAvatar.forEach((element) => {
+          element.style.display = 'none';
+        });
+
+        const hideCloseVR = document.querySelectorAll('.suggestions');
+          hideCloseVR.forEach((element) => {
+            element.style.display = 'none';
+
+      });
       }
     }
 
@@ -4428,6 +4870,10 @@ const sendTextToCommands = (text) => {
     setShowDirector(false);
     setShowFounded(false);
     setShowEntranceTest(false);
+    setShowOrgButton(false);
+    setShowPillars(false);
+        setShowPhilo(false);
+        setShowCalendar(false);
 
 
     setShowAvatar(false);
@@ -4607,6 +5053,9 @@ const sendTextToCommands = (text) => {
       {showFounded && <Founded/>}
       {showEntranceTest && <EntranceTest/>}
       {showOrgButton && <Orgchart />}
+      {showPillars && <Pillars />}
+      {showPhilo && <Philo />}
+      {showCalendar && <Calendar />}
       <Avatar />
 
         <div className="otherResponse">

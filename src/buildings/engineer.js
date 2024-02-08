@@ -19,7 +19,7 @@ import hm from '../areaImage/hm.webp';
 import gym from '../areaImage/gym.webp';
 import grand from '../areaImage/grand.webp';
 
-import voiceEngineer from '../speakText/engineering.mp3';
+import voiceEngineer from '../speakVoice/engineering.mp3';
 
 function EngineerButton() {
   const [isActive, setIsActive] = useState(false);

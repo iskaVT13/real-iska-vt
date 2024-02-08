@@ -5,7 +5,7 @@ import { jsPDF } from 'jspdf';
 import step1 from '../Enroll/enrollPicture/Transferee/step1.png';
 import step8 from '../Enroll/enrollPicture/Transferee/step8.jpg';
 
-import voiceTransferee from '../../speakText/transferee.mp3'; 
+import voiceTransferee from '../../speakVoice/transferee.mp3'; 
 
 const Transferee = () => {
   const [playVoice, setPlayVoice] = useState(false);

@@ -19,7 +19,7 @@ import hm from '../areaImage/hm.webp';
 import gym from '../areaImage/gym.webp';
 import grand from '../areaImage/grand.webp';
 
-import voiceScience from '../speakText/science.mp3';
+import voiceScience from '../speakVoice/science.mp3';
 
 function ScienceButton() {
   const [isActive, setIsActive] = useState(false);

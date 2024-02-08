@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
-import voiceHistory from '../../speakText/history.mp3'; 
+import voiceHistory from '../../speakVoice/history.mp3'; 
 
 const History = () => {
   const [playVoice, setPlayVoice] = useState(false);

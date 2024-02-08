@@ -19,7 +19,7 @@ import hm from '../areaImage/hm.webp';
 import gym from '../areaImage/gym.webp';
 import grand from '../areaImage/grand.webp';
 
-import voiceEduc from '../speakText/educ.mp3';
+import voiceEduc from '../speakVoice/educ.mp3';
 
 function EducationButton() {
   const [isActive, setIsActive] = useState(false);

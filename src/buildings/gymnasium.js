@@ -19,7 +19,7 @@ import nantes from '../areaImage/nantes.webp';
 import hm from '../areaImage/hm.webp';
 import grand from '../areaImage/grand.webp';
 
-import voiceGym from '../speakText/gym.mp3';
+import voiceGym from '../speakVoice/gym.mp3';
 
 function GymButton() {
   const [isActive, setIsActive] = useState(false);

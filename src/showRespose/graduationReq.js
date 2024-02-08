@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import './showResponse.css';
 import { jsPDF } from 'jspdf';
 
-import voiceGrad from '../speakText/grad.mp3'; 
+import voiceGrad from '../speakVoice/grad.mp3'; 
 
 const Graduation = () => {
   const [playVoice, setPlayVoice] = useState(false);
