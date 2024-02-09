@@ -4975,7 +4975,6 @@ const sendTextToCommands = (text) => {
           { aboutButtons && (
             <About onAboutClick={handleAboutButtonClick} />
           )}
-        {/* BUILDINGS */}
           {canteenButton && (
             <Canteen onCanteenButtonClick = {handleCanteenButtonClick}/>
           )}
@@ -5033,7 +5032,8 @@ const sendTextToCommands = (text) => {
       {showError && <ErrorComponent errorMessage={errorMessage} onTryAgain={resetDisplay} />}
     </div>
       <div className='container'>
-     
+     <div className='container-content'>
+
       {showEregular && <Eregular />}
       {showEirregular && <Eirregular />}
       {showEFreshmen && <Efreshmen />}
@@ -5073,6 +5073,7 @@ const sendTextToCommands = (text) => {
             {recognizedProcessText && (
               <p className="recognized-text-content">{recognizedProcessText}</p>
             )}
+      </div>
       </div>
       </div>
 

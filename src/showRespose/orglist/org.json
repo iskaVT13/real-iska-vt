@@ -17,7 +17,7 @@
     "ee4": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEE%20Department%2Fee4.png?alt=media&token=a3295503-94c7-4130-8c95-df8335a8483a",
     "ee5": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEE%20Department%2Fee5.png?alt=media&token=a6016f8e-263e-4fd9-8e7a-2343f443db18",
 
-    "archi": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FArchi%20Department%2Farchi1.png?alt=media&token=5a1b4f8f-940a-498b-a2da-ba987d760684",
+    "archi1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FArchi%20Department%2Farchi1.png?alt=media&token=5a1b4f8f-940a-498b-a2da-ba987d760684",
     "archi2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FArchi%20Department%2Farchi2.png?alt=media&token=839abd5c-1752-4844-8918-b945ac3f6570",
 
     "educ1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEduc%20Department%2Feduc1.png?alt=media&token=7ccf2ebe-6ee8-4666-8f9e-140209c6bb6f",
@@ -28,14 +28,23 @@
     "educ6": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEduc%20Department%2Feduc6.png?alt=media&token=8161b9c7-3149-47f3-a918-9205b440ded7",
     "educ7": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEduc%20Department%2Feduc7.png?alt=media&token=91c33387-0b78-4593-a665-18819ec082e5",
 
+    "acc1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FAccounting%20Department%2Facc1.png?alt=media&token=a77c4030-f40d-419d-9338-9fa78d09cf96",
+    "finance1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FAccounting%20Department%2Ffinance1.png?alt=media&token=b3207655-d061-47e4-88f5-8793b10059d7",
+  
+    "mark1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FAccounting%20Department%2Fmark1.png?alt=media&token=89b565df-780c-4249-9031-c914c1331392",
+    "mark2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FAccounting%20Department%2Fmark2.png?alt=media&token=9adb0d17-4ebf-4438-8bce-08e682ed8d33",
+    "mark3": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FAccounting%20Department%2Fmark3.png?alt=media&token=b44c2401-ae71-4dad-82bf-95c652b010a6",
 
+    "agri1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FAgri%20Department%2Fagri1.png?alt=media&token=4322d560-1a9e-4c96-8831-17c0c2a07d4f",
 
+    "bio1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FBio%20Department%2Fbio1.png?alt=media&token=4a1b5cba-2638-45ce-803f-d7b9c5535670",
+    "bio2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FBio%20Department%2Fbio2.png?alt=media&token=7ffe683a-ac89-4162-9747-ab4d5ff20cce",
+    "bio3": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FBio%20Department%2Fbio3.png?alt=media&token=ceb83902-ebb3-4206-8fa0-307ac3411749",
+    "nutri1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FBio%20Department%2Fnutri1.png?alt=media&token=78335985-5064-4888-bd9c-9c479dcf0c1d",
 
-    "pa4": "",
-    "pa5": "",
-    "pa6": "",
-    "pa7": "",
-    "pa8": ""
+    "pa1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FOffAd%20and%20PubAd%20Department%2Fpa1.png?alt=media&token=7695358e-01d8-41d5-86cb-8fa69260b007",
+    "pa2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FOffAd%20and%20PubAd%20Department%2Fpa2.png?alt=media&token=9c74ab8f-a0be-4d3e-b049-5f784bb9d65f",
+    "oa1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FOffAd%20and%20PubAd%20Department%2FoffAd1.png?alt=media&token=1fdfd6dd-e3bc-4452-9384-b8a701ab9cac"
 
   }
   

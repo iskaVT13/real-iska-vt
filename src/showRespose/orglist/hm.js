@@ -9,7 +9,7 @@ const SubComponent = ({ onBack }) => {
 
   return (
     <div className='org-chart'>
-      <div className='org-title'>Hospitality Management Faculty</div>
+      <div className='org-title'>Hospitality Management Department</div>
       <button onClick={onBack}>Back</button>
       
       <div className='image-pic'>

@@ -14,7 +14,7 @@ const SubComponent = ({ onBack }) => {
       
       <div className='image-pic'>
         <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
+        <img src={orgImage.oa1} alt='oa1' />
         <p>Mr. Hiro Sen T. Mera (PASOA)</p>
         </div>
       </div>

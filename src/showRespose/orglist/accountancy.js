@@ -9,30 +9,15 @@ const SubComponent = ({ onBack }) => {
 
   return (
     <div className='org-chart'>
-      <div className='org-title'>Accounting Faculty</div>
+      <div className='org-title'>Accounting Management</div>
       <button onClick={onBack}>Back</button>
       
       <div className='image-pic'>
         <div className='image-name'>
-        <img src={orgImage.it2} alt='it1' />
-        <p>Ms. Marie Andrea E. Zurbano (BSIT Professor)</p>
+        <img src={orgImage.acc1} alt='acc1' />
+        <p>Prof. Joanne Michelle Lee,CPA</p>
         </div>
-        <div className='image-name'>
-        <img src={orgImage.it1} alt='it1' />
-        <p>Mr. Lynel P. Tabien (IT Coordinator)</p>
-        </div>
-        <div className='image-name'>
-        <img src={orgImage.it3} alt='it1' />
-        <p>Mrs. Icon C. Obmerga (DIT Professor)</p>
-        </div>
-        <div className='image-name'>
-        <img src={orgImage.it4} alt='it1' />
-        <p>Mr. Mark Vence V. Dunca</p>
-        </div>
-        <div className='image-name'>
-        <img src={orgImage.it5} alt='it1' />
-        <p>Mrs. Rosario De Asis Anulao</p>
-        </div>
+        
       </div>
     
     </div>

@@ -10,7 +10,7 @@ import contentMapping from '../fileJSON/directionsBuilding.json';
 import MyVirtualTour from '../VRtour'; // Update the path as needed
 import pdfData from './handbook.json';
 
-import OrgComponent from '../showRespose/org';
+import OrgComponent from '../showRespose/codecraft';
 
 
 Modal.setAppElement('#root');
@@ -222,7 +222,7 @@ const closeIframeComponent = () => {
               <div className="icon">
                 <FontAwesomeIcon icon={faPeopleGroup} size="2x" />
               </div>
-              <div className="name">Faculty</div>
+              <div className="name">About Us</div>
             </div>
           </button>
           <button onClick={() => openPopup("Help")}>
@@ -297,8 +297,7 @@ const closeIframeComponent = () => {
     style={customModalStyles}
   >
     <div className="popup-title">
-    <FontAwesomeIcon className="close" onClick={closeOrgComponent} icon={faArrowLeft} size="xl" />
-            <span>FACULTIES DEPARTMENT</span>
+    <FontAwesomeIcon className="close" onClick={closeOrgComponent} icon={faArrowLeft} size="l" />
           </div>
     <div className='org-container'>
     <OrgComponent  closeOrgComponent={closeOrgComponent} />
@@ -318,7 +317,7 @@ const closeIframeComponent = () => {
     <div className="popup-title">
     <span>{pdfLink ? 'PUP Student Handbook' : '"ISKA" User Manual'}</span>
     </div>
-    <FontAwesomeIcon className="close" onClick={closePdfModal} icon={faArrowLeft} size="xl" />
+    <FontAwesomeIcon className="close" onClick={closePdfModal} icon={faArrowLeft} size="l" />
     <div className="popup-content">
       <div className="pdf-content-container">
         {/* Display the PDF link or embed a PDF viewer */}

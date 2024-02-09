@@ -1,16 +1,63 @@
+.choices-container{
+  top: 7.5em;
+  height: 100%;
+  position: relative;
+  color: white;
+}
+
+.choices-content p{
+  position: fixed;
+  color: white;
+  top: 15%;
+  z-index: 101;
+}
 
 .choices-button{
+  top: 20%;
     display: flexbox;
     justify-content: space-around;
     overflow: hidden;
-    position: relative;
+    position: fixed;
     background-color: #730000;
     z-index: 99;
-    top: 7em;
     padding: 5px;
     width: 100%;
     height: 100%;
     color: white;
+}
+
+.show-event{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.show-content{
+  position: static;
+  overflow: auto;
+  height: 100%;
+  padding-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content{
+  position: relative;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.back-choices{
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  padding: 10px;
+  top: 0;
+  z-index: 105;
 }
 
 .choices-button p{
@@ -28,7 +75,7 @@
     align-items: center;
     text-align: center;
     border-radius: 10px;
-    margin: 3px;
+    margin: 10px;
     background: linear-gradient(to bottom, #9b000a, #ffbd00); /* Gradient color */
     color: white; /* Text color */
     border: none;

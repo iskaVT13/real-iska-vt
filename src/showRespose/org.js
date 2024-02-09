@@ -26,9 +26,12 @@ const Org = () => {
 
   const handleButtonClick = (subComponent) => {
     setCurrentSubComponent(subComponent);
+    window.scroll(0, 0);
+
   };
 
   const renderSubComponent = () => {
+
     
     switch (currentSubComponent) {
       case 'Itdep':
@@ -78,9 +81,8 @@ const Org = () => {
         <div className='per-course'>
           <h4>Business and Accountancy</h4>
           <button onClick={() => handleButtonClick('Acc')}>Accounting Department</button>
-          <button onClick={() => handleButtonClick('Business')}>Business Administration</button>
           <button onClick={() => handleButtonClick('Finance')}>Finance Department</button>
-          <button onClick={() => handleButtonClick('Biodep')}>Marketing Management Department</button>
+          <button onClick={() => handleButtonClick('Business')}>Marketing Management Department</button>
         </div>
         <div className='per-course'>
           <h4>Agriculture and Agri-business</h4>
@@ -96,17 +98,17 @@ const Org = () => {
           <h4>Information Technology</h4>
           <button onClick={() => handleButtonClick('Itdep')}>IT Department</button>
         </div>
-        <div>
+        <div className='per-course'>
           <h4>Education and Public Administration</h4>
           <button onClick={() => handleButtonClick('Educdep')}>Education Department</button>
           <button onClick={() => handleButtonClick('PubAd')}>Public Administration Department</button>
         </div>
-        <div>
+        <div className='per-course'>
           <h4>Hospitality and Office Administration</h4>
           <button onClick={() => handleButtonClick('Hospi')}>Hospitality Management Department</button>
           <button onClick={() => handleButtonClick('OffAd')}>Office Administration Department</button>
         </div>
-        <div>
+        <div className='per-course'>
           <h4>Health and Science</h4>
           <button onClick={() => handleButtonClick('Biodep')}>Biology Department</button> 
           <button onClick={() => handleButtonClick('Nutri')}>Nutritionist Department</button>

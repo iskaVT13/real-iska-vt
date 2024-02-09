@@ -9,29 +9,21 @@ const SubComponent = ({ onBack }) => {
 
   return (
     <div className='org-chart'>
-      <div className='org-title'>Biology Faculty</div>
+      <div className='org-title'>Biology Department</div>
       <button onClick={onBack}>Back</button>
       
       <div className='image-pic'>
         <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
-        <p>Ms. Marie Andrea E. Zurbano (BSIT Professor)</p>
+        <img src={orgImage.bio1} alt='it1' />
+        <p>Benedick Labaco (ILS)</p>
         </div>
         <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
-        <p>Mr. Lynel P. Tabien (IT Coordinator)</p>
+        <img src={orgImage.bio2} alt='it1' />
+        <p>Francis M. Jimenez (ILS)</p>
         </div>
         <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
-        <p>Mrs. Icon C. Obmerga (DIT Professor)</p>
-        </div>
-        <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
-        <p>Mr. Mark Vence V. Dunca</p>
-        </div>
-        <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
-        <p>Mrs. Rosario De Asis Anulao</p>
+        <img src={orgImage.bio3} alt='it1' />
+        <p>Mr.Vince Czar S.Abel (ILS)</p>
         </div>
       </div>
     

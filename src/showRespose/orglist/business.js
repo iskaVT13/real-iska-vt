@@ -9,20 +9,20 @@ const SubComponent = ({ onBack }) => {
 
   return (
     <div className='org-chart'>
-      <div className='org-title'>Business and Marketing Faculty</div>
+      <div className='org-title'>Business and Marketing Department</div>
       <button onClick={onBack}>Back</button>
       
       <div className='image-pic'>
         <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
+        <img src={orgImage.mark1} alt='it1' />
         <p>Mr. Mark Tan</p>
         </div>
         <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
+        <img src={orgImage.mark2} alt='it1' />
         <p>Ms. Melanie Sario</p>
         </div>
         <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
+        <img src={orgImage.mark3} alt='it1' />
         <p>Mrs. Sarah Tabien</p>
         </div>
       </div>

@@ -8,7 +8,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     align-items: center;
     justify-content: space-around;
     text-align: center;
@@ -58,25 +58,24 @@ height: 100%;
 }
 
 .buttons-container {
-    padding: 20px;
+    top: 7em;
     position: relative;
-    top: 6.5em;
     overflow: auto;
     display: flexbox;
     flex-direction:column;
     color: white;
     height: 100%;
+    padding: 5px;
 }
 
 /* Add these styles to your existing CSS file, e.g., 'building.css' */
-
 .image-grid {
   display: grid;
   justify-content: center;
-  gap: 10px;
-  padding: 5px;
   position: relative;
-  height: max-content;
+  height: 100%;
+  padding: 5px;
+  gap: 1px 10px ;
 }
 
 .image-grid img {
@@ -88,16 +87,24 @@ height: 100%;
 .image-grid p {
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: center;
   position: relative;
+  width: 10px;
+  opacity: .8;
+  height: 33px;
+  align-items: center;
 }
 
-.image-text p{
-  top: 0;
-  padding: 5px;
+.image-text p {
+  align-items: center;
+  text-align: center;
+  top: -20%;
   font-size: 13px;
   position: relative;
   color: #ffffff;
+  width: 100%;
+  background-color: black;
+
 }
 /* Add the rest of your styles as they are */
 /* Desktop styles - 3 columns */
@@ -107,12 +114,13 @@ height: 100%;
   }
 }
 
-/* Mobile styles - 1 column */
+/* Mobile styles - 2 columns */
 @media screen and (max-width: 767px) {
   .image-grid {
-    grid-template-columns: (2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
 
 .title-area p{
   text-align:center;
@@ -128,7 +136,7 @@ height: 100%;
     position: sticky;
     border: #ffbd00 solid 5px;
     border-radius: 3%;
-    height: 10em;
+    height: fit-content;
 }
 
 .directions h4{

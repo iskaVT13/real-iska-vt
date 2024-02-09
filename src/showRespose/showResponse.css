@@ -4,12 +4,13 @@
     flex-direction: column;
     justify-content: center;
     padding: 10px;
-    top: 7em;
     overflow: auto;
     color: white;
     text-align: center;
     width: 100%;
+    height: 100%;
 }
+
 
 .step h4{
     color: white;
@@ -41,6 +42,7 @@ a{
     background-color: #ffbd00;
     padding: 10px 20px; 
     cursor: pointer; 
+    position: fixed;
     
 
     background-color: rgb(2, 189, 64);
@@ -83,7 +85,6 @@ a{
 }
 
 .video{
-    display: inline-block;
     position: relative;
     padding: 10px;
 }
@@ -107,7 +108,19 @@ a{
     top: 8em;
     position: relative;
     align-items: center;
+    justify-content: center;
 }
+
+.org-button h4{
+    text-align: center;
+}
+
+.per-course{
+    text-align: left;
+    width: 100%;
+    position: relative;
+}
+
 .button-org{
     position: relative;
     align-items: center;
@@ -115,8 +128,11 @@ a{
     height: 100%;
     display: block;
     padding: 5px;
+    justify-content: center;
+    text-align: center;
 }
 .button-org button{
+    width: 100px;
     display: inline-block;
     position: relative;
     background: linear-gradient(to bottom, #9b000a, #ffbd00); /* Gradient color */
@@ -125,6 +141,7 @@ a{
     align-items: center;
     margin: 5px;
     justify-content: center;
+    align-items: center;
     padding: 10px;
 }
 
@@ -186,7 +203,7 @@ a{
   /* Mobile styles - 1 column */
   @media screen and (max-width: 767px) {
     .image-pic {
-      grid-template-columns: (2, 2fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -197,7 +214,91 @@ a{
     text-align: center;
     align-items: center;
     justify-content: center;
-    z-index: 101;
 }
 
+.team-contents{
+    display: grid;
+    justify-content: center;
+    gap: 1px 20px;
+    padding: 15px;
+    z-index: 99;
+    position: relative;
+}
 
+.team-contents img{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    border: #ffbd00 solid 3px;
+    border-radius: 10%;
+    position: relative;
+    
+}
+
+.team-contents p{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.team-logo{
+    top: 0;
+    position: relative;
+}
+
+.team-logo img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-desc p{
+    top: -3.5em;
+    padding: 10px;
+    font-size: 11px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    color: #ffffff;
+    background-color:#ffbd00;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    left: 0;
+  }
+@media screen and (min-width: 768px) {
+    .team-contents {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Mobile styles - 1 column */
+  @media screen and (max-width: 767px) {
+    .team-contents {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+.feedback input {
+    display: inline-flex;
+    flex-direction: column;
+    height: 50px;
+    text-align: left;
+    align-items:baseline;
+    color: black;
+    font-weight: bold;
+}
+
+.send-comment .icon-send{
+    display: flex;
+    width: 100%;
+    position: relative;
+    color: white;
+}

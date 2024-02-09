@@ -1,5 +1,4 @@
-// src/App.js
-import React, { useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './displayDesign.css';
 
 import History from '../showRespose/About/history';
@@ -15,45 +14,50 @@ import voiceAbout from '../speakVoice/aboutPUP.mp3';
 import voicePillars from '../speakVoice/pillars.mp3';
 import voicePhilo from '../speakVoice/philo.mp3';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
 function App() {
   const [showHistory, setShowHistory] = useState(false);
   const [showMission, setShowMission] = useState(false);
   const [showHymn, setShowHymn] = useState(false);
   const [showPillars, setShowPillars] = useState(false);
   const [showPhilo, setShowPhilo] = useState(false);
+  const [showChoices, setShowChoices] = useState(true); // Added state for choices visibility
   const [playVoice, setPlayVoice] = useState(false);
   const [currentVoice, setCurrentVoice] = useState('');
   const audioRef = useRef(null); // Add a reference to the audio element
 
-useEffect(() => {
-  if (playVoice) {
-    const audioPlayer = new Audio(currentVoice);
-    audioRef.current = audioPlayer;
+  useEffect(() => {
+    if (playVoice) {
+      const audioPlayer = new Audio(currentVoice);
+      audioRef.current = audioPlayer;
 
-    audioPlayer.play();
+      audioPlayer.play();
 
-    audioPlayer.addEventListener('ended', () => {
-      setPlayVoice(false);
-    });
-  }
-}, [playVoice, currentVoice]);
+      audioPlayer.addEventListener('ended', () => {
+        setPlayVoice(false);
+      });
+    }
+  }, [playVoice, currentVoice]);
 
-const stopAudio = () => {
-  if (audioRef.current) {
-    audioRef.current.pause();
-    audioRef.current.currentTime = 0; // Reset the audio to the beginning
-  }
-};
-useEffect(() => {
-  // Play voiceAbout when the component mounts
-  setCurrentVoice(voiceAbout);
-  setPlayVoice(true);
-
-  // Cleanup function to stop audio when the component unmounts
-  return () => {
-    stopAudio();
+  const stopAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0; // Reset the audio to the beginning
+    }
   };
-}, []);
+
+  useEffect(() => {
+    // Play voiceAbout when the component mounts
+    setCurrentVoice(voiceAbout);
+    setPlayVoice(true);
+
+    // Cleanup function to stop audio when the component unmounts
+    return () => {
+      stopAudio();
+    };
+  }, []);
 
   const handleHistoryButtonClick = () => {
     stopAudio();
@@ -64,9 +68,13 @@ useEffect(() => {
     setPlayVoice(true);
     setShowPhilo(false);
     setShowPillars(false);
-    
+    setShowChoices(false);
     window.scrollTo(0, 0);
+    const hideMicAndSearch = document.querySelectorAll('.bottom');
+    hideMicAndSearch.forEach((element) => {
+      element.style.display = 'none';});
   };
+
   const handleMissionButtonClick = () => {
     stopAudio();
     setShowMission(!showMission);
@@ -76,9 +84,11 @@ useEffect(() => {
     setPlayVoice(true);
     setShowPhilo(false);
     setShowPillars(false);
-
+    setShowChoices(false);
     window.scrollTo(0, 0);
-
+    const hideMicAndSearch = document.querySelectorAll('.bottom');
+    hideMicAndSearch.forEach((element) => {
+      element.style.display = 'none';});
   };
 
   const handleHymnButtonClick = () => {
@@ -90,9 +100,11 @@ useEffect(() => {
     setPlayVoice(true);
     setShowPhilo(false);
     setShowPillars(false);
-
+    setShowChoices(false);
     window.scrollTo(0, 0);
-
+    const hideMicAndSearch = document.querySelectorAll('.bottom');
+    hideMicAndSearch.forEach((element) => {
+      element.style.display = 'none';});
   };
 
   const handlePillarButtonClick = () => {
@@ -100,46 +112,83 @@ useEffect(() => {
     setShowPillars(!showPillars);
     setShowHistory(false);
     setShowMission(false);
-    setShowPhilo(false)
+    setShowPhilo(false);
     setCurrentVoice(voicePillars);
     setPlayVoice(true);
-
+    setShowChoices(false);
     window.scrollTo(0, 0);
+    const hideMicAndSearch = document.querySelectorAll('.bottom');
+    hideMicAndSearch.forEach((element) => {
+      element.style.display = 'none';});
   };
+
   const handlePhiloButtonClick = () => {
     stopAudio();
     setShowPhilo(!showPhilo);
     setShowHistory(false);
     setShowMission(false);
-    setShowPhilo(true)
+    setShowPhilo(true);
     setShowPillars(false);
     setCurrentVoice(voicePhilo);
     setPlayVoice(true);
-
+    setShowChoices(false);
     window.scrollTo(0, 0);
-  }
+    const hideMicAndSearch = document.querySelectorAll('.bottom');
+    hideMicAndSearch.forEach((element) => {
+      element.style.display = 'none';});
+  };
+
+  const handleBackButtonClick = () => {
+    // Show choices buttons and hide the event display
+    setShowChoices(true);
+    setShowHistory(false);
+    setShowMission(false);
+    setShowHymn(false);
+    setShowPillars(false);
+    setShowPhilo(false);
+    window.scrollTo(0, 0);
+    const showMicandSearch = document.querySelectorAll('.bottom');
+    showMicandSearch.forEach((element) => {
+      element.style.display = '';});
+  };
 
   return (
-    <div>
-      <div className='choices-button' >
-      <div>
-        <p> Here are some information about PUP Lopez. Please select below which one do you want to see.
-</p>
-      </div>
-      <button className={showHistory ? 'active-button' : ''} onClick={handleHistoryButtonClick}>HISTORY</button>
-      <button className={showMission ? 'active-button' : ''} onClick={handleMissionButtonClick}>MISSION and VISION</button>
-      <button className={showHymn ? 'active-button' : ''} onClick={handleHymnButtonClick}> PUP HYMN</button>
-      <button className={showPillars ? 'active-button' : ''} onClick={handlePillarButtonClick}> 10 PILLARS</button>
-      <button className={showPhilo ? 'active-button' : ''} onClick={handlePhiloButtonClick}> PUP PHILOSOPHY</button>
-      </div>
-      <br></br>
-      <div>
-      {showHistory && <History />}
-      {showMission && <Mission />}
-      {showHymn && <Hymn />}
-      {showPillars && <Pillars />}
-      {showPhilo && <Philo />}
-      </div>
+    <div className='choices-container'>
+      {showChoices && (
+        <div>
+          <p>Here are some information about PUP Lopez. Please select below which one do you want to see.</p>
+          <div className='choices-button'>
+            <button className={showHistory ? 'active-button' : ''} onClick={handleHistoryButtonClick}>HISTORY</button>
+            <button className={showMission ? 'active-button' : ''} onClick={handleMissionButtonClick}>MISSION and VISION</button>
+            <button className={showHymn ? 'active-button' : ''} onClick={handleHymnButtonClick}>PUP HYMN</button>
+            <button className={showPillars ? 'active-button' : ''} onClick={handlePillarButtonClick}>10 PILLARS</button>
+            <button className={showPhilo ? 'active-button' : ''} onClick={handlePhiloButtonClick}>PUP PHILOSOPHY</button>
+          </div>
+        </div>
+      )}
+
+      {!showChoices && (
+        <div className='show-event'>
+          <div className='show-content'>
+            <div className='content'>
+          {showHistory && <History />}
+          </div>
+          <div className='content'>
+          {showMission && <Mission />}
+          </div>
+          <div className='content'>
+          {showHymn && <Hymn />}
+          </div>
+          <div className='content'>
+          {showPillars && <Pillars />}
+          </div>
+          <div className='content'>
+          {showPhilo && <Philo />}
+          </div>
+          </div>
+          <FontAwesomeIcon onClick={handleBackButtonClick} icon={faArrowLeft}  size="xl" color="#ffbd00" id='back' className='back-choices'/>
+        </div>
+      )}
     </div>
   );
 }
