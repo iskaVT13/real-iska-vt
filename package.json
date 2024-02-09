@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.1.0",
     "@fontsource/krona-one": "^5.0.8",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -15,6 +16,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "autocorrect": "^1.2.0",
+    "emailjs": "^4.0.3",
     "es6-promise": "^4.2.8",
     "firebase": "^10.7.2",
     "html2canvas": "^1.4.1",

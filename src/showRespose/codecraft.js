@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './showResponse.css';
 
 import leader from '../pictures/placePic/pup-logo.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import FeedBackForm  from './sendEmail';
 
 const CodeCraftTeam = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleButtonClick = () => {
+      setIsModalOpen(true);
+    };
+  
+    const handleCloseModal = () => {
+      setIsModalOpen(false);
+    };
   return (
     <div className='team-container'>
         <div className='team-logo'>
@@ -34,10 +42,14 @@ const CodeCraftTeam = () => {
             <p>Gjellah Mae M. Mortega</p>
           </div>
           </div>
-          <div className='feedback'>
-            <input id='comment' type='text' placeholder='Please  enter your feedback here.'></input><br/><br/>
-            <FontAwesomeIcon className='icon-send' icon={faPaperPlane} size='2x'/>
+          <div>
+          <button onClick={handleButtonClick}>Give us Feedback</button>
+
+          <div className='pop-form'>
+          {isModalOpen && <FeedBackForm onClose={handleCloseModal} />}
           </div>
+          </div>
+          
       </div>
   );
 };
