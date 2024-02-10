@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 
+import AdminHead from './adminHead';
 import Itdep from './orglist/IT';
 import Educdep from './orglist/educ';
 import ArchiDep from './orglist/archi';
@@ -34,6 +35,8 @@ const Org = () => {
 
     
     switch (currentSubComponent) {
+      case 'AdminHead':
+        return <AdminHead onBack={() => setCurrentSubComponent(null)}/>
       case 'Itdep':
         return <Itdep onBack={() => setCurrentSubComponent(null)} />;
       case 'Educdep':
@@ -76,6 +79,10 @@ const Org = () => {
         <>
         <div className='title-org'>
           <h2>Academic Department</h2>
+          <div className='button-org'>
+        <button onClick={() => handleButtonClick('AdminHead')}>Administration Officers</button>
+          </div>
+          <h2>Faculty Department</h2>
           </div>
         <div className='button-org'>
         <div className='per-course'>

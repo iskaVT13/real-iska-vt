@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
+import bachelor from './bachelor.webp';
+
 import voiceBachelor from '../../speakVoice/bachelor.mp3'; 
 
 const Bachelor = () => {
@@ -123,6 +125,9 @@ const Bachelor = () => {
     <div>
       <div className='step'>
         <h4 className=''>BACHELOR</h4><br/>
+        <div className='course-img'>
+          <img src={bachelor} alt='bachelor-img' />
+        </div>
         <p>
         Bachelor of Elementery Education (BEED)<br/>
         Bachelor in Public Administration (BPA)<br/>

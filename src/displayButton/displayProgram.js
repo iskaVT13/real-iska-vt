@@ -7,6 +7,8 @@ import Diploma from '../showRespose/Programs/diploma';
 import voiceBachelor from '../speakVoice/bachelor.mp3';
 import voiceDiploma from '../speakVoice/diploma.mp3';
 import voicePrograms from '../speakVoice/courses.mp3';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [showBachelor, setShowBachelor] = useState(false);
@@ -55,6 +57,10 @@ function App() {
     setPlayVoice(true);
     setShowChoices(false);
     window.scrollTo(0, 0);
+  
+    const hideMicAndSearch = document.querySelectorAll('.bottom');
+    hideMicAndSearch.forEach((element) => {
+      element.style.display = 'none';});
   };
 
   const handleDiplomaButtonClick = () => {
@@ -65,6 +71,11 @@ function App() {
     setPlayVoice(true);
     setShowChoices(false);
     window.scrollTo(0, 0);
+
+    const hideMicAndSearch = document.querySelectorAll('.bottom');
+    hideMicAndSearch.forEach((element) => {
+      element.style.display = 'none';});
+  
   };
 
   const handleBackButtonClick = () => {
@@ -72,7 +83,13 @@ function App() {
     setShowChoices(true);
     setShowBachelor(false);
     setShowDiploma(false);
+    window.scrollTo(0, 0);
+
+    const showMicandSearch = document.querySelectorAll('.bottom');
+    showMicandSearch.forEach((element) => {
+      element.style.display = '';});
   };
+  
 
   return (
     <div className='choices-container'>
@@ -96,7 +113,7 @@ function App() {
           {showBachelor && <Bachelor />}
           {showDiploma && <Diploma />}
           </div>
-          <button onClick={handleBackButtonClick}>Back</button>
+          <FontAwesomeIcon onClick={handleBackButtonClick} icon={faArrowLeft}  size="xl" color="#ffbd00" id='back' className='back-choices'/>
         </div>
       )}
     </div>

@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import '../showResponse.css';
 import { jsPDF } from 'jspdf';
 
+import diploma from './diploma.webp';
+
 import voiceDiploma from '../../speakVoice/diploma.mp3'; 
 
 const Diploma = () => {
@@ -120,9 +122,12 @@ const Diploma = () => {
     }
   };
   return (
-    <div>
+    <div className='diploma-container'>
       <div className='step'>
         <h4 className=''>DIPLOMA</h4><br/>
+        <div className='course-img'>
+          <img src={diploma} alt='diploma-img' />
+        </div>
         <p>
         Diploma in Computer Engineering Technology (DCEPET)<br/>
         Diploma in Civil Engineering Technology (DCVET)<br/>

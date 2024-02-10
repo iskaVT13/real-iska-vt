@@ -155,7 +155,7 @@ function App() {
   return (
     <div className='choices-container'>
       {showChoices && (
-        <div>
+        <div className='choices-content'>
           <p>Here are some information about PUP Lopez. Please select below which one do you want to see.</p>
           <div className='choices-button'>
             <button className={showHistory ? 'active-button' : ''} onClick={handleHistoryButtonClick}>HISTORY</button>

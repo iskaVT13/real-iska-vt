@@ -11,6 +11,12 @@
     height: 100%;
 }
 
+.diploma-container {
+    top: -9%;
+    position: relative;
+    height: 800px;
+}
+
 
 .step h4{
     color: white;
@@ -32,7 +38,7 @@ a{
 }
 
 .download-button{
-    right: 5%;
+    right: 38%;
     bottom: 7em;
     position: fixed;
 }
@@ -52,6 +58,7 @@ a{
     background-color: #147932; /* Change the color to your desired hover color */
 
 }
+  
 .title{
     justify-content: center;
     display: grid;
@@ -356,3 +363,63 @@ form{
     color: white;
 
 }
+
+.go-back {
+    position: fixed;
+    display: flex;
+    left: 0;
+    cursor: pointer;
+    color: #ffbd00;
+    width: 100%;
+}
+
+.admin-head{
+    padding: 20px;
+    border-bottom: #ffffff 3px solid;
+}
+
+.director {
+    width: 100%;
+    padding: 10px;
+}
+
+.director img {
+    width: 100px;
+    height: 100%;
+}
+
+.director p {
+    font-size: 15px;
+}
+
+.head-list {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.head-list img {
+    width: 100px;
+    height: 100px;
+}
+
+.head-list p{
+    padding: 10px;
+    display: flex;
+    font-size: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .head-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Mobile styles - 1 column */
+  @media screen and (max-width: 767px) {
+    .head-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+

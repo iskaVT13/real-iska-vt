@@ -4954,7 +4954,7 @@ const sendTextToCommands = (text) => {
           <p> What are the available programs</p>
           <p> Tell me about PUP</p>
           <p> How to enroll</p>
-          <p>- How to become academic achiever</p>
+          <p>- How to apply academic achiever</p>
           <p>- How to apply for graduation</p>
           <h5>You can ask ISKA for location of building</h5>
           <p>- Where is the Nantes Building</p>
