@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/real-iska-vt/static/css/main.0038100e.css",
-    "main.js": "/real-iska-vt/static/js/main.a64e9187.js",
+    "main.css": "/real-iska-vt/static/css/main.1a1e7b27.css",
+    "main.js": "/real-iska-vt/static/js/main.1db0e75c.js",
     "static/js/300.7a368175.chunk.js": "/real-iska-vt/static/js/300.7a368175.chunk.js",
     "static/js/952.19bf7103.chunk.js": "/real-iska-vt/static/js/952.19bf7103.chunk.js",
-    "static/js/64.d8e527b9.chunk.js": "/real-iska-vt/static/js/64.d8e527b9.chunk.js",
+    "static/js/64.1109fd58.chunk.js": "/real-iska-vt/static/js/64.1109fd58.chunk.js",
     "reactPlayerYouTube.js": "/real-iska-vt/static/js/reactPlayerYouTube.4659c4dd.chunk.js",
     "reactPlayerSoundCloud.js": "/real-iska-vt/static/js/reactPlayerSoundCloud.7a48e846.chunk.js",
     "reactPlayerVimeo.js": "/real-iska-vt/static/js/reactPlayerVimeo.ae6507e9.chunk.js",
@@ -38,8 +38,8 @@
     "static/media/canteen.webp": "/real-iska-vt/static/media/canteen.0aaf3f2b4d258e2b1dce.webp",
     "static/media/lab1.webp": "/real-iska-vt/static/media/lab1.ff5bbee4dc507a9d0e12.webp",
     "static/media/grand.webp": "/real-iska-vt/static/media/grand.b774bcaab69b9a5d0a3a.webp",
-    "static/media/eco.webp": "/real-iska-vt/static/media/eco.24c98ba06dc328a0e304.webp",
     "static/media/applyNow2.png": "/real-iska-vt/static/media/applyNow2.ed4edd29b1f0804d21c0.png",
+    "static/media/eco.webp": "/real-iska-vt/static/media/eco.e914e253be1541f90d0b.webp",
     "static/media/science.webp": "/real-iska-vt/static/media/science.858fc37cc264fd431afb.webp",
     "static/media/gym.webp": "/real-iska-vt/static/media/gym.239bdd9682131dea598f.webp",
     "static/media/step5.jpg": "/real-iska-vt/static/media/step5.d4cf3cb65fd9ad695386.jpg",
@@ -67,6 +67,8 @@
     "static/media/Founded.mp3": "/real-iska-vt/static/media/Founded.c1dcc706ed37186a39e2.mp3",
     "static/media/log in.png": "/real-iska-vt/static/media/log in.f6504351b1dbb41ffaaa.png",
     "static/media/engineering.mp3": "/real-iska-vt/static/media/engineering.40452215b5f615f0a392.mp3",
+    "static/media/bachelor.webp": "/real-iska-vt/static/media/bachelor.1a08ef8e4d7415d09a02.webp",
+    "static/media/diploma.webp": "/real-iska-vt/static/media/diploma.1568a9f803c4cb56e0d9.webp",
     "static/media/step12.png": "/real-iska-vt/static/media/step12.88ae2a12428376a06ef8.png",
     "static/media/step9.jpg": "/real-iska-vt/static/media/step9.00fb4fc1b41312bb605b.jpg",
     "static/media/educ.mp3": "/real-iska-vt/static/media/educ.12943e4804686cb2cc80.mp3",
@@ -120,11 +122,11 @@
     "static/media/krona-one-latin-ext-400-normal.woff": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.fb9cd5f06d66cdcda94f.woff",
     "static/media/krona-one-latin-ext-400-normal.woff2": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.01120cafa274a6b13dba.woff2",
     "index.html": "/real-iska-vt/index.html",
-    "main.0038100e.css.map": "/real-iska-vt/static/css/main.0038100e.css.map",
-    "main.a64e9187.js.map": "/real-iska-vt/static/js/main.a64e9187.js.map",
+    "main.1a1e7b27.css.map": "/real-iska-vt/static/css/main.1a1e7b27.css.map",
+    "main.1db0e75c.js.map": "/real-iska-vt/static/js/main.1db0e75c.js.map",
     "300.7a368175.chunk.js.map": "/real-iska-vt/static/js/300.7a368175.chunk.js.map",
     "952.19bf7103.chunk.js.map": "/real-iska-vt/static/js/952.19bf7103.chunk.js.map",
-    "64.d8e527b9.chunk.js.map": "/real-iska-vt/static/js/64.d8e527b9.chunk.js.map",
+    "64.1109fd58.chunk.js.map": "/real-iska-vt/static/js/64.1109fd58.chunk.js.map",
     "reactPlayerYouTube.4659c4dd.chunk.js.map": "/real-iska-vt/static/js/reactPlayerYouTube.4659c4dd.chunk.js.map",
     "reactPlayerSoundCloud.7a48e846.chunk.js.map": "/real-iska-vt/static/js/reactPlayerSoundCloud.7a48e846.chunk.js.map",
     "reactPlayerVimeo.ae6507e9.chunk.js.map": "/real-iska-vt/static/js/reactPlayerVimeo.ae6507e9.chunk.js.map",
@@ -140,7 +142,7 @@
     "reactPlayerPreview.5ee70c71.chunk.js.map": "/real-iska-vt/static/js/reactPlayerPreview.5ee70c71.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0038100e.css",
-    "static/js/main.a64e9187.js"
+    "static/css/main.1a1e7b27.css",
+    "static/js/main.1db0e75c.js"
   ]
 }
