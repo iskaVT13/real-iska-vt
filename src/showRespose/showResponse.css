@@ -359,13 +359,14 @@ form{
 
 }
 
-.go-back {
+.back-go{
     position: fixed;
-    display: flex;
     left: 0;
-    cursor: pointer;
+    padding: 10px;
+    top: 4em;
+    z-index: 101;
     color: #ffbd00;
-    width: 100%;
+    background-color: #730000;
 }
 
 .admin-head{

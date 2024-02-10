@@ -10,7 +10,6 @@ const AdminHead = ({onBack}) => {
 
   return (
     <div className='admin-head' >
-        <FontAwesomeIcon className='go-back' onClick={onBack} icon={faArrowLeft}/>
         <div className='director'>
         <img src={orgImage.temp} alt='director'/>
         <p>Assoc. Prof. Ronaldo G. Bulfa, MBA (Campus Director)</p>
@@ -53,6 +52,11 @@ const AdminHead = ({onBack}) => {
             <p>Assoc. Prof. Ronaldo G. Bulfa, MBA (Campus Director)</p>
             </div>
 
+        </div>
+        <div>
+        </div>
+        <div className='back-go'>
+        <FontAwesomeIcon className='go-back' onClick={onBack} icon={faArrowLeft} size='xl'/>
         </div>
       </div>
   );
