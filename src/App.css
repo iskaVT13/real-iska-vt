@@ -216,8 +216,8 @@ color: white;
 
 .container-content{
   position: relative;
-  height: 80px;
-  z-index: 98;
+  height: 740px;
+  z-index: 99;
 }
 
 .displayResponse{
@@ -391,6 +391,7 @@ input {
     padding: 10px;
     overflow-x: auto;
     overflow-y: hidden;
+    z-index: 98;
 }
 
 .suggestions button{
