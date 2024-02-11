@@ -3,35 +3,25 @@
 import React from 'react';
 import orgImage from './org.json';
 import '../showResponse.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const SubComponent = ({ onBack }) => {
 
   return (
     <div className='org-chart'>
+      <FontAwesomeIcon className='back-org' icon={faArrowLeft} size='xl' onClick={onBack} />
+
       <div className='org-title'>Hospitality Management Department</div>
-      <button onClick={onBack}>Back</button>
       
       <div className='image-pic'>
         <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
-        <p>Ms. Marie Andrea E. Zurbano (BSIT Professor)</p>
+        <img src={orgImage.hm1} alt='it1' />
+        <p>Lesley Ann-Chan Magtibay</p>
         </div>
         <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
-        <p>Mr. Lynel P. Tabien (IT Coordinator)</p>
-        </div>
-        <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
-        <p>Mrs. Icon C. Obmerga (DIT Professor)</p>
-        </div>
-        <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
-        <p>Mr. Mark Vence V. Dunca</p>
-        </div>
-        <div className='image-name'>
-        <img src={orgImage.temp} alt='it1' />
-        <p>Mrs. Rosario De Asis Anulao</p>
+        <img src={orgImage.hm2} alt='it1' />
+        <p>Mildred M. Mondragon</p>
         </div>
       </div>
     

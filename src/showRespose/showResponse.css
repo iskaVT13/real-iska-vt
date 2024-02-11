@@ -123,33 +123,28 @@ a{
 }
 
 .per-course{
-    text-align: left;
     width: 100%;
     position: relative;
 }
 
 .button-org{
-    position: relative;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    display: block;
-    padding: 5px;
-    justify-content: center;
-    text-align: center;
+    display: inline-block;
+    padding: 10px;
 }
 .button-org button{
-    width: 100px;
-    display: inline-block;
-    position: relative;
-    background: linear-gradient(to bottom, #9b000a, #ffbd00); /* Gradient color */
+    width:  15em;
     height: 5em;
+    border: none;
+    background: linear-gradient(to bottom, #9b000a, #ffbd00); /* Gradient color */
+    color: white;
+    padding: 1em;
+    margin-left: 10px;
+    cursor: pointer;
+    align-items: center;
     text-align: center;
-    align-items: center;
-    margin: 5px;
     justify-content: center;
-    align-items: center;
-    padding: 10px;
+
+
 }
 
 .org-title{
@@ -158,49 +153,44 @@ a{
 }
 
 .image-pic{
-    display: grid;
-    justify-content: center;
-    gap: 15px;
-    padding: 15px;
-    z-index: 99;
-    position: relative;
-}
-
-.image-pic img{
+    display: flex;
     width: 100%;
     height: 100%;
-    cursor: pointer;
-    border: #ffbd00 solid 3px;
-    border-radius: 10%;
-    position: relative;
-    
 }
 
-.image-pic p{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    position: relative;
-    text-align: center;
+.image-pic {
+    display: grid;
     align-items: center;
-    width: 10em;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-name {
+    padding: 10px;
+    display: grid;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-name img{
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    border:#ffbd00 solid 3px;
+    background-image: url(../pictures/placePic/pup-logo.png);
+    background-size: cover;
 }
 
 .image-name p{
-    top: -3.5em;
-    padding: 10px;
-    font-size: 15px;
-    position: relative;
-    text-align: center;
     align-items: center;
     justify-content: center;
+    text-align: center;
     width: 100%;
-    color: #ffffff;
-    background-color:#ffbd00;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    left: 0;
-  }
+    display: flex;
+    font-size: 15px;
+}
+
 @media screen and (min-width: 768px) {
     .image-pic {
       grid-template-columns: repeat(3, 1fr);
@@ -214,15 +204,6 @@ a{
     }
   }
 
-.org{
-    width: 100%;
-    height: 100em;
-    position: relative;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
 .team-contents{
     display: grid;
     justify-content: center;
@@ -233,8 +214,8 @@ a{
 }
 
 .team-contents img{
-    width: 150px;
-    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
     cursor: pointer;
     border: #ffbd00 solid 3px;
     border-radius: 50%;
@@ -261,7 +242,8 @@ a{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px 2px white;    position: relative;
+    box-shadow: 0px 0px 10px 2px white;
+    position: relative;
     align-items: center;
     justify-content: center;
 }
@@ -278,7 +260,6 @@ a{
     color: #ffffff;
     background-color:#ffbd00;
     border-radius: 10px;
-    left: 0;
   }
 @media screen and (min-width: 768px) {
     .team-contents {
@@ -303,7 +284,6 @@ a{
     padding: 20px;
     width: 100%;
     height: 100%;
-    background-color: #ffbd00;
   }
 
   .button-feedback button{
@@ -378,10 +358,19 @@ form{
 
 .submit-form input{
     background-color: #ffbd00;
-    font-weight: bolder;
     font-size: 15px;
     color: white;
 
+}
+
+.back-org{
+    position: fixed;
+    left: 0;
+    padding: 10px;
+    top: 1.5em;
+    z-index: 101;
+    color: #ffbd00;
+    background-color: #730000;
 }
 
 .back-go{
@@ -401,6 +390,7 @@ form{
 
 .director {
     width: 100%;
+    border-bottom: #ffffff 2px solid;
 }
 
 .director img {
@@ -416,15 +406,56 @@ form{
     font-size: 15px;
 }
 
+.second-container{
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    border-bottom: #ffffff 2px solid;
+    padding: 5px;
+}
+
+.second-head img {
+    max-width: 140px;
+    max-height: 100%;
+    border-radius: 50%;
+    border:#ffbd00 solid 3px;
+    background-image: url(../pictures/placePic/pup-logo.png);
+    background-size: cover;
+}
+
+.second-head p{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    font-size: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .second-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Mobile styles - 1 column */
+  @media screen and (max-width: 767px) {
+    .second-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
 .head-list {
     display: grid;
     gap: 10px;
     width: 100%;
     height: 100%;
+    padding: 10px;
 }
 
 .head-list img {
-    max-width: 150px;
+    max-width: 140px;
     max-height: 150px;
     border-radius: 50%;
     border:#ffbd00 solid 3px;

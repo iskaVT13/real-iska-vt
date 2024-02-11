@@ -281,6 +281,8 @@ color: white;
   padding: 5px;
 }
 input {
+  font-weight: bolder;
+  font-size: 13px;
   padding: 10px;
   width: 20em; /* Use the full width of the parent container */
   margin: 10px; /* You can use shorthand property for margin */
@@ -323,13 +325,20 @@ input {
   color: white;
 }
 
+.error img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
 .error button{
   background-color: #ffbd00;
+  padding: 15px;
 }
 
 .error-content{
   border-color:#ffbd00 solid 10px;
   color: #730000;
+  font-size: 20px;
   background-color: #f3efd0;
   width: 15em;
   align-items: center;
@@ -337,7 +346,7 @@ input {
   justify-content: center;
   text-align: center;
   padding: 10px;
-  border-radius: 5px ;
+  border-radius: 10px ;
   overflow: hidden;
 }
 

@@ -3,7 +3,8 @@
 import React, { useEffect } from 'react';
 import orgImage from './org.json';
 import '../showResponse.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const SubComponent = ({ onBack }) => {
 
@@ -13,8 +14,8 @@ const SubComponent = ({ onBack }) => {
 
   return (
     <div className='org-chart'>
+            <FontAwesomeIcon className='back-org' icon={faArrowLeft} size='xl' onClick={onBack} />
       <div className='org-title'>Agriculture Department</div>
-      <button onClick={onBack}>Back</button>
       
       <div className='image-pic'>
         <div className='image-name'>

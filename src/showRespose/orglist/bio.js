@@ -26,6 +26,15 @@ const SubComponent = ({ onBack }) => {
         <p>Mr.Vince Czar S.Abel (ILS)</p>
         </div>
       </div>
+
+      <div className='org-title'>Nutritionist Department</div>
+
+      <div className='image-pic'>
+        <div className='image-name'>
+        <img src={orgImage.nutri1} alt='nutri1' />
+        <p>Asst.Prof.Marvi Anne M. Mañago RMT PAN-YC</p>
+        </div>
+        </div>
     
     </div>
   );

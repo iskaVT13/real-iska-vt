@@ -3,19 +3,21 @@
 import React from 'react';
 import orgImage from './org.json';
 import '../showResponse.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 const SubComponent = ({ onBack }) => {
 
   return (
     <div className='org-chart'>
-      <div className='org-title'>IT Faculty</div>
-      <button onClick={onBack}>Back</button>
-      
+      <FontAwesomeIcon className='back-org' icon={faArrowLeft} size='xl' onClick={onBack} />
+      <div className='org-title'>IT Department</div>
+
       <div className='image-pic'>
         <div className='image-name'>
         <img src={orgImage.it2} alt='it1' />
-        <p>Ms. Marie Andrea E. Zurbano (BSIT Professor)</p>
+        <p>Ms. Marie Andrea E. Zurbano (IT Professor)</p>
         </div>
         <div className='image-name'>
         <img src={orgImage.it1} alt='it1' />
@@ -27,11 +29,24 @@ const SubComponent = ({ onBack }) => {
         </div>
         <div className='image-name'>
         <img src={orgImage.it4} alt='it1' />
-        <p>Mr. Mark Vence V. Dunca</p>
+        <p>Mr. Mark Vence V. Dunca (IT Professor)</p>
         </div>
         <div className='image-name'>
         <img src={orgImage.it5} alt='it1' />
-        <p>Mrs. Rosario De Asis Anulao</p>
+        <p>Mrs. Rosario De Asis Anulao (IT Professor)</p>
+        </div>
+      </div>
+
+      <div className='org-title'>Computer Engineer Department</div>
+      
+      <div className='image-pic'>
+        <div className='image-name'>
+        <img src={orgImage.com1} alt='it1' />
+        <p>Engr. Edelyn Pamilaran </p>
+        </div>
+        <div className='image-name'>
+        <img src={orgImage.com2} alt='it1' />
+        <p>Engr. Maria Luisa N. Francisco (ICEPT)</p>
         </div>
       </div>
     

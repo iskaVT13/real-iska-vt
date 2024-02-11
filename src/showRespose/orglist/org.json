@@ -1,15 +1,17 @@
 {
-    "it1": "https://ik.imagekit.io/prfixkppc/o/Orgchart%2FIT%20Department%2Fit1.png?alt=media&token=699de1de-4c8c-4914-aa1e-8aa8e695a863",
-    "it2": "https://ik.imagekit.io/prfixkppc/o/Orgchart%2FIT%20Department%2Fit2.png?alt=media&token=e4efeb87-4ecd-49e1-aebc-b4fd87f9b575",
-    "it3": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fit3.png?alt=media&token=cc8a7a5c-27e9-4630-951c-a4829591b6e6",
-    "it4": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fit4.png?alt=media&token=f5e413dd-d136-4b57-9792-cecc2442e3b0",
-    "it5": "https://ik.imagekit.io/prfixkppc/o/Orgchart%2FIT%20Department%2Fit5.png?alt=media&token=a034f1a0-c288-4ea9-8ae6-e0fce7208ab3",
-
+    "it1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fit1.png?alt=media&token=518bda61-ac4d-4be4-bd26-d22d6f7c9536",
+    "it2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fit2.png?alt=media&token=37993d20-b8a8-4080-9181-39afbb6fae51",
+    "it3": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fit3.png?alt=media&token=3d4e4ca6-5037-445a-b1df-e7904604adbc",
+    "it4": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fit4.png?alt=media&token=89a2b128-f8d5-4ffc-82af-344535361ded",
+    "it5": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fit5.png?alt=media&token=5c1d8256-d006-4b01-91f6-dfd12a7edc34",
+    "com1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fcomp1.png?alt=media&token=086dccb6-dc28-4958-a88b-ca87c896924c",
+    "com2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fcomp2.png?alt=media&token=5d13694a-9b2c-4716-805a-ad90f1399665",
     "temp": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FIT%20Department%2Fpup-logo.png?alt=media&token=db2717f7-5ce8-4fc5-8353-8115384540be",
 
-    "ce1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FCE%20Department%2Fce1.png?alt=media&token=ebf1ad18-81aa-4011-b998-7fa28cbf0cf4",
-    "ce2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FCE%20Department%2Fce2.png?alt=media&token=0b7b7599-4584-429e-8759-25b5ed4484d8",
-    "ce3": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FCE%20Department%2Fce3.png?alt=media&token=683c54fc-dab7-444a-920a-bd368871e2e8",
+    "ce1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FCE%20Department%2Fce1.png?alt=media&token=afe8ad52-d702-4525-9307-689e003555ce",
+    "ce2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FCE%20Department%2Fce2.png?alt=media&token=47cf2cf3-f571-47ff-a4d9-b0fbf5c78135",
+    "ce3": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FCE%20Department%2Fce3.png?alt=media&token=4f5003e3-8a3a-45c7-b346-b4e8ad1344f5",
+    "ce4": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FCE%20Department%2Fce4.png?alt=media&token=5c24eaf8-9002-4a0b-93e3-1df63c853ab1",
 
     "ee1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEE%20Department%2Fee1.png?alt=media&token=d72cb380-631f-49ea-89d1-a4dfe7648dae",
     "ee2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEE%20Department%2Fee2.png?alt=media&token=526552ed-988c-4e15-a8bc-9597318a7c3e",
@@ -19,13 +21,14 @@
 
     "archi1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FArchi%20Department%2Farchi1.png?alt=media&token=5a1b4f8f-940a-498b-a2da-ba987d760684",
     "archi2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FArchi%20Department%2Farchi2.png?alt=media&token=839abd5c-1752-4844-8918-b945ac3f6570",
+    "archi3": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FArchi%20Department%2Farchi3.png?alt=media&token=e2f3bfc9-ceb8-4602-a371-eecc0fb93eb7",
 
     "educ1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEduc%20Department%2Feduc1.png?alt=media&token=7ccf2ebe-6ee8-4666-8f9e-140209c6bb6f",
-    "educ2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEduc%20Department%2Feduc2.png?alt=media&token=4edd8835-e77a-4f16-9c84-0520c1040caf",
+    "educ2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEduc%20Department%2Feduc2.png?alt=media&token=2226986b-d20a-4791-a66a-62f517789e09",
     "educ3": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEduc%20Department%2Feduc3.png?alt=media&token=a41502ef-1389-4d4b-8787-6e44cc6d7c09",
     "educ4": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEduc%20Department%2Feduc4.png?alt=media&token=6813dede-632d-4dc2-8077-3e5710403e7c",
     "educ5": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEduc%20Department%2Feduc5.png?alt=media&token=5786707c-7b9b-40e0-93be-2d99bab97d66",
-    "educ6": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEduc%20Department%2Feduc6.png?alt=media&token=8161b9c7-3149-47f3-a918-9205b440ded7",
+    "educ6": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEduc%20Department%2Feduc6.png?alt=media&token=f750864c-85f6-493d-a829-16b14eca1d3a",
     "educ7": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FEduc%20Department%2Feduc7.png?alt=media&token=91c33387-0b78-4593-a665-18819ec082e5",
 
     "acc1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FAccounting%20Department%2Facc1.png?alt=media&token=a77c4030-f40d-419d-9338-9fa78d09cf96",
@@ -45,27 +48,43 @@
     "pa1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FOffAd%20and%20PubAd%20Department%2Fpa1.png?alt=media&token=7695358e-01d8-41d5-86cb-8fa69260b007",
     "pa2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FOffAd%20and%20PubAd%20Department%2Fpa2.png?alt=media&token=9c74ab8f-a0be-4d3e-b049-5f784bb9d65f",
     "oa1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FOffAd%20and%20PubAd%20Department%2FoffAd1.png?alt=media&token=1fdfd6dd-e3bc-4452-9384-b8a701ab9cac",
+    "oa2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2FOffAd%20and%20PubAd%20Department%2FOfAd2.png?alt=media&token=f8215f0e-dc18-4e4c-a26b-dec0c6a1dcab",
+
+    "hm1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2Fhospitality%20departmen%2Fhm1.png?alt=media&token=de7fe034-9442-4f02-9281-ca00875c29ca",
+    "hm2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/Orgchart%2Fhospitality%20departmen%2Fhm2.png?alt=media&token=4b13829b-75de-418e-bd8a-1e4d8ae218f5",
 
 
-    "staff1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fdirector.png?alt=media&token=80c3b23a-28b4-4241-a6d8-4e921ea9f026",
-    "staff2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff2.png?alt=media&token=7ff2c2c5-9d0b-4257-8a7b-99699fe4f329",
-    "staff3": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff3.png?alt=media&token=62822872-5fc3-4849-b66d-88e65c3072cf",
-    "staff4": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff4.png?alt=media&token=4a7ca472-a3be-4fd4-b6b8-aa2b170c708e",
-    "staff5": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff5.png?alt=media&token=27abaa0b-47b5-4906-b1d4-dff5bc668cee",
-    "staff6": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff6.png?alt=media&token=70ad9194-0793-475c-8c7b-cc235d519f5a",
-    "staff7": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff7.png?alt=media&token=ab6f6331-5c9f-4515-ae9a-04d5787572a7",
-    "staff8": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff8.png?alt=media&token=43b7b845-6778-4f2a-8066-b86283584396",
-    "staff9": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff9.png?alt=media&token=1d41dca0-069b-446e-8e97-9b5ea4d7fe75",
-    "staff10": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff10.png?alt=media&token=3131785e-01d9-48a6-b7f1-32922720fa5a",
-    "staff11": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff11.png?alt=media&token=ac4dc5c0-ad6b-480c-a6ad-f1c09df50c78",
-    "staff12": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff12.png?alt=media&token=13bfaf14-c7a8-4521-82f3-501894685ec9",
-    "staff13": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff13.png?alt=media&token=92bc948b-e3ea-4115-a3a4-78895d07b86f",
-    "staff14": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff14.png?alt=media&token=45d92755-a702-4157-a11a-a49e6ee44ee6",
-    "staff15": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff15.png?alt=media&token=62548a6b-9980-445a-85ca-868ec21d44f5",
-    "staff16": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fstaff16.png?alt=media&token=d50816da-b95f-4d21-a71b-5c511eed9f4e",
-    "staff17": "",
-    "staff18": "",
-    "staff19": ""
+    "director": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fdirector.png?alt=media&token=80c3b23a-28b4-4241-a6d8-4e921ea9f026",
+    "head1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fhead1.png?alt=media&token=a447bddf-c03d-4032-b4ae-0c59f5bb9c4f",
+    "head2": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fhead2.png?alt=media&token=c2437954-6633-4aa5-95c8-aa64c1db0baa",
+    "head3": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Fhead3.png?alt=media&token=559f14de-fc73-42dd-833d-974294eacf12",
+
+    "list0": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Flist0.png?alt=media&token=de8d6e68-b400-4929-aedd-7265f62bfa47",
+    "list1": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Flist1.png?alt=media&token=a73020cc-1136-4346-89b0-1b0d175c2247",
+    "list2":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Flist2.png?alt=media&token=fc926620-3e6f-4cc0-a9e8-dcf893d5cfd8",
+    "list3":"",
+    "list4":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Flist4.png?alt=media&token=e096101d-635c-4013-be8c-ea76db632778",
+    "list5":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Flist5.png?alt=media&token=3b6bb538-4745-4799-b2e3-c8e5babd11da",
+    "list6":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2Flist6.png?alt=media&token=390978ef-f099-496f-bf6b-bf131fec5883",
+    "list7": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL7.png?alt=media&token=d423783a-fca6-4fcf-b484-9409b859e99a",
+    "list8":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL8.png?alt=media&token=5f752f42-b81d-4a8d-be4b-52ca997a0158",
+    "list88": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL8-2.png?alt=media&token=da5e33b8-40a1-44c7-a03b-be8b70568bb7",
+    "list9":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL9.png?alt=media&token=841d1ebb-4408-4534-a7c6-a81d1a164b71",
+    "list10":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL10.png?alt=media&token=f807c0ba-a5f7-4d10-ae06-0400bc781f87",
+    "list11":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL11.png?alt=media&token=8a2892bd-1d8f-4f42-8768-d09385351d16",
+    "list12":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL12.png?alt=media&token=f952ed04-7eef-4ac5-a4ad-c2b9eed3fe4b",
+    "list13":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL13.png?alt=media&token=96dafd07-74e0-41f4-bb40-dd1820d23f6c",
+    "list14":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL14.png?alt=media&token=f92a2d9e-78bb-4192-8e34-4d4b5324e733",
+    "list15":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL15.png?alt=media&token=4a09d5bc-f8aa-4cc2-8a2c-c92a3f7ede4a",
+    "list16":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL16.png?alt=media&token=d9ae26cc-8a7d-4d6a-81c8-bdc9a81b1b54",
+    "list17":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL17.png?alt=media&token=b6269f71-c334-4cfd-95c7-a2b95b6124c7",
+    "list18":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL18.png?alt=media&token=314e90d0-3a11-4d45-a4c7-907b22fe1255",
+    "list19":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL19.png?alt=media&token=2e724000-85c8-4afb-8cf6-fba7d85ac316",
+    "list20":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL20.png?alt=media&token=d248ced4-fdab-449b-a934-0b0c73d22792",
+    "list21":"https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/ServicesStaff%2FL21.png?alt=media&token=7f23ef38-8eef-4d7d-b0d4-dbade1699fa1",
+    "list22":""
+
+
 
 
   }

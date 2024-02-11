@@ -1,13 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './showResponse.css';
 
 import leader from '../pictures/placePic/pup-logo.png';
 import FeedBackForm  from './sendEmail';
 
-import teamLogo from '../pictures/team-logo.jpg'
+import teamLogo from '../pictures/team-logo.jpg';
+
+import voiceTeam from '../speakVoice/team.mp3';
 
 const CodeCraftTeam = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [playVoice, setPlayVoice] = useState(false);
+    const [currentVoice, setCurrentVoice] = useState('');
+    const audioRef = useRef(null); // Add a reference to the audio element
+  
+    useEffect(() => {
+      if (playVoice) {
+        const audioPlayer = new Audio(currentVoice);
+        audioRef.current = audioPlayer;
+    
+        audioPlayer.play();
+    
+        audioPlayer.addEventListener('ended', () => {
+          setPlayVoice(false);
+        });
+      }
+    }, [playVoice, currentVoice]);
+    
+    const stopAudio = () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0; // Reset the audio to the beginning
+      }
+    };
+  
+    useEffect(() => {
+      // Play voiceHistory when the component mounts
+      setCurrentVoice(voiceTeam);
+      setPlayVoice(true);
+    
+      // Cleanup function to stop audio when the component unmounts
+      return () => {
+        stopAudio();
+      };
+    }, []);
 
     const handleButtonClick = () => {
       setIsModalOpen(true);
