@@ -113,7 +113,7 @@ const Org = () => {
       ) : (
         <>
         <div className='title-org'>
-          <h2>PUP Lopez Organizational Chart</h2>
+          <h2>Organizational Chart</h2>
           <div className='button-org'>
         <button onClick={() => handleButtonClick('AdminHead')}>Administration Officers</button>
           </div>

@@ -8,6 +8,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 const SubComponent = ({ onBack }) => {
+  window.scroll(0, 0);
 
   return (
     <div className='org-chart'>
