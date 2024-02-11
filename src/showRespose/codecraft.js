@@ -4,6 +4,8 @@ import './showResponse.css';
 import leader from '../pictures/placePic/pup-logo.png';
 import FeedBackForm  from './sendEmail';
 
+import teamLogo from '../pictures/team-logo.jpg'
+
 const CodeCraftTeam = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -17,7 +19,7 @@ const CodeCraftTeam = () => {
   return (
     <div className='team-container'>
         <div className='team-logo'>
-            <img src={leader} alt="Leader" />
+            <img src={teamLogo} alt="Leader" />
         </div>
       <h2>Team CodeCraft</h2>
       <div className='team-contents'>
@@ -43,7 +45,18 @@ const CodeCraftTeam = () => {
           </div>
           </div>
           <div>
-          <button onClick={handleButtonClick}>Give us Feedback</button>
+            <div className='button-feedback'>
+            <button onClick={handleButtonClick}>Give us a Feedback</button>
+            <div>
+              <p>Contact us: </p>
+              <ul>
+                <li>pupiska13@gmail.com</li>
+              </ul>
+            </div>
+            <div className='modal-footer'>
+              <p>2023 | ISKA | PUP Lopez Quezon</p>
+            </div>
+            </div>
 
           <div className='pop-form'>
           {isModalOpen && <FeedBackForm onClose={handleCloseModal} />}

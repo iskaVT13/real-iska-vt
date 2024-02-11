@@ -1,50 +1,54 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../showResponse.css';
 
-import voicePillars from '../../speakVoice/pillars.mp3'; 
+import voicePillars from '../../speakVoice/pillars.mp3';
 
 const Pillars = () => {
   const [playVoice, setPlayVoice] = useState(false);
   const [currentVoice, setCurrentVoice] = useState('');
-  const audioRef = useRef(null); // Add a reference to the audio element
+  const audioRef = useRef(null);
 
   useEffect(() => {
     if (playVoice) {
       const audioPlayer = new Audio(currentVoice);
       audioRef.current = audioPlayer;
-  
+
       audioPlayer.play();
-  
+
       audioPlayer.addEventListener('ended', () => {
         setPlayVoice(false);
       });
     }
   }, [playVoice, currentVoice]);
-  
+
   const stopAudio = () => {
     if (audioRef.current) {
       audioRef.current.pause();
-      audioRef.current.currentTime = 0; // Reset the audio to the beginning
+      audioRef.current.currentTime = 0;
     }
   };
 
   useEffect(() => {
-    // Play voicePillars when the component mounts
     setCurrentVoice(voicePillars);
     setPlayVoice(true);
-  
-    // Cleanup function to stop audio when the component unmounts
+
     return () => {
       stopAudio();
     };
   }, []);
 
-  window.scrollTo(0, 0);
+  useEffect(() => {
+    // Set the height of the step div to its scrollHeight
+    const stepDiv = document.querySelector('.step');
+    if (stepDiv) {
+      stepDiv.style.height = `${stepDiv.scrollHeight}px`;
+    }
+  }, []); // Run only once on component mount
 
   return (
     <div>
       <div className='step'>
-        <p className='title'>Ten Pillars</p><br/>
+        <p className='title'>Ten Pillars</p>
         <ul>
           <li>Pillar 1:  Dynamic, Transformational, and Responsible Leadership</li>
           <li>Pillar 2: Responsive and Innovative Curricula and Instruction</li>          
@@ -58,7 +62,7 @@ const Pillars = () => {
           <li>Pillar 10: Sustainable Social Development Programs and Projects</li>          
 
         </ul>
-        <p className='title'>Sampung Haligi</p><br/>
+        <p className='title'>Sampung Haligi</p>
         <ul>
           <li>Haligi 1: Dinamiko, Mapagbago at Responsableng Pamumuno</li>
           <li>Haligi 2: Tumutugon at Makabagong  Kurikula at Pagtuturo</li>

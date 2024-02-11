@@ -198,7 +198,7 @@ color: white;
   position: fixed;
   top: 13%;
   width: 100%;
-  z-index: 99;
+  z-index: 98;
   padding: 2vh;
   padding: 10px;
 }
@@ -211,14 +211,9 @@ color: white;
   line-height: 1.5; /* Adjust this value to control the line spacing */
   z-index: 98;
   text-align: center;
-  position: relative;
 }
 
-.container-content{
-  position: relative;
-  height: 740px;
-  z-index: 99;
-}
+
 
 .displayResponse{
   display: flex;
@@ -391,7 +386,6 @@ input {
     padding: 10px;
     overflow-x: auto;
     overflow-y: hidden;
-    z-index: 98;
 }
 
 .suggestions button{

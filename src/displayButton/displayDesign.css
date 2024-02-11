@@ -11,6 +11,8 @@
   top: 12%;
   z-index: 101;
   padding: 5px;
+  text-align: center;
+  width: 100%;
 }
 
 .choices-button{
@@ -38,7 +40,7 @@
   position: static;
   overflow: auto;
   height: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 130px;
   justify-content: center;
   align-items: center;
   text-align: center;
