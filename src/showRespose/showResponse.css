@@ -55,6 +55,37 @@ a{
     background-color: #147932; /* Change the color to your desired hover color */
 
 }
+
+.moral {
+    font-size: 20px;
+    height: 100%;
+    overflow: auto;
+    background-color: #730000;
+    padding: 15px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    justify-content: center;
+    text-align: left;
+}
+
+.grad-title{
+    text-align: center;
+}
+
+.download-container {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    position: fixed;
+    bottom: 15%;
+}
+.download-container button{
+    background-color: #147932;
+    margin-right: 10px;
+    padding: 10px;
+    color: white;
+
+}
   
 .title{
     justify-content: center;

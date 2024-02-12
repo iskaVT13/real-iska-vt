@@ -117,18 +117,18 @@ const Graduation = () => {
   };
   return (
     <div>
-      <div className='step'>
-        <h4 className=''>Graduation Requirements</h4><br></br>
+      <div className='moral'>
+        <h4 className='grad-title'>Graduation Requirements</h4><br></br>
         <ul className='list'>
-            <li>A candidate for graduation should file their application for graduation with the University Registrar's Office at the start of their last semester.</li>
-            <li>A student shall be recommended for graduation when they have satisfied all academic and other requirements prescribed by the University.</li>
-            <li>No student shall be allowed to graduate from the University unless they have earned therein more than fifty percent (50%) of the academic units required in their curriculum.</li>
-            <li>A candidate for graduation should have their deficiencies made up and their record cleared not later than two weeks before the end of their semester.</li>
-            <li>No student will be issued a diploma and a transcript of records unless they have been cleared of all accountabilities.</li>
+            <li>1. A candidate for graduation should file their application for graduation with the University Registrar's Office at the start of their last semester.</li>
+            <li>2. A student shall be recommended for graduation when they have satisfied all academic and other requirements prescribed by the University.</li>
+            <li>3. No student shall be allowed to graduate from the University unless they have earned therein more than fifty percent (50%) of the academic units required in their curriculum.</li>
+            <li>4. A candidate for graduation should have their deficiencies made up and their record cleared not later than two weeks before the end of their semester.</li>
+            <li>5. No student will be issued a diploma and a transcript of records unless they have been cleared of all accountabilities.</li>
         </ul>
       </div>
 
-    <div className='download-button'>
+    <div className='download-container'>
         <button onClick={handleDownloadPDF}>Download as PDF</button>
     </div>
     </div>

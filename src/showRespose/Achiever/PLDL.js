@@ -122,15 +122,15 @@ const Achiever = () => {
   };
   return (
     <div>
-      <div className='step'>
-        <h3 className=''>REQUIREMENTS ON HOW TO BECOME AN ACADEMIC ACHIEVER</h3>
+      <div className='moral'>
+        <h3 className='grad-title'>REQUIREMENTS ON HOW TO BECOME AN ACADEMIC ACHIEVER</h3>
         <p>1.Interested applicants must have a GWA of at least 1.5 for Presidents Listers while Deans Listers must have GWA of at least 1.75.<br/>
            2.No grade shall be below 2.5 and no INC, F, D grade.<br/>
            3.The top 10% in the ranking of Presidents Listers will receive P1,000.00 and all resident scholars will receive certificates signed by the president.<br/>
         </p>
       </div>
 
-    <div className='download-button'>
+    <div className='download-container'>
         <button onClick={handleDownloadPDF}>Download as PDF</button>
     </div>
     </div>

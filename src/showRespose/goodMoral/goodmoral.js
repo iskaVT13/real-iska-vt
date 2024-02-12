@@ -117,8 +117,8 @@ const Goodmoral = () => {
   };
   return (
     <div>
-      <div className='step'>
-        <h3 className=''>HOW TO REQUEST FOR GOOD MORAL CERTIFICATE</h3>
+      <div className='moral'>
+        <h3 className='grad-title'>HOW TO REQUEST FOR GOOD MORAL CERTIFICATE</h3>
         <p>1.Secure a form from Office of the Student Services accordingly (Form PUP-ACGM-5-OFSS-0007).<br/>
            2.Present Registration card or ID for currently enrolled student and Alumni ID or TOR with picture for graduate.<br/>
            3.Pay appropriate fee at the Cashier Office. <br/>
@@ -126,7 +126,7 @@ const Goodmoral = () => {
         </p>
       </div>
 
-    <div className='download-button'>
+    <div className='download-container'>
         <button onClick={handleDownloadPDF}>Download as PDF</button>
     </div>
     </div>

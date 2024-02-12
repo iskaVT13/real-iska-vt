@@ -2520,7 +2520,7 @@ const handleGrandButtonClick = () => {
     },
 
     {
-      command: ['graduation', '* graduation', 'graduation * ', '* graduation *'],
+      command: ['graduation', '* graduation', 'graduation * ', '* graduation *', 'graduated', '* graduated'],
       callback: () => {
         resetTranscript();
 
@@ -2838,7 +2838,7 @@ const handleGrandButtonClick = () => {
     },
     
     {
-      command: ['* lister'],
+      command: ['* lister', 'dean', '* dean', 'president', '* president', 'achiever', '* achiever', 'lister'],
       callback: () => {
         resetTranscript();
 
