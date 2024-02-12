@@ -85,11 +85,11 @@
       },
       "hs4": {
         "directionsText": "The room 108 is located at the first floor, last room of the building        ",
-        "speakDirections": ""
+        "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionScience%2F108.mp3?alt=media&token=d143ca67-da04-4888-8821-219843cfb37a"
       },
       "hs5": {
         "directionsText": "The room 203 is located at second floor, first room upon upstairs       ",
-        "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionScience%2F108.mp3?alt=media&token=d143ca67-da04-4888-8821-219843cfb37a"
+        "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionScience%2F203.mp3?alt=media&token=d1834618-33ff-4839-8614-0aafb973d746"
       },
       "hs6": {
         "directionsText": "The room 204 is located at second floor, second room next to room 203 in the building       ",

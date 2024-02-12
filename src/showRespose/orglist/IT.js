@@ -47,7 +47,7 @@ const SubComponent = ({ onBack }) => {
         </div>
         <div className='image-name'>
         <img src={orgImage.com2} alt='it1' />
-        <p>Engr. Maria Luisa N. Francisco (ICEPT)</p>
+        <p>Engr. Maria Luisa N. Francisco</p>
         </div>
       </div>
     

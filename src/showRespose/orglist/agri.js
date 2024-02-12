@@ -20,7 +20,7 @@ const SubComponent = ({ onBack }) => {
       <div className='image-pic'>
         <div className='image-name'>
         <img src={orgImage.agri1} alt='agri1' />
-        <p>Kent_B._Pitero (ABS)</p>
+        <p>Kent_B._Pitero </p>
         </div>
       </div>
     

@@ -27,13 +27,12 @@ const AdminHead = ({onBack}) => {
         <img src={orgImage.head3} alt='director'/>
         <p>Engr. Antonio P. Curva (Administrative Officer and QMS Head)</p>
         </div>
+        <div className='second-head'>
+        <img src={orgImage.head3} alt='director'/>
+        <p>Asst. Prof. Altagracia A. Silaya (Collecting and Disbursing Officer)</p>
+        </div>
         </div>
         <div className='head-list' >
-
-        <div className='admin-img' >
-            <img src={orgImage.list0} alt='officer1' />
-            <p>Asst. Prof. Altagracia A. Silaya</p>
-            </div>
 
             <div className='admin-img'>
             <img src={orgImage.list1} alt='officer1' />
