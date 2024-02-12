@@ -5,7 +5,7 @@
       "responseText": "Here is the way from Main gate to Canteen",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCanteen%2FMain%20Gate%20to%20Canteen.mp3?alt=media&token=de46a17f-9afa-450b-8595-3c00fa86fb6d"
     },
-    "admission": {
+    "admin": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCanteen/admin to canteen.gif",
       "title": "Admission Building",
       "responseText": "Here is the way from Admission Building to Canteen",

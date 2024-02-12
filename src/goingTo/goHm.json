@@ -5,7 +5,7 @@
       "responseText": "Here is the way from Main gate to Hospitality Management Building",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceHM%2FGate%20to%20Hm.mp3?alt=media&token=02a15970-c92e-4ce1-a6a6-196879576b0a"
     },
-    "admission": {
+    "admin": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingHM/admin to HM, Plant Lab.gif",
         "title": "Admission Building",
         "responseText": "Here is the way from Admission Building to Hospitality Management Building",

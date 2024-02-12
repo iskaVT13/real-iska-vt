@@ -5,7 +5,7 @@
       "responseText": "Here is the way from Main gate to Health and Science Building. Below the map are the Offices, Faculties nd Rooms",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceScience%2Fgate3.mp3?alt=media&token=2da4d075-6662-43c1-9f88-91e76938bb59"
     },
-    "admission": {
+    "admin": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingScience/admin to health _ science bldg.gif",
         "title": "Admission Building",
         "responseText": "Here is the way from Admission Building to Health and Science Building. Below the map are the Offices, Faculties nd Rooms",

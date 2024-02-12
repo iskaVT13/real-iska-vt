@@ -5,7 +5,7 @@
       "responseText": "Here is the way from Main gate to Grandstand",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FGate%20to%20Grandstand.mp3?alt=media&token=1cb86f8b-e38e-46ef-b6db-18eaaaa24db6"
     },
-    "admission": {
+    "admin": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/admin to grandstand.gif",
         "title": "Admission Building",
         "responseText": "Here is the way from Admission Building to Grandstand",

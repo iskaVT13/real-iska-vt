@@ -5,7 +5,7 @@
       "responseText": "Here is the way from Main gate to Education Building. Below the map are the Offices, Faculty and Room located at  Public Administration and Education Building",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEduc%2FGate%20to%20Educ.mp3?alt=media&token=3d110645-7f70-4cca-88f3-f77cfb0d0985"
     },
-    "admission": {
+    "admin": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingEduc/admin to educ bldg, csc _ guidance office.gif",
         "title": "Admission Building",
         "responseText": "Here is the way from Admission Building to Education Building.  Below the map are the Offices, Faculty and Room located at  Public Administration and Education Building",

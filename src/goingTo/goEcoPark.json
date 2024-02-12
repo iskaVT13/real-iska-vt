@@ -5,7 +5,7 @@
       "responseText": "Here is the way from Main gate to Eco Park",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEcoPark%2FGate%20to%20EcoPark.mp3?alt=media&token=48f064bd-2cab-45b6-b6e2-ea50b0f482ae"
     },
-    "admission": {
+    "admin": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingEcoPark/admin to eco park.gif",
         "title": "Admission Building",
         "responseText": "Here is the way from Admission Building to Eco Park",

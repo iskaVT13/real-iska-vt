@@ -5,7 +5,7 @@
       "responseText": "Here is the way from Main gate to Computer Laboratory 1",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab1%2Fgate4.mp3?alt=media&token=5cd1c066-cbb9-422f-aaf3-392ffb99c117"
     },
-    "admission": {
+    "admin": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab1/Admin to ICT lab 1.gif",
         "title": "Admission Building",
         "responseText": "Here is the way from Admission Building to Computer Laboratory 1",

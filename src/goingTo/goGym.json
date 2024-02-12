@@ -5,7 +5,7 @@
       "responseText": "Here is the way from Main gate to Gymnasium",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGym%2Fgate2gym.mp3?alt=media&token=86138bff-afec-49fe-9fee-988d1d149e6f"
     },
-    "admission": {
+    "admin": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingGym/admin to gym.gif",
         "title": "Admission Building",
         "responseText": "Here is the way from Admission Building to Gymnasium",

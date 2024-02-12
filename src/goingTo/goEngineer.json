@@ -5,7 +5,7 @@
       "responseText": "Here is the way from Main gate to Engineer and Architecture Building. Below the map are the Offices, Faculty and Room located at Engineering and Architecture Building",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceArchi%2Fgate6.mp3?alt=media&token=8decf6ec-3dfd-40b3-92fb-c2195743965f"
     },
-    "admission": {
+    "admin": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingEngineer/admin to engineering bldg.gif",
         "title": "Admission Building",
         "responseText": "Here is the way from Admission Building to Engineer and Architecture Building. Below the map are the Offices, Faculty and Room located at Engineering and Architecture Building",

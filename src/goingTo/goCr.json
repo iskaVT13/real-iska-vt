@@ -3,9 +3,9 @@
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/Gate to nearest CR.gif",
       "title": "Main Gate",
       "responseText": "Here is the way from Main Gate to nearest comfort room in PUP Lopez",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
-    "admission": {
+    "admin": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/admin to nearest CR.gif",
         "title": "Admission Building",
         "responseText": "Here is the way from Admission to nearest comfort room in campus",
@@ -15,73 +15,73 @@
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/lab 2 to nearest Cr.gif",
       "title": "ComLab-1",
       "responseText": "Here is the way from ICT Laboratory 1 to nearest comfort room in campus",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
     "lab2": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/lab 2 to nearest Cr.gif",
       "title": "comLab-2",
       "responseText": "Here is the way from ICT Laboratory 2 to nearest comfort room in campus",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
     "yumul": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/yumul to nearest CR.gif",
       "title": "Yumul Building",
       "responseText": "Here is the way from Yumul Building to nearest comfort room in campus",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
     "canteen": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/Canteen to nearest CR.gif",
       "title": "Canteen",
       "responseText": "Here is the way from Canteen to nearest comfort room in campus",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
     "gymnasium": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/gym to nearest CR.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to nearest comfort room in campus",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
     "nantes": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/nantes to nearest CR.gif",
       "title": "Nantes",
       "responseText": "Here is the way from Accounting Building to nearest comfort room in campus",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
     "grandstand": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/Grandstand to nearest CR.gif",
       "title": "Grandstand",
       "responseText": "Here is the way from Grandstand to nearest comfort room in campus",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
     "engineer": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/puplopez2Dmap.webp",
       "title": "Engineer and Architecture Building",
       "responseText": "Here is the way from Engineering and Architecture to nearest comfort room in campus",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
     "education": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/puplopez2Dmap.webp",
       "title": "Education Building",
       "responseText": "Here is the way Public Administration and Education Building to nearest comfort room in campus",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
     "science": {
-      "clickedImage": "",
+      "clickedImage": "gs://iskavt-26f75.appspot.com/puplopez2Dmap.webp",
       "title": "Science Building",
       "responseText": "Here is the way from Health and Science Buildiing to nearest comfort room in campus ",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
     "hospitality": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/HM & plant lab to nearest CR.gif",
       "title": "Hospitality Management Building",
       "responseText": "Here is the way from Hospitality Management to nearest comfort room in campus",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
     "ecopark": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/EcoPark to GymCr.gif",
       "title": "Eco Park",
       "responseText": "Here is the way from Eco Park to nearest comfort room in campus",
-      "speakVoice": ""
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     }
 
   }
