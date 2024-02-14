@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/real-iska-vt/static/css/main.ba774d7b.css",
-    "main.js": "/real-iska-vt/static/js/main.a2c430a0.js",
+    "main.css": "/real-iska-vt/static/css/main.5ee22b7b.css",
+    "main.js": "/real-iska-vt/static/js/main.475b9440.js",
     "static/js/300.7a368175.chunk.js": "/real-iska-vt/static/js/300.7a368175.chunk.js",
     "static/js/952.19bf7103.chunk.js": "/real-iska-vt/static/js/952.19bf7103.chunk.js",
     "static/js/64.32d0b135.chunk.js": "/real-iska-vt/static/js/64.32d0b135.chunk.js",
@@ -58,6 +58,7 @@
     "static/media/pup iapply.png": "/real-iska-vt/static/media/pup iapply.1e303b1c9f3898821b9c.png",
     "static/media/s4.jpg": "/real-iska-vt/static/media/s4.f5d11ef197140ecdb0db.jpg",
     "static/media/iska-error.ico": "/real-iska-vt/static/media/iska-error.3c70df7bd969c5fe32ca.ico",
+    "static/media/iska-iconn.ico": "/real-iska-vt/static/media/iska-iconn.3c70df7bd969c5fe32ca.ico",
     "static/media/step6-1.jpeg": "/real-iska-vt/static/media/step6-1.df52edeefc195eab8a1c.jpeg",
     "static/media/step13.jpg": "/real-iska-vt/static/media/step13.04c27e8ac99cd2707157.jpg",
     "static/media/team.mp3": "/real-iska-vt/static/media/team.aef5bc8e1256f79671c4.mp3",
@@ -126,8 +127,8 @@
     "static/media/krona-one-latin-ext-400-normal.woff": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.fb9cd5f06d66cdcda94f.woff",
     "static/media/krona-one-latin-ext-400-normal.woff2": "/real-iska-vt/static/media/krona-one-latin-ext-400-normal.01120cafa274a6b13dba.woff2",
     "index.html": "/real-iska-vt/index.html",
-    "main.ba774d7b.css.map": "/real-iska-vt/static/css/main.ba774d7b.css.map",
-    "main.a2c430a0.js.map": "/real-iska-vt/static/js/main.a2c430a0.js.map",
+    "main.5ee22b7b.css.map": "/real-iska-vt/static/css/main.5ee22b7b.css.map",
+    "main.475b9440.js.map": "/real-iska-vt/static/js/main.475b9440.js.map",
     "300.7a368175.chunk.js.map": "/real-iska-vt/static/js/300.7a368175.chunk.js.map",
     "952.19bf7103.chunk.js.map": "/real-iska-vt/static/js/952.19bf7103.chunk.js.map",
     "64.32d0b135.chunk.js.map": "/real-iska-vt/static/js/64.32d0b135.chunk.js.map",
@@ -146,7 +147,7 @@
     "reactPlayerPreview.5ee70c71.chunk.js.map": "/real-iska-vt/static/js/reactPlayerPreview.5ee70c71.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba774d7b.css",
-    "static/js/main.a2c430a0.js"
+    "static/css/main.5ee22b7b.css",
+    "static/js/main.475b9440.js"
   ]
 }
