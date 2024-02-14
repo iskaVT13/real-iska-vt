@@ -12,6 +12,8 @@ import voiceEnrollment from '../speakVoice/enrollment.mp3';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
+import Iska from '../pictures/avatar.gif';
+
 
 function App() {
   const [showRegular, setShowRegular] = useState(false);
@@ -143,6 +145,8 @@ function App() {
             <button className={showIrregular ? 'active-button' : ''} onClick={handleIrregularButtonClick}>IRREGULAR</button>
             <button className={showFreshmen ? 'active-button' : ''} onClick={handleFreshmenButtonClick}>FRESHMEN</button>
             <button className={showTransferee ? 'active-button' : ''} onClick={handleTransfereeButtonClick}>TRANSFEREE</button>
+            <img src={Iska} alt='iska-img' />
+
           </div>
         </div>
       )}

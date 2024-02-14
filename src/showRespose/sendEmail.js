@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './showResponse.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClose } from '@fortawesome/free-solid-svg-icons';
 
 export const FeedBackForm = ({ onClose }) => {
   const form = useRef();
@@ -48,9 +50,7 @@ export const FeedBackForm = ({ onClose }) => {
 
   return (
     <div className='feedback-form'>
-      <div className='close-button' onClick={onClose}>
-        Close
-      </div>
+      <FontAwesomeIcon icon={faClose} className='close-button' onClick={onClose} size='xl'/>
       <h2>Give us your feedback</h2>
       <div className='form-content'>
         <form ref={form} onSubmit={sendEmailFeedback}>

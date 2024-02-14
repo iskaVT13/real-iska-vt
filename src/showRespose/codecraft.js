@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './showResponse.css';
 
+import Applogo from '../pictures/iska-iconn.ico';
+
 import leader from '../pictures/placePic/pup-logo.png';
 import FeedBackForm  from './sendEmail';
 
@@ -80,6 +82,12 @@ const CodeCraftTeam = () => {
             <p>Gjellah Mae M. Mortega</p>
           </div>
           </div>
+          <div className='about-app'>
+        <img src={Applogo} alt='logo-app'/>
+      <p>
+        A Capstone Project of BSIT 4 student of Polytechnic University of the Philippines Lopez, Quezon Branch. 
+      </p>
+      </div>
           <div>
             <div className='button-feedback'>
             <button onClick={handleButtonClick}>Give us a Feedback</button>

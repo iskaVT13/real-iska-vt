@@ -3880,15 +3880,27 @@ const sendTextToCommands = (text) => {
       {showQuestions && (
         <div className="question-list">
           {/* Add your list of questions here */}
-          <h6 className='note'>Here are some task ISKA can do.</h6>
-          <p> What are the available programs</p>
-          <p> Tell me about PUP</p>
-          <p> How to enroll</p>
+          <h5>Here are some task ISKA can do.</h5>
+          <p>-  How to enroll?</p>
           <p>- How to apply academic achiever</p>
+          <p>- How to get a Good Moral</p>
           <p>- How to apply for graduation</p>
-          <h5>You can ask ISKA for location of building</h5>
-          <p>- Where is the Nantes Building</p>
-          <p>- Where is the Admission Office</p>
+          <p>- PUP Mission and Vision</p>
+          <p>- PUP Philosophy</p>
+          <p>- PUP 10 Pillars</p>
+          <p>- What are the available programs</p>
+          <p>- Who is the Campus director of PUP Lopez?</p>
+          <p>- Who is the Coordinator of the BSIT Course?</p>
+          <p>- Tell me about PUP</p>
+
+          <h5>You can ask ISKA for location of the building</h5>
+          <p>- Where is the Administration Office?</p>
+          <p>- Where is the Grandstand?</p>
+          <p>- Where is the Library?</p>
+          <p>- Where is the Clinic?</p>
+          <p>- Where is ICT laboratory 1?</p>
+          <p>- Where is the Academic Office?</p>
+          <p>- Where is the CSC Office?</p>
           {/* Add more questions as needed */}
         </div>
       )}

@@ -143,7 +143,7 @@ a{
 .org-button{
     width: 100%;
     height: 100em;
-    top: 8em;
+    top: 5.5em;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -156,15 +156,16 @@ a{
 .per-course{
     width: 100%;
     position: relative;
+    padding: 5px;
 }
 
 .button-org{
     display: inline-block;
-    padding: 10px;
 }
 .button-org button{
+    margin: 10px;
     width:  15em;
-    height: 5em;
+    height: 55px;
     border: none;
     background: linear-gradient(to bottom, #9b000a, #ffbd00); /* Gradient color */
     color: white;
@@ -174,6 +175,7 @@ a{
     align-items: center;
     text-align: center;
     justify-content: center;
+    font-size: 15px;
 
 
 }
@@ -305,6 +307,27 @@ a{
     }
   }
 
+  .about-app{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .about-app img{
+    max-width: 100px;
+    max-height: 100px;
+    padding: 10px;
+  }
+
+  .close-button {
+    
+    color:#ffbd00;
+    cursor: pointer;
+    float: right;
+  }
+
   .button-feedback{
     width: 100%;
     text-align: center;
@@ -326,10 +349,12 @@ a{
 
 .pop-form{
     width: 100%;
+    height: 100%;
     position: relative;
     align-items: center;
     justify-content: center;
     padding: 10px;
+    display: flex;
 }
 
 .feedback input {
@@ -345,17 +370,26 @@ a{
     position: fixed;
     top: 20%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
     width: max-content;
     z-index: 105;
     padding: 10px;
+    border: #ffbd00 2px solid;
+    border-radius: 10px;
 }
+
+.feedback-form h2 {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
 .form-content{
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 15px;
     position: relative;
 }
 form{
@@ -365,6 +399,7 @@ form{
     align-items: center;
     text-align: center;
     justify-content: center;
+
 }
 
 .form-content input{

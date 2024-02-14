@@ -135,17 +135,35 @@ background-color: #730000;
 }
 
 .question-list {
-  border: 5px solid #ffbd00;
+  border: 3px solid #ffbd00;
   background-color: white;
   color: #730000;
   position: absolute;
-  width: 190px;
-  height: max-content;
-  right: 5%;
-  margin-top: 10px;
-  top: 60px;
-  font-size: 15px;
+  width: 250px;
+  height: 600px;
+  right: 4%;
+  top: 40px;
   z-index: 105;
+  border-radius: 10px;
+  overflow: auto;
+  padding: 5px;
+
+}
+
+.question-list h5{
+  color:#730000;
+  font-size: 17px;
+  padding: 4px;
+  text-align: center;
+  align-items: center;
+}
+
+.question-list p{
+  border: #730000 2px solid;
+  font-size: 15px;
+  padding: 5px;
+  justify-content: center;
+  text-align: left;
 }
 
 .logo-name span{

@@ -58,7 +58,7 @@ height: 100%;
 }
 
 .buttons-container {
-    top: 5em;
+    top: 5.5em;
     position: relative;
     overflow: auto;
     display: flexbox;
