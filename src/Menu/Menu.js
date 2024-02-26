@@ -168,7 +168,7 @@ const closeIframeComponent = () => {
 
         <div className="option-buttons">
         <button onClick={openPdfModal}>
-        <div className="option-item">
+        <div className="handbook">
           <div className="icon">
             <FontAwesomeIcon icon={faBook} size="2x" />
           </div>

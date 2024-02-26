@@ -28,7 +28,7 @@ const AdminHead = ({onBack}) => {
         <p>Engr. Antonio P. Curva (Administrative Officer and QMS Head)</p>
         </div>
         <div className='second-head'>
-        <img src={orgImage.head3} alt='director'/>
+        <img src={orgImage.temp} alt='director'/>
         <p>Asst. Prof. Altagracia A. Silaya (Collecting and Disbursing Officer)</p>
         </div>
         </div>

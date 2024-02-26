@@ -75,6 +75,8 @@ import EntranceTest from './showRespose/entranceTest';
 
 import Orgchart from './showRespose/org';
 
+import DisplayComponent from './welcome';
+
 // Function for the searchInput 
 function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden, onSuggestionClick}) {
   const [showInput, setShowInput] = useState(true);
@@ -322,6 +324,25 @@ const [showFounded, setShowFounded] = useState(false);
 const [showEntranceTest, setShowEntranceTest] = useState(false);
 
 const [showOrgButton, setShowOrgButton] = useState(false);
+
+const [showComponent, setShowComponent] = useState(false);
+
+useEffect(() => {
+  // This effect will run when the component mounts
+  // or when the website is accessed again
+  setShowComponent(true);
+
+  // Cleanup function to reset the state when the component unmounts
+  return () => {
+    setShowComponent(false);
+  };
+}, []);
+
+const handleButtonClick = () => {
+  // Handle button click logic here
+  // For now, just close the component by setting showComponent to false
+  setShowComponent(false);
+};
 
 useEffect(() => {
   if (playAudio) {
@@ -3999,6 +4020,8 @@ const sendTextToCommands = (text) => {
       {showPhilo && <Philo />}
       {showCalendar && <Calendar />}
       <Avatar />
+
+      {showComponent && <DisplayComponent onClose={handleButtonClick} />}
 
         <div className="recognized-Text">
             {recognizedProcessText && (

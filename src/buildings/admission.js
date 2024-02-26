@@ -3,22 +3,9 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { storage, ref, getDownloadURL } from '../firebase.js'; // Import the storage, ref, and getDownloadURL functions
 import './building.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft} from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faLocationDot} from '@fortawesome/free-solid-svg-icons';
 
-import gate from '../areaImage/gate.webp';
-import lab1 from '../areaImage/lab1.webp';
-import lab2 from '../areaImage/lab2.webp';
-import yumul from '../areaImage/yumul.webp';
-import canteen from '../areaImage/canteen.webp';
-import science from '../areaImage/science.webp';
-import archi from '../areaImage/archi.webp';
-import eco from '../areaImage/eco.webp';
-import educ from '../areaImage/educ.webp';
-import nantes from '../areaImage/nantes.webp';
-import hm from '../areaImage/hm.webp';
-import gym from '../areaImage/gym.webp';
-import grand from '../areaImage/grand.webp';
-
+import MapImg from '../pictures/map.jpg';
 
 import voiceAdmin from '../speakVoice/admin.mp3';
 
@@ -157,58 +144,13 @@ function AdmissionButton() {
       <div className='title-area'>
         <p>Please select your nearest area in campus, so that I can assist you to show the way to Administration Building</p>
       </div>
-      <div className='image-grid'>
-    <div className='image-text'>
-    <img onClick={() => handleImageClick('gate')} className="gate" alt="Main Gate" src={gate} />
+      <div className='map-img'>
+      <img src={MapImg} alt='map-img'/>
+      </div>
+      <div className='icon-container'>
+    <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('gate')} className="gate" icon={faLocationDot} size='xl' />
         <p>Main Gate</p>
-    </div>
-    <div className='image-text'>
-    <img onClick={() => handleImageClick('canteen')} className="gate" alt="Canteen" src={canteen} />
-        <p>PUP Canteen</p>
-    </div>
-    <div className='image-text'>
-    <img  onClick={() => handleImageClick('lab1')} alt='lab1' className='lab1-image' src={lab1} />
-        <p>ICT Laboratory 1</p>
-    </div>
-    <div className='image-text'>
-    <img onClick={() => handleImageClick('lab2')}alt='lab2' className='lab2-image' src={lab2} />
-        <p>ICT Laboratory 2</p>
-    </div>
-    <div className='image-text'>
-        <img onClick={() => handleImageClick('yumul')} alt='yumul' className='yumul-image' src={yumul} />
-        <p>Yumul Building</p>
-    </div>
-    <div className='image-text'>
-        <img onClick={() => handleImageClick('nantes')}  alt='nantes' className='nantes-image' src={nantes} />
-        <p>Business and Accountancy Building</p>
-    </div>
-    <div className='image-text'>
-        <img onClick={() => handleImageClick('gymnasium')} alt='gymnasium' className='gymnasium-image' src={gym} />
-        <p>PUP Gymnasium</p>
-    </div>
-    <div className='image-text'>
-        <img onClick={() => handleImageClick('education')} alt='education' className='education-image' src={educ} />
-        <p>Education and Public Administration Building</p>
-    </div>
-    <div className='image-text'>
-        <img onClick={() => handleImageClick('science')}  alt='science' className='science-image' src={science} />
-        <p>Health and Science Building</p>
-    </div>
-    <div className='image-text'>
-        <img onClick={() => handleImageClick('grandstand')} alt='grandstand' className='grandstand-image' src={grand} />
-        <p>PUP Grandstand</p>
-    </div>
-    <div className='image-text'>
-        <img onClick={() => handleImageClick('engineer')}  alt='engineer' className='engineer-image' src={archi} />
-        <p>Enigineering, Technology and Architecture Building</p>
-    </div>
-    <div className='image-text'>
-        <img onClick={() => handleImageClick('hospitality')}  alt='hospitality' className='jm-image' src={hm} />
-        <p>Hospitality Management Building</p>
-    </div>
-    <div className='image-text'>
-        <img onClick={() => handleImageClick('ecopark')}  alt='EcoPark' className='ecopark-image' src={eco} />
-        <p>PUP Ecopark</p>
     </div>
         </div>
 

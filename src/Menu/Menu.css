@@ -69,6 +69,11 @@
     display: flex;
  }
 
+ .sidebar button .handbook {
+    align-items: center;
+    display: flex;
+ }
+
  .sidebar button .icon {
     color: #ffbd00;
     margin-right: 25px;
