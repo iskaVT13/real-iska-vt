@@ -162,9 +162,9 @@ function AdmissionButton() {
       <img src={MapImg} alt='map-img'/>
       </div>
       <div className='admin'>
-      <div className='text-admin'>
+      <div className='text-pin'>
     <FontAwesomeIcon icon={faLocationDot} size='2xl' beat/>
-        <p>Admin Bldg.</p>
+    <p>Administration Bldg.</p>
     </div>
         </div>
       <div className='pin-gate'>
@@ -251,6 +251,8 @@ function AdmissionButton() {
       </div>
 
   )}
+        <p className='note'>NOTE: Click the Location icon above each building.</p>
+
 <div className='showImage'> 
 
       {isActive && (

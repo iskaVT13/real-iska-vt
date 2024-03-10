@@ -166,9 +166,9 @@ function YumulButton() {
     </div>
         </div>
         <div className='p-yumul'>
-      <div className='icon-text'>
+      <div className='text-pin'>
     <FontAwesomeIcon className="lab2" icon={faLocationDot} size='2xl' beat />
-        <p></p>
+        <p>Yumul Bldg.</p>
     </div>
         </div>
         <div className='pin-canteen'>
@@ -228,6 +228,8 @@ function YumulButton() {
       
     </div>
   )}
+            <p className='note'>NOTE: Click the Location icon above each building.</p>
+
 <div className='showImage'>
 
       {isActive && (

@@ -214,9 +214,9 @@ function AdmissionButton() {
     </div>
         </div>
         <div className='p-nantes'>
-      <div className='icon-text'>
+      <div className='text-pin'>
     <FontAwesomeIcon className="nantes" icon={faLocationDot} size='2xl' beat />
-        <p></p>
+        <p>Business & Acc Bldg.</p>
     </div>
         </div>
         <div className='pin-grandstand'>
@@ -233,6 +233,8 @@ function AdmissionButton() {
         </div>
     </div>
   )}
+            <p className='note'>NOTE: Click the Location icon above each building.</p>
+
 <div className='showImage'>
 
       {isActive && (

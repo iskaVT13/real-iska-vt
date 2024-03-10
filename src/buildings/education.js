@@ -192,9 +192,9 @@ function EducationButton() {
     </div>
         </div>
         <div className='p-educ'>
-      <div className='icon-text'>
+      <div className='text-pin'>
     <FontAwesomeIcon className="educ" icon={faLocationDot} size='2xl' beat />
-        <p></p>
+        <p>P.A and Educ Bldg.</p>
     </div>
         </div>
         <div className='pin-gym'>
@@ -230,6 +230,8 @@ function EducationButton() {
       
     </div>
   )}
+              <p className='note'>NOTE: Click the Location icon above each building.</p>
+
 <div className='showImage'>
 
       {isActive && (

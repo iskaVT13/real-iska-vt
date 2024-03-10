@@ -133,9 +133,9 @@ function CanteenButton() {
     </div>
         </div>
         <div className='canteenn'>
-      <div className='icon-text'>
+      <div className='text-pin'>
     <FontAwesomeIcon  className="canteen" icon={faLocationDot} size='2xl' beat/>
-        <p></p>
+    <p>Canteen</p>
     </div>
         </div>
         <div className='pin-science'>
@@ -187,7 +187,10 @@ function CanteenButton() {
     </div>
         </div>
     </div>
+    
   )}
+          <p className='note'>NOTE: Click the Location icon above each building.</p>
+
     <div className='showImage'>
 
       {isActive && (

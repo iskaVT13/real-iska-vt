@@ -213,9 +213,9 @@ function GrandstandButton() {
     </div>
         </div>
         <div className='p-grandstand'>
-      <div className='icon-text'>
+      <div className='text-pin'>
     <FontAwesomeIcon className="grandstand" icon={faLocationDot} size='2xl' beat />
-        <p></p>
+        <p>Grandstand</p>
     </div>
         </div>
         <div className='pin-eco'>
@@ -227,6 +227,8 @@ function GrandstandButton() {
       
     </div>
   )}
+            <p className='note'>NOTE: Click the Location icon above each building.</p>
+
 <div className='showImage'>
 
       {isActive && (

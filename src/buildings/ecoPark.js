@@ -183,13 +183,14 @@ function EcoParkButton() {
     </div>
         </div>
         <div className='eco'>
-      <div className='icon-text'>
+      <div className='text-pin'>
     <FontAwesomeIcon icon={faLocationDot} size='2xl' beat />
-        <p></p>
+      <p>Eco-Park</p>
     </div>
         </div>
     </div>
   )}
+            <p className='note'>NOTE: Click the Location icon above each building.</p>
 
 <div className='showImage'>
 

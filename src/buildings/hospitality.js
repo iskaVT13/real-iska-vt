@@ -201,9 +201,9 @@ function HmButton() {
     </div>
         </div>
         <div className='p-hm'>
-      <div className='icon-text'>
+      <div className='text-pin'>
     <FontAwesomeIcon className="hm" icon={faLocationDot} size='2xl' beat />
-        <p></p>
+        <p>HM Bldg.</p>
     </div>
         </div>
         <div className='pin-nantes'>
@@ -227,6 +227,7 @@ function HmButton() {
       
     </div>
   )}
+            <p className='note'>NOTE: Click the Location icon above each building.</p>
 
 <div className='showImage'>
 

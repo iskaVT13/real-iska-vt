@@ -178,9 +178,9 @@ function ScienceButton() {
     </div>
         </div>
         <div className='p-science'>
-      <div className='icon-text'>
+      <div className='text-pin'>
     <FontAwesomeIcon className="science" icon={faLocationDot} size='2xl' beat />
-        <p></p>
+        <p>Health & Science Bldg.</p>
     </div>
         </div>
         <div className='pin-archi'>
@@ -228,6 +228,8 @@ function ScienceButton() {
       
     </div>
   )}
+            <p className='note'>NOTE: Click the Location icon above each building.</p>
+
 <div className='showImage'>
 
       {isActive && (

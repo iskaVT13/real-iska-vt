@@ -155,9 +155,9 @@ function GymButton() {
     </div>
         </div>
         <div className='p-gym'>
-      <div className='icon-text'>
+      <div className='text-pin'>
     <FontAwesomeIcon className="gym" icon={faLocationDot} size='2xl' beat />
-        <p></p>
+        <p>Gymnasium</p>
     </div>
         </div>
         <div className='pin-hm'>
@@ -186,6 +186,7 @@ function GymButton() {
         </div>
     </div>
   )}
+            <p className='note'>NOTE: Click the Location icon above each building.</p>
 
 <div className='showImage'>
 

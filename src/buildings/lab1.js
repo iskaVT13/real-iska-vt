@@ -115,9 +115,9 @@ function Lab1Button() {
         </div>
 
       <div className='p-lab1'>
-      <div className='icon-text'>
+      <div className='text-pin'>
     <FontAwesomeIcon className="lab1" icon={faLocationDot} size='2xl' beat />
-        <p></p>
+        <p>ICT Lab 1</p>
     </div>
         </div>
         <div className='pin-lab2'>
@@ -189,6 +189,7 @@ function Lab1Button() {
       
     </div>
   )}
+            <p className='note'>NOTE: Click the Location icon above each building.</p>
 
 <div className='showImage'>
 

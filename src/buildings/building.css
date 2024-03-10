@@ -291,18 +291,24 @@ height: 100%;
     border: none;
   }
 
+  .note {
+    position: fixed;
+    color: #fff;
+    top: 70%;
+  }
+
   .admin{
     position: absolute;
     z-index: 105;
-    top: 73%;
-    left: 50%;
+    top: 72%;
+    left: 45%;
     color: #ffbd00;
   }
 
   .canteenn {
     position: absolute;
     z-index: 105;
-    top: 38%;
+    top: 35%;
     right: 20%;
     color:#ffbd00;
   }
@@ -310,24 +316,24 @@ height: 100%;
   .eco{
     position: absolute;
     z-index: 105;
-    top: 22%;
-    left: 49%;
+    top: 20%;
+    left: 44%;
     color: #ffbd00;
   }
 
   .p-educ {
     position: absolute;
     z-index: 105;
-    top: 17%;
-    left: 42%;
+    top: 15%;
+    left: 30%;
     color: #ffbd00;
   }
 
   .p-archi{
     position: absolute;
     z-index: 105;
-    top: 25%;
-    left: 23%;
+    top: 22%;
+    left: 13%;
     color: #ffbd00;
 
   } 
@@ -335,16 +341,16 @@ height: 100%;
   .p-grandstand{
     position: absolute;
     z-index: 105;
-    top: 29%;
-    left: 49%;
+    top: 27%;
+    left: 40%;
     color: #ffbd00;
   }
 
   .p-gym{
     position: absolute;
     z-index: 105;
-    top: 20%;
-    right: 15%;
+    top: 19%;
+    right: 10%;
     color: #ffbd00;
 
   }
@@ -353,15 +359,15 @@ height: 100%;
     position: absolute;
     z-index: 105;
     top: 28%;
-    right: 22%;
+    right: 18%;
     color: #ffbd00;
   }
 
   .p-lab1{
     position: absolute;
     z-index: 105;
-    top: 52%;
-    left: 20%;
+    top: 50%;
+    left: 16%;
     color: #ffbd00;
   }
 
@@ -369,15 +375,15 @@ height: 100%;
     position: absolute;
     z-index: 105;
     top: 47%;
-    left: 35%;
+    left: 30%;
     color: #ffbd00;
   }
 
   .p-nantes{
     position: absolute;
     z-index: 105;
-    top: 25%;
-    left: 57%;
+    top: 20%;
+    left: 44%;
     color: #ffbd00;
   }
 
@@ -385,7 +391,7 @@ height: 100%;
     position: absolute;
     z-index: 105;
     top: 35%;
-    left: 15%;
+    left: 0;
     color:#ffbd00;
   }
 
@@ -393,7 +399,7 @@ height: 100%;
     position: absolute;
     z-index: 105;
     top: 50%;
-    right: 25%;
+    right: 20%;
     color: #ffbd00;
   }
 
@@ -404,7 +410,7 @@ height: 100%;
     left: 50%;
   }
 
-  .text-admin p{
+  .text-pin p{
     color: white;
     font-size: 13px;
   }

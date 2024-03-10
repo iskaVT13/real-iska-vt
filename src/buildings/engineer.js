@@ -183,9 +183,9 @@ function EngineerButton() {
     </div>
         </div>
         <div className='p-archi'>
-      <div className='icon-text'>
+      <div className='text-pin'>
     <FontAwesomeIcon icon={faLocationDot} size='2xl' beat/>
-        <p></p>
+        <p>Engr & Archi Bldg.</p>
     </div>
         </div>
         <div className='pin-educ'>
@@ -227,6 +227,7 @@ function EngineerButton() {
       
     </div>
   )}
+            <p className='note'>NOTE: Click the Location icon above each building.</p>
 <div className='showImage'>
 
       {isActive && (
