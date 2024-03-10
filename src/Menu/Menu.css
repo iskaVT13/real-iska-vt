@@ -1,3 +1,4 @@
+
 .menu {
     cursor: pointer;
     position: relative;
@@ -43,7 +44,7 @@
 .sidebar button{
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
     text-decoration: none;
     font-size: 20px;
     color:#ffffff;
@@ -69,7 +70,7 @@
     display: flex;
  }
 
- .sidebar button .handbook {
+ .sidebar button .handbook{
     align-items: center;
     display: flex;
  }
@@ -82,12 +83,13 @@
     align-items: center;
     justify-content: center;
     width: 20px;
-    font-size: 15px;
+    font-size: 12px;
 }
   
 .sidebar button .name {
-    font-size: 15px;
+    font-size: 14px;
 }
+
 
 .close-btn {
     position: absolute;
@@ -155,7 +157,6 @@
     text-align: center;
     
 }
-
 
 
 .close {
@@ -349,3 +350,19 @@ button:hover .icon {
     height: 100%;
     padding: 20px;
 }
+
+.rate-frame {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-height: 80%;
+    max-width: 400px;
+    background-color: #9b8a8a;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+

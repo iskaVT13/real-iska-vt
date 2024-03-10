@@ -1,0 +1,135 @@
+.display-component {
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color:#ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+  }
+  
+  .welcome-logo {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 280px;
+    padding: 30px;
+  }
+  
+  .welcome-logo img{
+    max-width: 150px;
+    padding: 10px;
+  }
+  
+  .welcome-container {
+    position: fixed;
+    width: 100%;
+    height: 70%;
+    background-color:#730000;
+    bottom: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .welcome-text {
+    position: relative;
+    height: 40px;
+    margin: 40px 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .welcome-text h2{
+    width: 100%;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+  }
+  
+  .welcome-text span{
+    color: #ffbd00;
+  }
+
+  .name-input {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .name-input input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: inherit;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .error-message {
+    color: #ffbd00;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .choose-text p{
+    position: relative;
+    display: flex;
+    width: 100%;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .btn {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn button{
+    width: 100%;
+    align-items: center;
+    background-color:white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px;
+    display: flex;
+    color:#730000;
+    margin: 6px 0;
+    justify-content: center;
+  }
+  
+  .btn button:hover {
+    background-color:#9b000a;
+    color: white;
+  }
+  
+  .bottom-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+  }

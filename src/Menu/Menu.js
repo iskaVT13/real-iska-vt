@@ -1,17 +1,17 @@
+
 import React, { useState, useRef } from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark, faArrowLeft, faMapLocationDot, faBell, faCircleQuestion, faBook, faCircleInfo, faPeopleGroup, faVrCardboard, faFilePdf} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faArrowLeft, faMapLocationDot, faBell, faCircleQuestion, faBook, faCircleInfo, faPeopleGroup, faVrCardboard, faFilePdf, faStar, faComment, } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 import pupMap from '../pictures/map.jpg';
 import iskalogo from '../pictures/iska-logo.png';
 import contentMapping from '../fileJSON/directionsBuilding.json';
-
-import MyVirtualTour from '../VRtour'; // Update the path as needed
+import MyVirtualTour from '../VRtour'; 
 import pdfData from './handbook.json';
-
 import OrgComponent from '../showRespose/codecraft';
-
+import Rating from '../rateNreview/rate';
+import Review from '../rateNreview/review';
 
 Modal.setAppElement('#root');
 
@@ -37,54 +37,48 @@ function Menu() {
   const mapRef = useRef(null);
   const [iframeComponentOpen, setIframeComponentOpen] = useState(false);
   const [pdfLink, setPdfLink] = useState(null);
-const [pdfModalOpen, setPdfModalOpen] = useState(false);
-// ... (Inside the Menu function component)
-const [secondPdfLink, setSecondPdfLink] = useState(null);
+  const [pdfModalOpen, setPdfModalOpen] = useState(false);
+  const [secondPdfLink, setSecondPdfLink] = useState(null);
+  const [openOrg, setOrgOpen] = useState(false);
+  const [ratingOpen, setRatingOpen] = useState(false);
+  const [showReview, setShowReview] = useState(false);
 
-const [openOrg, setOrgOpen] = useState(false);
+  const openSecondPdfModal = () => {
+    setSecondPdfLink(pdfData.secondPdfLink);
+    setPdfModalOpen(true);
+    playAudio("UserManual");
+  };
 
-// ... (Inside the Menu function component)
-const openSecondPdfModal = () => {
-  // Retrieve the second PDF link from the JSON file
-  setSecondPdfLink(pdfData.secondPdfLink);
-  setPdfModalOpen(true);
-
-  playAudio("UserManual");
-};
-
-const openOrgComponent = () => {
-  setOrgOpen(true);
-}
-
-const closeOrgComponent = () => {
-  setOrgOpen(false);
-}
-
-const openPdfModal = () => {
-  setPdfLink(pdfData.pdfLink);
-  setPdfModalOpen(true);
-
-  playAudio("handbook");
-};
-
-const closePdfModal = () => {
-  setPdfLink(null);
-  setPdfModalOpen(false);
-
-  if (audioRef.current) {
-    audioRef.current.pause();
+  const openOrgComponent = () => {
+    setOrgOpen(true);
   }
-};
 
+  const closeOrgComponent = () => {
+    setOrgOpen(false);
+  }
 
-const openIframeComponent = () => {
-  setIframeComponentOpen(true);
-  
-};
+  const openPdfModal = () => {
+    setPdfLink(pdfData.pdfLink);
+    setPdfModalOpen(true);
+    playAudio("handbook");
+  };
 
-const closeIframeComponent = () => {
-  setIframeComponentOpen(false);
-};
+  const closePdfModal = () => {
+    setPdfLink(null);
+    setPdfModalOpen(false);
+
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
+  };
+
+  const openIframeComponent = () => {
+    setIframeComponentOpen(true);
+  };
+
+  const closeIframeComponent = () => {
+    setIframeComponentOpen(false);
+  };
 
   const playAudio = (content) => {
     const audio = new Audio(contentMapping[content]); 
@@ -92,6 +86,27 @@ const closeIframeComponent = () => {
     audio.play();
   };
 
+  const openRatingPopup = () => {
+    setRatingOpen(true);
+    setMenuIsOpen(false);
+  };
+
+  const openReview = () => {
+    setShowReview(true);
+    setPopupContent(null); 
+    setMenuIsOpen(false);
+    setMapPopupOpen(false);
+  };
+
+  const closeReview = () => {
+    setShowReview(false);
+  };
+
+  const submitRating = ({ rating, comment }) => {
+    console.log("Submitted Rating:", rating);
+    console.log("Submitted Comment:", comment);
+  };
+  
   const openPopup = (content) => {
     if (content === "Map") {
       setMapPopupOpen(true);
@@ -106,6 +121,7 @@ const closeIframeComponent = () => {
   const closePopup = () => {
     setPopupContent(null);
     setMapPopupOpen(false);
+    setRatingOpen(false);
 
     if (audioRef.current) {
       audioRef.current.pause();
@@ -167,15 +183,16 @@ const closeIframeComponent = () => {
         </div>
 
         <div className="option-buttons">
-        <button onClick={openPdfModal}>
-        <div className="handbook">
-          <div className="icon">
-            <FontAwesomeIcon icon={faBook} size="2x" />
-          </div>
-          <div className="name">PUP Student Handbook</div>
-        </div>
-      </button>
-        <button onClick={() => openPopup("Map")}>
+          <button onClick={openPdfModal}>
+            <div className="handbook">
+              <div className="icon">
+                <FontAwesomeIcon icon={faBook} size="2x" />
+              </div>
+              <div className="name">PUP Student Handbook</div>
+            </div>
+          </button>
+
+          <button onClick={() => openPopup("Map")}>
             <div className="option-item">
               <div className="icon">
                 <FontAwesomeIcon icon={faMapLocationDot} size="2x" />
@@ -183,23 +200,24 @@ const closeIframeComponent = () => {
               <div className="name">PUP Lopez Map</div>
             </div>
           </button>
+
           <button onClick={openIframeComponent}>
-  <div className="option-item">
-    <div className="icon">
-      {/* Replace with the desired icon */}
-      <FontAwesomeIcon icon={faVrCardboard} size="2x" />
-    </div>
-    <div className="name">Virtual Tour</div>
-  </div>
-</button>
-<button onClick={openSecondPdfModal}>
-  <div className="option-item">
-    <div className="icon">
-      <FontAwesomeIcon icon={faFilePdf} size="2x" />
-    </div>
-    <div className="name">User Manual</div>
-  </div>
-</button>
+            <div className="option-item">
+              <div className="icon">
+                <FontAwesomeIcon icon={faVrCardboard} size="2x" />
+              </div>
+              <div className="name">Virtual Tour</div>
+            </div>
+          </button>
+
+          <button onClick={openSecondPdfModal}>
+            <div className="option-item">
+              <div className="icon">
+                <FontAwesomeIcon icon={faFilePdf} size="2x" />
+              </div>
+              <div className="name">User Manual</div>
+            </div>
+          </button>
 
           <button onClick={() => openPopup("Reminders")}>
             <div className="option-item">
@@ -209,6 +227,7 @@ const closeIframeComponent = () => {
               <div className="name">Reminders</div>
             </div>
           </button>
+
           <button onClick={() => openPopup("Information")}>
             <div className="option-item">
               <div className="icon">
@@ -217,6 +236,7 @@ const closeIframeComponent = () => {
               <div className="name">Information</div>
             </div>
           </button>
+
           <button onClick={openOrgComponent}>
             <div className="option-item">
               <div className="icon">
@@ -225,12 +245,31 @@ const closeIframeComponent = () => {
               <div className="name">About Us</div>
             </div>
           </button>
+
           <button onClick={() => openPopup("Help")}>
             <div className="option-item">
               <div className="icon">
                 <FontAwesomeIcon icon={faCircleQuestion} size="2x" />
               </div>
               <div className="name">Help</div>
+            </div>
+          </button>
+
+          <button onClick={openRatingPopup}>
+            <div className="option-item">
+              <div className="icon">
+                <FontAwesomeIcon icon={faStar} size="2x" />
+              </div>
+              <div className="name">Rate Us!</div>
+            </div>
+          </button>
+
+          <button onClick={openReview}>
+            <div className="option-item">
+              <div className="icon">
+                <FontAwesomeIcon icon={faComment} size="2x" />
+              </div>
+              <div className="name">Reviews</div>
             </div>
           </button>
         </div>
@@ -240,7 +279,6 @@ const closeIframeComponent = () => {
       {popupContent && !mapPopupOpen && (
         <PopupFrame content={popupContent} onClose={closePopup} />
       )}
-
 
       {mapPopupOpen && (
         <Modal
@@ -270,64 +308,69 @@ const closeIframeComponent = () => {
           <div className="text">2023 | ISKA | PUP Lopez Quezon</div>
         </Modal>
       )}
+
       {iframeComponentOpen && (
-  <Modal
-    className="common-frame"
-    isOpen={true}
-    onRequestClose={closeIframeComponent}
-    contentLabel="Virtual Tour Modal"
-    style={customModalStyles}
-  >
-    <div className="popup-title">
+        <Modal
+          className="common-frame"
+          isOpen={true}
+          onRequestClose={closeIframeComponent}
+          contentLabel="Virtual Tour Modal"
+          style={customModalStyles}>
+          <div className="popup-title">
             <span>PUP LOPEZ VIRTUAL TOUR</span>
           </div>
-    <div className='virtual-container'>
-    <MyVirtualTour  closeIframeComponent={closeIframeComponent} />
-
-    </div>
-
-  </Modal>
-)}
-{openOrg && (
-  <Modal
-    className="common-frame"
-    isOpen={true}
-    onRequestClose={closeOrgComponent}
-    contentLabel="Virtual Tour Modal"
-    style={customModalStyles}
-  >
-    <div className="popup-title">
-    <FontAwesomeIcon className="close" onClick={closeOrgComponent} icon={faArrowLeft} size="l" />
+          <div className='virtual-container'>
+            <MyVirtualTour  closeIframeComponent={closeIframeComponent} />
           </div>
-    <div className='org-container'>
-    <OrgComponent  closeOrgComponent={closeOrgComponent} />
+        </Modal>
+      )}
 
-    </div>
+      {openOrg && (
+        <Modal
+          className="common-frame"
+          isOpen={true}
+          onRequestClose={closeOrgComponent}
+          contentLabel="Virtual Tour Modal"
+          style={customModalStyles}>
+          <div className="popup-title">
+            <FontAwesomeIcon className="close" onClick={closeOrgComponent} icon={faArrowLeft} size="l" />
+          </div>
+          <div className='org-container'>
+            <OrgComponent  closeOrgComponent={closeOrgComponent} />
+          </div>
+        </Modal>
+      )}
 
-  </Modal>
-)}
-{pdfModalOpen && (
-  <Modal
-    className="common-frame"
-    isOpen={true}
-    onRequestClose={closePdfModal}
-    contentLabel="PDF Modal"
-    style={customModalStyles}
-  >
-    <div className="popup-title">
-    <span>{pdfLink ? 'PUP Student Handbook' : '"ISKA" User Manual'}</span>
-    </div>
-    <FontAwesomeIcon className="close" onClick={closePdfModal} icon={faArrowLeft} size="l" />
-    <div className="popup-content">
-      <div className="pdf-content-container">
-        {/* Display the PDF link or embed a PDF viewer */}
-        <iframe title="PDF Viewer" src={pdfLink || secondPdfLink} width="100%" height="100%" frameBorder="0"></iframe>
-      </div>
-    </div>
-    <div className="text">2023 | ISKA | PUP Lopez Quezon</div>
-  </Modal>
-)}
+      {pdfModalOpen && (
+        <Modal
+          className="common-frame"
+          isOpen={true}
+          onRequestClose={closePdfModal}
+          contentLabel="PDF Modal"
+          style={customModalStyles}>
+          <div className="popup-title">
+            <span>{pdfLink ? 'PUP Student Handbook' : '"ISKA" User Manual'}</span>
+          </div>
+          <FontAwesomeIcon className="close" onClick={closePdfModal} icon={faArrowLeft} size="l" />
+          <div className="popup-content">
+            <div className="pdf-content-container">
+              <iframe title="PDF Viewer" src={pdfLink || secondPdfLink} width="100%" height="100%" frameBorder="0"></iframe>
+            </div>
+          </div>
+          <div className="text">2023 | ISKA | PUP Lopez Quezon</div>
+        </Modal>
+      )}
+      
+      <Modal
+        className="rate-frame"
+        isOpen={ratingOpen}
+        onRequestClose={closePopup}
+        contentLabel="Rating Modal"
+        style={customModalStyles}>
+        <Rating onClose={closePopup} onSubmit={submitRating} />
+      </Modal>
 
+      {showReview && <Review onClose={closeReview} />}
     </div>
   );
 }
@@ -340,8 +383,7 @@ function PopupFrame({ content, onClose }) {
       isOpen={true}
       onRequestClose={onClose}
       contentLabel={`${content} Modal`}
-      style={customModalStyles}
-    >
+      style={customModalStyles}>
       <div className="popup-title">{content}</div>
       <FontAwesomeIcon className="close" onClick={onClose} icon={faArrowLeft} size="xl" />
       <div className="popup-content">
@@ -415,4 +457,4 @@ function PopupFrame({ content, onClose }) {
   );
 }
 
-export default Menu; //286
+export default Menu; //459
