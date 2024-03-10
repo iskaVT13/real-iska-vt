@@ -58,7 +58,7 @@ height: 100%;
 }
 
 .buttons-container {
-    top: 5.5em;
+    top: 5em;
     position: relative;
     overflow: auto;
     display: flexbox;
@@ -119,6 +119,7 @@ height: 100%;
   text-align:center;
   font-style: normal;
   letter-spacing: normal;
+  height: 5em;
 
 }
 
@@ -211,10 +212,10 @@ height: 100%;
     width: 18.5em;
     align-items: center;
     justify-content: center;
-    height: 10em;
+    height: 40%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    top: 40%;
+    top: 30%;
     position: fixed;
     border:#ffbd00 solid 2px;
     overflow: hidden;
@@ -222,14 +223,27 @@ height: 100%;
     
   }
 
+  .direct-image{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+  }
+
+  .direct-image img{
+    max-width:250px;
+  }
+
+
   .modal-content {
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 1rem;
+    padding: 5px;
   }
 
   .modal-close {
-    margin: 10px;
+    margin: 30px;
     background-color: #ffbd00;
     color: #fff;
     padding: 10px 20px;
@@ -263,15 +277,220 @@ height: 100%;
     }
   }
 
-  .map-img img {
+  .map-img {
+
     width: 100%;
-    height: 100%;
+    padding: 5px;
+    height: max-content;
   }
 
-  .icon-container {
+  .map-img img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .admin{
     position: absolute;
     z-index: 105;
-    top: 80%;
-    left: 59%;
+    top: 73%;
+    left: 50%;
+    color: #ffbd00;
+  }
+
+  .canteenn {
+    position: absolute;
+    z-index: 105;
+    top: 38%;
+    right: 20%;
+    color:#ffbd00;
+  }
+
+  .eco{
+    position: absolute;
+    z-index: 105;
+    top: 22%;
+    left: 49%;
+    color: #ffbd00;
+  }
+
+  .p-educ {
+    position: absolute;
+    z-index: 105;
+    top: 17%;
+    left: 42%;
+    color: #ffbd00;
+  }
+
+  .p-archi{
+    position: absolute;
+    z-index: 105;
+    top: 25%;
+    left: 23%;
+    color: #ffbd00;
+
+  } 
+
+  .p-grandstand{
+    position: absolute;
+    z-index: 105;
+    top: 29%;
+    left: 49%;
+    color: #ffbd00;
+  }
+
+  .p-gym{
+    position: absolute;
+    z-index: 105;
+    top: 20%;
+    right: 15%;
+    color: #ffbd00;
+
+  }
+
+  .p-hm {
+    position: absolute;
+    z-index: 105;
+    top: 28%;
+    right: 22%;
+    color: #ffbd00;
+  }
+
+  .p-lab1{
+    position: absolute;
+    z-index: 105;
+    top: 52%;
+    left: 20%;
+    color: #ffbd00;
+  }
+
+  .p-lab2{
+    position: absolute;
+    z-index: 105;
+    top: 47%;
+    left: 35%;
+    color: #ffbd00;
+  }
+
+  .p-nantes{
+    position: absolute;
+    z-index: 105;
+    top: 25%;
+    left: 57%;
+    color: #ffbd00;
+  }
+
+  .p-science{
+    position: absolute;
+    z-index: 105;
+    top: 35%;
+    left: 15%;
+    color:#ffbd00;
+  }
+
+  .p-yumul {
+    position: absolute;
+    z-index: 105;
+    top: 50%;
+    right: 25%;
+    color: #ffbd00;
+  }
+
+  .pin-admin{
+    position: absolute;
+    z-index: 105;
+    top: 73%;
+    left: 50%;
+  }
+
+  .text-admin p{
+    color: white;
+    font-size: 13px;
+  }
+
+  .pin-gate {
+    position: absolute;
+    z-index: 105;
+    top: 75%;
+    left: 35%;
     cursor: pointer;
+  }
+
+  .icon-text p{
+    font-size: 13px;
+  }
+
+  .pin-lab1{
+    position: absolute;
+    z-index: 105;
+    top: 55%;
+    left: 20%;
+  }
+  .pin-lab2 {
+    position: absolute;
+    z-index: 105;
+    top: 50%;
+    left: 35%;
+  }
+  .pin-yumul{
+    position: absolute;
+    z-index: 105;
+    top: 50%;
+    right: 25%;
+  }
+  .pin-canteen{
+    position: absolute;
+    z-index: 105;
+    top: 40%;
+    right: 20%;
+  }
+  .pin-science{
+    position: absolute;
+    z-index: 105;
+    top: 35%;
+    left: 13%;
+  }
+  .pin-archi{
+    position: absolute;
+    z-index: 105;
+    top: 25%;
+    left: 23%;
+  }
+  .pin-educ{
+    position: absolute;
+    z-index: 105;
+    top: 17%;
+    left: 42%;
+  }
+  .pin-gym{
+    position: absolute;
+    z-index: 105;
+    top: 23%;
+    right: 12%;
+  }
+  .pin-hm{
+    position: absolute;
+    z-index: 105;
+    top: 30%;
+    right: 20%;
+  }
+  .pin-nantes{
+    position: absolute;
+    z-index: 105;
+    top: 27%;
+    left: 59%;
+  }
+  .pin-grandstand{
+    position: absolute;
+    z-index: 105;
+    top: 30%;
+    left: 47%;
+  }
+  .pin-eco{
+    position: absolute;
+    z-index: 105;
+    top: 22%;
+    left: 49%;
+
   }

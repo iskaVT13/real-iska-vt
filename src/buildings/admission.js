@@ -5,7 +5,7 @@ import './building.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faLocationDot} from '@fortawesome/free-solid-svg-icons';
 
-import MapImg from '../pictures/map.jpg';
+import MapImg from '../pictures/3Dmap.jpg';
 
 import voiceAdmin from '../speakVoice/admin.mp3';
 
@@ -18,6 +18,8 @@ function AdmissionButton() {
   const [directCurrentButton, setDirectionCurrentButton] = useState('');
   const [currentAudio, setCurrentAudio] = useState(null);
   const adminAudio = useMemo(() => new Audio(voiceAdmin), []);  
+  const [directImageURL, setDirectImageURL] = useState('');
+
 
   useEffect(() => {
     Promise.all([
@@ -87,6 +89,18 @@ function AdmissionButton() {
     fetchImageURL();
   }, [fetchImageURL]);
 
+  const fetchDirectImageURL = useCallback(async () => {
+    if (directCurrentButton && directCurrentButton.img) {
+      const directImageRef = ref(storage, directCurrentButton.img);
+      const url = await getDownloadURL(directImageRef);
+      setDirectImageURL(url);
+    }
+  }, [directCurrentButton]);
+
+  useEffect(() => {
+    fetchDirectImageURL();
+  }, [fetchDirectImageURL]);
+
   const handleImageClick = (button) => {
     const buttonData = responses[button];
     setCurrentButton(responses[button]);
@@ -147,16 +161,97 @@ function AdmissionButton() {
       <div className='map-img'>
       <img src={MapImg} alt='map-img'/>
       </div>
-      <div className='icon-container'>
+      <div className='admin'>
+      <div className='text-admin'>
+    <FontAwesomeIcon icon={faLocationDot} size='2xl' beat/>
+        <p>Admin Bldg.</p>
+    </div>
+        </div>
+      <div className='pin-gate'>
     <div className='icon-text'>
     <FontAwesomeIcon onClick={() => handleImageClick('gate')} className="gate" icon={faLocationDot} size='xl' />
-        <p>Main Gate</p>
+        <p></p>
     </div>
         </div>
 
+      <div className='pin-lab1'>
+      <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('lab1')} className="lab1" icon={faLocationDot} size='xl' />
+        <p></p>
     </div>
+        </div>
+        <div className='pin-lab2'>
+      <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('lab2')} className="lab2" icon={faLocationDot} size='xl' />
+        <p></p>
+    </div>
+        </div>
+        <div className='pin-yumul'>
+      <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('yumul')} className="lab2" icon={faLocationDot} size='xl' />
+        <p></p>
+    </div>
+        </div>
+        <div className='pin-canteen'>
+      <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('canteen')} className="canteen" icon={faLocationDot} size='xl' />
+        <p></p>
+    </div>
+        </div>
+        <div className='pin-science'>
+      <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('science')} className="science" icon={faLocationDot} size='xl' />
+        <p></p>
+    </div>
+        </div>
+        <div className='pin-archi'>
+      <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('engineer')} className="engineer" icon={faLocationDot} size='xl' />
+        <p></p>
+    </div>
+        </div>
+        <div className='pin-educ'>
+      <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('education')} className="educ" icon={faLocationDot} size='xl' />
+        <p></p>
+    </div>
+        </div>
+        <div className='pin-gym'>
+      <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('gym')} className="gym" icon={faLocationDot} size='xl' />
+        <p></p>
+    </div>
+        </div>
+        <div className='pin-hm'>
+      <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('hospitality')} className="hm" icon={faLocationDot} size='xl' />
+        <p></p>
+    </div>
+        </div>
+        <div className='pin-nantes'>
+      <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('nantes')} className="nantes" icon={faLocationDot} size='xl' />
+        <p></p>
+    </div>
+        </div>
+        <div className='pin-grandstand'>
+      <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('grandstand')} className="grandstand" icon={faLocationDot} size='xl' />
+        <p></p>
+    </div>
+        </div>
+        <div className='pin-eco'>
+      <div className='icon-text'>
+    <FontAwesomeIcon onClick={() => handleImageClick('ecopark')} className="ecopark" icon={faLocationDot} size='xl' />
+        <p></p>
+    </div>
+        </div>
+
+
+      </div>
+
   )}
-<div className='showImage'>
+<div className='showImage'> 
 
       {isActive && (
         <div className="image-container">
@@ -212,6 +307,13 @@ Accounting Office    </button>
             {isModalOpen && (
               <div className="direction-modal">
                 <div className="modal-content">
+              
+                <div className='direct-image'>
+                  <img 
+                    src={directImageURL} alt='direct-img'
+                  />
+                </div>
+                  
                   <p>{directCurrentButton.directionsText}</p>
                   <button className='modal-close' onClick={closeModal}>Close</button>
                 </div>

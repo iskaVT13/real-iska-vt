@@ -77,6 +77,8 @@ import Orgchart from './showRespose/org';
 
 import DisplayComponent from './welcome';
 
+import ThreeD from './ThreeModel';
+
 // Function for the searchInput 
 function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicrophoneHidden, onSuggestionClick}) {
   const [showInput, setShowInput] = useState(true);
@@ -326,6 +328,12 @@ const [showEntranceTest, setShowEntranceTest] = useState(false);
 const [showOrgButton, setShowOrgButton] = useState(false);
 
 const [showComponent, setShowComponent] = useState(false);
+
+const [showThreeMap, setShowThreeMap] = useState(false);
+
+  const handleShowThreeMap = () => {
+    setShowThreeMap(true);
+  };
 
 useEffect(() => {
   // This effect will run when the component mounts
@@ -4020,6 +4028,13 @@ const sendTextToCommands = (text) => {
       {showPhilo && <Philo />}
       {showCalendar && <Calendar />}
       <Avatar />
+      {showThreeMap ? (
+          <ThreeD />
+        ) : (
+          <div>
+            <button onClick={handleShowThreeMap}>Show Three Map</button>
+          </div>
+        )}
 
       {showComponent && <DisplayComponent onClose={handleButtonClick} />}
 
@@ -4054,6 +4069,7 @@ const sendTextToCommands = (text) => {
         <button onClick={handleGrandButtonClick}>
           Grandstand
         </button>
+        <button onClick={handleShowThreeMap}>Show Three Map</button>
 
       </div>
 

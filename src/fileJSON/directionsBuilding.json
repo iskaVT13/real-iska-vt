@@ -26,7 +26,7 @@
       },
       "admin6": {
         "directionsText": " the Director's Office is located at second floor, second window ",
-        "img": "",
+        "img": "gs://iskavt-26f75.appspot.com/7.jpg",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fdirector.mp3?alt=media&token=5277a41c-5f24-490f-8bb3-b516ae48c13c"
       },
       "admin7": {

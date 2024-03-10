@@ -3,79 +3,100 @@
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Gate to Yumul.gif",
       "title": "Main Gate",
       "responseText": "Here is the way from Main gate to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fgate2.mp3?alt=media&token=662be88b-f506-4d95-9141-b1acadc4f1fd"
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fgate2.mp3?alt=media&token=662be88b-f506-4d95-9141-b1acadc4f1fd",
+      "popImage": ""
     },
     "admin": {
         "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Admin to Yumul.gif",
         "title": "Admission Building",
         "responseText": "Here is the way from Admission Building to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-        "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fadmin2.mp3?alt=media&token=61323dda-8e81-4669-97fd-65dc260eb99b"
+        "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fadmin2.mp3?alt=media&token=61323dda-8e81-4669-97fd-65dc260eb99b",
+        "popImage": ""
       },
     "lab1": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Lab 1 to Yumul.gif",
       "title": "ComLab-1",
       "responseText": "Here is the way from Computer Laboratory 1 to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Flab1-2.mp3?alt=media&token=d4dc2c78-df1c-4b78-8c6f-9ea8ddb948ad"
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Flab1-2.mp3?alt=media&token=d4dc2c78-df1c-4b78-8c6f-9ea8ddb948ad",
+      "popImage": ""
     },
     "lab2": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/lab 2 to yumul.gif",
       "title": "comLab-2",
       "responseText": "Here is the way from Computer Laboratory 2 to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Flab2-2.mp3?alt=media&token=d4e3ce0f-8067-4958-b3da-65866b3b2906"
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Flab2-2.mp3?alt=media&token=d4e3ce0f-8067-4958-b3da-65866b3b2906",
+      "popImage": ""
     },
     "canteen": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Canteen to yumul bldg.gif",
       "title": "Canteen",
       "responseText": "Here is the way from Canteen to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fcanteen2.mp3?alt=media&token=ff8015f3-a987-4be0-a2c8-264c0e8a2b04"
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fcanteen2.mp3?alt=media&token=ff8015f3-a987-4be0-a2c8-264c0e8a2b04",
+      "popImage": ""
+
     },
     "gymnasium": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/gym to yumul bldg.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fgym2.mp3?alt=media&token=5f9aa403-f13b-4039-a5cb-61c72d37d50a"
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fgym2.mp3?alt=media&token=5f9aa403-f13b-4039-a5cb-61c72d37d50a",
+      "popImage": ""
     },
     "nantes": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/nantes to yumul bldg.gif",
       "title": "Nantes",
       "responseText": "Here is the way from Accounting and Marketing Building to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fnantes2.mp3?alt=media&token=48206067-4ae1-4168-9280-4c2206721306"
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fnantes2.mp3?alt=media&token=48206067-4ae1-4168-9280-4c2206721306",
+      "popImage": ""
+
     },
     "grandstand": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/Grandstand to yumul bldg.gif",
       "title": "Grandstand",
       "responseText": "Here is the way from Grandstand to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fgrandstand2.mp3?alt=media&token=152a952a-e6d9-49a6-8c6b-b1daf5d025b1"
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fgrandstand2.mp3?alt=media&token=152a952a-e6d9-49a6-8c6b-b1daf5d025b1",
+      "popImage": ""
+
     },
     "engineer": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/engr to yumul.gif",
       "title": "Engineer and Architecture Building",
       "responseText": "Here is the way from Engineer and Architecture Building to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Farchi2.mp3?alt=media&token=59bf6bc8-c446-42c9-b68d-740362625cf5"
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Farchi2.mp3?alt=media&token=59bf6bc8-c446-42c9-b68d-740362625cf5",
+      "popImage": ""
+
     },
     "education": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/educ bldg to yumul bldg.gif",
       "title": "Education Building",
       "responseText": "Here is the way from Education Building to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Feduc2.mp3?alt=media&token=d76221a4-dc29-40fe-bbac-1746de6a4753"
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Feduc2.mp3?alt=media&token=d76221a4-dc29-40fe-bbac-1746de6a4753",
+      "popImage": ""
+
     },
     "science": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/science to yumul.gif",
       "title": "Science Building",
       "responseText": "Here is the way from Science Building to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fscience2.mp3?alt=media&token=c1a04ef9-f6a2-4ca7-8f36-9d225184e7c1"
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fscience2.mp3?alt=media&token=c1a04ef9-f6a2-4ca7-8f36-9d225184e7c1",
+      "popImage": ""
+
     },
     "hospitality": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/HM & plant lab to yumul.gif",
       "title": "Hospitality Management Building",
       "responseText": "Here is the way from Hospitality Management Building to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fhm2.mp3?alt=media&token=e46834a5-48f1-4d4e-be91-3b421a94714b"
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fhm2.mp3?alt=media&token=e46834a5-48f1-4d4e-be91-3b421a94714b",
+      "popImage": ""
+
     },
     "ecopark": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/EcoPark to Yumul.gif",
       "title": "Eco Park",
       "responseText": "Here is the way from Eco Park to Yumul Building. Below the map are the Offices, Faculties nd Rooms",
-      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fecopark.mp3?alt=media&token=09893413-9e2d-4bbb-b8d2-35b7f0b29f94"
+      "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceYumul%2Fecopark.mp3?alt=media&token=09893413-9e2d-4bbb-b8d2-35b7f0b29f94",
+      "popImage": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/popImage%2Feco.webp?alt=media&token=013c7cb3-ba64-42fb-9816-858d0039e83e"
+
     }
 
   }
