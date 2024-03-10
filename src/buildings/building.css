@@ -295,6 +295,8 @@ height: 100%;
     position: fixed;
     color: #fff;
     top: 70%;
+    width: 100%;
+    text-align: center;
   }
 
   .admin{
