@@ -225,10 +225,10 @@ function YumulButton() {
         <p></p>
     </div>
         </div>
-      
+        <p className='note'>NOTE: Click the Location icon above each building.</p>
+
     </div>
   )}
-            <p className='note'>NOTE: Click the Location icon above each building.</p>
 
 <div className='showImage'>
 
