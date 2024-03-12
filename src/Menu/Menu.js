@@ -10,6 +10,8 @@ import contentMapping from '../fileJSON/directionsBuilding.json';
 import MyVirtualTour from '../VRtour'; 
 import pdfData from './handbook.json';
 import OrgComponent from '../showRespose/codecraft';
+import Rating from '../rateNreview/rate';
+import Review from '../rateNreview/review';
 
 import RateV2 from '../rateNreview/rateV2';
 import ReviewV2 from '../rateNreview/reviewV2';

@@ -68,7 +68,7 @@ const DisplayData = ({onClose}) => {
     };
 
     return (
-        <div className='review-container'>
+        <div className='r-container'>
             <div className="backbut" onClick={handleGoBack}>
             <FontAwesomeIcon icon={faArrowLeft} />
         </div>
@@ -100,6 +100,7 @@ const DisplayData = ({onClose}) => {
                         <strong>Type:</strong> {item.userType}<br></br>
                         <strong>Message:</strong> {item.message}
                     </li>
+                    
                 ))}
             </ul>
             </div>
