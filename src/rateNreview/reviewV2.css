@@ -23,14 +23,13 @@
 }
 
 .dropdown{
-    top: 25%;
     width: 100%;
     text-align: right;
-    position: absolute;
 }
 
 .dropdown-content button{
     color: #730000;
+    top: 10%;
 }
 
 .filter-button{
