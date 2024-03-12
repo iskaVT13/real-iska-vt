@@ -1,6 +1,6 @@
 .r-container{
-    background-color:rgb(228, 228, 228);
-    color: #730000;
+    background-color:#730000;
+    color: white;
     padding: 10px;
     width: 100%;
     height: 100%;
@@ -15,41 +15,126 @@
     z-index: 1000;
 }
 
+.title-review{
+    position: relative;
+    top: -5%;    
+}
+
+.reviews-total {
+    position: fixed;
+    top: 9%;
+    right: 10%;
+    padding: 10px;
+}
+
+.review-stats{
+    padding: 10px;
+    position: fixed;
+    font-size: 20px;
+    align-items: center;
+    left: 10%;
+    top: 9%;
+}
+
 .backbut{
     font-size: 20px;
-    color: #730000;
+    color: white;
     text-align: left;
     padding: 10px;
 }
 
 .dropdown{
-    width: 100%;
+    top: 36%;
     text-align: right;
+    position: fixed;
+    z-index: 100;
+    left: 75%;
+}
+
+.dropdown-content{
+    margin-top: 10px;
+    color: white;
+    background-color: white;
+    position: fixed;
+    width: 110px;
+    align-items: center;
+    justify-content: center;
+    right: 5%;
+    text-align: center;
+    border-radius: 5px;
 }
 
 .dropdown-content button{
-    color: #730000;
-    top: 10%;
+    padding: 10px;
+    display: block;
+    color: #a80e18;
+    width: 110px;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    border-bottom: #730000  solid thin;
 }
 
 .filter-button{
-    color: #730000;
+    background-color: white;
+    color: #a80e18;
+    width: 70px;
+    margin-right: 25px;
+    padding: 10px;
 }
+
 
 .list-review li{
     padding: 10px;
     width: 335px;
-    margin-top: 20px;
-    background-color: rgb(172, 165, 165);
+    margin-bottom: 10px;
+    background-color: #a80e18;
+    overflow: auto;
+    position: relative;
+    
 }
 
 .list-review{
-    
-    position: absolute;
-    top: 25%;
-    color: #730000;
+    top: 32%;
+    background-color: #730000;
+    position: relative;
+    color: white;
     width: 100%;
+    height: 450px;
     text-align: left;
-    font-size: 20px;
+    font-size: 17px;
     margin-top: 10px;
+    overflow: auto;
+    z-index: 99;
 }
+
+.rating-bars{
+    position: fixed;
+    top: 20%;
+    padding: 10px;
+
+}
+
+.line-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 320px;
+    height: 10px;
+  }
+
+  .line-container{
+    background-color: #a80e18;
+    width: 300px;
+    border-radius: 30px;
+  }
+  
+  .line {
+    height: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .line-label {
+    margin-right: 30px;
+  }
