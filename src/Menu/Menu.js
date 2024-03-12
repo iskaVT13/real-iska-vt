@@ -13,6 +13,9 @@ import OrgComponent from '../showRespose/codecraft';
 import Rating from '../rateNreview/rate';
 import Review from '../rateNreview/review';
 
+import RateV2 from '../rateNreview/rateV2';
+import ReviewV2 from '../rateNreview/reviewV2';
+
 Modal.setAppElement('#root');
 
 const customModalStyles = {
@@ -367,10 +370,10 @@ function Menu() {
         onRequestClose={closePopup}
         contentLabel="Rating Modal"
         style={customModalStyles}>
-        <Rating onClose={closePopup} onSubmit={submitRating} />
+        <RateV2 onClose={closePopup} onSubmit={submitRating} />
       </Modal>
 
-      {showReview && <Review onClose={closeReview} />}
+      {showReview && <ReviewV2 onClose={closeReview} />}
     </div>
   );
 }
