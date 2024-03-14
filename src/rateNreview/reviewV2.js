@@ -2,172 +2,185 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faFilter, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import './reviewV2.css';
+import './review.css';
 
-const DisplayData = ({ onClose }) => {
-  const [data, setData] = useState([]);
-  const [totalReviews, setTotalReviews] = useState(0);
-  const [filteredData, setFilteredData] = useState([]);
-  const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const [selectedRating, setSelectedRating] = useState('');
+const DisplayData = ({onClose}) => {
+  const [filter, setFilter] = useState('all');
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(
-        'https://iskavt-26f75-default-rtdb.asia-southeast1.firebasedatabase.app/UserData.json'
-      );
+      const response = await fetch('https://iskavt-26f75-default-rtdb.asia-southeast1.firebasedatabase.app/UserData.json');
       const result = await response.json();
       const dataArray = Object.values(result);
-      setData(dataArray);
-      setTotalReviews(dataArray.length);
-      setFilteredData(dataArray);
-    };
+      
+      dataArray.sort((a, b) => {
+        return dataArray.indexOf(b) - dataArray.indexOf(a);
+      });
 
+      setReviews(dataArray);
+    };
     fetchData();
   }, []);
 
-  const toggleDropdown = () => {
-    setDropdownVisible(!isDropdownVisible);
+  const handleFilterChange = (event) => {
+    setFilter(event.target.value);
   };
 
-  const filterByAllReviews = () => {
-    setSelectedRating('');
-    setFilteredData(data);
-  };
+  const ratingColors = ['#ff0000', '#ff8000', '#ffff00', '#80ff00', '#00ff00'];
 
-  const filterByRating = (rating) => {
-    setSelectedRating(rating);
-    if (rating === '') {
-      setFilteredData(data);
+  const overallRating = reviews.reduce((acc, review) => acc + review.rating, 0) / reviews.length;
+
+  const getColorForRating = (rating) => {
+    if (rating <= 1) {
+        return ratingColors[0];
+    } else if (rating <= 2) {
+        return ratingColors[1]; 
+    } else if (rating <= 3) {
+        return ratingColors[2]; 
+    } else if (rating <= 4) {
+        return ratingColors[3]; 
     } else {
-      const filtered = data.filter((item) => item.rating === parseInt(rating));
-      setFilteredData(filtered);
+        return ratingColors[4];
     }
   };
 
-  const countReviewsByRating = (rating) => {
-    return data.filter((item) => item.rating === rating).length;
+  const circleStyle = {
+    borderColor: getColorForRating(overallRating),
+    '--glow-color': getColorForRating(overallRating),
   };
 
-  const calculateAverageRating = () => {
-    if (data.length === 0) return 0;
+  const percentageColors = ['#ff0000', '#ff8000', '#ffff00', '#80ff00', '#00ff00'];
 
-    const totalRating = data.reduce((acc, item) => acc + item.rating, 0);
-    return totalRating / data.length;
+  const getColorForPercentage = (percentage) => {
+      if (percentage <= 20) {
+          return percentageColors[0];
+      } else if (percentage <= 40) {
+          return percentageColors[1]; 
+      } else if (percentage <= 60) {
+          return percentageColors[2]; 
+      } else if (percentage <= 80) {
+          return percentageColors[3]; 
+      } else {
+          return percentageColors[4]; 
+      }
   };
 
-  const averageRating = calculateAverageRating();
+  const ratingCounts = {};
+  reviews.forEach((review) => {
+    ratingCounts[review.rating] = (ratingCounts[review.rating] || 0) + 1;
+  });
 
-  const getStarIcons = (rating) => {
-    const stars = [];
-    for (let i = 1; i <= 5; i++) {
-      stars.push(
-        <FontAwesomeIcon
-          key={i}
-          icon={faStar}
-          style={{
-            color: i <= rating ? 'gold' : 'black',
-            opacity: i > rating ? '0.3' : '1',
-          }}
-        />
-      );
+  const getFilteredReviewCount = () => {
+    if (filter === 'all') {
+      return reviews.length;
+    } else {
+      return reviews.filter(review => review.rating.toString() === filter).length;
     }
-    return stars;
   };
 
-  const renderRatingBar = () => {
-    const stars = getStarIcons(averageRating);
-    return (
-      <div className="rating-bar">
-        <div className="average-rating">{averageRating.toFixed(1)}</div>
-        <div className="star-icons">{stars}</div>
-      </div>
-    );
-  };
-
-  const renderRatingBars = () => {
-    return [5, 4, 3, 2, 1].map((rating) => {
-      const count = countReviewsByRating(rating);
-      const color = getRatingColor(rating);
-
-      return (
-        <div key={rating} className="line-bar">
-                        {rating}
-          <div className="line-label">
-          </div>
-          <div className='line-container'>
-          <div className="line" style={{ width: `${count}%`, backgroundColor: color }} />
-          </div>
-        </div>
-      );
-    });
-  };
-
-  const getRatingColor = (rating) => {
-    const ratingColors = {
-      5: 'gold',
-      4: 'gold',
-      3: 'gold',
-      2: 'gold',
-      1: 'gold',
-    };
-
-    return ratingColors[rating] || 'black';
+  const stringToColor = (str, index) => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    hash += index;
+    const color = Math.floor(Math.abs((Math.sin(hash) * 10000) % 1 * 16777216)).toString(16);
+    return '#' + Array(6 - color.length + 1).join('0') + color;
   };
 
   const handleGoBack = () => {
     onClose();
   };
 
+  const generateCurrentDate = () => {
+    const currentDate = new Date();
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const year = currentDate.getFullYear();
+    const formattedDate = `${month}-${day}-${year}`;
+    return formattedDate;
+  };
+  
   return (
-    <div className="r-container">
-      <div className="backbut" onClick={handleGoBack}>
-        <FontAwesomeIcon icon={faArrowLeft} />
+    <div className="review-container">
+      <div className="review-header">
+        <div className="backbut" onClick={handleGoBack}>
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </div>
+        <div className="review-text"> 
+          <h2 className="header-text">Reviews</h2>
+        </div>
       </div>
-      <div className='title-review'>
-        <h2>Rate and Review</h2>
-      </div>
-      <div className="reviews-total">
-        <h3>{totalReviews} <br></br>Reviews</h3>
-      </div>
-      <div className="review-stats">{renderRatingBar()}</div>
-      <div className="rating-bars">{renderRatingBars()}</div>
-
-      <div className="dropdown">
-        <button className="filter-button" onClick={toggleDropdown}>
-          <FontAwesomeIcon icon={faFilter} /> Filter
-        </button>
-        {isDropdownVisible && (
-          <div className="dropdown-content">
-            <button onClick={filterByAllReviews} className={selectedRating === '' ? 'active' : ''}>
-              All Reviews ({totalReviews})
-            </button>
-            {[5, 4, 3, 2, 1].map((rating) => (
-              <button
-                key={rating}
-                onClick={() => filterByRating(rating)}
-                className={selectedRating === rating ? 'active' : ''}
-              >
-                {rating} star ({countReviewsByRating(rating)})
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
-      <div className="list-review">
-        <ul>
-          {filteredData.map((item, index) => (
-            <li key={index}>
-              <strong>Name:</strong> {item.Name}
-              <br></br>
-              {getStarIcons(item.rating)}{' '}
-              <br></br>
-              <strong>Type:</strong> {item.userType}
-              <br></br>
-              <strong>Message:</strong> {item.message}
-            </li>
+      <div className="overall-rating">
+        <div className="circle-review">
+          <div className="circle" style={circleStyle}>{overallRating.toFixed(1)}</div>
+          <div className="total-reviews">{reviews.length} reviews</div>
+        </div>
+        <div className="ratings">
+          {[5, 4, 3, 2, 1].map((rating) => (
+            <div key={rating} className="rating" onClick={() => setFilter(rating)}>
+              <div className="starate">
+                <span className="rating-number">{rating}</span>
+                <FontAwesomeIcon icon={faStar} className="star-icon" />
+              </div>
+              <div className="percentage-line-container">
+                <div
+                  className="percentage-line"
+                  style={{ 
+                    width: `${((ratingCounts[rating] || 0) / reviews.length * 100).toFixed(1)}%`,
+                    backgroundColor: getColorForPercentage(((ratingCounts[rating] || 0) / reviews.length * 100).toFixed(1))
+                  }}
+                ></div>
+              </div>
+              <span className="percentage">
+                {((ratingCounts[rating] || 0) / reviews.length * 100).toFixed(1)}%
+              </span>
+            </div>
           ))}
-        </ul>
+        </div>
+      </div>
+      <div className="filter">
+        <div className="reviews-count">
+          {getFilteredReviewCount()} reviews
+        </div>
+        <div className="filter-sort">
+          <div className="filter-icon">
+            <FontAwesomeIcon icon={faFilter} />
+          </div>
+          <select value={filter} onChange={handleFilterChange}>
+            <option value="all">All Stars</option>
+            <option value="5">5 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="2">2 Stars</option>
+            <option value="1">1 Star</option>
+          </select>
+        </div>
+      </div>
+      <div className="reviews">
+        {reviews
+          .filter((review) => filter === 'all' || review.rating === parseInt(filter))
+          .map((review, index) => (
+            <div key={index} className="review">
+              <div className="user-info">
+                <div className="avatar-name">
+                <div className="user-avatar" style={{ backgroundColor: stringToColor(review.Name, index) }}>{review.Name.charAt(0)}</div>
+                  <span className="name">{review.Name}</span>
+                  <span className="type">• {review.userType}</span>
+                </div>
+                <div className="user-details">
+                  <div className="stars">
+                    {Array(review.rating).fill().map((_, index) => (
+                      <FontAwesomeIcon key={index} icon={faStar} className="staricon2" />
+                    ))}
+                  </div>
+                  <span className="date">{review.date || generateCurrentDate()}</span>
+                </div>
+              </div>
+              <p className="comment">{review.message}</p>
+            </div>
+          ))}
       </div>
     </div>
   );

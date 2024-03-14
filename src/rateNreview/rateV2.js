@@ -1,132 +1,177 @@
 import React, { useState } from 'react';
-import './rateV2.css';
+import './rate.css';
+import avatar from '../pictures/avatar.gif';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
-const RateV2 = () => {
-    const [user, setUser] = useState({
-        Name: '',
-        message: '',
-        rating: 1, // Set the default rating value to 1
-        userType: '' // Set the default user type to 'student'
-    });
+const RateV2 = ({ onClose, onSubmit }) => {
+  const [rating, setRating] = useState(0);
+  const [name, setName] = useState('');
+  const [comment, setComment] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const [hasRated, setHasRated] = useState(false);
+  const [userType, setUserType] = useState(null);
+  const [nameError, setNameError] = useState('');
+  const [ratingError, setRatingError] = useState('');
+  const [userTypeError, setUserTypeError] = useState('');
 
-    const clearForm = () => {
-        setUser({ Name: '', message: '', rating: 1, userType: 'student' });
-    };
+  const handleRatingChange = (value) => {
+    setRating(value);
+    setHasRated(false);
+    setRatingError('');
+  };
 
-    const data = (e) => {
-        const { name, value } = e.target;
-        setUser({ ...user, [name]: value });
-        console.log(user);
-    };
+  const handleCommentChange = (event) => {
+    setComment(event.target.value);
+  };
 
-    const handleRatingChange = (rating) => {
-        setUser({ ...user, rating });
-    };
+  const handleUserTypeChange = (selectedUserType) => {
+    setUserType(selectedUserType);
+    setUserTypeError('');
+  };
 
-    const handleUserTypeChange = (userType) => {
-        setUser({ ...user, userType });
-    };
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+    setNameError(event.target.value.trim() === '' ? 'Please enter your name' : '');
+  };
 
-    const getData = async (e) => {
-        e.preventDefault();
-        const { Name, message, rating, userType } = user;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let hasError = false;
 
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                Name,
-                message,
-                rating,
-                userType
-            })
-        };
+    if (name.trim() === '') {
+      setNameError('Please enter your name');
+      hasError = true;
+    } else {
+      setNameError('');
+    }
 
-        const res = await fetch(
-            'https://iskavt-26f75-default-rtdb.asia-southeast1.firebasedatabase.app/UserData.json',
-            options
-        );
+    // Check if rating is not selected
+    if (rating === 0) {
+      setHasRated(true);
+      setRatingError('Please rate your experience');
+      hasError = true;
+    } else {
+      setRatingError('');
+    }
 
-        if (res.ok) {
-            alert('Feedback Sent!');
-            clearForm();
-        } else {
-            alert('Error Sending Feedback');
-        }
-    };
+    if (!userType) {
+      setUserTypeError('Please select user type');
+      hasError = true;
+    } else {
+      setUserTypeError('');
+    }
 
-    return (
-        <div className='form'>
-            <div className='form-container'>
-                <form method='POST'>
-                    {/* Display star rating with values 1 to 5 */}
-                    <div>
-                        <span>Rating:</span><br></br>
-                        {[1, 2, 3, 4, 5].map((star) => (
-                            <span
-                                key={star}
-                                onClick={() => handleRatingChange(star)}
-                                style={{
-                                    cursor: 'pointer',
-                                    color: star <= user.rating ? 'gold' : 'gray',
-                                    fontSize: '50px'
-                                }}
-                            >
-                                ★
-                            </span>
-                        ))}
-                    </div>
-                    <div className='radio-btn'>
-                        <span>User Type:</span><br></br>
-                        <label>
-                            <input 
-                                type='radio' 
-                                name='userType' 
-                                value='student' 
-                                checked={user.userType === 'student'} 
-                                onChange={() => handleUserTypeChange('student')} 
-                            />
-                            Student
-                        </label>
-                        <label>
-                            <input 
-                                type='radio' 
-                                name='userType' 
-                                value='visitor' 
-                                checked={user.userType === 'visitor'} 
-                                onChange={() => handleUserTypeChange('visitor')} 
-                            />
-                            Visitor
-                        </label>
-                    </div>
-                    <input 
-                        className='name-input'
-                        type='text'
-                        name='Name'
-                        placeholder='Your name'
-                        value={user.Name}
-                        autoComplete='off'
-                        required
-                        onChange={data}
-                    />
-                    
-                    <textarea
-                        type='text'
-                        name='message'
-                        placeholder='Your comment'
-                        value={user.message}
-                        autoComplete='off'
-                        required
-                        onChange={data}
-                    />
-                    <br></br>
-                    <button className='submit-btn' onClick={getData}>Submit</button>
-                </form>
-            </div>
+    if (!hasError) {
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          Name: name,
+          message: comment,
+          rating: rating,
+          userType: userType
+        })
+      };
+  
+      const res = await fetch(
+        'https://iskavt-26f75-default-rtdb.asia-southeast1.firebasedatabase.app/UserData.json',
+        options
+      );
+  
+      if (res.ok) {
+        onClose(); // Close the rate popup
+        clearForm(); // Clear the form
+      } else {
+        alert('Error Sending Feedback');
+      }
+    }
+  };
+
+  const clearForm = () => {
+    setName('');
+    setComment('');
+    setRating(0);
+    setUserType(null);
+    setNameError('');
+    setRatingError('');
+    setUserTypeError('');
+  };
+  
+  return (
+    <div className='overlay-container'>
+    <div className="rate-popup">
+      <div className="rate-content">
+        <div className="gif-container">
+          <img src={avatar} alt="GIF" className="gif" />
         </div>
-    );
+        <div className="rate-container">
+          <h2 className="rate-title">Rate your experience</h2>
+          <div className="star-rating">
+            {[1, 2, 3, 4, 5].map((value) => (
+                <FontAwesomeIcon
+                key={value}
+                icon={faStar}
+                onClick={() => handleRatingChange(value)}
+                className={value <= rating ? 'star selected' : 'star'}
+                />
+            ))}
+          </div>
+          {hasRated && rating === 0 && <p className="rate-message">{ratingError}</p>}
+          <div className='radio-btn'>
+            <label>
+              <input
+                type='radio'
+                name='userType'
+                value='student'
+                checked={userType === 'Student'}
+                onChange={() => handleUserTypeChange('Student')}
+              />
+              Student
+            </label>
+            <label>
+              <input
+                type='radio'
+                name='userType'
+                value='visitor'
+                checked={userType === 'Visitor'}
+                onChange={() => handleUserTypeChange('Visitor')}
+              />
+              Visitor
+            </label>
+            {userTypeError && <p className="error-message">{userTypeError}</p>}
+          </div>
+          <div className='name-input'>
+            <input
+              type='text'
+              name='Name'
+              placeholder='Please enter your name'
+              value={name}
+              autoComplete='off'
+              required
+              onChange={handleNameChange}
+            />
+            {nameError && <p className="error-message">{nameError}</p>}
+          </div>
+          <textarea
+            className="comment-textarea"
+            placeholder={isTyping ? '' : 'Leave a message'}
+            onFocus={() => setIsTyping(true)}
+            onBlur={() => setIsTyping(false)}
+            onChange={handleCommentChange}
+            value={comment}
+          />
+          <div className="buttons">
+            <button onClick={handleSubmit} className="submit-button">Rate</button>
+            <button onClick={onClose} className="maybe-later-button">Maybe Later</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  );
 };
 
 export default RateV2;

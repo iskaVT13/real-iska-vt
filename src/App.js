@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+import Modal from 'react-modal';
+
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 import './App.css';
@@ -76,6 +78,8 @@ import EntranceTest from './showRespose/entranceTest';
 import Orgchart from './showRespose/org';
 
 import DisplayComponent from './welcome/welcome';
+
+import RateV2 from './rateNreview/rateV2';
 
 
 // Function for the searchInput 
@@ -328,6 +332,8 @@ const [showOrgButton, setShowOrgButton] = useState(false);
 
 const [showComponent, setShowComponent] = useState(false);
 
+const [showRateV2, setShowRateV2] = useState(false);
+
 
 useEffect(() => {
   // This effect will run when the component mounts
@@ -561,7 +567,10 @@ const handleGrandButtonClick = () => {
 }
 
   // Function for reset button event
-  const resetDisplay = () => {
+  const resetDisplay = ({ onClose }) => {
+
+    setShowRateV2(true);
+
     setShowError(false);
     stopAudio();
     setDisplayTextOnScreen('');
@@ -613,8 +622,6 @@ const handleGrandButtonClick = () => {
     setHMResponse(false);
 
 
-
-
     setShowEregular(false);
     setShowEfreshmen(false);
     setShowEirregular(false);
@@ -661,10 +668,10 @@ const handleGrandButtonClick = () => {
       const showMicAndSearch = document.querySelectorAll('.bottom');
       showMicAndSearch.forEach((element) => {
         element.style.display = '';
-      });
-
+      });    
 
     });
+
   };
 
     // Function for toggleQuestions button event
@@ -3996,9 +4003,14 @@ const sendTextToCommands = (text) => {
     <div className='error'>
       {showError && <ErrorComponent errorMessage={errorMessage} onTryAgain={resetDisplay} />}
     </div>
+
+    <Modal className='rate-home' isOpen={showRateV2} onClose={() => setShowRateV2(false)} >
+        <RateV2 onClose={() => setShowRateV2(false)} />
+      </Modal>
+
       <div className='container'>
      <div className='container-content'>
-
+      
       {showEregular && <Eregular />}
       {showEirregular && <Eirregular />}
       {showEFreshmen && <Efreshmen />}

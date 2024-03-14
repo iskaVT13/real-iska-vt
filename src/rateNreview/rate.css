@@ -3,55 +3,63 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.overlay-container{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .rate-popup {
+    color: white;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 370px; 
-    height: 100%;
+    height: 814px;
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    padding: 10px;
 }
 
 .rate-content {
     background-color: transparent;
     padding: 20px;
     position: relative;
-    bottom: 215px;
+    bottom: 285px;
     border-radius: 10px;
     max-width: 400px;
     max-height: 80%;
     overflow-y: auto;
 }
 
-.gif-container img{
-    margin-top: -30px;
-    max-width: 200px;
-    height: auto;
+.gif-container {
+    text-align: center;
 }
   
+.gif {
+    max-width: 80%;
+    height: auto;
+}
 
 .rate-container {
     position: fixed;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color:#730000;
+    top: 246px;
+    left: 0;
+    /*transform: translate(-50%, -50%);*/
+    background-color: #730000;
     padding: 15px;
-    border-radius: 40px;
-    width: 340px;
-    max-height: 430px;
+    border-radius: 10px;
+    width: 370px;
+    max-height: 578px;
     z-index: 1000;
+    font-family: "Poppins", sans-serif;
 }
   
 .rate-title {
     text-align: center;
     margin-bottom: 10px;
+    font-weight: 500;
 }
   
 .star-rating {
@@ -72,9 +80,63 @@
 }
   
 .rate-message {
-    color: #fff;
-    font-size: 17px;
-    margin: 18px 0;
+    color: #ffbd00;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.type-message {
+    color: #ffbd00;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.name-message {
+    color: #ffbd00;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.radio-btn {
+    width: 100%;
+    padding: 0 70px;
+    font-size: 16px;
+    font-weight: inherit;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio-btn input{
+    width: fit-content;
+    transform: scale(1.4);
+    
+}
+
+.name-input {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.name-input input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: inherit;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    border-radius: 7px;
+}
+  
+.error-message {
+    color: #ffbd00;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
 }
 
 .comment-textarea {
@@ -86,7 +148,9 @@
     border: 1px solid #ccc;
     resize: none;
     outline: none;
-    font: inherit;
+    font-size: 16px;
+    font-weight: inherit;
+    font-family: "Poppins", sans-serif;
 }
   
 .buttons {
@@ -103,10 +167,9 @@
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-  
-.buttons button:hover {
-    font-weight: bold;
+    font-size: 17px;
+    font-weight: inherit;
+    font-family: "Poppins", sans-serif;
 }
   
 .submit-button {
@@ -117,6 +180,7 @@
 
 .submit-button:hover {
     color:#730000;
+    font-weight: bold;
 }
   
 .maybe-later-button {
@@ -126,5 +190,6 @@
 }
 
 .maybe-later-button:hover {
-    font-size: 15px;
+    text-decoration: underline;
 }
+

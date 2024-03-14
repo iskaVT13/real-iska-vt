@@ -468,3 +468,7 @@ input {
   cursor: pointer;
   background-color:#ffbd00;
 }
+
+.rate-home {
+  background-color: black;
+}
