@@ -35,7 +35,7 @@
       "responseText": "Here is the way from Canteen to Hospitality Management Building",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceHM%2FCanteen%20to%20Hm.mp3?alt=media&token=8e57785c-da12-4c01-9ebd-d1c52f7d0881"
     },
-    "gymnasium": {
+    "gym": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingHM/gym to HM & plant lab.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Hospitality Management Building",

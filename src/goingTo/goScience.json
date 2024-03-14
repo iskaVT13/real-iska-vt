@@ -35,7 +35,7 @@
       "responseText": "Here is the way from Canteen to Health and Science Building. Below the map are the Offices, Faculties nd Rooms",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceScience%2Fcanteen3.mp3?alt=media&token=96735b77-13bc-4ecc-86c1-8525f46b4e88"
     },
-    "gymnasium": {
+    "gym": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingScience/gym to health & science bldg.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Health and Science Building. Below the map are the Offices, Faculties nd Rooms",

@@ -35,7 +35,7 @@
       "responseText": "Here is the way from Canteen to Education Building. Below the map are the Offices, Faculty and Room located at  Public Administration and Education Building",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceEduc%2FCanteen%20to%20Educ.mp3?alt=media&token=0174eedd-70d3-4fcd-98be-b0ff65eef1cd"
     },
-    "gymnasium": {
+    "gym": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingEduc/gym to educ bldg.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Education Building. Below the map are the Offices, Faculty and Room located at  Public Administration and Education Building",

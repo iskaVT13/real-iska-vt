@@ -3,10 +3,6 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.overlay-container{
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
 .rate-popup {
     color: white;
     position: fixed;
@@ -153,14 +149,14 @@
     font-family: "Poppins", sans-serif;
 }
   
-.buttons {
+.buttonss {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 7px;
 }
   
-.buttons button {
+.buttonss button {
     margin: 8px;
     padding: 10px 10px;
     border: none;

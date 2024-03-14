@@ -29,7 +29,7 @@
       "responseText": "Here is the way from Canteen to Computer Laboratory 1",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceLab1%2Fcanteen4.mp3?alt=media&token=574ac5fb-ab98-4b92-b3ca-db6eaa98bcdf"
     },
-    "gymnasium": {
+    "gym": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingLab1/gym to ict lab1.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Computer Laboratory 1",

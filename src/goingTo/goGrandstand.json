@@ -35,7 +35,7 @@
       "responseText": "Here is the way from Canteen to Grandstand",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceGrandstand%2FCanteen%20to%20Grandstand.mp3?alt=media&token=17c574d1-744f-45d4-8aa8-1cb41ba9066d"
     },
-    "gymnasium": {
+    "gym": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingGrandstand/gym to grandstand.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Grandstand",

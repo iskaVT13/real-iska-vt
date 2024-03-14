@@ -36,7 +36,7 @@
       "responseText": "Here is the way from Canteen to Engineer and Architecture Building. Below the map are the Offices, Faculty and Room located at Engineering and Architecture Building",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceArchi%2Fcanteen6.mp3?alt=media&token=1b804029-123f-4e68-8021-bd7b3fd6c9f7"
     },
-    "gymnasium": {
+    "gym": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingEngineer/gym to engineering bldg.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Engineer and Architecture Building. Below the map are the Offices, Faculty and Room located at Engineering and Architecture Building",

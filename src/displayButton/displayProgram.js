@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './displayDesign.css';
 
-import Iska from '../pictures/avatar.gif';
-
 import Bachelor from '../showRespose/Programs/bachelor';
 import Diploma from '../showRespose/Programs/diploma';
 
@@ -105,7 +103,6 @@ function App() {
             <button className={showDiploma ? 'active-button' : ''} onClick={handleDiplomaButtonClick}>
               DIPLOMA COURSES
             </button>
-            <img src={Iska} alt='iska-img' />
           </div>
         </div>
       )}

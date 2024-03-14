@@ -471,4 +471,5 @@ input {
 
 .rate-home {
   background-color: black;
+  position: fixed;
 }

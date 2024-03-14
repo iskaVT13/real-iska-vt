@@ -35,7 +35,7 @@
       "popImage": ""
 
     },
-    "gymnasium": {
+    "gym": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingYumul/gym to yumul bldg.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Yumul Building. Below the map are the Offices, Faculties nd Rooms",

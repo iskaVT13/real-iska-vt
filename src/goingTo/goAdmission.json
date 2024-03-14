@@ -30,7 +30,7 @@
       "responseText": "Here is the way from Canteen to Administration Building. Below the map are the Offices, Faculty and Room located at Administration Building",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceAdmin%2Fcanteen1.mp3?alt=media&token=c0023e92-1a97-41b7-b0d9-5c30b34cc052"
     },
-    "gymnasium": {
+    "gym": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingAdmission/gym to admin bldg.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Administration Building. Below the map are the Offices, Faculty and Room located at Administration Building",

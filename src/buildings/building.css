@@ -257,25 +257,6 @@ height: 100%;
     background-color:730000;
   }
 
-  .image-button-grid{
-    display: grid;
-    justify-content: center;
-    padding: 5px;
-    align-content: center;
-    gap: 10px;
-  }
-  @media screen and (min-width: 768px) {
-    .image-button-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  /* Mobile styles - 1 column */
-  @media screen and (max-width: 767px) {
-    .image-button-grid {
-      grid-template-columns: (2, 2fr);
-    }
-  }
 
   .map-img {
 
@@ -301,7 +282,7 @@ height: 100%;
 
   .admin{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 72%;
     left: 45%;
     color: #ffbd00;
@@ -309,7 +290,7 @@ height: 100%;
 
   .canteenn {
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 35%;
     right: 20%;
     color:#ffbd00;
@@ -317,7 +298,7 @@ height: 100%;
 
   .eco{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 20%;
     left: 44%;
     color: #ffbd00;
@@ -325,7 +306,7 @@ height: 100%;
 
   .p-educ {
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 15%;
     left: 30%;
     color: #ffbd00;
@@ -333,7 +314,7 @@ height: 100%;
 
   .p-archi{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 22%;
     left: 13%;
     color: #ffbd00;
@@ -342,7 +323,7 @@ height: 100%;
 
   .p-grandstand{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 27%;
     left: 40%;
     color: #ffbd00;
@@ -350,7 +331,7 @@ height: 100%;
 
   .p-gym{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 19%;
     right: 10%;
     color: #ffbd00;
@@ -359,7 +340,7 @@ height: 100%;
 
   .p-hm {
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 28%;
     right: 18%;
     color: #ffbd00;
@@ -367,7 +348,7 @@ height: 100%;
 
   .p-lab1{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 50%;
     left: 16%;
     color: #ffbd00;
@@ -375,7 +356,7 @@ height: 100%;
 
   .p-lab2{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 47%;
     left: 30%;
     color: #ffbd00;
@@ -383,7 +364,7 @@ height: 100%;
 
   .p-nantes{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 20%;
     left: 44%;
     color: #ffbd00;
@@ -391,7 +372,7 @@ height: 100%;
 
   .p-science{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 35%;
     left: 0;
     color:#ffbd00;
@@ -399,7 +380,7 @@ height: 100%;
 
   .p-yumul {
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 50%;
     right: 20%;
     color: #ffbd00;
@@ -407,7 +388,7 @@ height: 100%;
 
   .pin-admin{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 73%;
     left: 50%;
   }
@@ -419,7 +400,7 @@ height: 100%;
 
   .pin-gate {
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 75%;
     left: 35%;
     cursor: pointer;
@@ -431,73 +412,73 @@ height: 100%;
 
   .pin-lab1{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 55%;
     left: 20%;
   }
   .pin-lab2 {
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 50%;
     left: 35%;
   }
   .pin-yumul{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 50%;
     right: 25%;
   }
   .pin-canteen{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 40%;
     right: 20%;
   }
   .pin-science{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 35%;
     left: 13%;
   }
   .pin-archi{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 25%;
     left: 23%;
   }
   .pin-educ{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 17%;
     left: 42%;
   }
   .pin-gym{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 23%;
     right: 12%;
   }
   .pin-hm{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 30%;
     right: 20%;
   }
   .pin-nantes{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 27%;
     left: 59%;
   }
   .pin-grandstand{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 30%;
     left: 47%;
   }
   .pin-eco{
     position: absolute;
-    z-index: 105;
+    z-index: 99;
     top: 22%;
     left: 49%;
 

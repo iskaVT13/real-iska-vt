@@ -35,7 +35,7 @@
       "responseText": "Here is the way from Canteen to nearest comfort room in campus",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCR%2FvoiceCr.mp3?alt=media&token=8a538cde-173d-4913-940f-4ff499d41df3"
     },
-    "gymnasium": {
+    "gym": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCR/gym to nearest CR.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to nearest comfort room in campus",

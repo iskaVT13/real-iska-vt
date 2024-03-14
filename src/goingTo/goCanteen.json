@@ -29,7 +29,7 @@
       "responseText": "Here is the way from Yumul Building to Canteen",
       "speakVoice": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/voiceCanteen%2FYumul%20to%20Canteen.mp3?alt=media&token=d619fc98-e8d3-43da-a304-43be1189b3da"
     },
-    "gymnasium": {
+    "gym": {
       "clickedImage": "gs://iskavt-26f75.appspot.com/goingCanteen/gym to canteen.gif",
       "title": "Gymnasium",
       "responseText": "Here is the way from Gymnasium to Canteen",

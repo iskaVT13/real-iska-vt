@@ -163,7 +163,7 @@ const RateV2 = ({ onClose, onSubmit }) => {
             onChange={handleCommentChange}
             value={comment}
           />
-          <div className="buttons">
+          <div className="buttonss">
             <button onClick={handleSubmit} className="submit-button">Rate</button>
             <button onClick={onClose} className="maybe-later-button">Maybe Later</button>
           </div>

@@ -4004,11 +4004,10 @@ const sendTextToCommands = (text) => {
       {showError && <ErrorComponent errorMessage={errorMessage} onTryAgain={resetDisplay} />}
     </div>
 
-    <Modal className='rate-home' isOpen={showRateV2} onClose={() => setShowRateV2(false)} >
+      <div className='container'>
+      <Modal className='rate-home' isOpen={showRateV2} onClose={() => setShowRateV2(false)} >
         <RateV2 onClose={() => setShowRateV2(false)} />
       </Modal>
-
-      <div className='container'>
      <div className='container-content'>
       
       {showEregular && <Eregular />}

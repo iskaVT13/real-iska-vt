@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './displayDesign.css';
 
-import Iska from '../pictures/avatar.gif';
-
 import History from '../showRespose/About/history';
 import Mission from '../showRespose/About/mission';
 import Hymn from '../showRespose/About/hymn';
@@ -165,7 +163,6 @@ function App() {
             <button className={showHymn ? 'active-button' : ''} onClick={handleHymnButtonClick}>PUP HYMN</button>
             <button className={showPillars ? 'active-button' : ''} onClick={handlePillarButtonClick}>10 PILLARS</button>
             <button className={showPhilo ? 'active-button' : ''} onClick={handlePhiloButtonClick}>PUP PHILOSOPHY</button>
-            <img src={Iska} alt='iska-img' />
           </div>
         </div>
       )}
