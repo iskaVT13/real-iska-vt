@@ -14,9 +14,7 @@ const DisplayData = ({onClose}) => {
       const result = await response.json();
       const dataArray = Object.values(result);
       
-      dataArray.sort((a, b) => {
-        return dataArray.indexOf(b) - dataArray.indexOf(a);
-      });
+      dataArray.sort((a, b) => new Date(b.date) - new Date(a.date));
 
       setReviews(dataArray);
     };
@@ -25,6 +23,7 @@ const DisplayData = ({onClose}) => {
 
   const handleFilterChange = (event) => {
     setFilter(event.target.value);
+    window.scroll(0,0);
   };
 
   const ratingColors = ['#ff0000', '#ff8000', '#ffff00', '#80ff00', '#00ff00'];
@@ -71,12 +70,14 @@ const DisplayData = ({onClose}) => {
     ratingCounts[review.rating] = (ratingCounts[review.rating] || 0) + 1;
   });
 
+
   const getFilteredReviewCount = () => {
     if (filter === 'all') {
       return reviews.length;
     } else {
       return reviews.filter(review => review.rating.toString() === filter).length;
     }
+
   };
 
   const stringToColor = (str, index) => {

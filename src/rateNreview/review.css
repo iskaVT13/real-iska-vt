@@ -214,14 +214,18 @@
 }
   
   .reviews {
+    top: 0;
     background-color: white;
-    height: 446px;
+    position: relative;
+    height: 450px;
     overflow-y: scroll;
+    padding-bottom: 100%;
   }
   
   .review {
     border-bottom: 1px solid #ccc;
     padding: 15px;
+
   }
   
   .user-info {

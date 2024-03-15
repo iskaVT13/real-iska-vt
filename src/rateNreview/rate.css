@@ -6,11 +6,10 @@
 .rate-popup {
     color: white;
     position: fixed;
-    top: 50%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 370px; 
-    height: 814px;
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -22,10 +21,9 @@
     background-color: transparent;
     padding: 20px;
     position: relative;
-    bottom: 285px;
     border-radius: 10px;
     max-width: 400px;
-    max-height: 80%;
+    max-height: 300px;
     overflow-y: auto;
 }
 
@@ -40,14 +38,13 @@
 
 .rate-container {
     position: fixed;
-    top: 246px;
     left: 0;
     /*transform: translate(-50%, -50%);*/
     background-color: #730000;
     padding: 15px;
     border-radius: 10px;
     width: 370px;
-    max-height: 578px;
+    height: 520px;
     z-index: 1000;
     font-family: "Poppins", sans-serif;
 }
@@ -153,17 +150,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 7px;
+    gap: 5px;
 }
   
 .buttonss button {
-    margin: 8px;
     padding: 10px 10px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 17px;
     font-weight: inherit;
     font-family: "Poppins", sans-serif;
 }
