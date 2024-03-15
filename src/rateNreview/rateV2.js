@@ -95,6 +95,7 @@ const RateV2 = ({ onClose }) => {
 
     if (!hasError) {
       const currentDate = new Date(); // Get the current date
+      const formattedDate = currentDate.toLocaleString(); 
       const options = {
         method: 'POST',
         headers: {
@@ -105,7 +106,7 @@ const RateV2 = ({ onClose }) => {
           message: comment,
           rating: rating,
           userType: userType,
-          date: currentDate.toISOString() // Convert date to ISO format
+          date: formattedDate
         })
       };
 

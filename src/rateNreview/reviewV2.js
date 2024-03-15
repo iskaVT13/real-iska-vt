@@ -14,7 +14,9 @@ const DisplayData = ({onClose}) => {
       const result = await response.json();
       const dataArray = Object.values(result);
       
-      dataArray.sort((a, b) => new Date(b.date) - new Date(a.date));
+      dataArray.sort((a, b) => {
+        return dataArray.indexOf(b) - dataArray.indexOf(a);
+      });
 
       setReviews(dataArray);
     };
