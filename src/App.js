@@ -3911,7 +3911,7 @@ const sendTextToCommands = (text) => {
       {showQuestions && (
         <div className="question-list">
           {/* Add your list of questions here */}
-          <h5>Here are some task ISKA can do.</h5>
+          <h5>FAQs</h5>
           <p>-  How to enroll?</p>
           <p>- How to apply academic achiever</p>
           <p>- How to get a Good Moral</p>
@@ -3924,7 +3924,7 @@ const sendTextToCommands = (text) => {
           <p>- Who is the Coordinator of the BSIT Course?</p>
           <p>- Tell me about PUP</p>
 
-          <h5>You can ask ISKA for location of the building</h5>
+          <h5>Suggested Questions you can ask to ISKA</h5> 
           <p>- Where is the Administration Office?</p>
           <p>- Where is the Grandstand?</p>
           <p>- Where is the Library?</p>
