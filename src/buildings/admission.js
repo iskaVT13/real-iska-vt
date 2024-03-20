@@ -18,7 +18,6 @@ function AdmissionButton() {
   const [directCurrentButton, setDirectionCurrentButton] = useState('');
   const [currentAudio, setCurrentAudio] = useState(null);
   const adminAudio = useMemo(() => new Audio(voiceAdmin), []);  
-  const [directImageURL, setDirectImageURL] = useState('');
 
 
   useEffect(() => {
@@ -88,18 +87,6 @@ function AdmissionButton() {
   useEffect(() => {
     fetchImageURL();
   }, [fetchImageURL]);
-
-  const fetchDirectImageURL = useCallback(async () => {
-    if (directCurrentButton && directCurrentButton.img) {
-      const directImageRef = ref(storage, directCurrentButton.img);
-      const url = await getDownloadURL(directImageRef);
-      setDirectImageURL(url);
-    }
-  }, [directCurrentButton]);
-
-  useEffect(() => {
-    fetchDirectImageURL();
-  }, [fetchDirectImageURL]);
 
   const handleImageClick = (button) => {
     const buttonData = responses[button];
@@ -259,7 +246,6 @@ function AdmissionButton() {
         <div className="image-container">
           <p className='text-gif'>{currentButton.responseText}</p>
           <FontAwesomeIcon className="back-button" onClick={handleBackButtonClick} icon={faArrowLeft} size="xl" style={{color: "#FFD43B",}} />
-          <div className='image-button-grid'>
           <div className='gif'>
           <img  src={imageURL} alt={currentButton.title} />
           </div>
@@ -302,7 +288,6 @@ Accounting Office    </button>
   </li>
 </ul>
 </div>
-</div>
 
             {/* Modal for displaying text */}
             <div className='pop-up' >
@@ -312,7 +297,7 @@ Accounting Office    </button>
               
                 <div className='direct-image'>
                   <img 
-                    src={directImageURL} alt='direct-img'
+                    src={directCurrentButton.img} alt='direct-img'
                   />
                 </div>
                   

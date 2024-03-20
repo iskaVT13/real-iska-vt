@@ -1,7 +1,7 @@
 {
     "admin1": {
       "directionsText": "The Office of the Registrar is located at first floor of the building, third window.",
-      "img": "",
+      "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fregistrar.webp?alt=media&token=718c2335-89ea-4d83-be26-047435a3a147",
       "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fregistrar.mp3?alt=media&token=c892d51b-d5c0-49c5-a538-5f40e0d92c47"
     },
     "admin2": {
@@ -31,7 +31,7 @@
       },
       "admin7": {
         "directionsText": " The Academic and OJT Office is located at second floor, last window of the building",
-        "img": "",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Facademic%20head%20office.webp?alt=media&token=4d7ef705-452f-435a-b6ac-95c697773e65",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Facads.mp3?alt=media&token=d775dbf6-ff3a-4b6b-abf8-f0602d8a406c"
       },
 

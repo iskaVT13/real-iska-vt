@@ -140,7 +140,7 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
   };
 
   // Handle the text when sending trigger
-  const handleSendText = () => {
+  const handleSendText = async () => {
     onSendText(inputText);
     setInputText('');
     window.scrollTo(0, 0);
@@ -176,6 +176,7 @@ function TextInputApp({ onSendText, microphoneHidden, toggleMicrophone, setMicro
 
           <input id='keyword'
             type="text"
+            name= 'Keyword'
             placeholder="Type a keyword..."
             value={inputText}
             onChange={handleInputChange} // input when change and typing in searchInput
