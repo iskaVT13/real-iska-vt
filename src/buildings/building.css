@@ -198,7 +198,7 @@ height: 100%;
     justify-content: space-around;
     align-items:flex-start;
     width: 100%;
-    height: 36em;
+    height: 60em;
     text-align: center;
     position: relative;
     display: block;
@@ -216,8 +216,7 @@ height: 100%;
   }
 
   .showImage-button {
-    position: relative;
-    display:inline;
+    display:inline-flex;
     padding: 15px;
     margin-bottom: 5px;
     background-color: #ffbd00;
@@ -226,7 +225,7 @@ height: 100%;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 20em;
+    width: 15em;
   }
 
   .pop-up{
