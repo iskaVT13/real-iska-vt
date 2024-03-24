@@ -29,6 +29,8 @@
     border-radius: 10px;
     overflow-y: auto;
     width: 320px;
+    text-align: center;
+
 
 }
 
@@ -56,13 +58,13 @@
   
 .rate-title {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-weight: 500;
 }
   
 .star-rating {
     text-align: center;
-    margin: 25px 0;
+    margin: 20px 0;
 }
   
 .star {
@@ -78,6 +80,7 @@
 }
   
 .rate-message {
+    width: 200px;
     color: #ffbd00;
     font-size: 14px;
     font-family: "Montserrat", sans-serif;
@@ -97,12 +100,11 @@
 
 .radio-btn {
     width: 100%;
-    padding: 0 70px;
     font-size: 16px;
     font-weight: inherit;
     font-family: "Montserrat", sans-serif;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .radio-btn input{
@@ -116,7 +118,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     margin: 20px 0;
 }
@@ -132,6 +133,16 @@
 }
   
 .error-message {
+    width: 100%;
+    color: #ffbd00;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+}
+
+.error-message2{
+    width: 100%;
+    display: flex;
     color: #ffbd00;
     font-size: 14px;
     font-family: "Poppins", sans-serif;
@@ -139,7 +150,7 @@
 
 .comment-textarea {
     width: 100%;
-    height: 120px;
+    height: 90px;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -182,7 +193,7 @@
 .maybe-later-button {
     color: #fff;
     width: 150px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .maybe-later-button:hover {

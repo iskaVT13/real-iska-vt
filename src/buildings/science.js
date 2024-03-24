@@ -9,6 +9,8 @@ import MapImg from '../pictures/3Dmap.jpg';
 
 
 import voiceScience from '../speakVoice/science.mp3';
+import alumni from './alumni.jpg'
+
 
 function ScienceButton() {
   const [isActive, setIsActive] = useState(false);
@@ -19,6 +21,18 @@ function ScienceButton() {
   const [directCurrentButton, setDirectionCurrentButton] = useState('');
   const [currentAudio, setCurrentAudio] = useState(null);
   const scienceAudio = useMemo(() => new Audio(voiceScience), []);  
+  const [alumniActive, setAlumniActive] = useState(false);
+
+  // Assuming handleModalOpen and handleModalClose functions are defined here or imported from another file
+const handleModalOpen = () => {
+  setAlumniActive(true);
+  // Logic to open the modal
+};
+
+const handleModalClose = () => {
+  // Logic to close the modal
+  setAlumniActive(false);
+};
 
   useEffect(() => {
     Promise.all([
@@ -225,10 +239,28 @@ function ScienceButton() {
         <p></p>
     </div>
         </div>
+        <div className='pin-custom'>
+          <div className='icon-text'>
+            <FontAwesomeIcon onClick={handleModalOpen} className="custom" icon={faLocationDot} size='xl' />
+            <p></p> {/* Add a label for the new location */}
+          </div>
+        </div>
         <p className='note'>NOTE: Click the Location icon above each building.</p>
 
     </div>
   )}
+
+<div className='pop-alumni'>
+  {alumniActive && (
+      <div className="alumni-popUp">
+        <img src={alumni} alt='alumni-img' />
+        <h2>
+          Under Construction
+        </h2>
+        <button onClick={handleModalClose}>Close</button>
+      </div>
+    )}
+    </div>
 
 <div className='showImage'>
 
@@ -291,6 +323,11 @@ Room 105 (Food Laboratory)
             {isModalOpen && (
               <div className="direction-modal">
                 <div className="modal-content">
+                <div className='direct-image'>
+                  <img 
+                    src={directCurrentButton.img} alt='direct-img'
+                  />
+                </div>
                   <p>{directCurrentButton.directionsText}</p>
                   <button className='modal-close' onClick={closeModal}>Close</button>
                 </div>

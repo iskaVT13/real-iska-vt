@@ -1,5 +1,50 @@
 .showImage{
     position: relative;
+}
+
+.pop-alumni{
+  position:fixed;
+  top: 10%;
+  width: 100%;
+  background-color: #0000006f;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index:999;
+}
+
+.alumni-popUp{
+  padding: 10px;
+  top: 30%;
+  color: white;
+  background-color:#9b000a;
+  border: #ffbd00 2px solid;
+  z-index: 105;
+  position: fixed;
+  width: 300px;
+  text-align: center;
+  align-items: center;
+  display: block;
+  height: 260px;
+}
+
+.alumni-popUp h2{
+  padding: 10px;
+}
+
+.alumni-popUp button{
+  background-color:#ffbd00;
+}
+
+.alumni-popUp img{
+  width: 200px;
+}
+
+.pin-custom{
+  position: absolute;
+  top: 45%;
+  left: 12%;
+
 
 }
 
@@ -246,15 +291,14 @@ height: 100%;
 
 
   .map-img {
-
-    width: 100%;
     padding: 5px;
-    height: max-content;
+    
   }
 
   .map-img img {
-    width: 100%;
-    height: 100%;
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
     border: none;
   }
 

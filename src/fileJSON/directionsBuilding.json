@@ -1,71 +1,79 @@
 {
     "admin1": {
       "directionsText": "The Office of the Registrar is located at first floor of the building, third window.",
-      "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fregistrar.webp?alt=media&token=718c2335-89ea-4d83-be26-047435a3a147",
+      "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fadmin%20img%2Fregistrar.webp?alt=media&token=7cdd8d66-6a35-41a5-aed6-c1128ad786a1",
       "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fregistrar.mp3?alt=media&token=c892d51b-d5c0-49c5-a538-5f40e0d92c47"
     },
     "admin2": {
       "directionsText": "The Accounting Office is located at first floor, upon entering the building",
-      "img": "",
+      "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fadmin%20img%2Facc%20office.webp?alt=media&token=e6d426a2-5dcc-4d87-80b9-9135a4e86533",
       "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Facc.mp3?alt=media&token=569c3506-87b4-4fdb-a314-f614a0ff58b8"
     },
     "admin3": {
       "directionsText": "The Cashier Office is located at first floor, second window.",
-      "img": "",
+      "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fadmin%20img%2Ffund%20management.webp?alt=media&token=b87f1199-10ed-4ff0-96af-ae4b00feae49",
       "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fcash.mp3?alt=media&token=91795120-4fbe-4664-aa13-89d0610e74d2"
     },
     "admin4": {
       "directionsText": " The Admission Office is located at first floor, last window of the building",
-      "img": "",
+      "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fadmin%20img%2Fadmission.webp?alt=media&token=7003535c-2de2-4569-be4c-23d1e2d98d46",
       "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fadmission.mp3?alt=media&token=4ebd55d0-0d59-4632-80fc-5b30c3daecfa"
     },
     "admin5": {
         "directionsText": "The Office of OSAS is located at  second floor, first window ",
-        "img": "",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fadmin%20img%2Fosas.webp?alt=media&token=06930cfe-da57-482c-a52a-1f4e3930f5b0",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fosas.mp3?alt=media&token=8e42f6a3-8add-49a3-8b7c-1701de2e1acf"
       },
       "admin6": {
         "directionsText": " the Director's Office is located at second floor, second window ",
-        "img": "gs://iskavt-26f75.appspot.com/7.jpg",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fadmin%20img%2Fdirectors.webp?alt=media&token=1900de05-48a2-4b25-8f5e-6cf30abc503a",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Fdirector.mp3?alt=media&token=5277a41c-5f24-490f-8bb3-b516ae48c13c"
       },
       "admin7": {
         "directionsText": " The Academic and OJT Office is located at second floor, last window of the building",
-        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Facademic%20head%20office.webp?alt=media&token=4d7ef705-452f-435a-b6ac-95c697773e65",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fadmin%20img%2Facademic%20head.webp?alt=media&token=b4e09daa-9333-4e2c-b4c1-0259f122c544",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionAdmission%2Facads.mp3?alt=media&token=d775dbf6-ff3a-4b6b-abf8-f0602d8a406c"
       },
 
 
       "y1": {
         "directionsText": "The ICTO or ICT office is located at the right side of second floor building, first door crossing from academic and OJT officer",
+        "img": "",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionYumul%2Ficto.mp3?alt=media&token=66f30e21-4fca-4bcc-a6b6-c72a6e4ed6e0"
       },
       "y2": {
         "directionsText": "The Graduate Services or GS Office is located at the right side of second floor, upon entering of second floor",
+        "img": "",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionYumul%2Fgs.mp3?alt=media&token=769cb580-1f09-4e40-bbac-685da3448a58"
       },
       "y3": {
         "directionsText": "The room 202 is located at the left side of second floor, upon entering the building",
+        "img": "",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionYumul%2F202.mp3?alt=media&token=3a195ad0-a3d7-4589-b080-5fbbb817ac4c"
       },
       "y4": {
         "directionsText": "The room 201 is located at the left side of second floor, in the second door of the building",
+        "img": "",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionYumul%2F201.mp3?alt=media&token=44ef6718-e660-40ae-bf03-82618a711311"
       },
       "y5": {
         "directionsText": "The room 200 is located at the left side of second floor, in the third door of the building",
+        "img": "",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionYumul%2F200.mp3?alt=media&token=2681c50e-e8e6-4af2-9043-790a7e708d32"
       },
       "y6": {
         "directionsText": " The property and supply management office is located at the right side first floor, first door crossing from the admission office         ",
+        "img": "",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionYumul%2Fproperty.mp3?alt=media&token=237997b4-ae2a-40e1-9c54-606340740270"
       },
       "y7": {
         "directionsText": "The human resources management office is located at the right side first floor, second door of the building",
+        "img": "",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionYumul%2Fhrm.mp3?alt=media&token=ab039ca9-02e0-46df-91ab-ed760c402dc1"
       },
       "y8": {
         "directionsText": " The National Service Training Program or NSTP/Triage is located at the left side of first floor, upon entering the stairs.",
+        "img": "",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionYumul%2Fnstp.mp3?alt=media&token=86f4cb10-6262-412d-8f09-a286447a432f"
       },
 
@@ -73,96 +81,119 @@
 
       "hs1": {
         "directionsText": "The room 105 or the food laboratory is located at first floor, first door upon walking in the Comfort room",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fscience%20img%2F105.jpg?alt=media&token=8646015f-e49e-4cab-9fe6-dc42c3b00837",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionScience%2F105.mp3?alt=media&token=27cf2e3a-0531-43b9-8989-3995f916790c"
       },
       "hs2": {
         "directionsText": " The room 106 is located at first floor, second room of the building       ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fscience%20img%2F106.jpg?alt=media&token=d0e87abc-c4bd-4e57-a399-20cda202890c",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionScience%2F106.mp3?alt=media&token=325b560d-d461-4806-a552-889f167cd485"
       },
       "hs3": {
         "directionsText": "The room 107 is located at first floor, third room of the building     ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fscience%20img%2F107.jpg?alt=media&token=e769869c-f22d-4f1d-a418-a23131468d68",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionScience%2F107.mp3?alt=media&token=ed0d9522-f5c7-460b-bea5-683838cc422d"
       },
       "hs4": {
         "directionsText": "The room 108 is located at the first floor, last room of the building        ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fscience%20img%2F108.jpg?alt=media&token=2830ab13-a2fd-404d-aea1-c56389e97df2",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionScience%2F108.mp3?alt=media&token=d143ca67-da04-4888-8821-219843cfb37a"
       },
       "hs5": {
         "directionsText": "The room 203 is located at second floor, first room upon upstairs       ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fscience%20img%2F203.jpg?alt=media&token=b6f922b9-9984-4be6-b9e4-bc15f71ae918",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionScience%2F203.mp3?alt=media&token=d1834618-33ff-4839-8614-0aafb973d746"
       },
       "hs6": {
         "directionsText": "The room 204 is located at second floor, second room next to room 203 in the building       ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fscience%20img%2F204.jpg?alt=media&token=a0da085c-e8e4-45d0-abb1-a1cf4b7281d6",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionScience%2F204.mp3?alt=media&token=bdf5be1a-1695-4982-9b79-711fdf96f604"
       },
       "hs7": {
         "directionsText": "The room 205 or the physics laboratory is located at second floor, third room of the building        ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fscience%20img%2F205.jpg?alt=media&token=a391a60d-535d-4584-8576-48477945e4c8",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionScience%2F205.mp3?alt=media&token=c9e7cee1-f82b-4b2a-a71d-fb0ad7309400"
       },
       "hs8": {
         "directionsText": "The room 206 or the chemical laboratory is located at second floor, last room before stairs of the building ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fscience%20img%2F206.jpg?alt=media&token=5c3b3bfa-7c3e-45a9-97f1-97a105cb5067",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionScience%2F206.mp3?alt=media&token=039aa258-e27c-467b-8e49-98aa39e71fd1"
       },
 
 
       "arch1": {
         "directionsText": "The room 109 is located at first floor, first room crossing from health and science building         ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2F109.webp?alt=media&token=096b2850-8e62-46dd-a165-52571ac63870",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F109.mp3?alt=media&token=85074696-afd1-4b6b-9f6f-02766aa6dcde"
       },
       "arch2": {
         "directionsText": "The room 110 is located at first floor, second room of the building         ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2F110.jpg?alt=media&token=e38afe6d-0fc4-45f5-8118-c335e58d748b",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F110.mp3?alt=media&token=3ad0a6d1-851a-47b8-8b3c-4c2ca7a4139e"
       },
       "arch3": {
         "directionsText": "The room 111 or the Civil Engineer Laboratory is located at first floor, third room of the building     ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2F111.jpg?alt=media&token=b8ea7345-11c7-48ff-8634-4b61f8739232",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F111.mp3?alt=media&token=e25bcddd-671c-4ac8-a066-288042954fb6"
       },
       "arch4": {
         "directionsText": "The room 112 can be called Electrical Engineer laboratory is located at first floor, fourth room of the building     ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2F112.jpg?alt=media&token=df075a21-f9ce-459c-b882-d1180e9f3f1b",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F112.mp3?alt=media&token=a160c1e0-1fd4-44af-9b16-ca9604e891ca"
       },
       "arch5": {
         "directionsText": "The room 113 is located at first floor, fifth room of the building      ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2F113.jpg?alt=media&token=c1f91e23-30dd-4312-ae0c-94009e870a71",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F113.mp3?alt=media&token=e1075a2f-7226-49f5-9638-08a4a21fe703"
       },
       "arch6": {
         "directionsText": "The room 114 is on the first floor, the sixth room of the building         ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2F114.jpg?alt=media&token=7f58319d-6074-46de-97c5-64ad564abb5c",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F114.mp3?alt=media&token=ed37d802-ea35-46fd-bd04-d039867f89ac"
       },
       "arch7": {
         "directionsText": "The room 115 is on the first floor, the seventh room next to it is comfort room of the building        ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2F115.jpg?alt=media&token=0f07f9c7-00c8-4c9b-b5cc-7a73506a7c48",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F115.mp3?alt=media&token=c90526bc-378a-4db1-adc1-fcced1e1e45f"
       },
       "arch8": {
         "directionsText": "The room 116 is on the first floor, the last room of the building       ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2F116.webp?alt=media&token=32d2e03b-c690-4cd3-934a-df49c33736c9",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F116.mp3?alt=media&token=04688673-34b6-465f-97bb-ef4446fd4661"
       },
       "arch9": {
         "directionsText": "The room 207 can be called lab 3 is located at second floor, first room of the first upstairs         ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2Flab3.webp?alt=media&token=47032980-cf9f-4353-b175-9c4c3a76d562",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F207.mp3?alt=media&token=3250faf3-fd53-4b2c-a216-514677c05de7"
       },
       "arch10": {
         "directionsText": "The room 208 or the draft laboratory is on the second floor, second room of the building        ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2F208.webp?alt=media&token=4696e3eb-d42b-435b-98e8-b41822308238",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F208.mp3?alt=media&token=7ee7a0b2-de49-4c28-80b1-b511aee7ed00"
       },
       "arch11": {
         "directionsText": "The architecture faculty room is on the second floor, third room of the building        ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2FArchi%20Room.webp?alt=media&token=ed976982-217f-443e-a742-8f7f5b9dddac",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2FarchiFaculty.mp3?alt=media&token=1c0e4dd4-c932-4bb0-8695-67419017dc61"
       },
       "arch12": {
         "directionsText": "The engineering faculty room is located at second floor, first room in left side of the second upstairs         ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2FCE%20room.webp?alt=media&token=cbacc077-4155-4db8-82c9-388c3cead959",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2FengiFaculty.mp3?alt=media&token=e56c860d-8e7c-4227-8def-20d9f01c67c0"
       },
       "arch13": {
         "directionsText": "The room 209 or the CEA functional room is located at second floor, first room in right side of second upstairs of the building        ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2F209.webp?alt=media&token=2f0742c1-f1f8-4f11-8f02-1e97615f3542",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F209.mp3?alt=media&token=40208612-5fba-443c-b304-a3d12e88124c"
       },
       "arch14": {
         "directionsText": "The room 210 is located at second floor, second room in right side of second upstairs of the building        ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2F210.webp?alt=media&token=569a2818-d54f-41af-a07d-dfde34c0ee73",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F210.mp3?alt=media&token=b8552c83-08bc-49da-9f3c-bee0623cef4b"
       },
       "arch15": {
         "directionsText": "The room 211 is located at second floor, last room of the building ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Farchi%20img%2F211.webp?alt=media&token=0d27de40-5dd7-4362-ae7e-373a30e1e28f",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionArchi%2F211.mp3?alt=media&token=eb49c3da-9d1b-4f74-a3aa-95c7dc3ece0a"
       },
 
@@ -170,42 +201,52 @@
 
       "pb1": {
         "directionsText": "The room 117 is located at first floor, last room of the building       ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Feduc%20img%2F117.webp?alt=media&token=4348bf58-e0c4-4e61-af33-5f7363ef17a1",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionEduc%2F117.mp3?alt=media&token=3aa8dd2d-c8b0-4df8-aa35-4ede4baeb535"
       },
       "pb2": {
         "directionsText": "The room 118 is located at first floor, fourth room of the building       ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Feduc%20img%2F118.webp?alt=media&token=545b4da6-27b7-41fe-8601-af9b387557bc",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionEduc%2F118.mp3?alt=media&token=876af85b-b5ed-41b0-9d63-d8852f416171"
       },
       "pb3": {
         "directionsText": "The CSC office is located at first floor, third room of the building      ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Feduc%20img%2FCSC.webp?alt=media&token=5774eb19-51dd-4703-afe7-293c076f0beb",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionEduc%2Fcsc.mp3?alt=media&token=8236bdbc-419a-4d3b-96f8-013dba1446bc"
       },
       "pb4": {
         "directionsText": "The room 119 or the Educational Technology/EDTECH is located at first floor, first room of the building      ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Feduc%20img%2FETL.webp?alt=media&token=2f94862e-3afa-42dd-8e2f-876e4b8ea505",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionEduc%2Fedtech.mp3?alt=media&token=e48c8eb0-512c-488e-ab3a-585fc3aa93fe"
       },
       "pb5": {
         "directionsText": "The QAO is located at first floor, first room crossing from Business and Accountancy Building        ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Feduc%20img%2FQA.webp?alt=media&token=f4b6fe23-b7d1-4d7d-b37e-98b69a263e12",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionEduc%2Fqao.mp3?alt=media&token=0cf5913c-0b5f-4157-a122-2f626d25b11d"
       },
       "pb6": {
         "directionsText": "The room 212 is located at second floor, last room of the upstairs of room 117 of the building        ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Feduc%20img%2F212.webp?alt=media&token=6e19e7ad-b87b-4881-98b1-8805195db3b4",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionEduc%2F212.mp3?alt=media&token=2baa0085-140b-4b6d-b08f-195db65e2ad3"
       },
       "pb7": {
         "directionsText": "The room 213 is located at second floor, fourth room of the building        ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Feduc%20img%2F213.webp?alt=media&token=8ad62808-d727-4abb-9e50-0369e3651154",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionEduc%2F213.mp3?alt=media&token=58d05b66-ac42-4f20-ab26-210029ed9549"
       },
       "pb8": {
         "directionsText": "The office of counseling and psychological services is located at second floor, third room of the building        ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Feduc%20img%2Fguidance.webp?alt=media&token=d9eadaef-9ccf-4a68-a746-77e3c3e3a02d",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionEduc%2Fcounsel.mp3?alt=media&token=3acf21df-e93d-450e-9a95-aee00d6738dd"
       },
       "pb9": {
         "directionsText": "The room 214 is located at second floor, second room of the buiding    ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Feduc%20img%2F214.webp?alt=media&token=12aae1ec-6f97-41c5-a4ed-40f0d9970505",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionEduc%2F214.mp3?alt=media&token=39f1d60f-6b6e-4761-a63e-2b2e5a3aa0e1"
       },
       "pb10": {
         "directionsText": "The room 215 is located at second floor, first room upstairs of the building",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Feduc%20img%2F215.webp?alt=media&token=931e330b-04b6-44cf-94f5-549b0b5a0783",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionEduc%2F215.mp3?alt=media&token=f42d42bb-cd06-4bea-bc89-1f1d8b9da657"
       },
 
@@ -213,61 +254,75 @@
       
       "n1": {
         "directionsText": "The room 120 is located at first floor, first room of the building",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fnantes%20img%2F120.jpg?alt=media&token=c534b004-fc12-4410-bee7-606922bb2055",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionNantes%2F120.mp3?alt=media&token=304b48fe-7138-4d0d-8f21-94d030e55854"
       },
       "n2": {
         "directionsText": "The room 121 is located at first floor, second room of the building",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fnantes%20img%2F121.jpg?alt=media&token=5a3cce69-e48a-41d9-aa8d-ab602b0a0d56",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionNantes%2F121.mp3?alt=media&token=f5d12565-58f4-48d1-a714-12a7f128c6c8"
       },
       "n3": {
         "directionsText": "The room 122 is located at first floor, third room of the building",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fnantes%20img%2F122.jpg?alt=media&token=99a0b6e9-4f47-47f7-9b7c-c634414ab506",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionNantes%2F122.mp3?alt=media&token=af7fa81a-c6db-4f8c-81c9-b2e07a512867"
       },
       "n4": {
         "directionsText": "The faculty room is located at first floor, fourth room next beside of the stairs",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fnantes%20img%2FFaculty%20Room.jpg?alt=media&token=5f90b6a2-ae7f-4bca-a75e-9f608cb64a82",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionNantes%2Ffacultyroom.mp3?alt=media&token=3e854a44-12f3-4f04-9966-f445feb723f6"
       },
       "n5": {
         "directionsText": "The medical room, is in the last room of first floor building",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fnantes%20img%2FMedical%20Clinic.jpg?alt=media&token=d7957d8e-9854-4229-81b4-b68d0bb4a4c4",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionNantes%2Fmedical.mp3?alt=media&token=33d05230-33f9-4322-9d47-a61f25a7922e"
       },
       "n6": {
         "directionsText": "The room 216 or Speech Laboratory is located at second floor of the building",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fnantes%20img%2F216.jpg?alt=media&token=28d5d007-2330-4130-ab50-5ae04565ba4b",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionNantes%2F216.mp3?alt=media&token=7873a6d1-5a3c-4733-96c8-0c4b0b10c949"
       },
       "n7": {
         "directionsText": "The room 217 or the Keyboard Laboratory is located at second floor, second room right side of the building",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fnantes%20img%2F217.jpg?alt=media&token=074cebda-27bd-4bbc-aadc-8bbc5fabd51d",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionNantes%2F217.mp3?alt=media&token=1f116f24-417b-40a9-baf9-25a685212334"
       },
       "n8": {
         "directionsText": "The room 218 or the Simulation Room or what we called the AVR is located at second floor, first room in right side when you upstairs",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fnantes%20img%2FAVR.jpg?alt=media&token=8f4e74e9-80e6-439f-ab93-a3ac8e9726dc",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionNantes%2Favr.mp3?alt=media&token=cd646060-1df0-4402-9b95-8ef2c2bb2f43"
       },
       "n9": {
         "directionsText": "The library room is located at second floor, first room, left side of the building",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fnantes%20img%2Flibrary.jpg?alt=media&token=df7bc65c-f02a-4f4a-945d-0a6cf39e22c3",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionNantes%2Flibrary.mp3?alt=media&token=feed6616-5b95-4cdf-9eff-3f40d12eebac"
       },
       "n10": {
         "directionsText": "The dental clinic is located at second floor of the building, second room before the PWD stairs",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fnantes%20img%2FDental.jpg?alt=media&token=45e26e3b-b816-410b-9e7e-e970751cd664",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionNantes%2Fclinic.mp3?alt=media&token=6b29186d-2227-44ae-b47d-eb36ce4f4de8"
       },
 
 
       "rotc": {
         "directionsText": "The ROTC Office is located at the back of the Grandstand",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fgrandstand%2Frotc.webp?alt=media&token=5124b5c7-a0c1-4c69-a4a4-436bca490968",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionNantes%2Frotc.mp3?alt=media&token=40a1e8b8-b0af-4298-883e-642e6854ccdc"
       },
 
       "hm1": {
         "directionsText": "The room 102 or tissue laboratory is located in the last room of the building",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fhm%2F102.webp?alt=media&token=c4ab067d-bf24-485d-9d0d-aa53334397e9",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionHM%2F102.mp3?alt=media&token=6019453d-5b2c-4be6-8545-12fc5d43ba88"
       },
       "hm2": {
         "directionsText": "The room 101 or the beverage laboratory is located in the second room of the building ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fhm%2F101.webp?alt=media&token=1d00e125-5bbf-4679-a652-8e699cf05656",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionHM%2F101.mp3?alt=media&token=b5a654f9-7b6d-4927-95f8-ec73b8c4a3d4"
       },
       "hm3": {
         "directionsText": "The room 100 or kitchen laboratory is located in the first room of the building ",
+        "img": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionImages%2Fhm%2F100.webp?alt=media&token=c85f04f4-6a25-4af4-9687-5346bdb515a5",
         "speakDirections": "https://firebasestorage.googleapis.com/v0/b/iskavt-26f75.appspot.com/o/directionHM%2F100.mp3?alt=media&token=c956ac71-ead7-49aa-af15-a64084b61d0a"
       },
 

@@ -175,8 +175,8 @@ const RateV2 = ({ onClose }) => {
                 />
                 Visitor
               </label>
-              {userTypeError && <p className="error-message">{userTypeError}</p>}
-            </div>
+              </div>
+              {userTypeError && <p className="error-message2">{userTypeError}</p>}
             <div className='name-input'>
               <input
                 type='text'

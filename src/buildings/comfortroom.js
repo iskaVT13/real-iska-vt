@@ -9,6 +9,8 @@ import MapImg from '../pictures/3Dmap.jpg';
 
 
 import voiceCr from '../speakVoice/cr.mp3';
+import alumni from './alumni.jpg'
+
 
 function ComfortRoomButton() {
   const [isActive, setIsActive] = useState(false);
@@ -17,6 +19,18 @@ function ComfortRoomButton() {
   const [responses, setResponses] = useState({});
   const [currentAudio, setCurrentAudio] = useState(null);
   const crAudio = useMemo(() => new Audio(voiceCr), []);  
+  const [alumniActive, setAlumniActive] = useState(false);
+
+  // Assuming handleModalOpen and handleModalClose functions are defined here or imported from another file
+const handleModalOpen = () => {
+  setAlumniActive(true);
+  // Logic to open the modal
+};
+
+const handleModalClose = () => {
+  // Logic to close the modal
+  setAlumniActive(false);
+};
 
   useEffect(() => {
     // Import the responses JSON file dynamically
@@ -191,11 +205,27 @@ function ComfortRoomButton() {
         <p></p>
     </div>
         </div>
+        <div className='pin-custom'>
+          <div className='icon-text'>
+            <FontAwesomeIcon onClick={handleModalOpen} className="custom" icon={faLocationDot} size='xl' />
+            <p></p> {/* Add a label for the new location */}
+          </div>
+        </div>
         <p className='note'>NOTE: Click the Location icon above each building.</p>
 
     </div>
   )}
-
+<div className='pop-alumni'>
+  {alumniActive && (
+      <div className="alumni-popUp">
+        <img src={alumni} alt='alumni-img' />
+        <h2>
+          Under Construction
+        </h2>
+        <button onClick={handleModalClose}>Close</button>
+      </div>
+    )}
+    </div>
     <div className='showImage'>
 
 {isActive && (

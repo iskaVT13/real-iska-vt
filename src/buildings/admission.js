@@ -7,6 +7,8 @@ import { faArrowLeft, faLocationDot} from '@fortawesome/free-solid-svg-icons';
 
 import MapImg from '../pictures/3Dmap.jpg';
 
+import alumni from './alumni.jpg'
+
 import voiceAdmin from '../speakVoice/admin.mp3';
 
 function AdmissionButton() {
@@ -18,6 +20,18 @@ function AdmissionButton() {
   const [directCurrentButton, setDirectionCurrentButton] = useState('');
   const [currentAudio, setCurrentAudio] = useState(null);
   const adminAudio = useMemo(() => new Audio(voiceAdmin), []);  
+  const [alumniActive, setAlumniActive] = useState(false);
+
+  // Assuming handleModalOpen and handleModalClose functions are defined here or imported from another file
+const handleModalOpen = () => {
+  setAlumniActive(true);
+  // Logic to open the modal
+};
+
+const handleModalClose = () => {
+  // Logic to close the modal
+  setAlumniActive(false);
+};
 
 
   useEffect(() => {
@@ -233,12 +247,30 @@ function AdmissionButton() {
         <p></p>
     </div>
         </div>
+        <div className='pin-custom'>
+          <div className='icon-text'>
+            <FontAwesomeIcon onClick={handleModalOpen} className="custom" icon={faLocationDot} size='xl' />
+            <p></p> {/* Add a label for the new location */}
+          </div>
+        </div>
 
         <p className='note'>NOTE: Click the Location icon above each building.</p>
 
       </div>
-
   )}
+
+<div className='pop-alumni'>
+  {alumniActive && (
+      <div className="alumni-popUp">
+        <img src={alumni} alt='alumni-img' />
+        <h2>
+          Under Construction
+        </h2>
+        <button onClick={handleModalClose}>Close</button>
+      </div>
+    )}
+    </div>
+
 
 <div className='showImage'> 
 
