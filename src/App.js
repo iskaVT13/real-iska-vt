@@ -335,6 +335,40 @@ const [showComponent, setShowComponent] = useState(false);
 
 const [showRateV2, setShowRateV2] = useState(false);
 
+useEffect(() => {
+    const handleBeforeUnload = (event) => {
+      event.preventDefault();
+      event.returnValue = ''; // Required for Chrome
+      return ''; // Required for Safari
+    };
+
+    const handleUnload = (event) => {
+      event.preventDefault();
+      event.returnValue = ''; // Required for Chrome
+      return ''; // Required for Safari
+    };
+
+    const confirmExit = (event) => {
+      if (window.confirm('Are you sure you want to exit the app?')) {
+        event.preventDefault();
+        event.returnValue = ''; // Required for Chrome
+        return ''; // Required for Safari
+      }
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener('unload', handleUnload);
+
+    // For mobile devices with a back button
+    window.addEventListener('popstate', confirmExit);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener('unload', handleUnload);
+      window.removeEventListener('popstate', confirmExit);
+    };
+  }, []);
+
 
 useEffect(() => {
   // This effect will run when the component mounts

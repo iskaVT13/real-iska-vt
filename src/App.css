@@ -22,6 +22,7 @@
 /* Media Query for screens with a maximum width of 576px (typical small screens) */
 @media (max-width: 576px) {
   body {
+    display: flex;
     font-size: 14px; /* Adjust font size for small screens (e.g., iPhone SE) */
   }
 }
@@ -36,6 +37,7 @@
 /* Media Query for screens with a width between 769px and 991px (typical large screens) */
 @media (min-width: 769px) and (max-width: 991px) {
   body {
+    display: flex;
     font-size: 18px; /* Adjust font size for large screens (e.g., iPhone X/XS/11 Pro) */
   }
 }

@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark, faArrowLeft, faMapLocationDot, faBell, faCircleQuestion, faBook, faCircleInfo, faPeopleGroup, faVrCardboard, faFilePdf, faStar, faComment, } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faArrowLeft, faMapLocationDot, faBell, faCircleQuestion, faBook, faCircleInfo, faPeopleGroup, faVrCardboard, faFilePdf, faStar, faComment, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 import pupMap from '../pictures/map.jpg';
 import iskalogo from '../pictures/iska-logo.png';
@@ -43,6 +43,15 @@ function Menu() {
   const [openOrg, setOrgOpen] = useState(false);
   const [ratingOpen, setRatingOpen] = useState(false);
   const [showReview, setShowReview] = useState(false);
+
+  const handleReload = () => {
+    if (window.confirm("Are you sure you want to leave ISKA ?")) {
+      window.location.reload();    
+    }
+    else{
+      setMenuIsOpen(false);
+    }
+  };
 
   const openSecondPdfModal = () => {
     setSecondPdfLink(pdfData.secondPdfLink);
@@ -273,6 +282,16 @@ function Menu() {
               <div className="name">Reviews</div>
             </div>
           </button>
+
+          <button onClick={handleReload}>
+            <div className="option-item">
+              <div className="icon">
+                <FontAwesomeIcon icon={faRightFromBracket} size="2x" />
+              </div>
+              <div className="name">Exit</div>
+            </div>
+          </button>
+
         </div>
       </div>
       <div className="overlay" onClick={() => setMenuIsOpen(false)}></div>
@@ -352,7 +371,7 @@ function Menu() {
           <div className="popup-title">
             <span>{pdfLink ? 'PUP Student Handbook' : '"ISKA" User Manual'}</span>
           </div>
-          <FontAwesomeIcon className="close" onClick={closePdfModal} icon={faArrowLeft} size="l" />
+          <FontAwesomeIcon className="close" onClick={closePdfModal} icon={faArrowLeft} size="2xl" />
           <div className="popup-content">
             <div className="pdf-content-container">
               <iframe title="PDF Viewer" src={pdfLink || secondPdfLink} width="100%" height="100%" frameBorder="0"></iframe>

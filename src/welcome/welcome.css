@@ -3,10 +3,10 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color:#ffffff;
+    background-color:#e8e8e8;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:right;
     align-items: center;
     top: 0;
   }
@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    top: -3%;
+    top: -5%;
     width: 100%;
     height: 280px;
     padding: 30px;
@@ -29,13 +29,15 @@
   
   .welcome-container {
     position: fixed;
-    width: 100%;
+    width:360px;
     height: 68%;
     background-color:#730000;
     bottom: 0;
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
+    margin-bottom: 20px;
+   border-radius: 10px;
   }
 
   .welcome-text {
@@ -105,7 +107,7 @@
   }
   
   .btn button{
-    width: 100%;
+    width: 250px;
     align-items: center;
     background-color:white;
     font-size: 20px;
