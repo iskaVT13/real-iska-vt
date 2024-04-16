@@ -216,7 +216,7 @@ function Menu() {
               <div className="icon">
                 <FontAwesomeIcon icon={faVrCardboard} size="2x" />
               </div>
-              <div className="name">Virtual Tour</div>
+              <div className="name">Campus Tour</div>
             </div>
           </button>
 
@@ -337,7 +337,7 @@ function Menu() {
           contentLabel="Virtual Tour Modal"
           style={customModalStyles}>
           <div className="popup-title">
-            <span>PUP LOPEZ VIRTUAL TOUR</span>
+            <span>PUP LOPEZ CAMPUS TOUR</span>
           </div>
           <div className='virtual-container'>
             <MyVirtualTour  closeIframeComponent={closeIframeComponent} />
