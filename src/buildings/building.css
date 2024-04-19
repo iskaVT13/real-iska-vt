@@ -25,15 +25,21 @@
   text-align: center;
   align-items: center;
   display: block;
-  height: 260px;
+  height: 40%;
 }
 
 .alumni-popUp h2{
   padding: 10px;
 }
 
+.alumni-popUp p{
+  margin-top: -10px;
+}
+
 .alumni-popUp button{
   background-color:#ffbd00;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 .alumni-popUp img{
@@ -243,13 +249,12 @@ height: 100%;
     width: 18.5em;
     align-items: center;
     justify-content: center;
-    height: 40%;
+    height: 50%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     top: 30%;
     position: fixed;
     border:#ffbd00 solid 2px;
-    overflow: hidden;
     overflow: hidden;
     
   }

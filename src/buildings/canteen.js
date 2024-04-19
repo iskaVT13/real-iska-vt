@@ -217,9 +217,12 @@ const handleModalClose = () => {
       <div className="alumni-popUp">
         <img src={alumni} alt='alumni-img' />
         <h2>
-          Under Construction
+          PUP Alumni Building
         </h2>
-        <button onClick={handleModalClose}>Close</button>
+        <p>
+          (Under Construction)
+        </p>
+        <button className='alumni-btn-close' onClick={handleModalClose}>Close</button>
       </div>
     )}
     </div>
